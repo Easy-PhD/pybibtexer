@@ -1,0 +1,23 @@
+{
+    "build_systems": [
+        {
+            "file_patterns": ["*.py"],
+            "selector": "source.python",
+            "working_dir": "${project_path}",
+            "path": ".venv/bin:$PATH",
+            "name": "Python3 Local",
+            "cmd": ["python3", "-u", "$file"],
+            "env": {
+                "PYTHONIOENCODING": "utf-8",
+                "PYTHONPATH": ".",
+            },
+            "file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
+        },
+    ],
+    "settings": {},
+    "folders": [
+        {
+            "path": ".",
+        },
+    ],
+}

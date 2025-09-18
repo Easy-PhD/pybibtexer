@@ -1,0 +1,62 @@
+[tool.poetry]
+name = "pybibtexer"
+version = "0.0.1"
+description = "pybibtexer"
+license = "GPL-3.0-or-later"
+authors = ["NextAI <nextartifintell@gmail.com>"]
+maintainers = ["NextAI <nextartifintell@gmail.com>"]
+readme = ["README.md"]
+homepage = "https://github.com/NextArtifIntell/pybibtexer"
+repository = "https://github.com/NextArtifIntell/pybibtexer"
+documentation = "https://github.com/NextArtifIntell/pybibtexer"
+keywords = ["Python", "bibtex"]
+classifiers = ["Topic :: Software Development :: Libraries :: Python Modules"]
+
+[tool.poetry.dependencies]
+python = ">=3.8.1"
+pyadvtools = "^0.0.5"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.10.0"
+ruff = "^0.4.3"
+pycodestyle = "^2.11.1"
+pydocstyle = "^6.3.0"
+flake8 = "^7.0.0"
+isort = "^5.13.2"
+black = "^24.4.2"
+
+[tool.pyright]
+venvPath = "."
+venv = ".venv"
+
+[tool.ruff]
+line-length = 120
+indent-width = 4
+
+exclude = [".venv"]
+extend-exclude = ["tests"]
+
+[tool.ruff.lint]
+extend-select = ["I"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+
+[tool.mypy]
+ignore_missing_imports = true
+
+[tool.black]
+line-length = 120
+skip-magic-trailing-comma = true
+
+[tool.isort]
+line_length = 120
+profile = "black"
+include_trailing_comma = true
+
+[tool.pytest]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
