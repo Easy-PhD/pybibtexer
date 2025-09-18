@@ -205,4 +205,4 @@ def format_bib_to_abbr_zotero_save_modes(
     _options["is_sort_entry_fields"] = options.get("is_sort_entry_fields", True)  # default is True
     _options["is_sort_blocks"] = options.get("is_sort_blocks", False)  # default is True
     _python_write = PythonWriters(full_json_c, full_json_j, _options)
-    _python_write.write_multi_library_to_file(path_output, abbr_library, zotero_library, save_library)
+    _python_write.write_multi_library_to_multi_file(path_output, abbr_library, zotero_library, save_library)
