@@ -142,7 +142,7 @@ class PythonWriters(BasicInput):
         )
         return None
 
-    def write_multi_library_to_file(
+    def write_multi_library_to_multi_file(
         self,
         path_output: str,
         bib_for_abbr: Union[Library, List[Block]],
@@ -169,6 +169,26 @@ class PythonWriters(BasicInput):
         full_bib_for_zotero = os.path.join(path_output, self.bib_name_for_zotero)
         full_bib_for_save = os.path.join(path_output, self.bib_name_for_save)
         return full_bib_for_abbr, full_bib_for_zotero, full_bib_for_save
+
+    def write_multi_library_to_muldi_data_list(
+        self,
+        bib_for_abbr: Union[Library, List[Block]],
+        bib_for_zotero: Union[Library, List[Block]],
+        bib_for_save: Union[Library, List[Block]],
+        given_cite_keys: List[str] = [],
+        **kwargs,
+    ) -> Tuple[List[str], List[str], List[str]]:
+        _options = {}
+        _options.update(self.options)
+        _options["keep_entries_by_cite_keys"] = given_cite_keys
+        _options["sort_entries_by_cite_keys"] = given_cite_keys
+
+        bib_abbr = ConvertLibrayToStr(_options).generate_str(bib_for_abbr, **kwargs)
+
+        bib_zotero = ConvertLibrayToStr(_options).generate_str(bib_for_zotero, **kwargs)
+
+        bib_save = ConvertLibrayToStr(_options).generate_str(bib_for_save, **kwargs)
+        return bib_abbr, bib_zotero, bib_save
 
     def output_key_url_http_bib_dict(self, library: Library) -> Dict[str, List[List[str]]]:
         _options = {}
