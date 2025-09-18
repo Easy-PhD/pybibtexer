@@ -170,7 +170,7 @@ class PythonWriters(BasicInput):
         full_bib_for_save = os.path.join(path_output, self.bib_name_for_save)
         return full_bib_for_abbr, full_bib_for_zotero, full_bib_for_save
 
-    def write_multi_library_to_muldi_data_list(
+    def write_multi_library_to_multi_data_list(
         self,
         bib_for_abbr: Union[Library, List[Block]],
         bib_for_zotero: Union[Library, List[Block]],
