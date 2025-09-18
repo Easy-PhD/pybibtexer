@@ -2,7 +2,7 @@ import copy
 import math
 import os
 import re
-from typing import Any, Dict, List, Optional, Union
+from typing import Any, Dict, List, Optional, Tuple, Union
 
 from pyadvtools import (
     IterateCombineExtendDict,
@@ -206,3 +206,24 @@ def format_bib_to_abbr_zotero_save_modes(
     _options["is_sort_blocks"] = options.get("is_sort_blocks", False)  # default is True
     _python_write = PythonWriters(full_json_c, full_json_j, _options)
     _python_write.write_multi_library_to_multi_file(path_output, abbr_library, zotero_library, save_library)
+
+
+def format_bib_to_abbr_or_zotero_or_save_mode(
+    original_data: Union[List[str], str], options: Dict[str, Any], full_json_c: str, full_json_j: str
+) -> Tuple[List[str], List[str], List[str]]:
+    # generate for original data
+    data_list = transform_to_data_list(original_data, ".bib")
+
+    # parse data to abbr_library, zotero_library, and save_library
+    _options = {}
+    _options.update(options)
+    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    abbr_library, zotero_library, save_library = _python_bib.parse_to_multi_standard_library(data_list)
+
+    # write with sorting blocks according to original cite keys
+    _options = {}
+    _options.update(options)
+    _options["is_sort_entry_fields"] = options.get("is_sort_entry_fields", True)  # default is True
+    _options["is_sort_blocks"] = options.get("is_sort_blocks", False)  # default is True
+    _python_write = PythonWriters(full_json_c, full_json_j, _options)
+    return _python_write.write_multi_library_to_multi_data_list(abbr_library, zotero_library, save_library)

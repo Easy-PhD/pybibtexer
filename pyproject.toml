@@ -13,17 +13,19 @@ keywords = ["Python", "bibtex"]
 classifiers = ["Topic :: Software Development :: Libraries :: Python Modules"]
 
 [tool.poetry.dependencies]
-python = ">=3.8.1"
+python = ">=3.13"
 pyadvtools = "^0.0.5"
+streamlit = "^1.49.1"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.10.0"
-ruff = "^0.4.3"
-pycodestyle = "^2.11.1"
+mypy = "^1.18.1"
+ruff = "^0.13.1"
+pycodestyle = "^2.14.0"
 pydocstyle = "^6.3.0"
-flake8 = "^7.0.0"
-isort = "^5.13.2"
-black = "^24.4.2"
+flake8 = "^7.3.0"
+isort = "^6.0.1"
+black = "^25.1.0"
+
 
 [tool.pyright]
 venvPath = "."
