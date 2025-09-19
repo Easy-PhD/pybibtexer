@@ -111,54 +111,71 @@ with right_col:
     with st.container():
         st.markdown("**Additional Files:**")
         uploaded_file_2 = st.file_uploader(
-            "Conference Abbreviations File (Optional)", type=["json"], help="Optional additional configuration file"
+            "Conference Abbreviation File (Optional)", type=["json"], help="Optional additional configuration file"
         )
 
         uploaded_file_3 = st.file_uploader(
-            "Journal Abbreviations File (Optional)", type=["json"], help="Optional additional configuration file"
+            "Journal Abbreviation File (Optional)", type=["json"], help="Optional additional configuration file"
         )
 
     # Processing options in a neat container
     with st.container():
-        st.markdown("**Processing Options:**")
+        st.markdown("**Formatting Options:**")
+        format_options = {
+            "abbr": "Abbreviate journal and booktitle names",
+            "zotero": "Optimize for Zotero reference manager import",
+            "save": "Preserve all original data without changes",
+        }
+
+        purpose = st.selectbox(
+            "Formatting style",
+            options=list(format_options.keys()),
+            format_func=lambda x: format_options[x],
+            help="Select bibliography formatting style",
+        )
+
+        # Block separator and add index
         col1, col2 = st.columns(2)
         with col1:
-            format_options = {
-                "abbr": "Abbreviated (short names)",
-                "zotero": "Zotero (import optimized)",
-                "save": "Save (original data)",
-            }
-
-            purpose = st.selectbox(
-                "Format Style",
-                options=list(format_options.keys()),
-                format_func=lambda x: format_options[x],
-                help="Select bibliography formatting style",
+            # Generate citation keys
+            generate_entry_cite_keys = st.checkbox(
+                "Generate citation keys",
+                value=False,
+                help="Generate citation keys to BibTeX entries"
             )
 
         with col2:
-            maximum_authors_for_abbr = st.selectbox(
-                "Max authors before 'et al.'",
-                options=[1, 2, 3, 1000],
-                index=3,
-                help="Authors to show before abbreviation",
+            # Add sequential indexes
+            add_index_to_entries = st.checkbox(
+                "Add sequential indexes",
+                value=False,
+                help="Add sequential indexes to BibTeX entries"
             )
 
         # Abbreviation level options
         if purpose == "abbr":
-            st.markdown("**Abbreviation Levels:**")
-            col1, col2 = st.columns(2)
+            st.markdown("**Abbreviation Options:**")
+            col1, col2, col3 = st.columns(3)
             with col1:
                 abbr_index_article_for_abbr = st.selectbox(
-                    "Articles", options=[0, 1, 2], index=1, help="Article abbreviation level"
+                    "Article level", options=[0, 1, 2], index=1, help="Article abbreviation level"
                 )
             with col2:
                 abbr_index_inproceedings_for_abbr = st.selectbox(
-                    "Inproceedings", options=[0, 1, 2], index=2, help="Inproceedings abbreviation level"
+                    "Inproceedings level", options=[0, 1, 2], index=2, help="Inproceedings abbreviation level"
+                )
+
+            with col3:
+                maximum_authors_for_abbr = st.selectbox(
+                    "Maximum authors",
+                    options=[1, 2, 3, 1000],
+                    index=1,
+                    help="Authors to show in abbreviated BibTeX entries",
                 )
         else:
             abbr_index_article_for_abbr = 1
             abbr_index_inproceedings_for_abbr = 2
+            maximum_authors_for_abbr = 1000
 
     # Process button with prominent styling
     process_btn = st.button(
@@ -208,6 +225,8 @@ if process_btn:
             options = {
                 "choose_abbr_zotero_save": purpose,
                 "maximum_authors_for_abbr": maximum_authors_for_abbr,
+                "generate_entry_cite_keys": generate_entry_cite_keys,
+                "add_index_to_entries": add_index_to_entries,
                 "abbr_index_article_for_abbr": abbr_index_article_for_abbr,
                 "abbr_index_inproceedings_for_abbr": abbr_index_inproceedings_for_abbr,
             }
@@ -257,11 +276,6 @@ with st.expander("ℹ️ How to use", expanded=False):
     4. **Click** the Process button
     5. **View** the processed result in the left panel
     6. **Download** the result using the download button
-
-    ### Format Options:
-    - **Abbreviated**: Shortened journal and booktitle names
-    - **Zotero**: Optimized for Zotero reference manager import
-    - **Save**: Preserves all original data without changes
     """
     )
 
