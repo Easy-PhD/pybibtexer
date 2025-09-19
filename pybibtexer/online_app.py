@@ -81,11 +81,13 @@ with left_col:
     bibtex_input = st.text_area(
         "Paste your BibTeX data here:",
         height=300,
-        placeholder="""@article{key,
-  author = {Author Name},
-  title = {Paper Title},
-  journal = {Journal Name},
-  year = {2025}
+        placeholder="""@inproceedings{C_NeurIPS_vaswani2017attention,
+  author        = {Vaswani, Ashish and Shazeer, Noam and Parmar, Niki and Uszkoreit, Jakob and Jones, Llion and Gomez, Aidan N. and Kaiser, Łukasz and Polosukhin, Illia},
+  booktitle     = {Advances in Neural Information Processing Systems},
+  pages         = {5998-6008},
+  title         = {Attention is all you need},
+  url           = {https://proceedings.neurips.cc/paper_files/paper/2017/hash/3f5ee243547dee91fbd053c1c4a845aa-Abstract.html},
+  year          = {2017},
 }""",
         help="Copy and paste your BibTeX entries directly into this text area",
         label_visibility="collapsed",
