@@ -136,7 +136,10 @@ with right_col:
 
         with col2:
             maximum_authors_for_abbr = st.selectbox(
-                "Max authors before 'et al.'", [1, 2, 3, 10000], help="Authors to show before abbreviation"
+                "Max authors before 'et al.'",
+                options=[1, 2, 3, 1000],
+                index=3,
+                help="Authors to show before abbreviation",
             )
 
         # Abbreviation level options
