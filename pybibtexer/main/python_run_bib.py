@@ -1,8 +1,6 @@
 from typing import Any, Dict, List, Tuple, Union
 
-from pyadvtools import (
-    transform_to_data_list,
-)
+from pyadvtools import transform_to_data_list
 
 from ..bib.bibtexparser import Entry, Library
 from ..bib.core import ConvertLibrayToLibrary, ConvertStrToLibrary
@@ -24,10 +22,7 @@ class PythonRunBib(BasicInput):
         super().__init__(options)
 
     def parse_to_single_standard_library(
-        self,
-        original_data: Union[List[str], str, Library],
-        given_cite_keys: List[str] = [],
-        **kwargs,
+        self, original_data: Union[List[str], str, Library], given_cite_keys: List[str] = [], **kwargs
     ) -> Library:
         # update
         self.options["keep_entries_by_cite_keys"] = given_cite_keys
@@ -40,10 +35,7 @@ class PythonRunBib(BasicInput):
         return library
 
     def parse_to_multi_standard_library(
-        self,
-        original_data: Union[List[str], str, Library],
-        given_cite_keys: List[str] = [],
-        **kwargs,
+        self, original_data: Union[List[str], str, Library], given_cite_keys: List[str] = [], **kwargs
     ) -> Tuple[Library, Library, Library]:
         # update
         self.options["keep_entries_by_cite_keys"] = given_cite_keys
@@ -57,10 +49,7 @@ class PythonRunBib(BasicInput):
         return abbr_library, zotero_library, save_library
 
     def parse_to_nested_entries_dict(
-        self,
-        original_data: Union[List[str], str, Library],
-        given_cite_keys: List[str] = [],
-        **kwargs,
+        self, original_data: Union[List[str], str, Library], given_cite_keys: List[str] = [], **kwargs
     ) -> Dict[str, Dict[str, Dict[str, Dict[str, Dict[str, List[Entry]]]]]]:
         library = self.parse_to_single_standard_library(original_data, given_cite_keys, **kwargs)
 

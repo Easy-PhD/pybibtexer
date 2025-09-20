@@ -31,8 +31,8 @@ def split_data_list(split_pattern: str, data_list: List[str], last_next: str = "
     new_data_list = []
     for line in data_list:
         split_list = re.split(split_pattern, line)
-        list_one = split_list[0:len(split_list):2]
-        list_two = split_list[1:len(split_list):2]
+        list_one = split_list[0 : len(split_list) : 2]
+        list_two = split_list[1 : len(split_list) : 2]
 
         temp = []
         if last_next == "next":

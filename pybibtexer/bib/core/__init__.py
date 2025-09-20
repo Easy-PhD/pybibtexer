@@ -5,12 +5,7 @@ This submodule incorporates modified source code from the python-bibtexparser pr
 The original copyright notice and license terms have been preserved in accordance with the license requirements.
 """
 
-__all__ = [
-    "ConvertStrToStr",
-    "ConvertStrToLibrary",
-    "ConvertLibrayToLibrary",
-    "ConvertLibrayToStr",
-]
+__all__ = ["ConvertStrToStr", "ConvertStrToLibrary", "ConvertLibrayToLibrary", "ConvertLibrayToStr"]
 
 from .convert_library_to_library import ConvertLibrayToLibrary
 from .convert_library_to_str import ConvertLibrayToStr

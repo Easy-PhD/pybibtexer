@@ -15,8 +15,6 @@ Classes:
         and returns standardized output with error reporting.
 """
 
-__all__ = [
-    "StandardizeBib"
-]
+__all__ = ["StandardizeBib"]
 
 from .standardize_bib import StandardizeBib

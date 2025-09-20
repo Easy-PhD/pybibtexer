@@ -16,8 +16,8 @@ class NormalizeEntryFieldValues(BlockMiddleware):
     def __init__(
         self,
         field_keys: List[str] = ["journal", "booktitle"],
-        title_lower_upper: str = 'upper',
-        allow_inplace_modification: bool = True
+        title_lower_upper: str = "upper",
+        allow_inplace_modification: bool = True,
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification, allow_parallel_execution=True)
 

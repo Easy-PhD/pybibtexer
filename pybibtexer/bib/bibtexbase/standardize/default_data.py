@@ -84,7 +84,7 @@ DEFAULT_FIELDS_LIST = [
     "rights",
     "school",
     "series",
-    "shortjournal"
+    "shortjournal",
     "shorttitle",
     "slide",
     "submitted",

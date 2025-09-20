@@ -4,26 +4,15 @@ from typing import Any, Dict, Tuple
 from .library import Library
 from .middlewares.block.add_field import AddArchive, AddJournalLongAbbr
 from .middlewares.block.authors import ConstrainNumberOfAuthors
-from .middlewares.block.doi_url import (
-    ChangeDoiToUrlInEntry,
-    ChooseDoiOrUrlInEntry,
-    HttpsUrlInEntry,
-    SimplifyDoiInEntry,
-)
+from .middlewares.block.doi_url import ChangeDoiToUrlInEntry, ChooseDoiOrUrlInEntry, HttpsUrlInEntry, SimplifyDoiInEntry
 from .middlewares.block.entry_field_keys_normalize import NormalizeEntryFieldKeys
 from .middlewares.block.entry_field_keys_replace import ReplaceFieldKeyInEntry
-from .middlewares.block.entry_field_values_normalize import (
-    AddUrlToFieldValueInEntry,
-    NormalizeFieldValuesInEntry,
-)
+from .middlewares.block.entry_field_values_normalize import AddUrlToFieldValueInEntry, NormalizeFieldValuesInEntry
 from .middlewares.block.entry_fields_delete import DeleteFieldsInEntry
 from .middlewares.block.entry_fields_keep import KeepFieldsInEntry
 from .middlewares.block.entry_fields_sort import SortFieldsAlphabeticallyMiddleware
 from .middlewares.block.entry_types import NormalizeEntryTypes
-from .middlewares.block.journal_booktitle import (
-    AbbreviateJournalBooktitle,
-    DeleteRedundantInJournalBooktitle,
-)
+from .middlewares.block.journal_booktitle import AbbreviateJournalBooktitle, DeleteRedundantInJournalBooktitle
 from .middlewares.block.month_year import ConvertStrMonthToInt, ExtractYear
 from .middlewares.block.number_volume import ConvertStrNumberVolumeToInt
 from .middlewares.block.pages import NormalizePagesInEntry
@@ -371,9 +360,7 @@ class MiddlewaresLibraryToLibrary(object):
         # Add field 'journal abbreviation'
         if self.add_journal_abbr_for_zotero:
             library = AddJournalLongAbbr(
-                self.full_abbr_article_dict,
-                self.full_names_in_json,
-                self.abbr_names_in_json,
+                self.full_abbr_article_dict, self.full_names_in_json, self.abbr_names_in_json
             ).transform(library)
 
         library = self._function_sort(library)
@@ -407,8 +394,6 @@ class MiddlewaresLibraryToLibrary(object):
         # Sort blocks by type and user sort key
         if self.is_sort_blocks:
             library = SortBlocksByTypeAndUserSortKeyMiddleware(
-                self.sort_entries_by_cite_keys,
-                self.sort_entries_by_field_keys,
-                self.sort_entries_by_field_keys_reverse,
+                self.sort_entries_by_cite_keys, self.sort_entries_by_field_keys, self.sort_entries_by_field_keys_reverse
             ).transform(library)
         return library

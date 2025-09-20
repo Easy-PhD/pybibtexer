@@ -1,23 +1,28 @@
 {
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/core/convert_str_to_str.py
     "default_additional_field_list": [],
 
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/bibtexparser/middlewares_str_to_str.py
     "substitute_in_bib": true,
     "substitute_old_list": [],
     "substitute_new_list": [],
 
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/core/convert_str_to_library.py
     "is_standardize_bib": true,
 
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/bibtexparser/middlewares_str_to_library.py
     "is_display_implicit_comments": true,
 
-
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/core/convert_library_to_library.py
     // "abbr", "zotero", or "save"
     "choose_abbr_zotero_save": "save",
 
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/bibtexparser/middlewares_library_to_library.py
     "function_common_again": true,
     "function_common_again_for_abbr": true,
@@ -123,13 +128,14 @@
     // delete field list for save
     "delete_field_list_for_save": [],
 
-
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/core/convert_library_to_str.py
     "is_standardize_library": false,
     "empty_entry_cite_keys": false,
     "add_index_to_entries": false,
     "entries_necessary": true,
 
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/bib/bibtexparser/middlewares_library_to_str.py
     "is_sort_entry_fields": true,
     "is_sort_blocks": true,
@@ -137,21 +143,34 @@
     "sort_entries_by_field_keys": ["year", "volume", "number", "month", "pages"],
     "sort_entries_by_field_keys_reverse": true,
 
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // for bib file
+    // pybibtexer/main/basic_input.py
+    "full_json_c": "",  // specified by different users.
+    "full_json_j": "",  // specified by different users.
+
+    // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/main/python_run_bib.py
     // "abbr", "zotero", or "save"
     // "choose_abbr_zotero_save": "save",
 
     // pybibtexer/main/python_writers.py
+
     // "abbr", "zotero", or "save"
     // "choose_abbr_zotero_save": "save",
+
+    // "is_sort_entry_fields": true,
+    // "is_sort_blocks": true,
+    // "sort_entries_by_field_keys_reverse": true,
+
     // "abbr.bib", "zotero.bib", "save.bib"
     "bib_name_for_abbr": "abbr.bib",
     "bib_name_for_zotero": "zotero.bib",
     "bib_name_for_save": "save.bib",
-    // "choose_abbr_zotero_save": "save",
+
     // choose multiple items ["google", "connected", "scite"]
     "display_google_connected_scite": ["google", "connected", "scite"],
+
     // bib format
     "bibtex_format_indent": "  ",
     "bibtex_format_trailing_comma": true,

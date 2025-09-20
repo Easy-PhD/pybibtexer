@@ -68,22 +68,14 @@ class Block(abc.ABC):
     def __eq__(self, other):
         # make sure they have the same type and same content
         return (
-            isinstance(other, self.__class__)
-            and isinstance(self, other.__class__)
-            and self.__dict__ == other.__dict__
+            isinstance(other, self.__class__) and isinstance(self, other.__class__) and self.__dict__ == other.__dict__
         )
 
 
 class String(Block):
     """Bibtex Blocks of the ``@string`` type, e.g. ``@string{me = "My Name"}``."""
 
-    def __init__(
-        self,
-        key: str,
-        value: str,
-        start_line: Optional[int] = None,
-        raw: Optional[str] = None,
-    ):
+    def __init__(self, key: str, value: str, start_line: Optional[int] = None, raw: Optional[str] = None):
         super().__init__(start_line, raw)
         self._key = key
         self._value = value
@@ -110,10 +102,7 @@ class String(Block):
         return f"String (line: {self.start_line}, key: `{self.key}`): `{self.value}`"
 
     def __repr__(self) -> str:
-        return (
-            f"String(key=`{self.key}`, value=`{self.value}`, "
-            f"start_line={self.start_line}, raw=`{self.raw}`)"
-        )
+        return f"String(key=`{self.key}`, value=`{self.value}`, " f"start_line={self.start_line}, raw=`{self.raw}`)"
 
 
 class Preamble(Block):
@@ -159,10 +148,7 @@ class ExplicitComment(Block):
         return f"ExplicitComment (line: {self.start_line}): `{self.comment}`"
 
     def __repr__(self) -> str:
-        return (
-            f"ExplicitComment(comment=`{self.comment}`, "
-            f"start_line={self.start_line}, raw=`{self.raw}`)"
-        )
+        return f"ExplicitComment(comment=`{self.comment}`, " f"start_line={self.start_line}, raw=`{self.raw}`)"
 
 
 class ImplicitComment(Block):
@@ -185,10 +171,7 @@ class ImplicitComment(Block):
         return f"ImplicitComment (line: {self.start_line}): `{self.comment}`"
 
     def __repr__(self) -> str:
-        return (
-            f"ImplicitComment(comment=`{self.comment}`, "
-            f"start_line={self.start_line}, raw=`{self.raw}`)"
-        )
+        return f"ImplicitComment(comment=`{self.comment}`, " f"start_line={self.start_line}, raw=`{self.raw}`)"
 
 
 class Field(object):
@@ -225,9 +208,7 @@ class Field(object):
     def __eq__(self, other):
         # make sure they have the same type and same content
         return (
-            isinstance(other, self.__class__)
-            and isinstance(self, other.__class__)
-            and self.__dict__ == other.__dict__
+            isinstance(other, self.__class__) and isinstance(self, other.__class__) and self.__dict__ == other.__dict__
         )
 
     def __str__(self) -> str:
@@ -358,10 +339,7 @@ class Entry(Block):
         For newly written code, it's recommended to use `entry.entry_type`,
         `entry.key` and `entry.fields` instead.
         """
-        return [
-            ("ENTRYTYPE", self.entry_type),
-            ("ID", self.key),
-        ] + [(f.key, f.value) for f in self.fields]
+        return [("ENTRYTYPE", self.entry_type), ("ID", self.key)] + [(f.key, f.value) for f in self.fields]
 
     def __str__(self) -> str:
         lines = [f"Entry (line: {self.start_line}, type: `{self.entry_type}`, key: `{self.key}`):"]
@@ -413,12 +391,7 @@ class MiddlewareErrorBlock(ParsingFailedBlock):
     """
 
     def __init__(self, block: Block, error: Exception):
-        super().__init__(
-            start_line=block.start_line,
-            raw=block.raw,
-            error=error,
-            ignore_error_block=block,
-        )
+        super().__init__(start_line=block.start_line, raw=block.raw, error=error, ignore_error_block=block)
 
 
 class DuplicateBlockKeyBlock(ParsingFailedBlock):

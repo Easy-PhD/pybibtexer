@@ -16,11 +16,7 @@ class Middleware(abc.ABC):
     or LibraryMiddleware
     """
 
-    def __init__(
-        self,
-        allow_parallel_execution: bool = True,
-        allow_inplace_modification: bool = True,
-    ):
+    def __init__(self, allow_parallel_execution: bool = True, allow_inplace_modification: bool = True):
         """Create a new Middleware.
 
         :param allow_inplace_modification: See corresponding property.
@@ -87,9 +83,7 @@ class BlockMiddleware(Middleware, abc.ABC):
                 # check that all the items are indeed blocks
                 for item in transformed:
                     if not isinstance(item, Block):
-                        raise TypeError(
-                            f"Non-Block type found in transformed collection: {type(item)}"
-                        )
+                        raise TypeError(f"Non-Block type found in transformed collection: {type(item)}")
                 blocks.extend(transformed)
 
             # Case 4: Something else. Error.
@@ -97,9 +91,7 @@ class BlockMiddleware(Middleware, abc.ABC):
                 raise TypeError(f"Illegal output type from transform_block: {type(transformed)}")
         return Library(blocks=blocks)
 
-    def transform_block(
-        self, block: Block, library: Library
-    ) -> Union[Block, Collection[Block], None]:
+    def transform_block(self, block: Block, library: Library) -> Union[Block, Collection[Block], None]:
         """Transform a block.
 
         :param block: Block to transform.
@@ -132,9 +124,7 @@ class BlockMiddleware(Middleware, abc.ABC):
         # logger.warning(f"Unknown block type {type(block)}")
         return block
 
-    def transform_entry(
-        self, entry: Entry, library: Library
-    ) -> Union[Block, Collection[Block], None]:
+    def transform_entry(self, entry: Entry, library: Library) -> Union[Block, Collection[Block], None]:
         """Transform an entry. Called by `transform_block` if the block is an entry.
 
         Note: This method modifies the passed entry. For a method
@@ -143,9 +133,7 @@ class BlockMiddleware(Middleware, abc.ABC):
         """
         return entry
 
-    def transform_string(
-        self, string: String, library: Library
-    ) -> Union[Block, Collection[Block], None]:
+    def transform_string(self, string: String, library: Library) -> Union[Block, Collection[Block], None]:
         """Transform a string. Called by `transform_block` if the block is a string.
 
         Note: This method modifies the passed string. For a method
@@ -154,9 +142,7 @@ class BlockMiddleware(Middleware, abc.ABC):
         """
         return string
 
-    def transform_preamble(
-        self, preamble: Preamble, library: Library
-    ) -> Union[Block, Collection[Block], None]:
+    def transform_preamble(self, preamble: Preamble, library: Library) -> Union[Block, Collection[Block], None]:
         """Transform a preamble. Called by `transform_block` if the block is a preamble.
 
         Note: This method modifies the passed preamble. For a method
@@ -203,10 +189,7 @@ class LibraryMiddleware(Middleware, abc.ABC):
     def __init__(self, allow_inplace_modification: bool = True):
         # As library middleware is run per library (not per block individually),
         #   it cannot be parallelized.
-        super().__init__(
-            allow_inplace_modification=allow_inplace_modification,
-            allow_parallel_execution=False,
-        )
+        super().__init__(allow_inplace_modification=allow_inplace_modification, allow_parallel_execution=False)
 
     def transform(self, library: Library) -> Library:
         """Transform a library.

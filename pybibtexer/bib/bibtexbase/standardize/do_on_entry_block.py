@@ -127,10 +127,7 @@ class EntryBase(object):
             return '"', '"'
 
     def obtain_fields(
-        self,
-        block: List[str],
-        default_fields_list: List[str],
-        field_pattern: str = r'[\w\-]+'
+        self, block: List[str], default_fields_list: List[str], field_pattern: str = r"[\w\-]+"
     ) -> List[str]:
         r"""Obtain fileds in block.
 
@@ -271,7 +268,7 @@ class ExtractEntry(object):
     def _resub_brace_or_quote(self, pre, post, line: str) -> str:
         if post == "}":
             if line.count(post) > line.count(pre):
-                line = re.sub(r'(}[}\s\n,]*)$', '},\n', line)
+                line = re.sub(r"(}[}\s\n,]*)$", "},\n", line)
                 line = add_brace_or_quote(pre, post, line)
 
         elif post == '"':
@@ -304,7 +301,7 @@ class CheckEntry(object):
         pre, post = brace_or_quote
 
         regex_entry = re.compile(r"\s*@[a-zA-Z]+{")
-        regex_field = re.compile(fr'\s*(?:{"|".join(field_list)})' + r"\s*=")
+        regex_field = re.compile(rf'\s*(?:{"|".join(field_list)})' + r"\s*=")
         entry_flag, brace_flag = False, False  # minimal conditions
         error_dict: Dict[str, List[str]] = {}
         new_block = []

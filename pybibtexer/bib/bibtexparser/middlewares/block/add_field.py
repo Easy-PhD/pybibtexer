@@ -15,7 +15,7 @@ class AddArchive(BlockMiddleware):
         full_abbr_inproceedings_dict: dict,
         full_names_in_json: str,
         abbr_names_in_json: str,
-        allow_inplace_modification: bool = True
+        allow_inplace_modification: bool = True,
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification)
 
@@ -31,8 +31,8 @@ class AddArchive(BlockMiddleware):
             self.full_abbr_article_dict,
             self.full_abbr_inproceedings_dict,
             self.full_names_in_json,
-            self.abbr_names_in_json
-            )
+            self.abbr_names_in_json,
+        )
         return entry
 
 
@@ -44,7 +44,7 @@ class AddJournalLongAbbr(BlockMiddleware):
         full_abbr_article_dict: dict,
         full_names_in_json: str,
         abbr_names_in_json: str,
-        allow_inplace_modification: bool = True
+        allow_inplace_modification: bool = True,
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification)
 
@@ -82,7 +82,7 @@ class AddJournalLongAbbr(BlockMiddleware):
             long_abbr_name_list = abbr_dict_dict[abbr].get(self.abbr_names_in_json, [])
 
             for full, long_abbr in zip(full_name_list, long_abbr_name_list):
-                if re.match('{' + full + '}', '{' + field_content + '}', re.I):
+                if re.match("{" + full + "}", "{" + field_content + "}", re.I):
                     long_abbr_list.append(long_abbr)
 
         # check

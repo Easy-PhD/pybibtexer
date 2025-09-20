@@ -16,14 +16,11 @@ __all__ = [
     "ParsingFailedBlock",
     "DuplicateBlockKeyBlock",
     "Library",
-
     "MiddlewaresStrToStr",
     "MiddlewaresStrToLibrary",
     "MiddlewaresLibraryToLibrary",
     "MiddlewaresLibraryToStr",
-
     "Splitter",
-
     "BibtexFormat",
 ]
 

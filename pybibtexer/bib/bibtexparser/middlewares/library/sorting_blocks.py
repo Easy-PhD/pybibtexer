@@ -3,15 +3,7 @@ from copy import deepcopy
 from typing import List
 
 from ...library import Library
-from ...model import (
-    Block,
-    Entry,
-    ExplicitComment,
-    ImplicitComment,
-    ParsingFailedBlock,
-    Preamble,
-    String,
-)
+from ...model import Block, Entry, ExplicitComment, ImplicitComment, ParsingFailedBlock, Preamble, String
 from ..middleware import LibraryMiddleware
 
 DEFAULT_BLOCK_TYPE_ORDER = (ImplicitComment, ExplicitComment, String, Preamble, Entry, ParsingFailedBlock, Block)
@@ -38,9 +30,7 @@ class SortBlocksByTypeAndUserSortKeyMiddleware(LibraryMiddleware):
     def _verify_all_types_are_block_types(sort_order):
         for t in sort_order:
             if not issubclass(t, Block):
-                raise ValueError(
-                    "Sort order must only contain Block subclasses, " f"but got {str(t)}"
-                )
+                raise ValueError("Sort order must only contain Block subclasses, " f"but got {str(t)}")
 
     # docstr-coverage: inherited
     def transform(self, library: Library) -> Library:
@@ -68,13 +58,16 @@ class SortBlocksByTypeAndUserSortKeyMiddleware(LibraryMiddleware):
         _failed_blocks = deepcopy(library.failed_blocks)
         _failed_blocks = sorted(_failed_blocks, key=lambda x: len(x.__class__.__name__), reverse=False)
 
-        _others = [b for b in blocks if not (
-                isinstance(b, ImplicitComment) or
-                isinstance(b, ExplicitComment) or
-                isinstance(b, String) or
-                isinstance(b, Preamble) or
-                isinstance(b, Entry) or
-                isinstance(b, ParsingFailedBlock)
+        _others = [
+            b
+            for b in blocks
+            if not (
+                isinstance(b, ImplicitComment)
+                or isinstance(b, ExplicitComment)
+                or isinstance(b, String)
+                or isinstance(b, Preamble)
+                or isinstance(b, Entry)
+                or isinstance(b, ParsingFailedBlock)
             )
         ]
         _others = sorted(_others, key=lambda x: len(x.__class__.__name__), reverse=False)

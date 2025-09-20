@@ -155,15 +155,7 @@ class ConvertLibrayToStr(object):
     # string
     @staticmethod
     def _treat_string(block: String, bibtex_format: BibtexFormat) -> List[str]:
-        result = [
-            "@string{",
-            block.key,
-            VAL_SEP,
-            "{",
-            block.value,
-            "}",
-            "}\n",
-        ]
+        result = ["@string{", block.key, VAL_SEP, "{", block.value, "}", "}\n"]
         return ["".join(result)]
 
     # preamble

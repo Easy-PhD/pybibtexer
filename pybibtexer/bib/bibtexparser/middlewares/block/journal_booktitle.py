@@ -16,7 +16,7 @@ class AbbreviateJournalBooktitle(BlockMiddleware):
         abbr_index_inproceedings_for_abbr: int,
         full_names_in_json: str,
         abbr_names_in_json: str,
-        allow_inplace_modification: bool = True
+        allow_inplace_modification: bool = True,
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification)
 
@@ -76,7 +76,7 @@ class AbbreviateJournalBooktitle(BlockMiddleware):
             # long abbreviation
             if abbr_index == 1:
                 for full, long_abbr in zip(full_name_list, long_abbr_name_list):
-                    if re.match('{' + full + '}', '{' + field_content + '}', re.I):
+                    if re.match("{" + full + "}", "{" + field_content + "}", re.I):
                         content_list.append(long_abbr)
 
             # short abbreviation

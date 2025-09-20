@@ -2,9 +2,7 @@ import os
 import re
 from typing import Any, Dict, List, Optional, Tuple, Union
 
-from pyadvtools import (
-    write_list,
-)
+from pyadvtools import write_list
 
 from ..bib.bibtexparser import BibtexFormat, Block, Library
 from ..bib.core import ConvertLibrayToStr

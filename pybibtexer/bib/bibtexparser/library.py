@@ -116,9 +116,7 @@ class Library(object):
             raise ValueError("Duplicate key found.")
 
     @staticmethod
-    def _cast_to_duplicate(
-        prev_block_with_same_key: Union[Entry, String], duplicate: Union[Entry, String]
-    ):
+    def _cast_to_duplicate(prev_block_with_same_key: Union[Entry, String], duplicate: Union[Entry, String]):
         assert isinstance(prev_block_with_same_key, type(duplicate)) or isinstance(
             duplicate, type(prev_block_with_same_key)
         ), (

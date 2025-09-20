@@ -13,7 +13,7 @@ class ReplaceFieldKeyInEntry(BlockMiddleware):
         entry_type: str,
         old_field_keys: List[str],
         new_field_keys: List[str],
-        allow_inplace_modification: bool = True
+        allow_inplace_modification: bool = True,
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification, allow_parallel_execution=True)
 

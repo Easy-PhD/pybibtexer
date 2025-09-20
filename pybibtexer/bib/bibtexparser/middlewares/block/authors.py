@@ -16,7 +16,7 @@ class ConstrainNumberOfAuthors(BlockMiddleware):
         if "author" in entry:
             authors = entry["author"].split(" and ")
             if len(authors) > self.maximum_authors:
-                authors = authors[:self.maximum_authors]
+                authors = authors[: self.maximum_authors]
                 authors.append("others")
                 entry["author"] = " and ".join(authors)
         return entry

@@ -23,11 +23,11 @@ class StandardizeStringBlock(object):
         implicit_comments = []
 
         regex = re.compile(
-            r"@string{" + r"\s*([\w]+)\s*=\s*" + r'(["{])' + r"([\w\-\n]+)" + r'(["}])' + r'(.*)(\n*)', re.DOTALL
+            r"@string{" + r"\s*([\w]+)\s*=\s*" + r'(["{])' + r"([\w\-\n]+)" + r'(["}])' + r"(.*)(\n*)", re.DOTALL
         )
         if mch := regex.match("".join(block)):
             a, b, c, d, e, f = mch.groups()
-            if ((b == '"') and (d == '"')) or ((b == '{') and (d == '}')):
+            if ((b == '"') and (d == '"')) or ((b == "{") and (d == "}")):
                 block = ["@string{" + a + " = " + b + c.replace("\n", " ").strip() + d + "}\n"]
 
                 if e and e.lstrip()[0] == "}":

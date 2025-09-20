@@ -19,7 +19,7 @@ class GenerateEntriesCiteKey(LibraryMiddleware):
         full_abbr_inproceedings_dict: dict,
         full_names_in_json: str,
         abbr_names_in_json: str,
-        allow_inplace_modification: bool = True
+        allow_inplace_modification: bool = True,
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification)
 
@@ -45,8 +45,8 @@ class GenerateEntriesCiteKey(LibraryMiddleware):
             self.full_abbr_article_dict,
             self.full_abbr_inproceedings_dict,
             self.full_names_in_json,
-            self.abbr_names_in_json
-            )
+            self.abbr_names_in_json,
+        )
 
         cite_key = self.generate_google_cite_key(entry)
         if prefix != "":

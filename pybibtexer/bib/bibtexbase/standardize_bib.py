@@ -26,18 +26,18 @@ from .standardize.do_on_preamble_block import StandardizePreambleBlock
 from .standardize.do_on_string_block import StandardizeStringBlock
 
 MARKS_FLAGS = [
-    ["comment", "comment", "CMT"],      # comment
-    ["string", "string", "S"],          # string
-    ["preamble", "preamble", "P"],      # preamble
-    ["article", "entry", "J"],          # entry
-    ["inproceedings", "entry", "C"],    # entry
-    ["proceedings", "entry", "B"],      # entry
-    ["book", "entry", "B"],             # entry
-    ["incollection", "entry", "BS"],    # entry
-    ["misc", "entry", "D"],             # entry
-    ["unpublished", "entry", "M"],      # entry
-    ["techreport", "entry", "R"],       # entry
-    ["phdthesis", "entry", "T_D"],      # entry
+    ["comment", "comment", "CMT"],  # comment
+    ["string", "string", "S"],  # string
+    ["preamble", "preamble", "P"],  # preamble
+    ["article", "entry", "J"],  # entry
+    ["inproceedings", "entry", "C"],  # entry
+    ["proceedings", "entry", "B"],  # entry
+    ["book", "entry", "B"],  # entry
+    ["incollection", "entry", "BS"],  # entry
+    ["misc", "entry", "D"],  # entry
+    ["unpublished", "entry", "M"],  # entry
+    ["techreport", "entry", "R"],  # entry
+    ["phdthesis", "entry", "T_D"],  # entry
     ["mastersthesis", "entry", "T_M"],  # entry
 ]
 
