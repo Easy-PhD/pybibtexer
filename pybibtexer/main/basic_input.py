@@ -34,11 +34,11 @@ class BasicInput(object):
         full_json_j = os.path.join(self._path_templates, "AbbrFull", "journals.json")
 
         _full_json_c = options.get("full_json_c")
-        if isinstance(_full_json_c, "str") and os.path.isfile(_full_json_c) and os.path.exists(_full_json_c):
+        if isinstance(_full_json_c, str) and os.path.isfile(_full_json_c) and os.path.exists(_full_json_c):
             full_json_c = _full_json_c
 
         _full_json_j = options.get("full_json_j")
-        if isinstance(_full_json_j, "str") and os.path.isfile(_full_json_j) and os.path.exists(_full_json_j):
+        if isinstance(_full_json_j, str) and os.path.isfile(_full_json_j) and os.path.exists(_full_json_j):
             full_json_j = _full_json_j
 
         self.full_json_c = full_json_c
