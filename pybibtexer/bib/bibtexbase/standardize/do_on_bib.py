@@ -1,3 +1,16 @@
+"""BibTeX block splitting and parsing utilities.
+
+This module provides classes for splitting BibTeX data into blocks based on
+entry markers and organizing them into structured dictionaries for further
+processing.
+
+Classes:
+    SplitBibAccordingToMark: Splits BibTeX data into blocks based on entry
+        type markers (e.g., @article, @book).
+    ObtainMarkBlocksDict: Parses split blocks and organizes them into a
+        dictionary structure with implicit comment handling.
+"""
+
 import re
 from typing import Dict, List, Tuple
 

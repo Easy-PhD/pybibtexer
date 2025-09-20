@@ -48,10 +48,7 @@ class ProcessSpiderBib(object):
             "empty_entry_cite_keys": True,
         }
 
-        # ull_json_c and full_json_j are not required for processing spidered bibliographic data
-        self._full_json_c = self._full_json_j = ""  # "save" mode and empty_entry_cite_keys=True
-
-        self._python_bib = PythonRunBib(self._full_json_c, self._full_json_j, self._options)
+        self._python_bib = PythonRunBib(self._options)
 
     def format_spider_bib(self, write_bib: bool = False) -> None:
         """Format spider bib."""
@@ -63,7 +60,7 @@ class ProcessSpiderBib(object):
 
         _options = {}
         _options.update(self._options)
-        _python_writer = PythonWriters(self._full_json_c, self._full_json_j, _options)
+        _python_writer = PythonWriters(_options)
 
         for f in file_list:
             print("*" * 5 + f" Format {os.path.basename(f)} " + "*" * 5)
@@ -109,7 +106,7 @@ class ProcessSpiderBib(object):
 
         _options = {}
         _options.update(self._options)
-        _python_writer = PythonWriters(self._full_json_c, self._full_json_j, _options)
+        _python_writer = PythonWriters(_options)
 
         for name in bibs_name:
             bib_base_name = name[-1]
@@ -154,9 +151,7 @@ class ProcessSpiderBib(object):
         print("*" * 5 + f" Start moving {self.abbr_standard} ... " + "*" * 5)
         path_move = os.path.join(path_shutil, self.abbr_standard)
         entry_type_entry_dict = {}
-        library = PythonRunBib(self._full_json_c, self._full_json_j, {}).parse_to_single_standard_library(
-            self.path_abbr
-        )
+        library = PythonRunBib({}).parse_to_single_standard_library(self.path_abbr)
         for entry in library.entries:
             entry_type_entry_dict.setdefault(entry.entry_type, []).append(entry)
         for entry_type in entry_type_entry_dict:
@@ -178,7 +173,7 @@ class ProcessSpiderBib(object):
         # Delete
         _options = {}
         _options.update(self._options)
-        _python_writer = PythonWriters(self._full_json_c, self._full_json_j, _options)
+        _python_writer = PythonWriters(_options)
         print("*" * 5 + f" Start deleting {self.abbr_standard} ... " + "*" * 5)
         bibs = iterate_obtain_full_file_names(self.path_abbr, ".bib")
         for bib in bibs:
@@ -211,7 +206,7 @@ class ProcessSpiderBib(object):
 
         _options = {}
         _options.update(self._options)
-        _python_writer = PythonWriters(self._full_json_c, self._full_json_j, _options)
+        _python_writer = PythonWriters(_options)
 
         print(f"***** Simplify {self.abbr_standard} *****")
         path_url_ieee_early_access = os.path.join(path_ieee_early_access, "url")

@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pybibtexer"
-version = "0.0.3"
+version = "0.1.0"
 description = "pybibtexer"
 license = "GPL-3.0-or-later"
 authors = ["NextAI <nextartifintell@gmail.com>"]
@@ -14,7 +14,7 @@ classifiers = ["Topic :: Software Development :: Libraries :: Python Modules"]
 
 [tool.poetry.dependencies]
 python = ">=3.13"
-pyadvtools = "^0.0.5"
+pyadvtools = "^0.1.2"
 streamlit = "^1.49.1"
 
 [tool.poetry.group.dev.dependencies]

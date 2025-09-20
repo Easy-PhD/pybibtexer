@@ -1,3 +1,25 @@
+"""Entry block standardization utilities.
+
+This module provides comprehensive functionality for processing and standardizing
+BibTeX entry blocks. Entry blocks contain the actual bibliographic data and
+require the most complex processing including field validation, formatting,
+and error checking.
+
+Classes:
+    StandardizeEntryBlock: Main class for standardizing BibTeX entry blocks
+        with configurable field lists and comprehensive validation.
+    EntryBase: Base class providing utility methods for field extraction
+        and brace/quote detection.
+    SplitEntry: Handles splitting of entry blocks based on field patterns.
+    AppendEntry: Manages field appending and line continuation processing.
+    ExtractEntry: Extracts and validates field content from entry blocks.
+    CheckEntry: Performs final validation and error checking on entry blocks.
+
+Functions:
+    add_brace_or_quote: Utility function for ensuring proper brace/quote
+        matching in field values.
+"""
+
 import re
 from typing import Dict, List, Tuple
 

@@ -1,3 +1,22 @@
+"""Main BibTeX standardization module.
+
+This module provides the primary interface for standardizing BibTeX files.
+It coordinates the processing of different block types (entries, comments,
+preamble, and strings) and provides a unified standardization workflow.
+
+The StandardizeBib class serves as the main entry point for BibTeX
+standardization, handling the complete processing pipeline from raw
+BibTeX data to standardized output with comprehensive error reporting.
+
+Constants:
+    MARKS_FLAGS: Mapping of BibTeX entry types to their processing flags
+        and abbreviations for standardized output.
+
+Classes:
+    StandardizeBib: Main standardization class that processes complete
+        BibTeX files and returns standardized output with error reporting.
+"""
+
 from typing import List, Tuple
 
 from .standardize.do_on_bib import ObtainMarkBlocksDict, SplitBibAccordingToMark

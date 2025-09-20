@@ -35,28 +35,22 @@ def compare_bibs_with_local(
     path_spidering_bibs: str,
     path_output: str,
     options: Dict[str, Any],
-    full_json_c: str,
-    full_json_j: str,
 ) -> None:
     path_output = standard_path(path_output)
 
     # generate for original data
     _options = {}
     _options.update(options)
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
     data_list = transform_to_data_list(original_data, ".bib")
     library = _python_bib.parse_to_single_standard_library(data_list)
     original_entry_keys = [entry.key for entry in library.entries]
 
     # generate dict for abbr key entry
-    abbr_key_entries_dict, not_in_local_entries = generate_abbr_key_entry_dict(
-        library, options, full_json_c, full_json_j
-    )
+    abbr_key_entries_dict, not_in_local_entries = generate_abbr_key_entry_dict(library, options)
 
     # compare with local bibs
-    tuple_entries = _compare_with_local(
-        abbr_key_entries_dict, path_spidered_bibs, path_spidering_bibs, options, full_json_c, full_json_j
-    )
+    tuple_entries = _compare_with_local(abbr_key_entries_dict, path_spidered_bibs, path_spidering_bibs, options)
     searched_entries, not_searched_entries, duplicate_original_entries, duplicate_searched_entries = tuple_entries
     not_in_local_entries.extend(not_searched_entries)
 
@@ -65,7 +59,7 @@ def compare_bibs_with_local(
     _options["is_sort_entry_fields"] = True  # default is True
     _options["is_sort_blocks"] = True  # default is True
     _options["sort_entries_by_cite_keys"] = original_entry_keys
-    _python_write = PythonWriters(full_json_c, full_json_j, _options)
+    _python_write = PythonWriters(_options)
     _python_write.write_to_file(searched_entries, "in_local_entries.bib", "w", path_output, False)
     _python_write.write_to_file(not_in_local_entries, "not_in_local_entries.bib", "w", path_output, False)
 
@@ -73,20 +67,20 @@ def compare_bibs_with_local(
     _options = {}
     _options["is_sort_entry_fields"] = True  # default is True
     _options["is_sort_blocks"] = False  # default is True
-    _python_write = PythonWriters(full_json_c, full_json_j, _options)
+    _python_write = PythonWriters(_options)
     _python_write.write_to_file(duplicate_original_entries, "duplicate_original_entries.bib", "w", path_output, False)
     _python_write.write_to_file(duplicate_searched_entries, "duplicate_searched_entries.bib", "w", path_output, False)
     return None
 
 
-def generate_abbr_key_entry_dict(library: Library, options: Dict[str, Any], full_json_c: str, full_json_j: str):
+def generate_abbr_key_entry_dict(library: Library, options: Dict[str, Any]):
     _options = {}
     _options["is_standardize_bib"] = True  # default is True
     _options["choose_abbr_zotero_save"] = "save"  # default is "save"
     _options["function_common_again"] = True  # default is True
     _options["generate_entry_cite_keys"] = True  # default is False
     _options.update(options)
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
 
     abbr_key_entries_dict, not_in_local_entries = {}, []
     for entry in library.entries:
@@ -117,8 +111,6 @@ def _compare_with_local(
     local_path_spidered_bibs: str,
     local_path_spidering_bibs: str,
     options: Dict[str, Any],
-    full_json_c: str,
-    full_json_j: str,
 ) -> Tuple[List[Block], List[Block], List[Block], List[Block]]:
     # compare with local bibs
     searched_entries, not_searched_entries, duplicate_original_entries, duplicate_searched_entries = [], [], [], []
@@ -146,7 +138,7 @@ def _compare_with_local(
             _options["function_common_again_save"] = False  # default is True
             _options["generate_entry_cite_keys"] = False  # default is False
             _options.update(options)
-            _library = PythonRunBib(full_json_c, full_json_j, _options).parse_to_single_standard_library(data_list)
+            _library = PythonRunBib(_options).parse_to_single_standard_library(data_list)
             for key, entry in old_key_entries_dict.items():
                 for _entry in _library.entries:
                     if check_equal_for_entry(entry, _entry, ["title"], abbr):
@@ -197,12 +189,7 @@ def check_equal_for_entry(original_entry, new_entry, compare_field_list: List[st
 
 
 def compare_bibs_with_zotero(
-    zotero_bib: Union[List[str], str],
-    download_bib: Union[List[str], str],
-    path_output: str,
-    options: Dict[str, Any],
-    full_json_c: str,
-    full_json_j: str,
+    zotero_bib: Union[List[str], str], download_bib: Union[List[str], str], path_output: str, options: Dict[str, Any]
 ) -> None:
     path_output = standard_path(path_output)
 
@@ -210,7 +197,7 @@ def compare_bibs_with_zotero(
     _options = {}
     _options.update(options)
     _options["generate_entry_cite_keys"] = False  # default is False
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
     data_list = transform_to_data_list(zotero_bib, ".bib")
     zotero_library = _python_bib.parse_to_single_standard_library(data_list)
 
@@ -218,7 +205,7 @@ def compare_bibs_with_zotero(
     _options = {}
     _options.update(options)
     _options["generate_entry_cite_keys"] = True  # default is False
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
     data_list = transform_to_data_list(download_bib, ".bib")
     download_library = _python_bib.parse_to_single_standard_library(data_list)
 
@@ -238,7 +225,7 @@ def compare_bibs_with_zotero(
     # write
     _options = {}
     _options.update(options)
-    _python_write = PythonWriters(full_json_c, full_json_j, _options)
+    _python_write = PythonWriters(_options)
     _python_write.write_to_file(only_in_download_entries, "only_in_download.bib", "w", path_output, False)
     _python_write.write_to_file(in_download_and_zotero_entries, "in_download_and_zotero.bib", "w", path_output, False)
     return None

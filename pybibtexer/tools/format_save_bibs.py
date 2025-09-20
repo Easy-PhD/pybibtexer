@@ -73,13 +73,12 @@ def format_bib_to_save_mode_by_entry_type(
     _options["is_sort_entry_fields"] = True  # Force field sorting
     _options["is_sort_blocks"] = True  # Force block sorting
     _options["sort_entries_by_field_keys_reverse"] = False  # Sort in ascending order, default is True
-    full_json_c = full_json_j = ""  # "save" mode and empty_entry_cite_keys=True
 
     # Initialize helper classes
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
 
     _options["empty_entry_cite_keys"] = True  # Allow empty citation keys
-    _python_writer = PythonWriters(full_json_c, full_json_j, _options)
+    _python_writer = PythonWriters(_options)
 
     # Organize entries by type, year, volume, number, and month
     entry_type_year_volume_number_month_entry_dict = _python_bib.parse_to_nested_entries_dict(original_data)
@@ -161,8 +160,7 @@ def generate_statistic_information(path_storage: str) -> None:
         "is_sort_entry_fields": False,  # Skip field sorting
         "is_sort_blocks": False,  # Skip block sorting
     }
-    full_json_c = full_json_j = ""  # "save" mode
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
 
     # Process each BibTeX file
     for f in full_files:
@@ -186,7 +184,7 @@ def generate_statistic_information(path_storage: str) -> None:
 
 
 def format_bib_to_abbr_zotero_save_modes(
-    original_data: Union[List[str], str], path_output: str, options: Dict[str, Any], full_json_c: str, full_json_j: str
+    original_data: Union[List[str], str], path_output: str, options: Dict[str, Any]
 ) -> None:
     path_output = standard_path(path_output)
 
@@ -196,7 +194,7 @@ def format_bib_to_abbr_zotero_save_modes(
     # parse data to abbr_library, zotero_library, and save_library
     _options = {}
     _options.update(options)
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
     abbr_library, zotero_library, save_library = _python_bib.parse_to_multi_standard_library(data_list)
 
     # write with sorting blocks according to original cite keys
@@ -204,12 +202,12 @@ def format_bib_to_abbr_zotero_save_modes(
     _options.update(options)
     _options["is_sort_entry_fields"] = options.get("is_sort_entry_fields", True)  # default is True
     _options["is_sort_blocks"] = options.get("is_sort_blocks", False)  # default is True
-    _python_write = PythonWriters(full_json_c, full_json_j, _options)
+    _python_write = PythonWriters(_options)
     _python_write.write_multi_library_to_multi_file(path_output, abbr_library, zotero_library, save_library)
 
 
 def format_bib_to_abbr_or_zotero_or_save_mode(
-    original_data: Union[List[str], str], options: Dict[str, Any], full_json_c: str, full_json_j: str
+    original_data: Union[List[str], str], options: Dict[str, Any]
 ) -> Tuple[List[str], List[str], List[str]]:
     # generate for original data
     data_list = transform_to_data_list(original_data, ".bib")
@@ -217,7 +215,7 @@ def format_bib_to_abbr_or_zotero_or_save_mode(
     # parse data to abbr_library, zotero_library, and save_library
     _options = {}
     _options.update(options)
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
     abbr_library, zotero_library, save_library = _python_bib.parse_to_multi_standard_library(data_list)
 
     # write with sorting blocks according to original cite keys
@@ -225,5 +223,5 @@ def format_bib_to_abbr_or_zotero_or_save_mode(
     _options.update(options)
     _options["is_sort_entry_fields"] = options.get("is_sort_entry_fields", True)  # default is True
     _options["is_sort_blocks"] = options.get("is_sort_blocks", False)  # default is True
-    _python_write = PythonWriters(full_json_c, full_json_j, _options)
+    _python_write = PythonWriters(_options)
     return _python_write.write_multi_library_to_multi_data_list(abbr_library, zotero_library, save_library)

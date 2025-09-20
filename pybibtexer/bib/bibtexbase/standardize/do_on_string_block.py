@@ -1,3 +1,14 @@
+"""String block standardization utilities.
+
+This module provides functionality for processing and standardizing BibTeX
+string blocks. String blocks define abbreviations and macros that can be
+used throughout the BibTeX file to maintain consistency and reduce redundancy.
+
+Classes:
+    StandardizeStringBlock: Handles the standardization of @string blocks,
+        ensuring proper delimiter matching and formatting of string definitions.
+"""
+
 import re
 from typing import List, Tuple
 

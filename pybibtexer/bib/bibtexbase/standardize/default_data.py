@@ -1,3 +1,16 @@
+"""Default data definitions for BibTeX standardization.
+
+This module contains default field lists and format flags used throughout
+the BibTeX standardization process. These definitions help ensure consistent
+field recognition and validation across different BibTeX entry types.
+
+Constants:
+    FIELD_FORMAT_FLAG: Regular expression patterns for identifying field
+        value delimiters (quotes, braces, and word characters).
+    DEFAULT_FIELDS_LIST: Comprehensive list of standard BibTeX field names
+        that are recognized and processed during standardization.
+"""
+
 FIELD_FORMAT_FLAG = [r'"', r"{", r"\w"]
 
 DEFAULT_FIELDS_LIST = [

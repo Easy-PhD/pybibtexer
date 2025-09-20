@@ -49,13 +49,13 @@ class PythonWriters(BasicInput):
         bibtex_format_block_separator (str): Separator between BibTeX blocks (default: "")
     """
 
-    def __init__(self, full_json_c: str, full_json_j: str, options: Dict[str, Any]) -> None:
+    def __init__(self, options: Dict[str, Any]) -> None:
         # Set default options if not provided
         options["choose_abbr_zotero_save"] = options.get("choose_abbr_zotero_save", "save")
         options["is_sort_entry_fields"] = options.get("is_sort_entry_fields", True)
         options["is_sort_blocks"] = options.get("is_sort_blocks", True)
         options["sort_entries_by_field_keys_reverse"] = options.get("sort_entries_by_field_keys_reverse", True)
-        super().__init__(full_json_c, full_json_j, options)
+        super().__init__(options)
 
         # Initialize bibliography source filenames
         self.bib_name_for_abbr = options.get("bib_name_for_abbr", "abbr.bib")

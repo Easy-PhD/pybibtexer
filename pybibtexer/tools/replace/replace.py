@@ -9,7 +9,7 @@ from ...main import PythonRunBib, PythonWriters
 
 
 def replace_to_standard_cite_keys(
-    full_tex_md: str, full_bib: str, path_output: str, options: Dict[str, Any], full_json_c: str, full_json_j: str
+    full_tex_md: str, full_bib: str, path_output: str, options: Dict[str, Any]
 ) -> List[str]:
     """
     Replace citation keys in TeX/Markdown files with standardized keys from BibTeX.
@@ -39,7 +39,7 @@ def replace_to_standard_cite_keys(
     bib_data = transform_to_data_list(full_bib, ".bib")
 
     # Generate mapping from old to new citation keys
-    old_key_new_entry_dict = generate_old_key_new_entry_dict(bib_data, options, full_json_c, full_json_j)
+    old_key_new_entry_dict = generate_old_key_new_entry_dict(bib_data, options)
 
     # Read and process document content
     data = "".join(transform_to_data_list(full_tex_md, ext))
@@ -69,26 +69,24 @@ def replace_to_standard_cite_keys(
     _options = {}
     _options.update(options)
     _options["is_sort_blocks"] = False  # Preserve original entry order and default is True
-    _python_write = PythonWriters(full_json_c, full_json_j, _options)
+    _python_write = PythonWriters(_options)
     _python_write.write_to_file(list(old_key_new_entry_dict.values()), "new.bib", "w", path_output, False)
     return data_list
 
 
-def generate_old_key_new_entry_dict(
-    bib_data: Union[List[str], str], options: Dict[str, Any], full_json_c: str, full_json_j: str
-) -> dict:
+def generate_old_key_new_entry_dict(bib_data: Union[List[str], str], options: Dict[str, Any]) -> dict:
     # Parse library without generating new keys first
     _options = {}
     _options.update(options)
     _options["generate_entry_cite_keys"] = False  # default is False
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
     library = _python_bib.parse_to_single_standard_library(bib_data)
 
     # Configure for key generation
     _options = {}
     _options.update(options)
     _options["generate_entry_cite_keys"] = True  # default is False
-    _python_bib = PythonRunBib(full_json_c, full_json_j, _options)
+    _python_bib = PythonRunBib(_options)
 
     # Generate new keys for each entry
     old_key_new_entry_dict = {}

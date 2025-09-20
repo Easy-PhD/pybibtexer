@@ -25,11 +25,25 @@ class BasicInput(object):
             while full_json_j adheres to the format {"publisher": {"journals": {"abbr": {}}}}.
     """
 
-    def __init__(self, full_json_c: str, full_json_j: str, options: Dict[str, Any]) -> None:
+    def __init__(self, options: Dict[str, Any]) -> None:
+        # full_json_c and full_json_j
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        self._path_templates = os.path.join(os.path.dirname(current_dir), "data", "Templates")
+
+        full_json_c = os.path.join(self._path_templates, "AbbrFull", "conferences.json")
+        full_json_j = os.path.join(self._path_templates, "AbbrFull", "journals.json")
+
+        _full_json_c = options.get("full_json_c")
+        if isinstance(_full_json_c, "str") and os.path.isfile(_full_json_c) and os.path.exists(_full_json_c):
+            full_json_c = _full_json_c
+
+        _full_json_j = options.get("full_json_j")
+        if isinstance(_full_json_j, "str") and os.path.isfile(_full_json_j) and os.path.exists(_full_json_j):
+            full_json_j = _full_json_j
+
         self.full_json_c = full_json_c
         self.full_json_j = full_json_j
 
-        # bib/core
         self._initialize_middlewares(options)
 
         self.options = options

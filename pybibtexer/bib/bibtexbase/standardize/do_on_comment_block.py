@@ -1,3 +1,14 @@
+"""Comment block standardization utilities.
+
+This module provides functionality for processing and standardizing BibTeX
+comment blocks. Comment blocks in BibTeX are used for documentation and
+notes that should be preserved but formatted consistently.
+
+Classes:
+    StandardizeCommentBlock: Handles the standardization of @comment blocks,
+        ensuring proper brace matching and formatting.
+"""
+
 import re
 from typing import List, Tuple
 

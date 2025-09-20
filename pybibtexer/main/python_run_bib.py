@@ -19,9 +19,9 @@ class PythonRunBib(BasicInput):
         choose_abbr_zotero_save (str): Selected bibliography purpose ("abbr", "zotero", or "save")
     """
 
-    def __init__(self, full_json_c: str, full_json_j: str, options: Dict[str, Any]) -> None:
+    def __init__(self, options: Dict[str, Any]) -> None:
         options["choose_abbr_zotero_save"] = options.get("choose_abbr_zotero_save", "save")
-        super().__init__(full_json_c, full_json_j, options)
+        super().__init__(options)
 
     def parse_to_single_standard_library(
         self,

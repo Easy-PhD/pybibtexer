@@ -1,3 +1,13 @@
+"""Base utilities for BibTeX standardization.
+
+This module provides fundamental utility functions used throughout the
+standardization process, particularly for text processing and pattern matching.
+
+Functions:
+    split_data_list: Splits a list of strings according to a regex pattern,
+        with options for handling the last element differently.
+"""
+
 import re
 from typing import List
 

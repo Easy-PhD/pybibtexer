@@ -1,3 +1,14 @@
+"""Preamble block standardization utilities.
+
+This module provides functionality for processing and standardizing BibTeX
+preamble blocks. Preamble blocks contain LaTeX commands and definitions
+that are used throughout the BibTeX file.
+
+Classes:
+    StandardizePreambleBlock: Handles the standardization of @preamble blocks,
+        ensuring proper quote matching and formatting of LaTeX commands.
+"""
+
 import re
 from typing import List, Tuple
 
