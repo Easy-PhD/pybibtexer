@@ -6,9 +6,9 @@ license = "GPL-3.0-or-later"
 authors = ["NextAI <nextartifintell@gmail.com>"]
 maintainers = ["NextAI <nextartifintell@gmail.com>"]
 readme = ["README.md"]
-homepage = "https://github.com/NextArtifIntell/pybibtexer"
-repository = "https://github.com/NextArtifIntell/pybibtexer"
-documentation = "https://github.com/NextArtifIntell/pybibtexer"
+homepage = "https://github.com/Easy-PhD/pybibtexer"
+repository = "https://github.com/Easy-PhD/pybibtexer"
+documentation = "https://github.com/Easy-PhD/pybibtexer"
 keywords = ["Python", "bibtex"]
 classifiers = ["Topic :: Software Development :: Libraries :: Python Modules"]
 
