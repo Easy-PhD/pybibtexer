@@ -15,7 +15,7 @@
                         [
                             {
                                 "command": "open_url",
-                                "args": {"url": "https://github.com/NextArtifIntell/pybibtexer"},
+                                "args": {"url": "https://github.com/Easy-PhD/pybibtexer"},
                                 "caption": "Documentation"
                             },
                             { "caption": "-" },
