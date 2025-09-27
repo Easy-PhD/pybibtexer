@@ -13,6 +13,7 @@ node_modules/
 .idea/
 .vscode/
 tests_temp/
+_build/
 
 # Special for this project
 
