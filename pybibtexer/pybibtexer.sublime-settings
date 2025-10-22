@@ -169,7 +169,7 @@
     "bib_name_for_save": "save.bib",
 
     // choose multiple items ["www", "google", "connected", "scite"]
-    "display_google_connected_scite": ["www", "google", "connected", "scite"],
+    "display_www_google_connected_scite": ["www", "google", "connected", "scite"],
 
     // bib format
     "bibtex_format_indent": "  ",

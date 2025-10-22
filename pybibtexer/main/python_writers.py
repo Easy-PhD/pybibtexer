@@ -10,24 +10,7 @@ from .basic_input import BasicInput
 
 
 class PythonWriters(BasicInput):
-    """Python writers.
-
-    Args:
-        options (Dict[str, Any]): Options.
-
-    Attributes:
-        choose_abbr_zotero_save (str = "save"): Choose "abbr", "zotero", or "save".
-
-        bib_name_for_abbr (str = "abbr.bib"): Bib name for abbr.
-        bib_name_for_zotero (str = "zotero.bib"): Bib name for zotero.
-        bib_name_for_save (str = "save.bib"): Bib name for save.
-        display_google_connected_scite (List[str] = ["google", "connected", "scite"]): Choose multiple items.
-        bibtex_format_indent (str = "  "):
-        bibtex_format_trailing_comma (bool = True):
-        bibtex_format_block_separator (str = ""):
-        bibtex_format:
-
-    Python writers for generating BibTeX files with various formatting options.
+    """Python writers for generating BibTeX files with various formatting options.
 
     Args:
         options (Dict[str, Any]): Configuration options for BibTeX generation.
