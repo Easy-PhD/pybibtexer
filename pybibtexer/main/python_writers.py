@@ -4,7 +4,7 @@ from typing import Any, Dict, List, Optional, Tuple, Union
 
 from pyadvtools import write_list
 
-from ..bib.bibtexparser import BibtexFormat, Block, Library
+from ..bib.bibtexparser import BibtexFormat, Block, Entry, Library
 from ..bib.core import ConvertLibrayToStr
 from .basic_input import BasicInput
 
@@ -41,7 +41,7 @@ class PythonWriters(BasicInput):
         bib_name_for_abbr (str): Filename for abbreviated bibliography (default: "abbr.bib")
         bib_name_for_zotero (str): Filename for Zotero bibliography (default: "zotero.bib")
         bib_name_for_save (str): Filename for saved bibliography (default: "save.bib")
-        display_google_connected_scite (List[str]): Display options selection from ["google", "connected", "scite"]
+        display_www_google_connected_scite (List[str]): Display options selection from ["www", "google", "connected", "scite"]
         bibtex_format_indent (str): Indentation string for BibTeX formatting (default: "  ")
         bibtex_format_trailing_comma (bool): Whether to include trailing commas in BibTeX entries (default: True)
         bibtex_format_block_separator (str): Separator between BibTeX blocks (default: "")
@@ -61,8 +61,8 @@ class PythonWriters(BasicInput):
         self.bib_name_for_save = options.get("bib_name_for_save", "save.bib")
 
         # Initialize display options
-        self.display_google_connected_scite = options.get(
-            "display_google_connected_scite", ["google", "connected", "scite"]
+        self.display_www_google_connected_scite = options.get(
+            "display_www_google_connected_scite", ["www", "google", "connected", "scite"]
         )
 
         # Initialize BibTeX formatting options
@@ -197,20 +197,13 @@ class PythonWriters(BasicInput):
 
         for key, entry in library.entries_dict.items():
 
-            url = entry["url"] if "url" in entry else ""
-            if len(url) == 0:
-                url = entry["doi"] if "doi" in entry else ""
-                if (len(url) != 0) and (not re.match(r"https*://", url)):
-                    url = f"https://doi.org/{url}"
-
-            link_list = self._generate_link_list(entry)
+            url, link_list = self._generate_link_list(entry)
             patch_bib = ConvertLibrayToStr(_options).generate_str([entry])
 
             v: List[List[str]] = [[], [], patch_bib]
 
             if len(url) != 0:
                 v[0] = [url + "\n"]
-                link_list.insert(0, rf"[www]({url})")
 
             join_link = []
             if link_list:
@@ -226,10 +219,17 @@ class PythonWriters(BasicInput):
             key_url_http_bib_dict.update({key: v})
         return key_url_http_bib_dict
 
-    def _generate_link_list(self, entry) -> List[str]:
+    def _generate_link_list(self, entry: Entry) -> Tuple[str, List[str]]:
         title = entry["title"] if "title" in entry else ""
         if not title:
-            return []
+            return "", []
+
+        url = entry["url"] if "url" in entry else ""
+        if len(url) == 0:
+            url = entry["doi"] if "doi" in entry else ""
+            if (len(url) != 0) and (not re.match(r"https*://", url)):
+                url = f"https://doi.org/{url}"
+        www = f"[www]({url})" if url else ""
 
         title = re.sub(r"\s+", "+", title)
         url_google = f"https://scholar.google.com/scholar?q={title}"
@@ -249,8 +249,9 @@ class PythonWriters(BasicInput):
         scite = f"[Scite]({url_scite})"
 
         link_list = []
-        for i, j in zip(["google", "connected", "scite"], [google, connected, scite]):
-            if i in self.display_google_connected_scite:
-                link_list.append(j)
+        for i, j in zip(["www", "google", "connected", "scite"], [www, google, connected, scite]):
+            if i in self.display_www_google_connected_scite:
+                if j:
+                    link_list.append(j)
 
-        return link_list
+        return url, link_list
