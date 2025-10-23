@@ -93,6 +93,14 @@ class NormalizeFieldValuesInEntry(BlockMiddleware):
     # docstr-coverage: inherited
     def transform_entry(self, entry: Entry, library: Library) -> Block:
         if self.field_key in entry:
+            text = entry[self.field_key]
+            # Convert to lowercase if all of the following conditions are met:
+            # 1. Contains at least one letter character (to exclude pure numbers/symbols)
+            # 2. All letters are uppercase (to exclude mixed case or already lowercase text)
+            # 3. Contains multiple words (to preserve single acronyms/abbreviations)
+            if bool(re.search(r'[A-Za-z]', text)) and text.isupper() and len(text.split(" ")) > 1:
+                entry[self.field_key] = text.lower()
+
             if self.sentence_title == "sentence":
                 entry[self.field_key] = self.generate_standard_sentence_case(entry[self.field_key])
             if self.sentence_title == "title":
