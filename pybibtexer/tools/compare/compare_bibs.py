@@ -36,6 +36,22 @@ def compare_bibs_with_local(
     path_output: str,
     options: Dict[str, Any],
 ) -> None:
+    """
+    Compare bibliography entries with local bibliography collections.
+
+    Processes original bibliography data and compares it against local bib files,
+    categorizing entries into found, not found, and duplicate categories.
+    Results are written to separate output files.
+
+    Args:
+        original_data: Input bibliography data as string or list of strings
+        path_spidered_bibs: Path to pre-collected/spidered bibliography files
+        path_spidering_bibs: Path to actively spidered bibliography files
+        path_output: Output directory for result files
+        options: Configuration options for comparison behavior
+
+            compare_each_entry_with_all_local_bibs: Whether to compare each Entry with all local bib files.
+    """
     path_output = standard_path(path_output)
 
     # generate for original data
@@ -47,7 +63,11 @@ def compare_bibs_with_local(
     original_entry_keys = [entry.key for entry in library.entries]
 
     # generate dict for abbr key entry
-    abbr_key_entries_dict, not_in_local_entries = generate_abbr_key_entry_dict(library, options)
+    if options.get("compare_each_entry_with_all_local_bibs"):
+        abbr_key_entries_dict: Dict[str, Dict[str, Block]] = {"arXiv": {entry.key: entry for entry in library.entries}}
+        not_in_local_entries = []
+    else:
+        abbr_key_entries_dict, not_in_local_entries = generate_abbr_key_entry_dict(library, options)
 
     # compare with local bibs
     tuple_entries = _compare_with_local(abbr_key_entries_dict, path_spidered_bibs, path_spidering_bibs, options)
@@ -191,6 +211,19 @@ def check_equal_for_entry(original_entry, new_entry, compare_field_list: List[st
 def compare_bibs_with_zotero(
     zotero_bib: Union[List[str], str], download_bib: Union[List[str], str], path_output: str, options: Dict[str, Any]
 ) -> None:
+    """
+    Compare downloaded bibliography entries with Zotero library entries.
+
+    Processes both Zotero export and downloaded bibliography files, then compares
+    them to identify entries that exist only in the download set versus entries
+    that exist in both collections.
+
+    Args:
+        zotero_bib: Zotero exported bibliography data as string or list of strings
+        download_bib: Downloaded bibliography data as string or list of strings
+        path_output: Output directory path for result files
+        options: Configuration options for parsing and comparison behavior
+    """
     path_output = standard_path(path_output)
 
     # for zotero bib
