@@ -28,10 +28,10 @@ class BasicInput(object):
     def __init__(self, options: Dict[str, Any]) -> None:
         # full_json_c and full_json_j
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        self._path_templates = os.path.join(os.path.dirname(current_dir), "data", "Templates")
+        self._path_templates = os.path.join(os.path.dirname(current_dir), "data", "templates")
 
-        full_json_c = os.path.join(self._path_templates, "AbbrFull", "conferences.json")
-        full_json_j = os.path.join(self._path_templates, "AbbrFull", "journals.json")
+        full_json_c = os.path.join(self._path_templates, "abbr_full", "conferences.json")
+        full_json_j = os.path.join(self._path_templates, "abbr_full", "journals.json")
 
         _full_json_c = options.get("full_json_c")
         if isinstance(_full_json_c, str) and os.path.isfile(_full_json_c) and os.path.exists(_full_json_c):
