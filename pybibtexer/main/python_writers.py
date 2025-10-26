@@ -24,6 +24,7 @@ class PythonWriters(BasicInput):
         bib_name_for_abbr (str): Filename for abbreviated bibliography (default: "abbr.bib")
         bib_name_for_zotero (str): Filename for Zotero bibliography (default: "zotero.bib")
         bib_name_for_save (str): Filename for saved bibliography (default: "save.bib")
+        join_flag_in_http (str): The join flag for HTTP-related formatting (default: " | " or " |\n")
         display_www_google_connected_scite (List[str]): Display options selection from ["www", "google", "connected", "scite"]
         bibtex_format_indent (str): Indentation string for BibTeX formatting (default: "  ")
         bibtex_format_trailing_comma (bool): Whether to include trailing commas in BibTeX entries (default: True)
@@ -42,6 +43,8 @@ class PythonWriters(BasicInput):
         self.bib_name_for_abbr = options.get("bib_name_for_abbr", "abbr.bib")
         self.bib_name_for_zotero = options.get("bib_name_for_zotero", "zotero.bib")
         self.bib_name_for_save = options.get("bib_name_for_save", "save.bib")
+
+        self.join_flag_in_http = options.get("join_flag_in_http", " | ")  # " |\n"
 
         # Initialize display options
         self.display_www_google_connected_scite = options.get(
@@ -191,7 +194,7 @@ class PythonWriters(BasicInput):
             join_link = []
             if link_list:
                 for i in range(len(link_list) - 1):
-                    join_link.append(link_list[i].strip() + " |\n")
+                    join_link.append(link_list[i].strip() + self.join_flag_in_http)  # " |\n"
                 join_link.append(link_list[-1].strip() + "\n")
 
                 join_link[0] = "(" + join_link[0]

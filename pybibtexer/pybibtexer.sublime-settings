@@ -168,6 +168,10 @@
     "bib_name_for_zotero": "zotero.bib",
     "bib_name_for_save": "save.bib",
 
+    // The join flag for HTTP-related formatting
+    // " | " or " |\n"
+    "join_flag_in_http": " | ",
+
     // choose multiple items ["www", "google", "connected", "scite"]
     "display_www_google_connected_scite": ["www", "google", "connected", "scite"],
 
