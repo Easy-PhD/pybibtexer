@@ -27,8 +27,7 @@ jobs:
 
       - name: Generate changelog
         # run: conventional-changelog -p angular -i CHANGELOG.md -s -r 0
-        # run: conventional-changelog -p angular -i CHANGELOG.md -s
-        run: conventional-changelog -p angular -r 0 > release_notes.md
+        run: conventional-changelog -p angular -i CHANGELOG.md -s
 
       # - name: Commit changelog
       #   run: |
@@ -38,14 +37,10 @@ jobs:
       #     git commit -m "docs: update changelog for ${{ github.ref_name }}" || exit 0
       #     git push
 
-      - name: View generated changelog
-        run: cat release_notes.md
-
       - name: Create GitHub Release
         uses: softprops/action-gh-release@v2
         with:
-          # body_path: CHANGELOG.md
-          body_path: release_notes.md
-          generate_release_notes: false
+          body_path: CHANGELOG.md
+          # generate_release_notes: true
         env:
           GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
