@@ -5,7 +5,7 @@
             "selector": "source.python",
             "working_dir": "${project_path}",
             "path": ".venv/bin:$PATH",
-            "name": "Python3 Local",
+            "name": "Python3 Virtual Env",
             "cmd": ["python3", "-u", "$file"],
             "env": {
                 "PYTHONIOENCODING": "utf-8",
