@@ -56,10 +56,8 @@ class AbbreviateJournalBooktitle(BlockMiddleware):
                     return entry
 
         # Case 2
-        # obtain new_dict
-        abbr_dict_dict = {}
-        for publisher in full_abbr_dict:
-            abbr_dict_dict.update({abbr: full_abbr_dict[publisher][abbr] for abbr in full_abbr_dict[publisher]})
+        # # nested dict
+        abbr_dict_dict = full_abbr_dict
 
         field_content = entry[field_key] if field_key in entry else ""
         field_content = re.sub(r"\(.*\)", "", field_content).strip()

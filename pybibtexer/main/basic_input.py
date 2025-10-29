@@ -48,39 +48,37 @@ class BasicInput(object):
 
         self.options = options
 
+    @staticmethod
+    def load_json_dict(file_path):
+        """Load and parse JSON file, return empty dict if fails."""
+        if os.path.isfile(file_path):
+            with open(file_path, "r") as f:
+                try:
+                    return json.loads(f.read())
+                except Exception as e:
+                    print(e)
+                    return {}
+        return {}
+
     # bib/core
     def _initialize_middlewares(self, options: Dict[str, Any]) -> None:
-        if os.path.isfile(self.full_json_c):
-            with open(self.full_json_c, "r") as f:
-                try:
-                    json_dict = json.loads(f.read())
-                except Exception as e:
-                    print(e)
-                    json_dict = {}
+        # Conferences
+        json_dict = self.load_json_dict(self.full_json_c)
+        full_abbr_inproceedings_dict = {}
+        for flag in ["conferences", "Conferences", "CONFERENCES", "conference", "Conference", "CONFERENCE"]:
+            full_abbr_inproceedings_dict = {p: json_dict[p].get(flag, {}) for p in json_dict}
+            if full_abbr_inproceedings_dict:
+                break
+        full_abbr_inproceedings_dict = {abbr: v[abbr] for v in full_abbr_inproceedings_dict.values() for abbr in v}
 
-                full_abbr_inproceedings_dict = {}
-                for flag in ["conferences", "Conferences", "CONFERENCES", "conference", "Conference", "CONFERENCE"]:
-                    full_abbr_inproceedings_dict = {p: json_dict[p].get(flag, {}) for p in json_dict}
-                    if full_abbr_inproceedings_dict:
-                        break
-        else:
-            full_abbr_inproceedings_dict = {}
-
-        if os.path.isfile(self.full_json_j):
-            with open(self.full_json_j, "r") as f:
-                try:
-                    json_dict = json.loads(f.read())
-                except Exception as e:
-                    print(e)
-                    json_dict = {}
-
-                full_abbr_article_dict = {}
-                for flag in ["journals", "Journals", "JOURNALS", "journal", "Journal", "JOURNAL"]:
-                    full_abbr_article_dict = {p: json_dict[p].get("journals", {}) for p in json_dict}
-                    if full_abbr_article_dict:
-                        break
-        else:
-            full_abbr_article_dict = {}
+        # Journals
+        json_dict = self.load_json_dict(self.full_json_j)
+        full_abbr_article_dict = {}
+        for flag in ["journals", "Journals", "JOURNALS", "journal", "Journal", "JOURNAL"]:
+            full_abbr_article_dict = {p: json_dict[p].get("journals", {}) for p in json_dict}
+            if full_abbr_article_dict:
+                break
+        full_abbr_article_dict = {abbr: v[abbr] for v in full_abbr_article_dict.values() for abbr in v}
 
         self.full_abbr_inproceedings_dict = full_abbr_inproceedings_dict
         self.full_abbr_article_dict = full_abbr_article_dict
