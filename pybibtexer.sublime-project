@@ -4,9 +4,10 @@
             "file_patterns": ["*.py"],
             "selector": "source.python",
             "working_dir": "${project_path}",
-            "path": ".venv/bin:$PATH",
             "name": "Python3 Virtual Env",
-            "cmd": ["python3", "-u", "$file"],
+            "target": "terminus_exec",
+            "cancel": "terminus_cancel_build",
+            "shell_cmd": "\".venv/bin/python3\" -u \"$file\"",
             "env": {
                 "PYTHONIOENCODING": "utf-8",
                 "PYTHONPATH": ".",
