@@ -6,7 +6,49 @@ from typing import Any
 from ..main.utils import process_user_conferences_journals_json
 
 
-class GenerateJSON:
+def run_generate_jsons(
+    default_full_json_c: str,
+    default_full_json_j: str,
+    full_biblatex: str,
+    user_full_json_c: str,
+    user_full_json_j: str,
+    merge_json: bool = False
+) -> None:
+    """Execute the JSON generation process for conferences and journals.
+
+    Args:
+        default_full_json_c (str): Path to the default conferences JSON file
+            Contains predefined conference abbreviations and full names
+        default_full_json_j (str): Path to the default journals JSON file
+            Contains predefined journal abbreviations and full names
+        full_biblatex (str): Path to the BibLaTeX source file
+            Used as input for generating/updating JSON data
+        user_full_json_c (str): Path to the user conferences JSON file
+            Stores user-specific conference abbreviations and full names
+        user_full_json_j (str): Path to the user journals JSON file
+            Stores user-specific journal abbreviations and full names
+        merge_json (bool, optional): Flag indicating whether to merge JSON data
+            If True, merges data from multiple sources; if False, do nothing
+            Defaults to False
+
+    Returns:
+        None: This function does not return any value
+
+    Notes:
+        This function serves as a convenient wrapper to instantiate and execute
+        the GenerateDefaultJSONs class with the provided parameters.
+    """
+    GenerateDefaultJSONs(
+        default_full_json_c,
+        default_full_json_j,
+        full_biblatex,
+        user_full_json_c,
+        user_full_json_j,
+    ).run(merge_json)
+    return None
+
+
+class GenerateDefaultJSONs:
     def __init__(
         self,
         default_full_json_c: str,

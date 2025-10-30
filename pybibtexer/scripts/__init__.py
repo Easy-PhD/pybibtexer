@@ -1,5 +1,5 @@
 __all__ = [
-    "GenerateJSON"
+    "run_generate_jsons"
 ]
 
-from .generate_json import GenerateJSON
+from .run_generate_jsons import run_generate_jsons
