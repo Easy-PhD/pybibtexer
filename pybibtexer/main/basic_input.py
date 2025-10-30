@@ -93,7 +93,14 @@ class BasicInput(object):
                 break
 
         # Flatten the nested dictionary structure to {abbr: value} format
+        # Convert from {publisher: {abbr: data}} to {abbr: data}
         full_abbr_inproceedings_dict = {abbr: v[abbr] for v in full_abbr_inproceedings_dict.values() for abbr in v}
+        # Standardize the structure to ensure consistent format
+        # Extract only usefull information ("names_full" and "names_abbr")
+        full_abbr_inproceedings_dict = {
+            k: {"names_full": v.get("names_full", []), "names_abbr": v.get("names_abbr", [])}
+            for k, v in full_abbr_inproceedings_dict.items()
+        }
 
         # Process user journals JSON file
         json_dict = self.load_json_dict(options.get("full_json_j", ""))
@@ -106,6 +113,14 @@ class BasicInput(object):
                 break
 
         # Flatten the nested dictionary structure to {abbr: value} format
+        # Convert from {publisher: {abbr: data}} to {abbr: data}
         full_abbr_article_dict = {abbr: v[abbr] for v in full_abbr_article_dict.values() for abbr in v}
+        # Standardize the structure to ensure consistent format
+        # Extract only usefull information ("names_full" and "names_abbr")
+        full_abbr_article_dict = {
+            k: {"names_full": v.get("names_full", []), "names_abbr": v.get("names_abbr", [])}
+            for k, v in full_abbr_article_dict.items()
+        }
 
+        # Return both processed dictionaries
         return full_abbr_inproceedings_dict, full_abbr_article_dict
