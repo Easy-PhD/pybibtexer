@@ -1,7 +1,7 @@
 import os
 from typing import Any, Dict
 
-from local_config import local_options
+from local_config import LOCAL_OPTIONS
 from pyadvtools import delete_python_cache
 
 from pybibtexer.tools import CheckDeleteFormatMoveSpideredBibs
@@ -24,11 +24,11 @@ if __name__ == "__main__":
         "exclude_publisher_list": [],
         "exclude_abbr_list": [],
     }
-    options["full_json_c"] = local_options["full_json_c"]
-    options["full_json_j"] = local_options["full_json_j"]
+    options["full_json_c"] = LOCAL_OPTIONS["full_json_c"]
+    options["full_json_j"] = LOCAL_OPTIONS["full_json_j"]
 
-    path_storage = os.path.join(local_options["path_spidering_bibs"], "spider_c")
-    path_shutil = os.path.join(local_options["path_spidered_bibs"], "Conferences")
+    path_storage = os.path.join(LOCAL_OPTIONS["path_spidering_bibs"], "spider_c")
+    path_shutil = os.path.join(LOCAL_OPTIONS["path_spidered_bibs"], "Conferences")
 
     CheckDeleteFormatMoveSpideredBibs(path_storage, path_shutil, options).check_delete_format_move()
     delete_python_cache(os.path.dirname(os.path.dirname(os.path.realpath(__file__))))

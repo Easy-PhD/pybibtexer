@@ -1,7 +1,7 @@
 import os
 from typing import Any, Dict
 
-from local_config import local_options
+from local_config import LOCAL_OPTIONS
 from pyadvtools import delete_python_cache
 
 from pybibtexer.tools import (
@@ -38,12 +38,12 @@ if __name__ == "__main__":
         "exclude_publisher_list": [],
         "exclude_abbr_list": [],
     }
-    options["full_json_c"] = local_options["full_json_c"]
-    options["full_json_j"] = local_options["full_json_j"]
+    options["full_json_c"] = LOCAL_OPTIONS["full_json_c"]
+    options["full_json_j"] = LOCAL_OPTIONS["full_json_j"]
 
     for i, j in zip(["Journals", "Conferences"], ["Journals", "Conferences"]):
-        path_storage = os.path.join(local_options["path_spidered_bibs"], i)
-        path_output = os.path.join(local_options["path_output"], os.path.join("Format_Local_All", j))
+        path_storage = os.path.join(LOCAL_OPTIONS["path_spidered_bibs"], i)
+        path_output = os.path.join(LOCAL_OPTIONS["path_output"], os.path.join("Format_Local_All", j))
         FormatAllConferenceOrJournalPapers(path_storage, path_output).run(options)
 
     # delete caches

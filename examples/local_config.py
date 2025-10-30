@@ -1,7 +1,15 @@
 import os
 
-local_options = {
-    "full_json_c": os.path.expanduser(os.path.join("", "conferences.json")),
-    "full_json_j": os.path.expanduser(os.path.join("", "journals.json")),
-    "path_spidered_bibs": os.path.expanduser("")
+
+def update_path(input: str):
+    return os.path.expandvars(os.path.expanduser(input))
+
+
+LOCAL_OPTIONS = {
+    "full_json_c": update_path(os.path.join("", "conferences.json")),
+    "full_json_j": update_path(os.path.join("", "journals.json")),
+    "zotero_biblatex": update_path(""),
+    "zotero_bibtex": update_path(""),
+    "path_spidered_bibs": update_path(""),
+    "path_spidering_bibs": update_path(""),
 }
