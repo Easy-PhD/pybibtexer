@@ -12,7 +12,6 @@ class BasicInput(object):
         options (Dict[str, Any]): Options.
 
     Attributes:
-
         full_abbr_article_dict (Dict[str, str]): Full abbr article dict.
         full_abbr_inproceedings_dict (Dict[str, str]): Full abbr inproceedings dict.
         full_names_in_json (str): Full names in json.
@@ -20,31 +19,22 @@ class BasicInput(object):
 
         options (Dict[str, Any]): Options.
 
-    Notes:
-        The structure of full_json_c follows the format {"publisher": {"conferences": {"abbr": {}}}},
-            while full_json_j adheres to the format {"publisher": {"journals": {"abbr": {}}}}.
     """
 
     def __init__(self, options: Dict[str, Any]) -> None:
-        # full_json_c and full_json_j
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        self._path_templates = os.path.join(os.path.dirname(current_dir), "data", "templates")
+        # Load default conferences and journals abbreviations from built-in templates
+        default_abbr_dict_c, default_abbr_dict_j = self._process_default_conferences_journals_json()
 
-        full_json_c = os.path.join(self._path_templates, "abbr_full", "conferences.json")
-        full_json_j = os.path.join(self._path_templates, "abbr_full", "journals.json")
+        # Load user-defined conferences and journals abbreviations from provided JSON files
+        user_abbr_dict_c, user_abbr_dict_j = self._process_user_conferences_journals_json(options)
 
-        _full_json_c = options.get("full_json_c")
-        if isinstance(_full_json_c, str) and os.path.isfile(_full_json_c):
-            full_json_c = _full_json_c
+        # Merge dictionaries: user abbreviations override default ones for the same keys
+        options["full_abbr_article_dict"] = {**default_abbr_dict_j, **user_abbr_dict_j}
+        options["full_abbr_inproceedings_dict"] = {**default_abbr_dict_c, **user_abbr_dict_c}
 
-        _full_json_j = options.get("full_json_j")
-        if isinstance(_full_json_j, str) and os.path.isfile(_full_json_j):
-            full_json_j = _full_json_j
-
-        self.full_json_c = full_json_c
-        self.full_json_j = full_json_j
-
-        self._initialize_middlewares(options)
+        # Set JSON field names for full and abbreviated names
+        options["full_names_in_json"] = "names_full"
+        options["abbr_names_in_json"] = "names_abbr"
 
         self.options = options
 
@@ -60,41 +50,62 @@ class BasicInput(object):
                     return {}
         return {}
 
-    # bib/core
-    def _initialize_middlewares(self, options: Dict[str, Any]) -> None:
-        # Conferences
-        json_dict = self.load_json_dict(self.full_json_c)
+    def _process_default_conferences_journals_json(self):
+        """Process default conferences and journals JSON files from built-in templates.
+
+        Notes:
+            The structure of full_json_c follows the format
+                {"abbr": {"names_abbr": [], "names_full": []}},
+            while full_json_j adheres to the format
+                {"abbr": {"names_abbr": [], "names_full": []}}.
+        """
+        # Get current directory and construct path to templates
+        current_dir = os.path.dirname(os.path.abspath(__file__))
+        path_templates = os.path.join(os.path.dirname(current_dir), "data", "templates")
+
+        # Load conferences abbreviations dictionary
+        full_json_c = os.path.join(path_templates, "abbr_full", "conferences.json")
+        full_abbr_inproceedings_dict = self.load_json_dict(full_json_c)
+
+        # Load journals abbreviations dictionary
+        full_json_j = os.path.join(path_templates, "abbr_full", "journals.json")
+        full_abbr_article_dict = self.load_json_dict(full_json_j)
+
+        return full_abbr_inproceedings_dict, full_abbr_article_dict
+
+    def _process_user_conferences_journals_json(self, options: dict):
+        """Process user-defined conferences and journals JSON files.
+
+        Notes:
+            The structure of full_json_c follows the format
+                {"publisher": {"conferences": {"abbr": {"names_abbr": [], "names_full": []}}}},
+            while full_json_j adheres to the format
+                {"publisher": {"journals": {"abbr": {"names_abbr": [], "names_full": []}}}}.
+        """
+        # Process user conferences JSON file
+        json_dict = self.load_json_dict(options.get("full_json_c", ""))
         full_abbr_inproceedings_dict = {}
+
+        # Try different possible keys for conferences section in JSON structure
         for flag in ["conferences", "Conferences", "CONFERENCES", "conference", "Conference", "CONFERENCE"]:
             full_abbr_inproceedings_dict = {p: json_dict[p].get(flag, {}) for p in json_dict}
             if full_abbr_inproceedings_dict:
                 break
+
+        # Flatten the nested dictionary structure to {abbr: value} format
         full_abbr_inproceedings_dict = {abbr: v[abbr] for v in full_abbr_inproceedings_dict.values() for abbr in v}
 
-        # Journals
-        json_dict = self.load_json_dict(self.full_json_j)
+        # Process user journals JSON file
+        json_dict = self.load_json_dict(options.get("full_json_j", ""))
         full_abbr_article_dict = {}
+
+        # Try different possible keys for journals section in JSON structure
         for flag in ["journals", "Journals", "JOURNALS", "journal", "Journal", "JOURNAL"]:
             full_abbr_article_dict = {p: json_dict[p].get("journals", {}) for p in json_dict}
             if full_abbr_article_dict:
                 break
+
+        # Flatten the nested dictionary structure to {abbr: value} format
         full_abbr_article_dict = {abbr: v[abbr] for v in full_abbr_article_dict.values() for abbr in v}
 
-        self.full_abbr_inproceedings_dict = full_abbr_inproceedings_dict
-        self.full_abbr_article_dict = full_abbr_article_dict
-
-        full_names_in_json = options.get("full_names_in_json", "names_full")
-        if not full_names_in_json:
-            full_names_in_json = "names_full"
-        self.full_names_in_json = full_names_in_json
-
-        abbr_names_in_json = options.get("abbr_names_in_json", "names_abbr")
-        if not abbr_names_in_json:
-            abbr_names_in_json = "names_abbr"
-        self.abbr_names_in_json = abbr_names_in_json
-
-        options["full_abbr_article_dict"] = self.full_abbr_article_dict
-        options["full_abbr_inproceedings_dict"] = self.full_abbr_inproceedings_dict
-
-        options["full_names_in_json"] = self.full_names_in_json
-        options["abbr_names_in_json"] = self.abbr_names_in_json
+        return full_abbr_inproceedings_dict, full_abbr_article_dict
