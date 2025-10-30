@@ -4,12 +4,12 @@
     "names_full": ["Applied Mathematics and Computation"]
   },
   "AAP": {
-    "names_abbr": ["Adv. Appl. Probab."],
-    "names_full": ["Advances in Applied Probability"]
+    "names_full": ["Advances in Applied Probability"],
+    "names_abbr": ["Adv. Appl. Probab."]
   },
   "ACCESS": {
-    "names_abbr": ["IEEE Access"],
-    "names_full": ["IEEE Access"]
+    "names_full": ["IEEE Access"],
+    "names_abbr": ["IEEE Access"]
   },
   "ACME": {
     "names_abbr": ["Arch. Comput. Methods Eng."],
@@ -24,40 +24,40 @@
     "names_full": ["Alexandria Engineering Journal"]
   },
   "AIAAJ": {
-    "names_abbr": ["AIAA J."],
-    "names_full": ["AIAA Journal"]
+    "names_full": ["AIAA Journal"],
+    "names_abbr": ["AIAA J."]
   },
   "AIJ": {
-    "names_abbr": ["Artif. Intell."],
-    "names_full": ["Artificial Intelligence"]
+    "names_full": ["Artificial Intelligence"],
+    "names_abbr": ["Artif. Intell."]
   },
   "AIOPEN": {
     "names_abbr": ["AI Open"],
     "names_full": ["AI Open"]
   },
   "AIR": {
-    "names_abbr": ["Artif. Intell. Rev."],
-    "names_full": ["Artificial Intelligence Review"]
+    "names_full": ["Artificial Intelligence Review"],
+    "names_abbr": ["Artif. Intell. Rev."]
   },
   "Alg": {
-    "names_abbr": ["Algorithmica"],
-    "names_full": ["Algorithmica"]
+    "names_full": ["Algorithmica"],
+    "names_abbr": ["Algorithmica"]
   },
   "ALGO": {
     "names_abbr": ["Algorithms"],
     "names_full": ["Algorithms"]
   },
   "ALJ": {
-    "names_abbr": ["Artif. Life"],
-    "names_full": ["Artificial Life"]
+    "names_full": ["Artificial Life"],
+    "names_abbr": ["Artif. Life"]
   },
   "AMAI": {
-    "names_abbr": ["Ann. Math. Artif. Intell."],
-    "names_full": ["Annals of Mathematics and Artificial Intelligence"]
+    "names_full": ["Annals of Mathematics and Artificial Intelligence"],
+    "names_abbr": ["Ann. Math. Artif. Intell."]
   },
   "AMC": {
-    "names_abbr": ["Appl. Math. Comput."],
-    "names_full": ["Applied Mathematics and Computation"]
+    "names_full": ["Applied Mathematics and Computation"],
+    "names_abbr": ["Appl. Math. Comput."]
   },
   "AOM": {
     "names_abbr": ["Ann. Math."],
@@ -72,16 +72,16 @@
     "names_full": ["Annals of Operations Research"]
   },
   "AOS": {
-    "names_abbr": ["Ann. Stat."],
-    "names_full": ["The Annals of Statistics"]
+    "names_full": ["Annals of Statistics", "The Annals of Statistics"],
+    "names_abbr": ["Ann. Stat.", "Ann. Stat."]
   },
   "APAREV": {
     "names_abbr": ["Psyc. Rev."],
     "names_full": ["Psychological Review"]
   },
   "APIN": {
-    "names_abbr": ["Appl. Intell."],
-    "names_full": ["Applied Intelligence"]
+    "names_full": ["Applied Intelligence"],
+    "names_abbr": ["Appl. Intell."]
   },
   "APJOR": {
     "names_abbr": ["Asia Pac. J. Oper. Res."],
@@ -100,28 +100,28 @@
     "names_full": ["Applied Sciences"]
   },
   "ASOC": {
-    "names_abbr": ["Appl. Soft Comput."],
-    "names_full": ["Applied Soft Computing"]
+    "names_full": ["Applied Soft Computing"],
+    "names_abbr": ["Appl. Soft. Comput."]
   },
   "AUTCON": {
-    "names_abbr": ["Autom. Construct."],
-    "names_full": ["Automation in Construction"]
+    "names_full": ["Automation in Construction"],
+    "names_abbr": ["Autom. Construct."]
   },
   "AUTOM": {
-    "names_abbr": ["Automatica"],
-    "names_full": ["Automatica"]
+    "names_full": ["Automatica"],
+    "names_abbr": ["Automatica"]
   },
   "BCYB": {
-    "names_abbr": ["Biol. Cybern."],
-    "names_full": ["Biological Cybernetics"]
+    "names_full": ["Biological Cybernetics"],
+    "names_abbr": ["Biol. Cybern."]
   },
   "BIOINF": {
     "names_abbr": ["Bioinformatics"],
     "names_full": ["Bioinformatics"]
   },
   "BIOMET": {
-    "names_abbr": ["Biometrika"],
-    "names_full": ["Biometrika"]
+    "names_full": ["Biometrika"],
+    "names_abbr": ["Biometrika"]
   },
   "BITNN": {
     "names_abbr": ["BIT Num. Math."],
@@ -136,12 +136,12 @@
     "names_full": ["The Bell System Technical Journal"]
   },
   "CAAITIT": {
-    "names_abbr": ["CAAI Trans. Intell. Technol."],
-    "names_full": ["CAAI Transactions on Intelligence Technology"]
+    "names_full": ["CAAI Transactions on Intelligence Technology"],
+    "names_abbr": ["CAAI Trans. Intell. Technol."]
   },
   "CACM": {
-    "names_abbr": ["Commun. ACM"],
-    "names_full": ["Communications of The ACM"]
+    "names_full": ["Communications of the ACM"],
+    "names_abbr": ["Commun. ACM"]
   },
   "CAN": {
     "names_abbr": ["SIGARCH Comput. Archit. News"],
@@ -152,16 +152,16 @@
     "names_full": ["CIRP Annals-Manufacturing Technology"]
   },
   "CIS": {
-    "names_abbr": ["Complex Intell. Syst."],
-    "names_full": ["Complex \\& Intelligent Systems"]
+    "names_full": ["Complex & Intelligent Systems", "Complex and Intelligent Systems"],
+    "names_abbr": ["Complex Intell. Syst.", "Complex Intell. Syst."]
   },
   "CJIST": {
     "names_abbr": ["Chinese J. Intell. Sci. Technol."],
     "names_full": ["Chinese Journal of Intelligent Science and Techology"]
   },
   "CMAME": {
-    "names_abbr": ["Comput. Methods Appl. Mech. Eng."],
-    "names_full": ["Computer Methods in Applied Mechanics and Engineering"]
+    "names_full": ["Computer Methods in Applied Mechanics and Engineering"],
+    "names_abbr": ["Comput. Meth. Appl. Mech. Eng."]
   },
   "CNKIJOS": {
     "names_abbr": ["J. Softw."],
@@ -172,20 +172,20 @@
     "names_full": ["Computational Optimization and Applications"]
   },
   "COAP": {
-    "names_abbr": ["Comput. Optim. Appl."],
-    "names_full": ["Computational Optimization and Applications"]
+    "names_full": ["Computational Optimization and Applications"],
+    "names_abbr": ["Comput. Optim. Appl."]
   },
   "COMCOM": {
-    "names_abbr": ["Comput. Commun."],
-    "names_full": ["Computer Communications"]
+    "names_full": ["Computer Communications"],
+    "names_abbr": ["Comput. Commun."]
   },
   "COMJNL": {
-    "names_abbr": ["Comput. J."],
-    "names_full": ["The Computer Journal"]
+    "names_full": ["The Computer Journal"],
+    "names_abbr": ["Comput. J."]
   },
   "COR": {
-    "names_abbr": ["Comput. Oper. Res."],
-    "names_full": ["Computers \\& Operations Research"]
+    "names_full": ["Computers & Operations Research", "Computers and Operations Research"],
+    "names_abbr": ["Comput. Oper. Res.", "Comput. Oper. Res."]
   },
   "CPC": {
     "names_abbr": ["Comb. Probab. Comput."],
@@ -204,20 +204,20 @@
     "names_full": ["Composite Structures"]
   },
   "CSUR": {
-    "names_abbr": ["ACM Comput. Surv."],
-    "names_full": ["ACM Computing Surveys"]
+    "names_full": ["ACM Computing Surveys"],
+    "names_abbr": ["ACM Comput. Surv."]
   },
   "CSYST": {
     "names_abbr": ["Complex Syst."],
     "names_full": ["Complex Systems"]
   },
   "EAAI": {
-    "names_abbr": ["Eng. Appl. Artif. Intell."],
-    "names_full": ["Engineering Applications of Artificial Intelligence"]
+    "names_full": ["Engineering Applications of Artificial Intelligence"],
+    "names_abbr": ["Eng. Appl. Artif. Intell."]
   },
   "ECJ": {
-    "names_abbr": ["Evol. Comput."],
-    "names_full": ["Evolutionary Computation"]
+    "names_full": ["Evolutionary Computation"],
+    "names_abbr": ["Evol. Comput."]
   },
   "ECMA": {
     "names_abbr": ["Econometrica"],
@@ -228,16 +228,16 @@
     "names_full": ["Ethology, Ecology \\& Evolution"]
   },
   "EI": {
-    "names_abbr": ["Evol. Intell."],
-    "names_full": ["Evolutionary Intelligence"]
+    "names_full": ["Evolutionary Intelligence"],
+    "names_abbr": ["Evol. Intell."]
   },
   "EJOR": {
-    "names_abbr": ["Eur. J. Oper. Res."],
-    "names_full": ["European Journal of Operational Research"]
+    "names_full": ["European Journal of Operational Research"],
+    "names_abbr": ["Eur. J. Oper. Res."]
   },
   "ENGO": {
-    "names_abbr": ["Eng. Optim."],
-    "names_full": ["Engineering Optimization"]
+    "names_full": ["Engineering Optimization"],
+    "names_abbr": ["Eng. Optim."]
   },
   "EOPTIM": {
     "names_abbr": ["Eng. Optim."],
@@ -252,20 +252,20 @@
     "names_full": ["Expert Systems with Applications"]
   },
   "ESWA": {
-    "names_abbr": ["Expert Syst. Appl."],
-    "names_full": ["Expert Systems with Applications"]
+    "names_full": ["Expert Systems with Applications"],
+    "names_abbr": ["Expert Syst. Appl."]
   },
   "EXSY": {
-    "names_abbr": ["Expert Syst."],
-    "names_full": ["Expert Systems"]
+    "names_full": ["Expert Systems"],
+    "names_abbr": ["Expert Syst."]
   },
   "FoCM": {
-    "names_abbr": ["Found. Comput. Math."],
-    "names_full": ["Foundations of Computational Mathematics"]
+    "names_full": ["Foundations of Computational Mathematics"],
+    "names_abbr": ["Found. Comput. Math."]
   },
   "FODM": {
-    "names_abbr": ["Fuzzy Optim. Decis. Mak."],
-    "names_full": ["Fuzzy Optimization and Decision Making"]
+    "names_full": ["Fuzzy Optimization and Decision Making"],
+    "names_abbr": ["Fuzzy Optim. Decis. Mak."]
   },
   "FTCGV": {
     "names_abbr": ["Found. Trends Comput. Graph. Vis."],
@@ -276,8 +276,8 @@
     "names_full": ["Foundations and Trends in Machine Learning"]
   },
   "FTSP": {
-    "names_abbr": ["Found. Trends Signal Process."],
-    "names_full": ["Foundations and Trends in Signal Processing"]
+    "names_full": ["Foundations and Trends in Signal Processing", "Foundations and Trends® in Signal Processing"],
+    "names_abbr": ["Found. Trends Signal Process.", "Found. Trends Signal Process."]
   },
   "FUIN": {
     "names_abbr": ["Fund. Inform."],
@@ -288,8 +288,8 @@
     "names_full": ["Future Generation Computer Systems"]
   },
   "GPEM": {
-    "names_abbr": ["Genet. Program. Evol. Mach."],
-    "names_full": ["Genetic Programming and Evolvable Machines"]
+    "names_full": ["Genetic Programming and Evolvable Machines"],
+    "names_abbr": ["Genet. Program. Evol. Mach."]
   },
   "IAST": {
     "names_abbr": ["ISA Trans."],
@@ -304,20 +304,20 @@
     "names_full": ["IET Microwaves Antennas \\& Propagation"]
   },
   "IJAA": {
-    "names_abbr": ["Interfaces"],
-    "names_full": ["Interfaces"]
+    "names_full": ["INFORMS Journal on Applied Analysis"],
+    "names_abbr": ["INFORMS. J. Appl. Anal."]
   },
   "IJAC": {
     "names_abbr": ["Int. J. Automat. Comput."],
     "names_full": ["International Journal of Automation and Computing"]
   },
   "IJAIT": {
-    "names_abbr": ["Int. J. Aritf. Intell. Tools"],
-    "names_full": ["International Journal on Artificial Intelligence Tools"]
+    "names_full": ["International Journal on Artificial Intelligence Tools"],
+    "names_abbr": ["Int. J. Aritf. Intell. Tools"]
   },
   "IJARS": {
-    "names_abbr": ["Int. J. Adv. Robot. Syst."],
-    "names_full": ["International Journal of Advanced Robotic Systems"]
+    "names_full": ["International Journal of Advanced Robotic Systems"],
+    "names_abbr": ["Int. J. Adv. Robot. Syst."]
   },
   "IJBIC": {
     "names_abbr": ["Int. J. Bio-Inspired Comput."],
@@ -328,44 +328,44 @@
     "names_full": ["International Journal of Crashworthiness"]
   },
   "IJCIA": {
-    "names_abbr": ["Int. J. Comput. Intell. Appl."],
-    "names_full": ["International Journal of Computational Intelligence and Applications"]
+    "names_full": ["International Journal of Computational Intelligence and Applications"],
+    "names_abbr": ["Int. J. Comput. Intell. Appl."]
   },
   "IJCV": {
-    "names_abbr": ["Int. J. Comput. Vis."],
-    "names_full": ["International Journal of Computer Vision"]
+    "names_full": ["International Journal of Computer Vision"],
+    "names_abbr": ["Int. J. Comput. Vis."]
   },
   "IJFS": {
-    "names_abbr": ["Int. J. Fuzzy Syst."],
-    "names_full": ["International Journal of Fuzzy Systems"]
+    "names_full": ["International Journal of Fuzzy Systems"],
+    "names_abbr": ["Int. J. Fuzzy Syst."]
   },
   "IJIIDS": {
     "names_abbr": ["Int. J. Intell. Inf. Data. Syst."],
     "names_full": ["International Journal of Intelligent Information and Database Systems"]
   },
   "IJIS": {
-    "names_abbr": ["Int. J. Intell. Syst."],
-    "names_full": ["International Journal of Intelligent Systems"]
+    "names_full": ["International Journal of Intelligent Systems"],
+    "names_abbr": ["Int. J. Intell. Syst."]
   },
   "IJITDM": {
-    "names_abbr": ["Int. J. Inf. Tech. Decis."],
-    "names_full": ["International Journal of Information Technology \\& Decision Making"]
+    "names_full": ["International Journal of Information Technology & Decision Making"],
+    "names_abbr": ["Int. J. Inf. Tech. Decis."]
   },
   "IJMLC": {
-    "names_abbr": ["Int. J. Mach. Learn. Cybern."],
-    "names_full": ["International Journal of Machine Learning and Cybernetics"]
+    "names_full": ["International Journal of Machine Learning and Cybernetics"],
+    "names_abbr": ["Int. J. Mach. Learn. Cybern."]
   },
   "IJMLCYB": {
     "names_abbr": ["Int. J. Mach. Learn. Cyber."],
     "names_full": ["International Journal of Machine Learning and Cybernetics"]
   },
   "IJOC": {
-    "names_abbr": ["ORSA J. Comput."],
-    "names_full": ["ORSA Journal on Computing"]
+    "names_full": ["INFORMS Journal on Computing"],
+    "names_abbr": ["INFORMS J. Comput."]
   },
   "IJPRAI": {
-    "names_abbr": ["Int. J. Patt. Recogn. Artif. Intell."],
-    "names_full": ["International Journal of Pattern Recognition and Artificial Intelligence"]
+    "names_full": ["International Journal of Pattern Recognition and Artificial Intelligence"],
+    "names_abbr": ["Int. J. Pattern Recognit. Artif. Intell."]
   },
   "IJSC": {
     "names_abbr": ["Int.  J. Syst. Sci."],
@@ -376,80 +376,83 @@
     "names_full": ["International Journal of Swarm Intelligence Research"]
   },
   "IJSS": {
-    "names_abbr": ["Int.  J. Syst. Sci."],
-    "names_full": ["International Journal of Systems Science"]
+    "names_full": ["International Journal of Systems Science"],
+    "names_abbr": ["Int. J. Syst. Sci."]
   },
   "IndRes": {
     "names_abbr": ["Ind. Res."],
     "names_full": ["Industrial Research"]
   },
   "IPL": {
-    "names_abbr": ["Inf. Process. Lett."],
-    "names_full": ["Information Processing Letters"]
+    "names_full": ["Information Processing Letters"],
+    "names_abbr": ["Inf. Process. Lett."]
   },
   "IPSJTCVA": {
     "names_abbr": ["IPSJ Trans. Comput. Vis. Appl."],
     "names_full": ["IPSJ Transactions on Computer Vision and Applications"]
   },
   "ISAT": {
-    "names_abbr": ["ISA Trans."],
-    "names_full": ["ISA Transactions"]
+    "names_full": ["ISA Transactions"],
+    "names_abbr": ["ISA Trans."]
   },
   "ISCI": {
-    "names_abbr": ["Inf. Sci."],
-    "names_full": ["Information Sciences"]
+    "names_full": ["Information Sciences"],
+    "names_abbr": ["Inf. Sci."]
   },
   "JACM": {
-    "names_abbr": ["J. ACM"],
-    "names_full": ["Journal of the ACM"]
+    "names_full": ["Journal of the ACM"],
+    "names_abbr": ["J. ACM"]
   },
   "JACT": {
-    "names_abbr": ["J. Algo. Comput. Technol."],
-    "names_full": ["Journal of Algorithms \\& Computational Technology"]
+    "names_full": ["Journal of Algorithms & Computational Technology"],
+    "names_abbr": ["J. Algo. Comput. Technol."]
   },
   "JAIR": {
-    "names_abbr": ["J. Artif. Intell. Res."],
-    "names_full": ["Journal of Artificial Intelligence Research"]
+    "names_full": ["Journal of Artificial Intelligence Research"],
+    "names_abbr": ["J. Artif. Intell. Res."]
   },
   "JAMC": {
-    "names_abbr": ["J. Appl. Math. Comput."],
-    "names_full": ["Journal of Applied Mathematics and Computing"]
+    "names_full": ["Journal of Applied Mathematics and Computing"],
+    "names_abbr": ["J. Appl. Math. Comput."]
   },
   "JAS": {
     "names_abbr": ["IEEE/CAA J. Autom. Sinica"],
     "names_full": ["IEEE/CAA Journal of Automatica Sinica"]
   },
   "JASA": {
-    "names_abbr": ["J. Am. Stat. Assoc."],
-    "names_full": ["Journal of the American Statistical Association"]
+    "names_full": ["Journal of the American Statistical Association"],
+    "names_abbr": ["J. Am. Stat. Assoc."]
   },
   "JCO": {
-    "names_abbr": ["J. Comb. Optim."],
-    "names_full": ["Journal of Combinatorial Optimization"]
+    "names_full": ["Journal of Combinatorial Optimization"],
+    "names_abbr": ["J. Comb. Optim."]
   },
   "JCP": {
-    "names_abbr": ["J. Chem. Phys."],
-    "names_full": ["The Journal of Chemical Physics"]
+    "names_full": ["Journal of Chemical Physics", "The Journal of Chemical Physics"],
+    "names_abbr": ["J. Chem. Phys.", "J. Chem. Phys."]
   },
   "JCPC": {
     "names_abbr": ["Comput. Phys. Commun."],
     "names_full": ["Computer Physics Communications"]
   },
   "JDA": {
-    "names_abbr": ["J. Discret. Algo."],
-    "names_full": ["Journal of Discrete Algorithms"]
+    "names_full": ["Journal of Discrete Algorithms"],
+    "names_abbr": ["J. Discret. Algo."]
   },
   "JETAI": {
-    "names_abbr": ["J. Exp. Theor. Artif. Intell."],
-    "names_full": ["Journal of Experimental \\& Theoretical Artificial Intelligence"]
+    "names_full": [
+      "Journal of Experimental and Theoretical Artificial Intelligence",
+      "Journal of Experimental & Theoretical Artificial Intelligence"
+    ],
+    "names_abbr": ["J. Exp. Theor. Artif. Intell.", "J. Exp. Theor. Artif. Intell."]
   },
   "JGO": {
-    "names_abbr": ["J. Glob. Optim."],
-    "names_full": ["Journal of Global Optimization"]
+    "names_full": ["Journal of Global Optimization"],
+    "names_abbr": ["J. Glob. Optim."]
   },
   "JIM": {
-    "names_abbr": ["J. Intell. Manuf."],
-    "names_full": ["Journal of Intelligent Manufacturing"]
+    "names_full": ["Journal of Intelligent Manufacturing"],
+    "names_abbr": ["J. Intell. Manuf."]
   },
   "JLP": {
     "names_abbr": ["J. Logic Program."],
@@ -460,32 +463,32 @@
     "names_full": ["Journal of Mathematical Finance"]
   },
   "JMLR": {
-    "names_abbr": ["J. Mach. Learn. Res."],
-    "names_full": ["Journal of Machine Learning Research"]
+    "names_full": ["Journal of Machine Learning Research", "Journal Machine Learning Research"],
+    "names_abbr": ["J. Mach. Learn. Res.", "J. Mach. Learn. Res."]
   },
   "JMP": {
-    "names_abbr": ["J. Math. Psychol."],
-    "names_full": ["Journal of Mathematical Psychology"]
+    "names_full": ["Journal of Mathematical Physics"],
+    "names_abbr": ["J. Math. Phys."]
   },
   "JOCS": {
-    "names_abbr": ["J. Comput. Sci."],
-    "names_full": ["Journal of Computational Science"]
+    "names_full": ["Journal of Computational Science"],
+    "names_abbr": ["J. Comput. Sci."]
   },
   "JOH": {
-    "names_abbr": ["J. Heuristics"],
-    "names_full": ["Journal of Heuristics"]
+    "names_full": ["Journal of Heuristics"],
+    "names_abbr": ["J. Heuristics"]
   },
   "JOSS": {
-    "names_abbr": ["J. Open Source Softw."],
-    "names_full": ["Journal of Open Source Software"]
+    "names_full": ["The Journal of Open Source Software"],
+    "names_abbr": ["J. Open Source Softw."]
   },
   "JOTA": {
-    "names_abbr": ["J. Optim. Theory Appl."],
-    "names_full": ["Journal of Optimization Theory and Applications"]
+    "names_full": ["Journal of Optimization Theory and Applications"],
+    "names_abbr": ["J. Optim. Theory Appl."]
   },
   "JPDC": {
-    "names_abbr": ["J. Parallel Distrib. Comput."],
-    "names_full": ["Journal of Parallel and Distributed Computing"]
+    "names_full": ["Journal of Parallel and Distributed Computing"],
+    "names_abbr": ["J. Parallel Distrib. Comput."]
   },
   "JRSSB": {
     "names_abbr": ["J. R. Stat. Soc. Ser. B"],
@@ -500,132 +503,132 @@
     "names_full": ["Journal of Systems Science and Information"]
   },
   "JSYST": {
-    "names_abbr": ["IEEE Syst. J."],
-    "names_full": ["IEEE Systems Journal"]
+    "names_full": ["IEEE Systems Journal"],
+    "names_abbr": ["IEEE Syst. J."]
   },
   "JTB": {
-    "names_abbr": ["J. Theor. Biol"],
-    "names_full": ["Journal of Theoretical Biology"]
+    "names_full": ["Journal of Theoretical Biology"],
+    "names_abbr": ["J. Theor. Biol"]
   },
   "KBS": {
-    "names_abbr": ["Knowl. Based Syst."],
-    "names_full": ["Knowledge-Based Systems"]
+    "names_full": ["Knowledge-Based Systems", "Knowledge Based Systems"],
+    "names_abbr": ["Knowl. Based Syst.", "Knowl. Based Syst."]
   },
   "MATDES": {
-    "names_abbr": ["Mater. Des."],
-    "names_full": ["Materials \\& Design"]
+    "names_full": ["Materials & Design", "Materials and Design"],
+    "names_abbr": ["Mater. Des.", "Mater. Des."]
   },
   "MATHM": {
     "names_abbr": ["Math. Model."],
     "names_full": ["Mathematical Modelling"]
   },
   "MC": {
-    "names_abbr": ["Comput."],
-    "names_full": ["Computer"]
+    "names_full": ["Computer"],
+    "names_abbr": ["Computer"]
   },
   "MCAP": {
-    "names_abbr": ["Methodol. Comput. Appl. Probab."],
-    "names_full": ["Methodology and Computing in Applied Probability"]
+    "names_full": ["Methodology and Computing in Applied Probability"],
+    "names_abbr": ["Meth. Comput. Appl. Prob."]
   },
   "MCI": {
-    "names_abbr": ["IEEE Comput. Intell. Mag."],
-    "names_full": ["IEEE Computational Intelligence Magazine"]
+    "names_full": ["IEEE Computational Intelligence Magazine"],
+    "names_abbr": ["IEEE Comput. Intell. Mag."]
   },
   "MCSE": {
     "names_abbr": ["Comput. Sci. Eng."],
     "names_full": ["Computing in Science \\& Engineering"]
   },
   "MECO": {
-    "names_abbr": ["Memet. Comput."],
-    "names_full": ["Memetic Computing"]
+    "names_full": ["Memetic Computing"],
+    "names_abbr": ["Memet. Comput."]
   },
   "METRIKA": {
     "names_abbr": ["Metrika"],
     "names_full": ["Metrika"]
   },
   "MICRO": {
-    "names_abbr": ["IEEE Micro"],
-    "names_full": ["IEEE Micro"]
+    "names_full": ["IEEE Micro"],
+    "names_abbr": ["IEEE Micro"]
   },
   "ML": {
-    "names_abbr": ["Mach. Learn."],
-    "names_full": ["Machine Learning"]
+    "names_full": ["Machine Learning"],
+    "names_abbr": ["Mach. Learn."]
   },
   "MLA": {
-    "names_abbr": ["Mach. Learn. Appl."],
-    "names_full": ["Machine Learning with Applications"]
+    "names_full": ["Machine Learning with Applications"],
+    "names_abbr": ["Mach. Learn. Appl."]
   },
   "MLST": {
-    "names_abbr": ["Mach. Learn.: Sci. Technol."],
-    "names_full": ["Machine Learning: Science and Technology"]
+    "names_full": ["Machine Learning: Science and Technology"],
+    "names_abbr": ["Mach. Learn.: Sci. Technol."]
   },
   "MOOR": {
-    "names_abbr": ["Math. Oper. Res."],
-    "names_full": ["Mathematics of Operations Research"]
+    "names_full": ["Mathematics of Operations Research"],
+    "names_abbr": ["Math. Oper. Res."]
   },
   "MP": {
-    "names_abbr": ["Math. Program."],
-    "names_full": ["Mathematical Programming"]
+    "names_full": ["Mathematical Programming"],
+    "names_abbr": ["Math. Program."]
   },
   "MPC": {
-    "names_abbr": ["Math. Program. Comput."],
-    "names_full": ["Mathematical Programming Computation"]
+    "names_full": ["Mathematical Programming Computation"],
+    "names_abbr": ["Math. Program. Comput."]
   },
   "MS": {
-    "names_abbr": ["Manag. Sci."],
-    "names_full": ["Management Science"]
+    "names_full": ["Management Science"],
+    "names_abbr": ["Manag. Sci."]
   },
   "MSD": {
     "names_abbr": ["Multibody Syst. Dyn."],
     "names_full": ["Multibody System Dynamics"]
   },
   "MSP": {
-    "names_abbr": ["IEEE Signal Process. Mag."],
-    "names_full": ["IEEE Signal Processing Magazine"]
+    "names_full": ["IEEE Signal Processing Magazine"],
+    "names_abbr": ["IEEE Signal Process. Mag."]
   },
   "NACO": {
-    "names_abbr": ["Nat. Comput."],
-    "names_full": ["Natural Computing"]
+    "names_full": ["Natural Computing"],
+    "names_abbr": ["Nat. Comput."]
   },
   "NATMI": {
-    "names_abbr": ["Nat. Mach. Intell."],
-    "names_full": ["Nature Machine Intelligence"]
+    "names_full": ["Nature Machine Intelligence"],
+    "names_abbr": ["Nat. Mach. Intell."]
   },
   "NATURE": {
-    "names_abbr": ["Nature"],
-    "names_full": ["Nature"]
+    "names_full": ["Nature"],
+    "names_abbr": ["Nature"]
   },
   "NBT": {
-    "names_abbr": ["Nat. Biotechnol."],
-    "names_full": ["Nature Biotechnology"]
+    "names_full": ["Nature Biotechnology"],
+    "names_abbr": ["Nature Biotech."]
   },
   "NCA": {
-    "names_abbr": ["Neural Comput. Appl."],
-    "names_full": ["Neural Computing and Applications"]
+    "names_full": ["Neural Computing and Applications"],
+    "names_abbr": ["Neural Comput. Appl."]
   },
   "NECO": {
-    "names_abbr": ["Neural Comput."],
-    "names_full": ["Neural Computation"]
+    "names_full": ["Neural Computation"],
+    "names_abbr": ["Neural Comput."]
   },
   "NEUCOM": {
-    "names_abbr": ["Neurocomputing"],
-    "names_full": ["Neurocomputing"]
+    "names_full": ["Neurocomputing"],
+    "names_abbr": ["Neurocomputing"]
   },
   "NMETH": {
-    "names_abbr": ["Nat. Meth."],
-    "names_full": ["Nature Methods"]
+    "names_full": ["Nature Methods"],
+    "names_abbr": ["Nat. Meth."]
   },
   "NN": {
-    "names_abbr": ["Neural Netw."],
-    "names_full": ["Neural Networks"]
+    "names_full": ["Neural Networks"],
+    "names_abbr": ["Neural Netw."]
   },
   "NRL": {
     "names_abbr": ["Nav. Res. Log. Quarterly"],
     "names_full": ["Naval Research Logistics Quarterly"]
   },
   "NSR": {
-    "names_abbr": ["Nat. Sci. Rev."],
-    "names_full": ["National Science Review"]
+    "names_full": ["National Science Review"],
+    "names_abbr": ["Nat. Sci. Rev."]
   },
   "NSSC": {
     "names_abbr": ["IEEE Solid-State Circuits Soc. Newsletter"],
@@ -640,16 +643,16 @@
     "names_full": ["Open Journal of Statistics"]
   },
   "OMS": {
-    "names_abbr": ["Optim. Methods Softw."],
-    "names_full": ["Optimization Methods and Software"]
+    "names_full": ["Optimization Methods and Software"],
+    "names_abbr": ["Optim. Methods Softw."]
   },
   "OR": {
-    "names_abbr": ["Oper. Res."],
-    "names_full": ["Operations Research"]
+    "names_full": ["Operations Research"],
+    "names_abbr": ["Oper. Res."]
   },
   "PARCO": {
-    "names_abbr": ["Parallel Comput."],
-    "names_full": ["Parallel Computing"]
+    "names_full": ["Parallel Computing"],
+    "names_abbr": ["Parallel Comput."]
   },
   "PCB": {
     "names_abbr": ["PLoS Comput. Biol."],
@@ -664,32 +667,36 @@
     "names_full": ["Physica D: Nonlinear Phenomena"]
   },
   "PIEEE": {
-    "names_abbr": ["Proc. IEEE"],
-    "names_full": ["Proceedings of the IEEE"]
+    "names_full": ["Proceedings of the IEEE"],
+    "names_abbr": ["Proc. IEEE"]
   },
   "PNAS": {
-    "names_abbr": ["Proc. Natl. Acad. Sci. USA"],
-    "names_full": ["Proceedings of the National Academy of Sciences of the United States of America"]
+    "names_full": [
+      "Proceedings of the National Academy of Sciences of the United States of America",
+      "Proceedings of the National Academy of Sciences of the USA",
+      "Proceedings of the National Academy of Sciences"
+    ],
+    "names_abbr": ["Proc. Natl. Acad. Sci. USA", "Proc. Natl. Acad. Sci. USA", "Proc. Natl. Acad. Sci. USA"]
   },
   "PONE": {
     "names_abbr": ["PLoS ONE"],
     "names_full": ["PLOS ONE"]
   },
   "POS": {
-    "names_abbr": ["Philos. Sci."],
-    "names_full": ["Philosophy of Science"]
+    "names_full": ["Philosophy of Science"],
+    "names_abbr": ["Philos. Sci."]
   },
   "PR": {
-    "names_abbr": ["Pattern Recog."],
-    "names_full": ["Pattern Recognition"]
+    "names_full": ["Pattern Recognition"],
+    "names_abbr": ["Pattern Recognition"]
   },
   "PRA": {
-    "names_abbr": ["Phys. Rev. A"],
-    "names_full": ["Physical Review A"]
+    "names_full": ["Physical Review A"],
+    "names_abbr": ["Phys. Rev. A"]
   },
   "PRL": {
-    "names_abbr": ["Phys. Rev. Lett."],
-    "names_full": ["Physical Review Letters"]
+    "names_full": ["Physical Review Letters"],
+    "names_abbr": ["Phys. Rev. Lett."]
   },
   "PROCS": {
     "names_abbr": ["Procedia Comput. Sci."],
@@ -708,8 +715,8 @@
     "names_full": ["Philosophical Transactions of the Royal Society A"]
   },
   "SAC": {
-    "names_abbr": ["Stat. Comput."],
-    "names_full": ["Statistics and Computing"]
+    "names_full": ["Statistics and Computing"],
+    "names_abbr": ["Stat. Comput."]
   },
   "SACJ": {
     "names_abbr": ["South African Comput. J."],
@@ -720,64 +727,64 @@
     "names_full": ["Science Advances"]
   },
   "SCIADV": {
-    "names_abbr": ["Sci. Adv."],
-    "names_full": ["Science Advances"]
+    "names_full": ["Science Advances"],
+    "names_abbr": ["Sci. Adv."]
   },
   "SCIENCE": {
-    "names_abbr": ["Science"],
-    "names_full": ["Science"]
+    "names_full": ["Science"],
+    "names_abbr": ["Science"]
   },
   "SI": {
-    "names_abbr": ["Swarm Intell."],
-    "names_full": ["Swarm Intelligence"]
+    "names_full": ["Swarm Intelligence"],
+    "names_abbr": ["Swarm Intell."]
   },
   "SIAMREV": {
     "names_abbr": ["SIAM Rev."],
     "names_full": ["SIAM Review"]
   },
   "SICOMP": {
-    "names_abbr": ["SIAM J. Comput."],
-    "names_full": ["SIAM Journal on Computing"]
+    "names_full": ["SIAM Journal on Computing"],
+    "names_abbr": ["SIAM J. Comput."]
   },
   "SICON": {
-    "names_abbr": ["SIAM J. Control Optim."],
-    "names_full": ["SIAM Journal on Control and Optimization"]
+    "names_full": ["SIAM Journal on Control and Optimization"],
+    "names_abbr": ["SIAM J. Control Optim."]
   },
   "SIGEVO": {
     "names_abbr": ["SIGEVOlution"],
     "names_full": ["SIGEVOlution"]
   },
   "SIMA": {
-    "names_abbr": ["SIAM J. Math. Anal."],
-    "names_full": ["SIAM Journal on Mathematical Analysis"]
+    "names_full": ["SIAM Journal on Mathematical Analysis"],
+    "names_abbr": ["SIAM J. Math. Anal."]
   },
   "SIMODS": {
-    "names_abbr": ["SIAM J. Math. Data Sci."],
-    "names_full": ["SIAM Journal on Mathematics of Data Science"]
+    "names_full": ["SIAM Journal on Mathematics of Data Science"],
+    "names_abbr": ["SIAM J. Math. Data Sci."]
   },
   "SIOPT": {
-    "names_abbr": ["SIAM J. Optim."],
-    "names_full": ["SIAM Journal on Optimization"]
+    "names_full": ["SIAM Journal on Optimization"],
+    "names_abbr": ["SIAM J. Optim."]
   },
   "SIREV": {
-    "names_abbr": ["SIAM Rev."],
-    "names_full": ["SIAM Review"]
+    "names_full": ["SIAM Review"],
+    "names_abbr": ["SIAM Rev."]
   },
   "SISC": {
-    "names_abbr": ["SIAM J. Sci. Comput."],
-    "names_full": ["SIAM Journal on Scientific Computing"]
+    "names_full": ["SIAM Journal on Scientific Computing"],
+    "names_abbr": ["SIAM J. Sci. Comput."]
   },
   "SJOS": {
-    "names_abbr": ["Scand. J. Statist."],
-    "names_full": ["Scandinavian Journal Of Statistics"]
+    "names_full": ["Scandinavian Journal Of Statistics"],
+    "names_abbr": ["Scand. J. Stat."]
   },
   "SMO": {
     "names_abbr": ["Struct. Multidisc. Optim."],
     "names_full": ["Structural and Multidisciplinary Optimization"]
   },
   "SOCO": {
-    "names_abbr": ["Soft Comput."],
-    "names_full": ["Soft Computing"]
+    "names_full": ["Soft Computing"],
+    "names_abbr": ["Soft Comput."]
   },
   "SOFTC": {
     "names_abbr": ["Soft Comput."],
@@ -788,16 +795,16 @@
     "names_full": ["Structural Optimization"]
   },
   "SREP": {
-    "names_abbr": ["Sci. Rep."],
-    "names_full": ["Scientific Reports"]
+    "names_full": ["Scientific Reports"],
+    "names_abbr": ["Sci. Rep."]
   },
   "SROB": {
-    "names_abbr": ["Sci. Robot."],
-    "names_full": ["Science Robotics"]
+    "names_full": ["Science Robotics"],
+    "names_abbr": ["Sci. Robot."]
   },
   "SSIGNAL": {
-    "names_abbr": ["Sci. Signaling"],
-    "names_full": ["Science Signaling"]
+    "names_full": ["Science Signaling"],
+    "names_abbr": ["Sci. Signal."]
   },
   "SSRN": {
     "names_abbr": ["SSRN Journal"],
@@ -812,12 +819,12 @@
     "names_full": ["Statistical Science"]
   },
   "SUPERC": {
-    "names_abbr": ["J. Supercomput."],
-    "names_full": ["Journal of Supercomputing"]
+    "names_full": ["The Journal of Supercomputing"],
+    "names_abbr": ["J. Supercomput."]
   },
   "SWEVO": {
-    "names_abbr": ["Swarm Evol. Comput."],
-    "names_full": ["Swarm and Evolutionary Computation"]
+    "names_full": ["Swarm and Evolutionary Computation"],
+    "names_abbr": ["Swarm Evol. Comput."]
   },
   "SWJ": {
     "names_abbr": ["Sci. World J."],
@@ -828,56 +835,56 @@
     "names_full": ["Symmetry"]
   },
   "TAC": {
-    "names_abbr": ["IEEE Trans. Autom. Control"],
-    "names_full": ["IEEE Transactions on Automatic Control"]
+    "names_full": ["IEEE Transactions on Automatic Control"],
+    "names_abbr": ["IEEE Trans. Autom. Control"]
   },
   "TAMM": {
     "names_abbr": ["Am. Math. Mon."],
     "names_full": ["The American Mathematical Monthly"]
   },
   "TAS": {
-    "names_abbr": ["Am. Stat."],
-    "names_full": ["The American Statistician"]
+    "names_full": ["The American Statistician", "American Statistician"],
+    "names_abbr": ["Am. Stat.", "Am. Stat."]
   },
   "TC": {
-    "names_abbr": ["IEEE Trans. Comput."],
-    "names_full": ["IEEE Transactions on Computers"]
+    "names_full": ["IEEE Transactions on Computers"],
+    "names_abbr": ["IEEE Trans. Comput."]
   },
   "TCBB": {
     "names_abbr": ["IEEE/ACM Trans. Comput. Biol. Bioinform."],
     "names_full": ["IEEE/ACM Transactions on Computational Biology and Bioinformatics"]
   },
   "TCC": {
-    "names_abbr": ["IEEE Trans. Cloud Comput."],
-    "names_full": ["IEEE Transactions on Cloud Computing"]
+    "names_full": ["IEEE Transactions on Cloud Computing"],
+    "names_abbr": ["IEEE Trans. Cloud Comput."]
   },
   "TCS": {
-    "names_abbr": ["Theor. Comput. Sci."],
-    "names_full": ["Theoretical Computer Science"]
+    "names_full": ["Theoretical Computer Science"],
+    "names_abbr": ["Theor. Comput. Sci."]
   },
   "TCSS": {
-    "names_abbr": ["IEEE Trans. Comput. Social Syst."],
-    "names_full": ["IEEE Transactions on Computational Social Systems"]
+    "names_full": ["IEEE Transactions on Computational Social Systems"],
+    "names_abbr": ["IEEE Trans. Comput. Social Syst."]
   },
   "TCYB": {
-    "names_abbr": ["IEEE Trans. Cybern."],
-    "names_full": ["IEEE Transactions on Cybernetics"]
+    "names_full": ["IEEE Transactions on Cybernetics"],
+    "names_abbr": ["IEEE Trans. Cybern."]
   },
   "TELO": {
-    "names_abbr": ["ACM Trans. Evol. Learn. Optim."],
-    "names_full": ["ACM Transactions on Evolutionary Learning and Optimization"]
+    "names_full": ["ACM Transactions on Evolutionary Learning and Optimization"],
+    "names_abbr": ["ACM Trans. Evol. Learn. Optim."]
   },
   "TETCI": {
-    "names_abbr": ["IEEE Trans. Emerg. Top. Comput. Intell."],
-    "names_full": ["IEEE Transactions on Emerging Topics in Computational Intelligence"]
+    "names_full": ["IEEE Transactions on Emerging Topics in Computational Intelligence"],
+    "names_abbr": ["IEEE Trans. Emerg. Topics Comput. Intell."]
   },
   "TEVC": {
-    "names_abbr": ["IEEE Trans. Evol. Comput."],
-    "names_full": ["IEEE Transactions on Evolutionary Computation"]
+    "names_full": ["IEEE Transactions on Evolutionary Computation"],
+    "names_abbr": ["IEEE Trans. Evol. Comput."]
   },
   "TFS": {
-    "names_abbr": ["IEEE Trans. Fuzzy Syst."],
-    "names_full": ["IEEE Transactions on Fuzzy Systems"]
+    "names_full": ["IEEE Transactions on Fuzzy Systems"],
+    "names_abbr": ["IEEE Trans. Fuzzy Syst."]
   },
   "THFE": {
     "names_abbr": ["Trans. Hum. Factors Electron."],
@@ -888,87 +895,988 @@
     "names_full": ["IEEE Transactions on Industrial Informatics"]
   },
   "TIST": {
-    "names_abbr": ["ACM Trans. Intell. Syst. Technol."],
-    "names_full": ["ACM Transactions on Intelligent Systems and Technology"]
+    "names_full": ["ACM Transactions on Intelligent Systems and Technology"],
+    "names_abbr": ["ACM Trans. Intell. Syst. Technol."]
   },
   "TIT": {
-    "names_abbr": ["IEEE Trans. Inf. Theory"],
-    "names_full": ["IRE Transactions on Information Theory"]
+    "names_full": [
+      "IRE Transactions on Information Theory",
+      "Transactions of the IRE Professional Group on Information Theory",
+      "IEEE Transactions on Information Theory"
+    ],
+    "names_abbr": ["IEEE Trans. Inf. Theory", "IEEE Trans. Inf. Theory", "IEEE Trans. Inf. Theory"]
   },
   "TITS": {
-    "names_abbr": ["IEEE Trans. Intell. Transp. Syst."],
-    "names_full": ["IEEE Transactions on Intelligent Transportation Systems"]
+    "names_full": ["IEEE Transactions on Intelligent Transportation Systems"],
+    "names_abbr": ["IEEE Trans. Intell. Transp. Syst."]
   },
   "TKDE": {
-    "names_abbr": ["IEEE Trans. Knowl. Data Eng."],
-    "names_full": ["IEEE Transactions on Knowledge and Data Engineering"]
+    "names_full": ["IEEE Transactions on Knowledge and Data Engineering"],
+    "names_abbr": ["IEEE Trans. Knowl. Data Eng."]
   },
   "TMAG": {
     "names_abbr": ["IEEE Trans. Magn."],
     "names_full": ["IEEE Transactions on Magnetics"]
   },
   "TMIS": {
-    "names_abbr": ["ACM Trans. Mag. Inf. Sys."],
-    "names_full": ["ACM Transactions on Management Information Systems"]
+    "names_full": ["ACM Transactions on Management Information Systems"],
+    "names_abbr": ["ACM Trans. Manag. Inf. Sys."]
   },
   "TMLR": {
-    "names_abbr": ["Trans. Mach. Learn. Res."],
-    "names_full": ["Transactions on Machine Learning Research"]
+    "names_full": ["Transactions on Machine Learning Research"],
+    "names_abbr": ["Trans. Mach. Learn. Res."]
   },
   "TMTT": {
     "names_abbr": ["IEEE Trans. Microw. Theory Techn."],
     "names_full": ["IEEE Transactions on Microwave Theory and Techniques"]
   },
   "TNN": {
-    "names_abbr": ["IEEE Trans. Neural Netw."],
-    "names_full": ["IEEE Transactions on Neural Networks"]
+    "names_full": ["IEEE Transactions on Neural Networks"],
+    "names_abbr": ["IEEE Trans. Neural Netw."]
   },
   "TNNLS": {
-    "names_abbr": ["IEEE Trans. Neural Netw. Learn. Syst."],
-    "names_full": ["IEEE Transactions on Neural Networks and Learning Systems"]
+    "names_full": ["IEEE Transactions on Neural Networks and Learning Systems"],
+    "names_abbr": ["IEEE Trans. Neural Netw. Learn. Syst."]
   },
   "TNSE": {
     "names_abbr": ["IEEE Trans. Netw. Sci. Eng."],
     "names_full": ["IEEE Transactions on Network Science and Engineering"]
   },
   "TOCS": {
-    "names_abbr": ["ACM Trans. Comput. Syst."],
-    "names_full": ["ACM Transactions on Computer Systems"]
+    "names_full": ["ACM Transactions on Computer Systems"],
+    "names_abbr": ["ACM Trans. Comput. Syst."]
   },
   "TOMS": {
-    "names_abbr": ["ACM Trans. Math. Softw."],
-    "names_full": ["ACM Transactions on Mathematical Software"]
+    "names_full": ["ACM Transactions on Mathematical Software"],
+    "names_abbr": ["ACM Trans. Math. Softw."]
   },
   "TPAMI": {
-    "names_abbr": ["IEEE Trans. Pattern Anal. Mach. Intell."],
-    "names_full": ["IEEE Transactions on Pattern Analysis and Machine Intelligence"]
+    "names_full": ["IEEE Transactions on Pattern Analysis and Machine Intelligence"],
+    "names_abbr": ["IEEE Trans. Pattern Anal. Mach. Intell."]
   },
   "TPDS": {
-    "names_abbr": ["IEEE Trans. Parallel Distrib. Syst."],
-    "names_full": ["IEEE Transactions on Parallel and Distributed Systems"]
+    "names_full": ["IEEE Transactions on Parallel and Distributed Systems"],
+    "names_abbr": ["IEEE Trans. Parallel Distrib. Syst."]
   },
   "TSMC": {
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. Syst."],
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics: Systems"]
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics: Systems"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. Syst."]
   },
   "TSMCB": {
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. B"],
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics)"]
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics)"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. B"]
   },
   "TSMCC": {
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. C"],
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)"]
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. C"]
   },
   "TVCG": {
-    "names_abbr": ["IEEE Trans. Vis. Comput. Graph."],
-    "names_full": ["IEEE Transactions on Visualization and Computer Graphics"]
+    "names_full": ["IEEE Transactions on Visualization and Computer Graphics"],
+    "names_abbr": ["IEEE Trans. Vis. Comput. Graph."]
   },
   "TVT": {
-    "names_abbr": ["IEEE Trans. Intell. Veh. Technol."],
-    "names_full": ["IEEE Transactions on Vehicular Technology"]
+    "names_full": ["IEEE Transactions on Vehicular Technology"],
+    "names_abbr": ["IEEE Trans. Intell. Veh. Technol."]
   },
   "WICS": {
     "names_abbr": ["WIREs Comp. Stat."],
     "names_full": ["Wiley Interdisciplinary Reviews: Computational Statistics"]
+  },
+  "ICOMPUT": {
+    "names_full": ["Intelligent Computing"],
+    "names_abbr": ["Intell. Comput."]
+  },
+  "TAAS": {
+    "names_full": ["ACM Transactions on Autonomous and Adaptive Systems"],
+    "names_abbr": ["ACM Trans. Auton. Adapt. Syst."]
+  },
+  "TACO": {
+    "names_full": ["ACM Transactions on Architecture and Code Optimization"],
+    "names_abbr": ["ACM Trans. Archit. Code Optim."]
+  },
+  "TAP": {
+    "names_full": ["ACM Transactions on Applied Perception"],
+    "names_abbr": ["ACM Trans. Appl. Perc."]
+  },
+  "TIIS": {
+    "names_full": ["ACM Transactions on Interactive Intelligent Systems"],
+    "names_abbr": ["ACM Trans. Interact. Intell. Syst."]
+  },
+  "TKDD": {
+    "names_full": ["ACM Transactions on Knowledge Discovery from Data"],
+    "names_abbr": ["ACM Trans. knowl. Discov. Data"]
+  },
+  "TODAES": {
+    "names_full": ["ACM Transactions on Design Automation of Electronic Systems"],
+    "names_abbr": ["ACM Trans. Des. Autom. Electron. Syst."]
+  },
+  "TOG": {
+    "names_full": ["ACM Transactions on Graphics"],
+    "names_abbr": ["ACM Trans. Graph."]
+  },
+  "TOSEM": {
+    "names_full": ["ACM Transactions on Software Engineering and Methodology"],
+    "names_abbr": ["ACM Trans. Softw. Eng. Methodol."]
+  },
+  "TSLP": {
+    "names_full": ["ACM Transactions on Speech and Language Processing"],
+    "names_abbr": ["ACM Trans. Speech Lang. Process."]
+  },
+  "CHRE": {
+    "names_full": ["Chemical Reviews"],
+    "names_abbr": ["Chem. Rev."]
+  },
+  "JACS": {
+    "names_full": ["Journal of the American Chemical Society"],
+    "names_abbr": ["J. Am. Chem. Soc."]
+  },
+  "JGCD": {
+    "names_full": ["Journal of Guidance, Control, and Dynamics"],
+    "names_abbr": ["J. Guid. Contr. Dyn."]
+  },
+  "AML": {
+    "names_full": ["APL Machine Learning"],
+    "names_abbr": ["APL Mach. Learn."]
+  },
+  "APL": {
+    "names_full": ["Applied Physics Letters"],
+    "names_abbr": ["Appl. Phys. Lett."]
+  },
+  "APR": {
+    "names_full": ["Applied Physics Reviews"],
+    "names_abbr": ["Appl. Phys. Rev."]
+  },
+  "BAMS": {
+    "names_full": ["Bulletin of the American Mathematical Society"],
+    "names_abbr": ["Bull. Am. Math. Soc."]
+  },
+  "JAMS": {
+    "names_full": ["Journal of the American Mathematical Society"],
+    "names_abbr": ["J. Am. Math. Soc."]
+  },
+  "MCOM": {
+    "names_full": ["Mathematics of Computation"],
+    "names_abbr": ["Math. Comput."]
+  },
+  "PRX": {
+    "names_full": ["Physical Review X"],
+    "names_abbr": ["Phys. Rev. X"]
+  },
+  "RMP": {
+    "names_full": ["Review Modern Physics"],
+    "names_abbr": ["Rev. Mod. Phys."]
+  },
+  "ACTAN": {
+    "names_full": ["Acta Numerica"],
+    "names_abbr": ["Acta Numer."]
+  },
+  "CPAC": {
+    "names_full": ["Combinatorics, Probability & Computing", "Combinatorics, Probability and Computing"],
+    "names_abbr": ["Comb. Probab. Comput.", "Comb. Probab. Comput."]
+  },
+  "AANDA": {
+    "names_full": ["Astronomy & Astrophysics"],
+    "names_abbr": ["Astron. Astrophys."]
+  },
+  "BCAS": {
+    "names_full": ["Bulletin of the Chinese Academy of Sciences"],
+    "names_abbr": ["Bull. Chinese Acad. Sci."]
+  },
+  "ARTMED": {
+    "names_full": ["Artificial Intelligence in Medicine"],
+    "names_abbr": ["Artif. Intell. Med."]
+  },
+  "CMA": {
+    "names_full": ["Computers & Mathematics with Applications"],
+    "names_abbr": ["Comput. Meth. Appl."]
+  },
+  "CSDA": {
+    "names_full": ["Computational Statistics & Data Analysis", "Computational Statistics and Data Analysis"],
+    "names_abbr": ["Comput. Stat. Data Anal.", "Comput. Stat. Data Anal."]
+  },
+  "CVIU": {
+    "names_full": ["Computer Vision and Image Understanding"],
+    "names_abbr": ["Comput. Vis. Image Understanding"]
+  },
+  "DISOPT": {
+    "names_full": ["Discrete Optimization"],
+    "names_abbr": ["Discret. Optim."]
+  },
+  "DKE": {
+    "names_full": ["Data & Knowledge Engineering", "Data and Knowledge Engineering"],
+    "names_abbr": ["Data Knowl. Eng.", "Data Knowl. Eng."]
+  },
+  "DSS": {
+    "names_full": ["Decision Support Systems"],
+    "names_abbr": ["Decis. Supp. Syst."]
+  },
+  "IANDC": {
+    "names_full": ["Information and Computation"],
+    "names_abbr": ["Inf. Comput."]
+  },
+  "ICV": {
+    "names_full": ["Image and Vision Computing"],
+    "names_abbr": ["Image Vis. Comput."]
+  },
+  "IJAR": {
+    "names_full": ["International Journal of Approximate Reasoning"],
+    "names_abbr": ["Int. J. Approx. Reasoning"]
+  },
+  "JAIM": {
+    "names_full": ["Advances in Mathematics"],
+    "names_abbr": ["Adv. Math."]
+  },
+  "JAT": {
+    "names_full": ["Journal of Approximation Theory"],
+    "names_abbr": ["J. Approx. Theory"]
+  },
+  "JDE": {
+    "names_full": ["Journal of Differential Equations"],
+    "names_abbr": ["J. Diff. Equ."]
+  },
+  "JMAA": {
+    "names_full": ["Journal of Mathematical Analysis and Applications"],
+    "names_abbr": ["J. Math. Anal. Appl."]
+  },
+  "JOE": {
+    "names_full": ["Journal of Econometrics"],
+    "names_abbr": ["J. Econ."]
+  },
+  "JOMA": {
+    "names_full": ["Journal of Multivariate Analysis"],
+    "names_abbr": ["J. Multi. Anal."]
+  },
+  "JOMP": {
+    "names_full": ["Journal of Mathematical Psychology"],
+    "names_abbr": ["J. Math. Psychol."]
+  },
+  "ORL": {
+    "names_full": ["Operations Research Letters"],
+    "names_abbr": ["Oper. Res. Lett."]
+  },
+  "RAS": {
+    "names_full": ["Robotics and Autonomous Systems"],
+    "names_abbr": ["Robot. Auton. Syst."]
+  },
+  "SPA": {
+    "names_full": ["Stochastic Processes and their Applications"],
+    "names_abbr": ["Stoch. Proc. Appl."]
+  },
+  "BA": {
+    "names_full": ["Bayesian Analysis"],
+    "names_abbr": ["Bayesian Anal."]
+  },
+  "BERNOULLI": {
+    "names_full": ["Bernoulli"],
+    "names_abbr": ["Bernoulli"]
+  },
+  "ECP": {
+    "names_full": ["Electronic Communications in Probability"],
+    "names_abbr": ["Elec. Commun. Probab."]
+  },
+  "EJP": {
+    "names_full": ["Electronic Journal of Probability"],
+    "names_abbr": ["Elec. J. Probab."]
+  },
+  "EJS": {
+    "names_full": ["Electronic Journal of Statistics"],
+    "names_abbr": ["Elec. J. Stat."]
+  },
+  "PS": {
+    "names_full": ["Probability Surveys"],
+    "names_abbr": ["Probab. Surv."]
+  },
+  "SS": {
+    "names_full": ["Statistics Surveys"],
+    "names_abbr": ["Stat. Surv."]
+  },
+  "FCOMP": {
+    "names_full": ["Frontiers in Computer Science"],
+    "names_abbr": ["Front. Comput. Sci."]
+  },
+  "FCTEG": {
+    "names_full": ["Frontiers in Control Engineering"],
+    "names_abbr": ["Front. Control Eng."]
+  },
+  "FDATA": {
+    "names_full": ["Frontiers in Big Data"],
+    "names_abbr": ["Front. Big Data"]
+  },
+  "FRAI": {
+    "names_full": ["Frontiers in Artificial Intelligence"],
+    "names_abbr": ["Front. Artif. Intell."]
+  },
+  "FROBT": {
+    "names_full": ["Frontiers in Robotics and AI"],
+    "names_abbr": ["Front. Robot. AI"]
+  },
+  "LCOMM": {
+    "names_full": ["IEEE Communications Letters"],
+    "names_abbr": ["IEEE Commun. Lett."]
+  },
+  "MIS": {
+    "names_full": ["IEEE Intelligent Systems"],
+    "names_abbr": ["IEEE Intell. Syst."]
+  },
+  "MRA": {
+    "names_full": ["IEEE Robotics Automation Magazine"],
+    "names_abbr": ["IEEE Robot. Autom. Mag."]
+  },
+  "MSSC": {
+    "names_full": ["IEEE Solid-State Circuits Magazine", "IEEE Solid-State Circuits Society Newsletter"],
+    "names_abbr": ["IEEE Solid-State Circuits Mag.", "IEEE Solid-State Circuits Soc. Newsletter"]
+  },
+  "TAFFC": {
+    "names_full": ["IEEE Transactions on Affective Computing"],
+    "names_abbr": ["IEEE Trans. Affect. Comput."]
+  },
+  "TAI": {
+    "names_full": ["IEEE Transactions on Artificial Intelligence"],
+    "names_abbr": ["IEEE Trans. Artif. Intell."]
+  },
+  "TASE": {
+    "names_full": ["IEEE Transactions on Automation Science and Engineering"],
+    "names_abbr": ["IEEE Trans. Autom. Sci. Eng."]
+  },
+  "TASLP": {
+    "names_full": ["IEEE/ACM Transactions on Audio, Speech, and Language Processing"],
+    "names_abbr": ["IEEE/ACM Trans. Audio Speech Lang. Process."]
+  },
+  "TASLPRO": {
+    "names_full": ["IEEE Transactions on Audio, Speech, and Language Processing"],
+    "names_abbr": ["IEEE Trans. Audio Speech Lang. Process."]
+  },
+  "TBD": {
+    "names_full": ["IEEE Transactions on Transactions on Big Data"],
+    "names_abbr": ["IEEE Trans. Big Data"]
+  },
+  "TCDS": {
+    "names_full": ["IEEE Transactions on Cognitive and Developmental Systems"],
+    "names_abbr": ["IEEE Trans. Cogn. Develop. Syst."]
+  },
+  "TCNS": {
+    "names_full": ["IEEE Transactions on Control of Network Systems"],
+    "names_abbr": ["IEEE Trans. Control Netw. Syst."]
+  },
+  "TETC": {
+    "names_full": ["IEEE Transactions on Emerging Topics in Computing"],
+    "names_abbr": ["IEEE Trans. Emerg. Topics Comput."]
+  },
+  "THMS": {
+    "names_full": ["IEEE Transactions on Human-Machine Systems"],
+    "names_abbr": ["IEEE Trans. Human-Mach. Syst."]
+  },
+  "TIFS": {
+    "names_full": ["IEEE Transactions on Information Forensics and Security"],
+    "names_abbr": ["IEEE Trans. Inf. Forensics Security"]
+  },
+  "TIP": {
+    "names_full": ["IEEE Transactions on Image Processing"],
+    "names_abbr": ["IEEE Trans. Image Process."]
+  },
+  "TIV": {
+    "names_full": ["IEEE Transactions on Intelligent Vehicles"],
+    "names_abbr": ["IEEE Trans. Intell. Intell. Veh."]
+  },
+  "TLT": {
+    "names_full": ["IEEE Transactions on Learning Technologies"],
+    "names_abbr": ["IEEE Trans. Learn. Technol."]
+  },
+  "TMC": {
+    "names_full": ["IEEE Transactions on Mobile Computing"],
+    "names_abbr": ["IEEE Trans. Mobile Comput."]
+  },
+  "TMM": {
+    "names_full": ["IEEE Transactions on Multimedia"],
+    "names_abbr": ["IEEE Trans. Multimed."]
+  },
+  "TMRB": {
+    "names_full": ["IEEE Transactions on Medical Robotics and Bionics"],
+    "names_abbr": ["IEEE Tran. Med. Robot. Bionics"]
+  },
+  "TRA": {
+    "names_full": ["IEEE Transactions on Robotics and Automation"],
+    "names_abbr": ["IEEE Trans. Robot. Autom."]
+  },
+  "TROB": {
+    "names_full": ["IEEE Transactions on Robotics"],
+    "names_abbr": ["IEEE Trans. Robot."]
+  },
+  "TSC": {
+    "names_full": ["IEEE Transactions on Services Computing"],
+    "names_abbr": ["IEEE Trans. Serv. Comput."]
+  },
+  "TSMCA": {
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part A: Systems and Humans"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. A"]
+  },
+  "TVC": {
+    "names_full": ["IEEE Transactions on Vehicular Communications"],
+    "names_abbr": ["IEEE Trans. Intell. Veh. Commun."]
+  },
+  "IJAIML": {
+    "names_full": ["International Journal of Artificial Intelligence and Machine Learning"],
+    "names_abbr": ["Int. J. Artif. Intell. Mach. Learn."]
+  },
+  "IJSWIS": {
+    "names_full": ["International Journal on Semantic Web and Information Systems"],
+    "names_abbr": ["Int. J. Semantic Web Inf. Syst."]
+  },
+  "AOAP": {
+    "names_full": ["Annals of Applied Probability", "The Annals of Applied Probability"],
+    "names_abbr": ["Ann. Appl. Probab.", "Ann. Appl. Probab."]
+  },
+  "AOAS": {
+    "names_full": ["Annals of Applied Statistics", "The Annals of Applied Statistics"],
+    "names_abbr": ["Ann. Appl. Stat.", "Ann. Appl. Stat."]
+  },
+  "AOP": {
+    "names_full": ["Annals of Probability", "The Annals of Probability"],
+    "names_abbr": ["Ann. Probab.", "Ann. Probab."]
+  },
+  "BULLETIN": {
+    "names_full": ["IMS Bulletin"],
+    "names_abbr": ["IMS Bull."]
+  },
+  "STATSCI": {
+    "names_full": ["Statistical Science"],
+    "names_abbr": ["Stat. Sci."]
+  },
+  "DECA": {
+    "names_full": ["Decision Analysis"],
+    "names_abbr": ["Decis. Anal."]
+  },
+  "IJDS": {
+    "names_full": ["INFORMS Journal on Data Science"],
+    "names_abbr": ["INFORMS J. Data Sci."]
+  },
+  "IJOO": {
+    "names_full": ["INFORMS Journal on Optimization"],
+    "names_abbr": ["INFORMS J. Optim."]
+  },
+  "ISRE": {
+    "names_full": ["Information Systems Research"],
+    "names_abbr": ["Inf. Syst. Res."]
+  },
+  "ITED": {
+    "names_full": ["INFORMS Transactions on Education"],
+    "names_abbr": ["Inf. Syst. Res."]
+  },
+  "MKSC": {
+    "names_full": ["Marketing Science"],
+    "names_abbr": ["Market. Sci."]
+  },
+  "MSOM": {
+    "names_full": [
+      "M&som-manufacturing & Service Operations Management",
+      "M&som-manufacturing and Service Operations Management",
+      "Manufacturing & Service Operations Management (M&SOM)",
+      "Manufacturing & Service Operations Management",
+      "Manufacturing and Service Operations Management (M&SOM)",
+      "Manufacturing and Service Operations Management"
+    ],
+    "names_abbr": [
+      "Manuf. Serv. Oper. Manag.",
+      "Manuf. Serv. Oper. Manag.",
+      "Manuf. Serv. Oper. Manag.",
+      "Manuf. Serv. Oper. Manag.",
+      "Manuf. Serv. Oper. Manag.",
+      "Manuf. Serv. Oper. Manag."
+    ]
+  },
+  "ORSC": {
+    "names_full": ["Organization Science"],
+    "names_abbr": ["Organ. Sci."]
+  },
+  "SERV": {
+    "names_full": ["Service Science"],
+    "names_abbr": ["Serv. Sci."]
+  },
+  "STSC": {
+    "names_full": ["Strategy Science"],
+    "names_abbr": ["Strat. Sci."]
+  },
+  "STSY": {
+    "names_full": ["Stochastic Systems"],
+    "names_abbr": ["Stoch. Syst."]
+  },
+  "TRSC": {
+    "names_full": ["Transportation Science"],
+    "names_abbr": ["Trans. Sci."]
+  },
+  "ACTA": {
+    "names_full": ["Acta Mathematica"],
+    "names_abbr": ["Acta Math."]
+  },
+  "SII": {
+    "names_full": ["Statistics and Its Interface"],
+    "names_abbr": ["Stat. Interface"]
+  },
+  "ApJ": {
+    "names_full": ["The Astrophysical Journal"],
+    "names_abbr": ["The Astrophys. J."]
+  },
+  "COLI": {
+    "names_full": ["Computational Linguistics"],
+    "names_abbr": ["Comput. Lingu."]
+  },
+  "DINT": {
+    "names_full": ["Data Intelligence"],
+    "names_abbr": ["Data Intell."]
+  },
+  "NETN": {
+    "names_full": ["Network Neuroscience"],
+    "names_abbr": ["Netw. Neuroscience"]
+  },
+  "TACL": {
+    "names_full": ["Transactions of the Association for Computational Linguistics"],
+    "names_abbr": ["Trans. Assoc. Comput. Lingu."]
+  },
+  "NATCS": {
+    "names_full": ["Nature Computational Science"],
+    "names_abbr": ["Nat. Comput. Sci"]
+  },
+  "NATEE": {
+    "names_full": ["Nature Ecology & Evolution", "Nature Ecology and Evolution"],
+    "names_abbr": ["Nat. Ecol. Evol", "Nat. Ecol. Evol"]
+  },
+  "NCHEM": {
+    "names_full": ["Nature Chemistry"],
+    "names_abbr": ["Nat. Chem."]
+  },
+  "NCOMMS": {
+    "names_full": ["Nature Communications"],
+    "names_abbr": ["Nat. Commun."]
+  },
+  "NG": {
+    "names_full": ["Nature Genetics"],
+    "names_abbr": ["Nat. Genet."]
+  },
+  "NMAT": {
+    "names_full": ["Nature Materials"],
+    "names_abbr": ["Nat. Mater."]
+  },
+  "NPHYS": {
+    "names_full": ["Nature Physics"],
+    "names_abbr": ["Nat. Phys."]
+  },
+  "NPJQI": {
+    "names_full": ["npj Quantum Information"],
+    "names_abbr": ["npj Quantum Inf."]
+  },
+  "FTML": {
+    "names_full": ["Foundations and Trends in Machine Learning", "Foundations and Trends® in Machine Learning"],
+    "names_abbr": ["Found. Trends Mach. Learn.", "Found. Trends Mach. Learn."]
+  },
+  "FTOPT": {
+    "names_full": ["Foundations and Trends in Optimization", "Foundations and Trends® in Optimization"],
+    "names_abbr": ["Found. Trends Optim.", "Found. Trends Optim."]
+  },
+  "JSS": {
+    "names_full": ["Journal of Statistical Software"],
+    "names_abbr": ["J. Stat. Softw."]
+  },
+  "BIOMTC": {
+    "names_full": ["Biometrics"],
+    "names_abbr": ["Biometrics"]
+  },
+  "BIOSTAT": {
+    "names_full": ["Biostatistics"],
+    "names_abbr": ["Biostatistics"]
+  },
+  "EVLETT": {
+    "names_full": ["Evolution Letters"],
+    "names_abbr": ["Evol. Lett."]
+  },
+  "JRSSIG": {
+    "names_full": ["Significance"],
+    "names_abbr": ["Significance"]
+  },
+  "JRSSSA": {
+    "names_full": [
+      "Journal of the Royal Statistical Society Series A: Statistics in Society",
+      "Journal of the Royal Statistical Society: Series A (Statistics in Society)",
+      "Journal of the Royal Statistical Society: Series A"
+    ],
+    "names_abbr": ["J. R. Stat. Soc. Ser. A", "J. R. Stat. Soc. Ser. A", "J. R. Stat. Soc. Ser. A"]
+  },
+  "JRSSSB": {
+    "names_full": [
+      "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+      "Journal of the Royal Statistical Society: Series B (Methodological)",
+      "Journal of the Royal Statistical Society: Series B"
+    ],
+    "names_abbr": ["J. R. Stat. Soc. Ser. B", "J. R. Stat. Soc. Ser. B", "J. R. Stat. Soc. Ser. B"]
+  },
+  "JRSSSC": {
+    "names_full": [
+      "Journal of the Royal Statistical Society Series C: Applied Statistics",
+      "Journal of the Royal Statistical Society: Series C (Applied Statistics)",
+      "Journal of the Royal Statistical Society: Series C"
+    ],
+    "names_abbr": ["J. R. Stat. Soc. Ser. C", "J. R. Stat. Soc. Ser. C", "J. R. Stat. Soc. Ser. C"]
+  },
+  "PEERJCS": {
+    "names_full": ["PeerJ Computer Science"],
+    "names_abbr": ["PeerJ Comput. Sci."]
+  },
+  "ANNALS": {
+    "names_full": ["Annals of Mathematics"],
+    "names_abbr": ["Ann. Math."]
+  },
+  "ADBE": {
+    "names_full": ["Adaptive Behavior"],
+    "names_abbr": ["Adaptive Behavior"]
+  },
+  "BECB": {
+    "names_full": ["Biomedical Engineering and Computational Biology"],
+    "names_abbr": ["Biomed. Eng. Comput. Biol."]
+  },
+  "DSC": {
+    "names_full": ["Data Science"],
+    "names_abbr": ["Data Sci."]
+  },
+  "EAI": {
+    "names_full": ["European Journal on Artificial Intelligence", "The European Journal on Artificial Intelligence"],
+    "names_abbr": ["Eur. Artif. Intell.", "Eur. Artif. Intell."]
+  },
+  "ICAE": {
+    "names_full": ["Integrated Computer-Aided Engineering"],
+    "names_abbr": ["Integrated Computer-Aided Engineering"]
+  },
+  "IDA": {
+    "names_full": ["Intelligent Data Analysis"],
+    "names_abbr": ["Intell. Data Anal."]
+  },
+  "IJRR": {
+    "names_full": ["International Journal of Robotics Research", "The International Journal of Robotics Research"],
+    "names_abbr": ["Int. J. Robot. Res.", "Int. J. Robot. Res."]
+  },
+  "JAISE": {
+    "names_full": ["Journal of Ambient Intelligence and Smart Environments"],
+    "names_abbr": ["J. Ambient Intell. Smart Env."]
+  },
+  "JIFS": {
+    "names_full": ["Journal of Intelligent & Fuzzy Systems", "Journal of Intelligent and Fuzzy Systems"],
+    "names_abbr": ["J. Intell. Fuzzy Syst.", "J. Intell. Fuzzy Syst."]
+  },
+  "POM": {
+    "names_full": ["Production and Operations Management"],
+    "names_abbr": ["Product. Oper. Manag."]
+  },
+  "SW": {
+    "names_full": ["Semantic Web"],
+    "names_abbr": ["Semantic Web"]
+  },
+  "JUQ": {
+    "names_full": ["SIAM/ASA Journal on Uncertainty Quantification"],
+    "names_abbr": ["SIAM/ASA J. Uncertainty Quantification"]
+  },
+  "MMS": {
+    "names_full": ["Multiscale Modeling & Simulation", "Multiscale Modeling and Simulation"],
+    "names_abbr": ["Multiscale Model. Simul.", "Multiscale Model. Simul."]
+  },
+  "SIADS": {
+    "names_full": ["SIAM Journal on Applied Dynamical Systems"],
+    "names_abbr": ["SIAM J. Appl. Dyn. Syst."]
+  },
+  "SIAGA": {
+    "names_full": ["SIAM Journal on Applied Algebra and Geometry"],
+    "names_abbr": ["SIAM J. Appl. Algebra Geom."]
+  },
+  "SIAP": {
+    "names_full": ["SIAM Journal on Applied Mathematics"],
+    "names_abbr": ["SIAM J. Appl. Math."]
+  },
+  "SIDMA": {
+    "names_full": ["SIAM Journal on Discrete Mathematics"],
+    "names_abbr": ["SIAM J. Discret. Math."]
+  },
+  "SIFIN": {
+    "names_full": ["SIAM Journal on Financial Mathematics"],
+    "names_abbr": ["SIAM J. Financ. Math."]
+  },
+  "SIIMS": {
+    "names_full": ["SIAM Journal on Imaging Sciences"],
+    "names_abbr": ["SIAM J. Imaging Sci."]
+  },
+  "SIMAX": {
+    "names_full": ["SIAM Journal on Matrix Analysis and Applications"],
+    "names_abbr": ["SIAM J. Matrix Anal. Appl."]
+  },
+  "SINUM": {
+    "names_full": ["SIAM Journal on Numerical Analysis"],
+    "names_abbr": ["SIAM J. Numer. Anal."]
+  },
+  "TVP": {
+    "names_full": ["Theory of Probability and Its Applications", "Theory of Probability & Its Applications"],
+    "names_abbr": ["Theory Probab. Appl.", "Theory Probab. Appl."]
+  },
+  "AAMAS": {
+    "names_full": ["Autonomous Agents and Multi-Agent Systems"],
+    "names_abbr": ["Auton. Agent. Multi-Agent. Syst."]
+  },
+  "AIL": {
+    "names_full": ["Artificial Intelligence and Law"],
+    "names_abbr": ["Artif. Intell. Law"]
+  },
+  "AISM": {
+    "names_full": ["Annals of the Institute of Statistical Mathematics"],
+    "names_abbr": ["Ann. Inst. Stat. Math."]
+  },
+  "AR": {
+    "names_full": ["Autonomous Robots"],
+    "names_abbr": ["Auton. Robot."]
+  },
+  "CC": {
+    "names_full": ["Cognitive Computation"],
+    "names_abbr": ["Cogn. Comput."]
+  },
+  "CMS": {
+    "names_full": ["Communications in Mathematics and Statistics"],
+    "names_abbr": ["Commun. Math. Stat."]
+  },
+  "CSTAT": {
+    "names_full": ["Computational Statistics"],
+    "names_abbr": ["Comput. Stat."]
+  },
+  "Constr": {
+    "names_full": ["Constraints"],
+    "names_abbr": ["Constraints"]
+  },
+  "DMKD": {
+    "names_full": ["Data Mining and Knowledge Discovery"],
+    "names_abbr": ["Data Mining Knowl. Discov."]
+  },
+  "EVOLS": {
+    "names_full": ["Evolving Systems"],
+    "names_abbr": ["Evol. Syst."]
+  },
+  "IJCIS": {
+    "names_full": ["International Journal of Computational Intelligence Systems"],
+    "names_abbr": ["Int. J. Comput. Intell. Syst."]
+  },
+  "IJDAR": {
+    "names_full": ["International Journal on Document Analysis and Recognition"],
+    "names_abbr": ["Int. J. Doc. Anal. Recognit."]
+  },
+  "IJMIR": {
+    "names_full": ["International Journal of Multimedia Information Retrieval"],
+    "names_abbr": ["Int. J. Multimed. Inf. Retr."]
+  },
+  "INVENT": {
+    "names_full": ["Inventiones Mathematicae"],
+    "names_abbr": ["Invent. Math."]
+  },
+  "JAR": {
+    "names_full": ["Journal of Automated Reasoning"],
+    "names_abbr": ["J. Auto. Reasoning"]
+  },
+  "JIIS": {
+    "names_full": ["Journal of Intelligent Information Systems"],
+    "names_abbr": ["J. Intell. Inf. Syst."]
+  },
+  "JIRS": {
+    "names_full": ["Journal of Intelligent & Robotic Systems"],
+    "names_abbr": ["J. Intell. Robot. Syst."]
+  },
+  "JLLI": {
+    "names_full": ["Journal of Logic, Language and Information"],
+    "names_abbr": ["J. Log. Lang. Inf."]
+  },
+  "JMIV": {
+    "names_full": ["Journal of Mathematical Imaging and Vision"],
+    "names_abbr": ["J. Math. Imaging Vis."]
+  },
+  "JMUI": {
+    "names_full": ["Journal on Multimodal User Interfaces"],
+    "names_abbr": ["J. Multimodal User Interfaces"]
+  },
+  "JRTIP": {
+    "names_full": ["Journal of Real-Time Image Processing"],
+    "names_abbr": ["J. Real-Time Image Process."]
+  },
+  "KIS": {
+    "names_full": ["Knowledge and Information Systems"],
+    "names_abbr": ["Knowl. Inf. Syst."]
+  },
+  "MAM": {
+    "names_full": ["Minds and Machines"],
+    "names_abbr": ["Minds Mach."]
+  },
+  "MIR": {
+    "names_full": ["Machine Intelligence Research"],
+    "names_abbr": ["Mach. Intell. Res."]
+  },
+  "MVA": {
+    "names_full": ["Machine Vision and Applications"],
+    "names_abbr": ["Mach. Vis. Appl."]
+  },
+  "NPL": {
+    "names_full": ["Neural Processing Letters"],
+    "names_abbr": ["Neural Process. Lett."]
+  },
+  "PAAA": {
+    "names_full": ["Pattern Analysis and Applications"],
+    "names_abbr": ["Pattern Anal. Appl."]
+  },
+  "PTRF": {
+    "names_full": ["Probability Theory and Related Fields"],
+    "names_abbr": ["Probab. Theory Relat. Fields"]
+  },
+  "AAI": {
+    "names_full": ["Applied Artificial Intelligence"],
+    "names_abbr": ["Appl. Artif. Intell."]
+  },
+  "CSCI": {
+    "names_full": ["Connection Science"],
+    "names_abbr": ["Connect. Sci."]
+  },
+  "CYBS": {
+    "names_full": ["Cybernetics and Systems"],
+    "names_abbr": ["Cybern. Sci."]
+  },
+  "IJCON": {
+    "names_full": ["International Journal of Control"],
+    "names_abbr": ["Int. J. Control"]
+  },
+  "JBES": {
+    "names_full": ["Journal of Business & Economic Statistics", "Journal of Business and Economic Statistics"],
+    "names_abbr": ["J. Busin. Econ. Stat.", "J. Busin. Econ. Stat."]
+  },
+  "JCGS": {
+    "names_full": ["Journal of Computational and Graphical Statistics"],
+    "names_abbr": ["J. Comput. Graph. Stat."]
+  },
+  "JEEE": {
+    "names_full": ["Ethology Ecology And Evolution", "Ethology Ecology & Evolution"],
+    "names_abbr": ["Ethol. Ecol. Evol.", "Ethol. Ecol. Evol."]
+  },
+  "JOAS": {
+    "names_full": ["Journal of Applied Statistics"],
+    "names_abbr": ["J. Appl. Stat."]
+  },
+  "NCNS": {
+    "names_full": ["Network: Computation in Neural Systems"],
+    "names_abbr": ["Netw. Comput. Neural Syst."]
+  },
+  "OPTIM": {
+    "names_full": ["Optimization"],
+    "names_abbr": ["Optim."]
+  },
+  "AAIL": {
+    "names_full": ["Applied AI Letters"],
+    "names_abbr": ["Appl. AI Lett."]
+  },
+  "ACISC": {
+    "names_full": ["Applied Computational Intelligence and Soft Computing"],
+    "names_abbr": ["Appl. Comput. Intell. Soft Comput."]
+  },
+  "ADVS": {
+    "names_full": ["Advanced Science"],
+    "names_abbr": ["Adv. Sci."]
+  },
+  "AIM": {
+    "names_full": ["AI Magazine"],
+    "names_abbr": ["AI Mag."]
+  },
+  "AISY": {
+    "names_full": ["Advanced Intelligent Systems"],
+    "names_abbr": ["Adv. Intell. Syst."]
+  },
+  "ANGEW": {
+    "names_full": ["Angewandte Chemie International Edition"],
+    "names_abbr": ["Angew. Chem. Int. Edit."]
+  },
+  "BIMJ": {
+    "names_full": ["Biometrical Journal"],
+    "names_abbr": ["Bio. J."]
+  },
+  "COIN": {
+    "names_full": ["Computational Intelligence"],
+    "names_abbr": ["Comput. Intell."]
+  },
+  "IETCV": {
+    "names_full": ["IET Computer Vision"],
+    "names_abbr": ["IET Comput. Vis."]
+  },
+  "IETIP": {
+    "names_full": ["IET Image Processing"],
+    "names_abbr": ["IET Image Process."]
+  },
+  "IJNME": {
+    "names_full": ["International Journal for Numerical Methods in Engineering"],
+    "names_abbr": ["Int. J. Numer. Meth. Eng."]
+  },
+  "INSR": {
+    "names_full": ["International Statistical Review"],
+    "names_abbr": ["Int. Stat. Rev."]
+  },
+  "JCC": {
+    "names_full": ["Journal of Computational Chemistry"],
+    "names_abbr": ["J. Comput. Chem."]
+  },
+  "JOM": {
+    "names_full": ["Journal of Operations Management"],
+    "names_abbr": ["J. Oper. Manag."]
+  },
+  "JTSA": {
+    "names_full": ["Journal of Time Series Analysis"],
+    "names_abbr": ["J. Time Series Anal."]
+  },
+  "MMAS": {
+    "names_full": ["Mathematical Methods in the Applied Sciences"],
+    "names_abbr": ["Math. Meth. Appl. Sci."]
+  },
+  "SADM": {
+    "names_full": ["Statistical Analysis and Data Mining"],
+    "names_abbr": ["Stat. Anal. Data Mining"]
+  },
+  "SIM": {
+    "names_full": ["Statistics in Medicine"],
+    "names_abbr": ["Stat. Med."]
+  },
+  "WIDM": {
+    "names_full": [
+      "WIREs Data Mining and Knowledge Discovery",
+      "Wiley Interdisciplinary Reviews: Data Mining and Knowledge Discovery"
+    ],
+    "names_abbr": ["WIREs Data Mining Knowl. Discov.", "WIREs Data Mining Knowl. Discov."]
+  },
+  "IET": {
+    "names_full": ["Innovation and Emerging Technologies"],
+    "names_abbr": ["Innov. Emerg. Technol."]
+  },
+  "IJAIRR": {
+    "names_full": ["International Journal of Artificial Intelligence and Robotics Research"],
+    "names_abbr": ["Int. J. Artif. Intell. Robot. Res."]
+  },
+  "IJDSMS": {
+    "names_full": ["International Journal of Data Science in the Mathematical Sciences"],
+    "names_abbr": ["Int. J. Data Sci. Math. Sci."]
+  },
+  "IJFCS": {
+    "names_full": ["International Journal of Foundations of Computer Science"],
+    "names_abbr": ["Int. J. Found. Comput. Sci"]
+  },
+  "IJNS": {
+    "names_full": ["International Journal of Neural Systems"],
+    "names_abbr": ["Int. J. Neural Syst."]
+  },
+  "IJSEKE": {
+    "names_full": ["International Journal of Software Engineering and Knowledge Engineering"],
+    "names_abbr": ["Int. J. Soft. Eng. Knowl. Eng."]
+  },
+  "IJUFKS": {
+    "names_full": ["International Journal of Uncertainty, Fuzziness and Knowledge-Based Systems"],
+    "names_abbr": ["Int. J. Uncertain. Fuzziness Knowl.-Based. Syst."]
+  },
+  "WSARAI": {
+    "names_full": ["World Scientific Annual Review of Artificial Intelligence"],
+    "names_abbr": ["World Sci. Ann. Rev. Artif. Intell."]
+  },
+  "arXiv": {
+    "names_full": ["arXiv"],
+    "names_abbr": ["arXiv"]
   }
 }
