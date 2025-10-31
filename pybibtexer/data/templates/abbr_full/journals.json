@@ -51,10 +51,6 @@
     "names_full": ["IEEE Signal Processing Letters"],
     "names_abbr": ["IEEE Signal Process. Lett."]
   },
-  "IEEE_J_SYST": {
-    "names_full": ["IEEE Systems Journal"],
-    "names_abbr": ["IEEE Syst. J."]
-  },
   "IEEE_J_ASSP": {
     "names_full": ["IEEE Transactions on Acoustics, Speech, and Signal Processing"],
     "names_abbr": ["IEEE Trans. Acoust., Speech, Signal Process."]
@@ -70,14 +66,6 @@
   "IEEE_J_ASLP": {
     "names_full": ["{IEEE/ACM} Transactions on Audio, Speech, and Language Processing"],
     "names_abbr": ["{IEEE/ACM} Trans. Audio, Speech, Language Process."]
-  },
-  "IEEE_J_ASL": {
-    "names_full": ["IEEE Transactions on Audio, Speech, and Language Processing"],
-    "names_abbr": ["IEEE Audio, Speech, Language Process."]
-  },
-  "IEEE_J_AC": {
-    "names_full": ["IEEE Transactions on Automatic Control"],
-    "names_abbr": ["IEEE Trans. Autom. Control"]
   },
   "IEEE_J_CAS": {
     "names_full": ["IEEE Transactions on Circuits and Systems"],
@@ -134,10 +122,6 @@
   "IEEE_J_UFFC": {
     "names_full": ["IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control"],
     "names_abbr": ["IEEE Trans. Ultrason., Ferroelectr., Freq. Control"]
-  },
-  "IEEE_J_COML": {
-    "names_full": ["IEEE Communications Letters"],
-    "names_abbr": ["IEEE Commun. Lett."]
   },
   "IEEE_J_JSAC": {
     "names_full": ["IEEE Journal on Selected Areas in Communications"],
@@ -473,10 +457,6 @@
     "names_full": ["Canadian Journal of Electrical and Computer Engineering"],
     "names_abbr": ["Canadian J. Elect. Comput. Eng."]
   },
-  "IEEE_J_PROC": {
-    "names_full": ["Proceedings of the IEEE"],
-    "names_abbr": ["Proc. IEEE"]
-  },
   "IEEE_J_RITA": {
     "names_full": ["IEEE Revista Iberoamericana de Technolog{\\'{i}}as del Aprendizaje"],
     "names_abbr": ["IEEE Revista Iberoamericana de Technolog{\\'{i}}as del Aprendizaje"]
@@ -809,10 +789,6 @@
     "names_full": ["IEEE Transactions on Very Large Scale Integration (VLSI) Systems"],
     "names_abbr": ["IEEE Trans. VLSI Syst."]
   },
-  "IEEE_O_ACC": {
-    "names_full": ["IEEE Access"],
-    "names_abbr": ["IEEE Access"]
-  },
   "IEEE_M_AES": {
     "names_full": ["IEEE Aerospace and Electronics Systems Magazine"],
     "names_abbr": ["IEEE Aerosp. Electron. Syst. Mag."]
@@ -853,10 +829,6 @@
     "names_full": ["IEEE Communications Surveys and Tutorials"],
     "names_abbr": ["IEEE Commun. Surveys Tuts."]
   },
-  "IEEE_M_CIM": {
-    "names_full": ["IEEE Computational Intelligence Magazine"],
-    "names_abbr": ["IEEE Comput. Intell. Mag."]
-  },
   "IEEE_M_CSE": {
     "names_full": ["IEEE Computing in Science and Engineering"],
     "names_abbr": ["IEEE Comput. Sci. Eng."]
@@ -864,10 +836,6 @@
   "IEEE_M_CSEM": {
     "names_full": ["IEEE Computational Science and Engineering Magazine"],
     "names_abbr": ["IEEE Comput. Sci. Eng. Mag."]
-  },
-  "IEEE_M_C": {
-    "names_full": ["Computer"],
-    "names_abbr": ["Computer"]
   },
   "IEEE_M_CAP": {
     "names_full": ["IEEE Computer Applications in Power"],
@@ -941,10 +909,6 @@
     "names_full": ["IEEE Instrumentation and Measurement Magazine"],
     "names_abbr": ["IEEE Instrum. Meas. Mag."]
   },
-  "IEEE_M_IS": {
-    "names_full": ["IEEE Intelligent Systems"],
-    "names_abbr": ["IEEE Intell. Syst."]
-  },
   "IEEE_M_ITS": {
     "names_full": ["IEEE Intelligent Transportation Systems Magazine"],
     "names_abbr": ["IEEE Intell. Transp. Syst. Mag."]
@@ -956,10 +920,6 @@
   "IEEE_M_ITP": {
     "names_full": ["IEEE {IT} Professional"],
     "names_abbr": ["IEEE {IT} Prof."]
-  },
-  "IEEE_M_MICRO": {
-    "names_full": ["IEEE Micro"],
-    "names_abbr": ["IEEE Micro"]
   },
   "IEEE_M_MW": {
     "names_full": ["IEEE Microwave Magazine"],
@@ -1013,17 +973,9 @@
     "names_full": ["IEEE Security and Privacy"],
     "names_abbr": ["IEEE Security Privacy"]
   },
-  "IEEE_M_SP": {
-    "names_full": ["IEEE Signal Processing Magazine"],
-    "names_abbr": ["IEEE Signal Process. Mag."]
-  },
   "IEEE_M_S": {
     "names_full": ["IEEE Software"],
     "names_abbr": ["IEEE Softw."]
-  },
-  "IEEE_M_SSC": {
-    "names_full": ["IEEE Solid-State Circuits Magazine"],
-    "names_abbr": ["IEEE Solid-State Circuits Mag."]
   },
   "IEEE_M_SPECT": {
     "names_full": ["IEEE Spectrum"],
@@ -1369,10 +1321,6 @@
     "names_full": ["International Journal of Machine Learning and Cybernetics"],
     "names_abbr": ["Int. J. Mach. Learn. Cybern."]
   },
-  "IJMLCYB": {
-    "names_abbr": ["Int. J. Mach. Learn. Cyber."],
-    "names_full": ["International Journal of Machine Learning and Cybernetics"]
-  },
   "IJOC": {
     "names_full": ["INFORMS Journal on Computing"],
     "names_abbr": ["INFORMS J. Comput."]
@@ -1380,10 +1328,6 @@
   "IJPRAI": {
     "names_full": ["International Journal of Pattern Recognition and Artificial Intelligence"],
     "names_abbr": ["Int. J. Pattern Recognit. Artif. Intell."]
-  },
-  "IJSC": {
-    "names_abbr": ["Int.  J. Syst. Sci."],
-    "names_full": ["International Journal of Systems Science"]
   },
   "IJSIR": {
     "names_abbr": ["Int. J. Swarm Intell. Res."],
