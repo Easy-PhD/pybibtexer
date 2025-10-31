@@ -236,12 +236,14 @@
         "names_abbr": [
             "Proc. Genet. Evol. Comput. Conf.",
             "Proc. Genet. Evol. Comput. Conf.",
+            "Proc. Genet. Evol. Comput. Conf.",
             "Proc. Genet. Evol. Comput. Conf."
         ],
         "names_full": [
             "Proceedings of the.* Genetic and Evolutionary Computation Conference",
             "Proceedings of the [a-zA-Z0-9]+ Annual Conference on Genetic and Evolutionary Computation",
-            "Genetic and Evolutionary Computation --- GECCO [0-9]*"
+            "Genetic and Evolutionary Computation -+ GECCO [0-9]*",
+            "Genetic and Evolutionary Computation Conference"
         ]
     },
     "GECCOC": {
