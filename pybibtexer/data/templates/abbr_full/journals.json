@@ -455,6 +455,10 @@
         "names_abbr": ["Expert Syst. Appl."],
         "names_full": ["Expert Systems with Applications"]
     },
+    "ETT": {
+        "names_abbr": ["Trans. Emerg. Telecommun. Technol."],
+        "names_full": ["Transactions on Emerging Telecommunications Technologies"]
+    },
     "EVLETT": {
         "names_abbr": ["Evol. Lett."],
         "names_full": ["Evolution Letters"]
@@ -515,7 +519,7 @@
         "names_full": ["Fundamenta Informaticae"]
     },
     "FUTURE": {
-        "names_abbr": ["Future Generation Comput. Syst."],
+        "names_abbr": ["Future Gen. Comput. Syst."],
         "names_full": ["Future Generation Computer Systems"]
     },
     "FoCM": {
@@ -881,10 +885,6 @@
     "IEEE_J_JRA": {
         "names_abbr": ["IEEE J. Robot. Autom."],
         "names_full": ["IEEE Journal of Robotics and Automation"]
-    },
-    "IEEE_J_JSAC": {
-        "names_abbr": ["IEEE J. Sel. Areas Commun."],
-        "names_full": ["IEEE Journal on Selected Areas in Communications"]
     },
     "IEEE_J_JSSC": {
         "names_abbr": ["IEEE J. Solid-State Circuits"],
@@ -1793,6 +1793,10 @@
         "names_abbr": ["J. Real-Time Image Process."],
         "names_full": ["Journal of Real-Time Image Processing"]
     },
+    "JSAC": {
+        "names_abbr": ["IEEE J. Sel. Areas Commun."],
+        "names_full": ["IEEE Journal on Selected Areas in Communications"]
+    },
     "JSIAM": {
         "names_abbr": ["J. Soc. Ind. Appl. Math."],
         "names_full": ["Journal of the Society for Industrial and Applied Mathematics"]
@@ -2426,6 +2430,10 @@
     "TCYB": {
         "names_abbr": ["IEEE Trans. Cybern."],
         "names_full": ["IEEE Transactions on Cybernetics"]
+    },
+    "TEEE": {
+        "names_abbr": ["IEEJ Trans. Elec. Electron. Eng."],
+        "names_full": ["IEEJ Transactions on Electrical and Electronic Engineering"]
     },
     "TELO": {
         "names_abbr": ["ACM Trans. Evol. Learn. Optim."],
