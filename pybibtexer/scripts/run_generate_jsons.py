@@ -166,41 +166,78 @@ class GenerateDefaultJSONs:
         return result_dict
 
     @staticmethod
-    def _check_multiple_items(json_data: dict) -> None:
+    def _check_multiple_items(json_data: dict, verbose=False) -> None:
         # Check for entries with multiple full names
-        for key in json_data:
-            if len(set(json_data[key].get("names_full", []))) > 1:
-                print(f"{key}: {json_data[key]["names_full"]}")
-            if len(set(json_data[key].get("names_abbr", []))) > 1:
-                print(f"{key}: {json_data[key]["names_abbr"]}")
+        if verbose:
+            for key in json_data:
+                if len(set(json_data[key].get("names_full", []))) > 1:
+                    print(f"{key}: {json_data[key]["names_full"]}")
+                if len(set(json_data[key].get("names_abbr", []))) > 1:
+                    print(f"{key}: {json_data[key]["names_abbr"]}")
 
         print()
-        for flag in ["names_full", "names_abbr"]:
-            # Create reverse mapping from full/abbr names to keys
-            new_json_data = {}
-            for key in json_data:
-                for j in json_data[key].get(flag, []):
-                    new_json_data.setdefault(j, []).append(key)
+        if verbose:
+            for flag in ["names_full", "names_abbr"]:
+                # Create reverse mapping from full/abbr names to keys
+                new_json_data = {}
+                for key in json_data:
+                    for j in json_data[key].get(flag, []):
+                        new_json_data.setdefault(j, []).append(key)
 
-            # Check for full/abbr names that map to multiple keys
-            for key in new_json_data:
-                if len(set(new_json_data[key])) > 1:
-                    print(f"{key}: {new_json_data[key]}")
-
-            print()
+                # Check for full/abbr names that map to multiple keys
+                for key in new_json_data:
+                    if len(set(new_json_data[key])) > 1:
+                        print(f"{key}: {new_json_data[key]}")
+                print()
 
         return None
 
-    def _check_duplicate(self, json_old: dict, json_new: dict) -> None:
-        # Check for duplicate keys between old and new JSON data
-        for key in json_old:
-            if key in json_new:
-                # Check if new data has any items not in old data
-                if any(item not in json_old[key] for item in json_new[key]):
-                    print(f"Old data:{json_old[key]}")
-                    print(f"New data:{json_new[key]}")
+    def _compare_and_return(self, json_old: dict, json_new: dict) -> dict:
+        """
+        Compare old and new JSON data to find newly added items.
+
+        Returns keys that only appear in the new JSON data.
+
+        Args:
+            json_old: Old JSON data as dictionary
+            json_new: New JSON data as dictionary
+
+        Returns:
+            dict: A dictionary containing keys that only exist in new data
+        """
+        # Find keys that only exist in new JSON
+        keys_only_in_new = set(json_new.keys()) - set(json_old.keys())
+        new_only_data = {key: json_new[key] for key in keys_only_in_new}
+
+        # Find common keys between old and new JSON
+        common_keys = set(json_old.keys()) & set(json_new.keys())
+
+        # Check each common key for new items using pattern matching
+        for key in common_keys:
+
+            for flag in ["names_full"]:
+                old_items = [item.lower() for item in json_old[key][flag]]
+                new_items = [item.lower() for item in json_new[key][flag]]
+
+                # Convert to regex patterns
+                patterns = [re.compile(item.replace("(", "").replace(")", "")) for item in old_items]
+
+                unmatched = []
+                for item in new_items:
+                    not_in_old = item not in old_items
+
+                    if not_in_old and (not any([p.match(item.replace("(", "").replace(")", "")) for p in patterns])):
+                        unmatched.append(item)
+
+                # Report unmatched items
+                if unmatched:
+                    print(f"New items found - Key: {key}, requires manual handling")
+                    print(f"Old data: {json_old[key][flag]}")
+                    print(f"New data: {unmatched}")
                     print()
-        return None
+
+        # Return keys that only exist in new data
+        return new_only_data
 
     def run(self, merge_json: bool = False) -> None:
         """Run the parsing pipeline.
@@ -213,35 +250,35 @@ class GenerateDefaultJSONs:
         # ==================== Conference Data Processing ====================
         print(f"Checking existing conference data: `{self.default_full_json_c}`")
         json_old_c = self.load_json_file(self.default_full_json_c)
-        self._check_multiple_items(json_old_c)
+        self._check_multiple_items(json_old_c, verbose=False)
         print()
 
         # Parse new conference data from BibLaTeX file
         json_new_c = self.parse_bibtex_file(self.full_biblatex, "inproceedings")
         print(f"Checking newly parsed conference data: `{self.full_biblatex}`")
-        self._check_multiple_items(json_new_c)
+        self._check_multiple_items(json_new_c, verbose=True)
         print()
 
         # Check for duplicates between old and new conference data
         print("Comparing existing conference data with newly parsed data")
-        self._check_duplicate(json_old_c, json_new_c)
+        json_new_c = self._compare_and_return(json_old_c, json_new_c)
         print()
 
         # ==================== Journal Data Processing ====================
         print(f"Checking existing journal data: `{self.default_full_json_j}`")
         json_old_j = self.load_json_file(self.default_full_json_j)
-        self._check_multiple_items(json_old_j)
+        self._check_multiple_items(json_old_j, verbose=False)
         print()
 
         # Parse new journal data from BibLaTeX file
         json_new_j = self.parse_bibtex_file(self.full_biblatex, "article")
         print(f"Checking newly parsed journal data: `{self.full_biblatex}`")
-        self._check_multiple_items(json_new_j)
+        self._check_multiple_items(json_new_j, verbose=True)
         print()
 
         # Check for duplicates between old and new journal data
         print("Comparing existing journal data with newly parsed data")
-        self._check_duplicate(json_old_j, json_new_j)
+        json_new_j = self._compare_and_return(json_old_j, json_new_j)
         print()
 
         # ==================== Data Merging and Saving ====================
@@ -253,13 +290,13 @@ class GenerateDefaultJSONs:
 
             # Merge conference data with priority: new data > user data > old data
             self.save_to_json(
-                {**json_old_c, **json_new_c, **user_c_json},  # Priority: user > new > old
+                {**json_new_c, **json_old_c, **user_c_json},  # Priority: user > old > new
                 self.default_full_json_c
             )
 
             # Merge journal data with priority: new data > user data > old data
             self.save_to_json(
-                {**json_old_j, **json_new_j, **user_j_json},  # Priority: user > new > old
+                {**json_new_j, **json_old_j, **user_j_json},  # Priority: user > old > new
                 self.default_full_json_j
             )
             print("Data merging completed and saved")
