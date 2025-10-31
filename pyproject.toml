@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pybibtexer"
-version = "0.2.19"
+version = "0.2.20"
 description = "pybibtexer"
 license = "GPL-3.0-or-later"
 authors = ["NextAI <nextartifintell@gmail.com>"]

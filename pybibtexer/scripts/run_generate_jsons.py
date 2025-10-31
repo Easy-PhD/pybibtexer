@@ -3,6 +3,8 @@ import os
 import re
 from typing import Any
 
+from pyadvtools.tools import IterateSortDict
+
 from ..main.utils import process_user_conferences_journals_json
 
 
@@ -153,10 +155,11 @@ class GenerateDefaultJSONs:
     def _check_multiple_items(json_data: dict) -> None:
         # Check for entries with multiple full names
         for key in json_data:
-            if len(json_data.get("names_full", [])) > 1:
+            if len(set(json_data[key].get("names_full", []))) > 1:
                 print(f"{key}: {json_data[key]["names_full"]}")
                 print(f"{key}: {json_data[key]["names_abbr"]}")
 
+        print()
         for flag in ["names_full", "names_abbr"]:
             # Create reverse mapping from full/abbr names to keys
             new_json_data = {}
@@ -166,8 +169,10 @@ class GenerateDefaultJSONs:
 
             # Check for full/abbr names that map to multiple keys
             for key in new_json_data:
-                if len(new_json_data[key]) > 1:
+                if len(set(new_json_data[key])) > 1:
                     print(f"{key}: {new_json_data[key]}")
+
+            print()
 
         return None
 
@@ -183,6 +188,12 @@ class GenerateDefaultJSONs:
         return None
 
     def run(self, merge_json: bool = False) -> None:
+        # Load existing JSON data
+        print(f"Check in `JSON {self.default_full_json_j}`")
+        json_old_j = self.load_json_file(self.default_full_json_j)
+        self._check_multiple_items(json_old_j)
+        print()
+
         # Parse new data from BibLaTeX file
         json_new_j = self.parse_bibtex_file(self.full_biblatex)
         # Check for multiple items in new data
@@ -190,17 +201,21 @@ class GenerateDefaultJSONs:
         self._check_multiple_items(json_new_j)
         print()
 
-        # Load existing JSON data
-        json_old_j = self.load_json_file(self.default_full_json_j)
         # Check for duplicates between old and new data
         print(f"Compare `{self.default_full_json_j}` with `JSON generated from {self.full_biblatex}`")
-        self._check_duplicate(json_old_j, json_new_j)
+        self._check_duplicate(json_old_j, json_new_j)  # Identify overlapping entries
         print()
 
         # Merge old and new data (new data overwrites old data for same keys) and save
         if merge_json:
+            # Process user-specific conference and journal JSON files
             _c_json, _j_json = process_user_conferences_journals_json(self.user_full_json_c, self.user_full_json_j)
+
+            # Save conference data
+            _c_json = IterateSortDict().dict_update(_c_json)
             self.save_to_json(_c_json, self.default_full_json_c)
+
+            # Merge journal data with priority: new data > user data > old data
             self.save_to_json({**json_old_j, **json_new_j, **_j_json}, self.default_full_json_j)
 
         return None
@@ -225,8 +240,9 @@ class GenerateDefaultJSONs:
     def save_to_json(data: dict, full_json: str) -> None:
         # Save data to JSON file
         try:
-            with open(full_json, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
+            if data:
+                with open(full_json, "w", encoding="utf-8") as f:
+                    json.dump(data, f, indent=4, sort_keys=True, ensure_ascii=True)
 
         except Exception as e:
             print(f"Error saving JSON file: {e}")
