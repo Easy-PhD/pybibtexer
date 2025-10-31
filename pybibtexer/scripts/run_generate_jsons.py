@@ -3,8 +3,6 @@ import os
 import re
 from typing import Any
 
-from pyadvtools.tools import IterateSortDict
-
 from ..main.utils import process_user_conferences_journals_json
 
 
@@ -98,58 +96,74 @@ class GenerateDefaultJSONs:
             content = file.read()
         return content
 
-    def parse_bibtex_file(self, full_biblatex: str):
-        # Read BibLaTeX file content
+    def parse_bibtex_file(self, full_biblatex: str, entry_type: str = "article"):
+        if entry_type not in ["article", "inproceedings"]:
+            raise ValueError("entry_type must be 'article' or 'inproceedings'")
+
+        config = {
+            "article": {
+                "prefix": "J_",
+                "pattern": r"@article\{(.*?),\s*([^@]*)\}",
+                "full_field": "journaltitle",
+                "abbr_field": "shortjournal"
+            },
+            "inproceedings": {
+                "prefix": "C_",
+                "pattern": r"@inproceedings\{(.*?),\s*([^@]*)\}",
+                "full_field": "booktitle",
+                "abbr_field": "eventtitle"
+            }
+        }
+
+        cfg = config[entry_type]
+
         content = self._read_str(full_biblatex)
 
-        # Regex pattern to match @article entries
-        article_pattern = r"@article\{(.*?),\s*([^@]*)\}"
-        articles = re.findall(article_pattern, content, re.DOTALL)
+        # Regex pattern to match entries
+        entries = re.findall(cfg["pattern"], content, re.DOTALL)
 
-        journal_dict = {}
-        for cite_key, entry_content in articles:
-            # Process only entries starting with 'J_' (journal entries)
-            if not cite_key.startswith("J_"):
+        result_dict = {}
+        for cite_key, entry_content in entries:
+            # Process only entries with the specified prefix
+            if not cite_key.startswith(cfg["prefix"]):
                 continue
 
-            # Extract journaltitle and shortjournal fields
-            journal_title_match = re.search(
-                r"journaltitle\s*=\s*\{([^}]*)\}", entry_content
+            # Extract full and abbreviation fields
+            full_match = re.search(
+                rf"{cfg['full_field']}\s*=\s*{{([^}}]*)}}", entry_content
             )
-            short_journal_match = re.search(
-                r"shortjournal\s*=\s*\{([^}]*)\}", entry_content
+            abbr_match = re.search(
+                rf"{cfg['abbr_field']}\s*=\s*{{([^}}]*)}}", entry_content
             )
 
-            if not (journal_title_match and short_journal_match):
+            # For inproceedings, booktitle is required but eventtitle is optional
+            if not full_match:
                 continue
 
-            journal_title = journal_title_match.group(1).strip()
-            short_journal = short_journal_match.group(1).strip()
+            full = full_match.group(1).strip()
+            if abbr_match:
+                abbr = abbr_match.group(1).strip()
+            else:
+                # Use full name as abbreviation if abbreviation field is missing
+                abbr = full
 
             parts = cite_key.split("_")
             if len(parts) >= 3:
-                journal_key = parts[1]
+                key = parts[1]
 
                 # Check if key already exists
-                if journal_key in journal_dict:
-                    existing_entry = journal_dict[journal_key]
+                if key in result_dict:
+                    existing_entry = result_dict[key]
 
-                    # Only update if journaltitle and shortjournal are identical
-                    if journal_title not in existing_entry["names_full"]:
-                        existing_entry["names_abbr"] = existing_entry["names_abbr"].append(
-                            short_journal
-                        )
-                        existing_entry["names_full"] = existing_entry["names_full"].append(
-                            journal_title
-                        )
+                    # Only add if full name is not already present
+                    if full not in existing_entry["names_full"]:
+                        existing_entry["names_abbr"].append(abbr)
+                        existing_entry["names_full"].append(full)
                 else:
                     # New key - add to dictionary
-                    journal_dict[journal_key] = {
-                        "names_abbr": [short_journal],
-                        "names_full": [journal_title],
-                    }
+                    result_dict[key] = {"names_abbr": [abbr], "names_full": [full]}
 
-        return journal_dict
+        return result_dict
 
     @staticmethod
     def _check_multiple_items(json_data: dict) -> None:
@@ -157,6 +171,7 @@ class GenerateDefaultJSONs:
         for key in json_data:
             if len(set(json_data[key].get("names_full", []))) > 1:
                 print(f"{key}: {json_data[key]["names_full"]}")
+            if len(set(json_data[key].get("names_abbr", []))) > 1:
                 print(f"{key}: {json_data[key]["names_abbr"]}")
 
         print()
@@ -188,41 +203,71 @@ class GenerateDefaultJSONs:
         return None
 
     def run(self, merge_json: bool = False) -> None:
-        # Load existing JSON data
-        print(f"Check in `JSON {self.default_full_json_j}`")
+        """Run the parsing pipeline.
+
+        load existing data, parse new data, check for duplicates, and optionally merge and save the data.
+
+        Args:
+            merge_json: Whether to merge and save data to JSON files
+        """
+        # ==================== Conference Data Processing ====================
+        print(f"Checking existing conference data: `{self.default_full_json_c}`")
+        json_old_c = self.load_json_file(self.default_full_json_c)
+        self._check_multiple_items(json_old_c)
+        print()
+
+        # Parse new conference data from BibLaTeX file
+        json_new_c = self.parse_bibtex_file(self.full_biblatex, "inproceedings")
+        print(f"Checking newly parsed conference data: `{self.full_biblatex}`")
+        self._check_multiple_items(json_new_c)
+        print()
+
+        # Check for duplicates between old and new conference data
+        print("Comparing existing conference data with newly parsed data")
+        self._check_duplicate(json_old_c, json_new_c)
+        print()
+
+        # ==================== Journal Data Processing ====================
+        print(f"Checking existing journal data: `{self.default_full_json_j}`")
         json_old_j = self.load_json_file(self.default_full_json_j)
         self._check_multiple_items(json_old_j)
         print()
 
-        # Parse new data from BibLaTeX file
-        json_new_j = self.parse_bibtex_file(self.full_biblatex)
-        # Check for multiple items in new data
-        print(f"Check in `JSON generated from {self.full_biblatex}`")
+        # Parse new journal data from BibLaTeX file
+        json_new_j = self.parse_bibtex_file(self.full_biblatex, "article")
+        print(f"Checking newly parsed journal data: `{self.full_biblatex}`")
         self._check_multiple_items(json_new_j)
         print()
 
-        # Check for duplicates between old and new data
-        print(f"Compare `{self.default_full_json_j}` with `JSON generated from {self.full_biblatex}`")
-        self._check_duplicate(json_old_j, json_new_j)  # Identify overlapping entries
+        # Check for duplicates between old and new journal data
+        print("Comparing existing journal data with newly parsed data")
+        self._check_duplicate(json_old_j, json_new_j)
         print()
 
-        # Merge old and new data (new data overwrites old data for same keys) and save
+        # ==================== Data Merging and Saving ====================
         if merge_json:
             # Process user-specific conference and journal JSON files
-            _c_json, _j_json = process_user_conferences_journals_json(self.user_full_json_c, self.user_full_json_j)
+            user_c_json, user_j_json = process_user_conferences_journals_json(
+                self.user_full_json_c, self.user_full_json_j
+            )
 
-            # Save conference data
-            _c_json = IterateSortDict().dict_update(_c_json)
-            self.save_to_json(_c_json, self.default_full_json_c)
+            # Merge conference data with priority: new data > user data > old data
+            self.save_to_json(
+                {**json_old_c, **json_new_c, **user_c_json},  # Priority: user > new > old
+                self.default_full_json_c
+            )
 
             # Merge journal data with priority: new data > user data > old data
-            self.save_to_json({**json_old_j, **json_new_j, **_j_json}, self.default_full_json_j)
+            self.save_to_json(
+                {**json_old_j, **json_new_j, **user_j_json},  # Priority: user > new > old
+                self.default_full_json_j
+            )
+            print("Data merging completed and saved")
 
         return None
 
     @staticmethod
     def load_json_file(file_path: str) -> dict[str, Any]:
-        # Check if file exists
         if not os.path.isfile(file_path):
             print(f"File not found: {file_path}")
             return {}
@@ -238,7 +283,6 @@ class GenerateDefaultJSONs:
 
     @staticmethod
     def save_to_json(data: dict, full_json: str) -> None:
-        # Save data to JSON file
         try:
             if data:
                 with open(full_json, "w", encoding="utf-8") as f:
