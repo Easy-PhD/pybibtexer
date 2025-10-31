@@ -1,7 +1,1053 @@
 {
-  "AAC": {
-    "names_abbr": ["Appl. Math. Comput."],
-    "names_full": ["Applied Mathematics and Computation"]
+  "IEEE_J_ANNE": {
+    "names_full": ["IEEE Transactions on Aeronautical and Navigational Electronics"],
+    "names_abbr": ["IEEE Trans. Aeronaut. Navig. Electron."]
+  },
+  "IEEE_J_AES": {
+    "names_full": ["IEEE Transactions on Aerospace and Electronic Systems"],
+    "names_abbr": ["IEEE Trans. Aerosp. Electron. Syst."]
+  },
+  "IEEE_J_ANE": {
+    "names_full": ["IEEE Transactions on Aerospace and Navigational Electronics"],
+    "names_abbr": ["IEEE Trans. Aerosp. Navig. Electron."]
+  },
+  "IEEE_J_AS": {
+    "names_full": ["IEEE Transactions on Aerospace"],
+    "names_abbr": ["IEEE Trans. Aerosp."]
+  },
+  "IEEE_J_AIRE": {
+    "names_full": ["IEEE Transactions on Airborne Electronics"],
+    "names_abbr": ["IEEE Trans. Airborne Electron."]
+  },
+  "IEEE_J_MIL": {
+    "names_full": ["IEEE Transactions on Military Electronics"],
+    "names_abbr": ["IEEE Trans. Mil. Electron."]
+  },
+  "IEEE_J_ITS": {
+    "names_full": ["IEEE Transactions on Intelligent Transportation Systems"],
+    "names_abbr": ["IEEE Trans. Intell. Transp. Syst."]
+  },
+  "IEEE_J_IV": {
+    "names_full": ["IEEE Transactions on Intelligent Vehicles"],
+    "names_abbr": ["IEEE Trans. Intell. Veh."]
+  },
+  "IEEE_J_TTE": {
+    "names_full": ["IEEE Transactions on Transportation Electrification"],
+    "names_abbr": ["IEEE Trans. Transport. Electrific."]
+  },
+  "IEEE_J_VC": {
+    "names_full": ["IEEE Transactions on Vehicular Communications"],
+    "names_abbr": ["IEEE Trans. Veh. Commun."]
+  },
+  "IEEE_J_VT": {
+    "names_full": ["IEEE Transactions on Vehicular Technology"],
+    "names_abbr": ["IEEE Trans. Veh. Technol."]
+  },
+  "IEEE_J_STSP": {
+    "names_full": ["IEEE Journal of Selected Topics in Signal Processing"],
+    "names_abbr": ["IEEE J. Sel. Topics Signal Process."]
+  },
+  "IEEE_J_SPL": {
+    "names_full": ["IEEE Signal Processing Letters"],
+    "names_abbr": ["IEEE Signal Process. Lett."]
+  },
+  "IEEE_J_SYST": {
+    "names_full": ["IEEE Systems Journal"],
+    "names_abbr": ["IEEE Syst. J."]
+  },
+  "IEEE_J_ASSP": {
+    "names_full": ["IEEE Transactions on Acoustics, Speech, and Signal Processing"],
+    "names_abbr": ["IEEE Trans. Acoust., Speech, Signal Process."]
+  },
+  "IEEE_J_AU": {
+    "names_full": ["IEEE Transactions on Audio"],
+    "names_abbr": ["IEEE Trans. Audio"]
+  },
+  "IEEE_J_AUEA": {
+    "names_full": ["IEEE Transactions on Audio and Electroacoustics"],
+    "names_abbr": ["IEEE Trans. Audio Electroacoust."]
+  },
+  "IEEE_J_ASLP": {
+    "names_full": ["{IEEE/ACM} Transactions on Audio, Speech, and Language Processing"],
+    "names_abbr": ["{IEEE/ACM} Trans. Audio, Speech, Language Process."]
+  },
+  "IEEE_J_ASL": {
+    "names_full": ["IEEE Transactions on Audio, Speech, and Language Processing"],
+    "names_abbr": ["IEEE Audio, Speech, Language Process."]
+  },
+  "IEEE_J_AC": {
+    "names_full": ["IEEE Transactions on Automatic Control"],
+    "names_abbr": ["IEEE Trans. Autom. Control"]
+  },
+  "IEEE_J_CAS": {
+    "names_full": ["IEEE Transactions on Circuits and Systems"],
+    "names_abbr": ["IEEE Trans. Circuits Syst."]
+  },
+  "IEEE_J_CASVT": {
+    "names_full": ["IEEE Transactions on Circuits and Systems for Video Technology"],
+    "names_abbr": ["IEEE Trans. Circuits Syst. Video Technol."]
+  },
+  "IEEE_J_CASI": {
+    "names_full": ["IEEE Transactions on Circuits and Systems---Part I: Fundamental Theory and Applications"],
+    "names_abbr": ["IEEE Trans. Circuits Syst. I"]
+  },
+  "IEEE_J_CASII": {
+    "names_full": ["IEEE Transactions on Circuits and Systems---Part II: Analog and Digital Signal Processing"],
+    "names_abbr": ["IEEE Trans. Circuits Syst. II"]
+  },
+  "IEEE_J_CASI_RP": {
+    "names_full": ["IEEE Transactions on Circuits and Systems---Part I: Regular Papers"],
+    "names_abbr": ["IEEE Trans. Circuits Syst. I"]
+  },
+  "IEEE_J_CASII_EB": {
+    "names_full": ["IEEE Transactions on Circuits and Systems---Part II: Express Briefs"],
+    "names_abbr": ["IEEE Trans. Circuits Syst. II"]
+  },
+  "IEEE_J_CT": {
+    "names_full": ["IEEE Transactions on Circuit Theory"],
+    "names_abbr": ["IEEE Trans. Circuit Theory"]
+  },
+  "IEEE_J_CST": {
+    "names_full": ["IEEE Transactions on Control Systems Technology"],
+    "names_abbr": ["IEEE Trans. Control Syst. Technol."]
+  },
+  "IEEE_J_ETCAS": {
+    "names_full": ["IEEE Transactions on Emerging and Selected Topics in Circuits and Systems"],
+    "names_abbr": ["IEEE Trans. Emerg. Sel. Topics Circuits Syst."]
+  },
+  "IEEE_J_SP": {
+    "names_full": ["IEEE Transactions on Signal Processing"],
+    "names_abbr": ["IEEE Trans. Signal Process."]
+  },
+  "IEEE_J_SU": {
+    "names_full": ["IEEE Transactions on Sonics and Ultrasonics"],
+    "names_abbr": ["IEEE Trans. Sonics Ultrason."]
+  },
+  "IEEE_J_SAP": {
+    "names_full": ["IEEE Transactions on Speech and Audio Processing"],
+    "names_abbr": ["IEEE Trans. Speech Audio Process."]
+  },
+  "IEEE_J_UE": {
+    "names_full": ["IEEE Transactions on Ultrasonics Engineering"],
+    "names_abbr": ["IEEE Trans. Ultrason. Eng."]
+  },
+  "IEEE_J_UFFC": {
+    "names_full": ["IEEE Transactions on Ultrasonics, Ferroelectrics, and Frequency Control"],
+    "names_abbr": ["IEEE Trans. Ultrason., Ferroelectr., Freq. Control"]
+  },
+  "IEEE_J_COML": {
+    "names_full": ["IEEE Communications Letters"],
+    "names_abbr": ["IEEE Commun. Lett."]
+  },
+  "IEEE_J_JSAC": {
+    "names_full": ["IEEE Journal on Selected Areas in Communications"],
+    "names_abbr": ["IEEE J. Sel. Areas Commun."]
+  },
+  "IEEE_J_COM": {
+    "names_full": ["IEEE Transactions on Communications"],
+    "names_abbr": ["IEEE Trans. Commun."]
+  },
+  "IEEE_J_COMT": {
+    "names_full": ["IEEE Transactions on Communication Technology"],
+    "names_abbr": ["IEEE Trans. Commun. Technol."]
+  },
+  "IEEE_J_WCOM": {
+    "names_full": ["IEEE Transactions on Wireless Communications"],
+    "names_abbr": ["IEEE Trans. Wireless Commun."]
+  },
+  "IEEE_J_WCOML": {
+    "names_full": ["IEEE Wireless Communications Letters"],
+    "names_abbr": ["IEEE Wireless Commun. Lett."]
+  },
+  "IEEE_J_ADVP": {
+    "names_full": ["IEEE Transactions on Advanced Packaging"],
+    "names_abbr": ["IEEE Trans. Adv. Packag."]
+  },
+  "IEEE_J_CHMT": {
+    "names_full": ["IEEE Transactions on Components, Hybrids and Manufacturing Technology"],
+    "names_abbr": ["IEEE Trans. Compon., Hybrids, Manuf. Technol."]
+  },
+  "IEEE_J_CPMT": {
+    "names_full": ["IEEE Transactions on Components, Packaging and Manufacturing Technology"],
+    "names_abbr": ["IEEE Trans. Compon. Packag. Manuf. Technol."]
+  },
+  "IEEE_J_CPMTA": {
+    "names_full": ["IEEE Transactions on Components, Packaging and Manufacturing Technology---Part A"],
+    "names_abbr": ["IEEE Trans. Compon., Packag., Manuf. Technol. A"]
+  },
+  "IEEE_J_CPMTB": {
+    "names_full": [
+      "IEEE Transactions on Components, Packaging and Manufacturing Technology---Part B: Advanced Packaging"
+    ],
+    "names_abbr": ["IEEE Trans. Compon., Packag., Manuf. Technol. B"]
+  },
+  "IEEE_J_CPMTC": {
+    "names_full": ["IEEE Transactions on Components, Packaging and Manufacturing Technology---Part C: Manufacturing"],
+    "names_abbr": ["IEEE Trans. Compon., Packag., Manuf. Technol. C"]
+  },
+  "IEEE_J_CAPTS": {
+    "names_full": ["IEEE Transactions on Components and Packaging Technologies"],
+    "names_abbr": ["IEEE Trans. Compon. Packag. Technol."]
+  },
+  "IEEE_J_CAPT": {
+    "names_full": ["IEEE Transactions on Components and Packaging Technology"],
+    "names_abbr": ["IEEE Trans. Compon. Packag. Technol."]
+  },
+  "IEEE_J_CPART": {
+    "names_full": ["IEEE Transactions on Component Parts"],
+    "names_abbr": ["IEEE Trans. Compon. Parts"]
+  },
+  "IEEE_J_EPM": {
+    "names_full": ["IEEE Transactions on Electronics Packaging Manufacturing"],
+    "names_abbr": ["IEEE Trans. Electron. Packag. Manuf."]
+  },
+  "IEEE_J_MFT": {
+    "names_full": ["IEEE Transactions on Manufacturing Technology"],
+    "names_abbr": ["IEEE Trans. Manuf. Technol."]
+  },
+  "IEEE_J_PHP": {
+    "names_full": ["IEEE Transactions on Parts, Hybrids and Packaging"],
+    "names_abbr": ["IEEE Trans. Parts, Hybrids, Packag."]
+  },
+  "IEEE_J_PMP": {
+    "names_full": ["IEEE Transactions on Parts, Materials and Packaging"],
+    "names_abbr": ["IEEE Trans. Parts, Mater., Packag."]
+  },
+  "IEEE_J_TCAD": {
+    "names_full": ["IEEE Journal on Technology in Computer Aided Design"],
+    "names_abbr": ["IEEE J. Technol. Comput. Aided Design"]
+  },
+  "IEEE_J_CAD": {
+    "names_full": ["IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"],
+    "names_abbr": ["IEEE Trans. Comput.-Aided Design Integr. Circuits Syst."]
+  },
+  "IEEE_J_BD": {
+    "names_full": ["IEEE Transactions on Big Data"],
+    "names_abbr": ["IEEE Trans. Big Data"]
+  },
+  "IEEE_J_IFS": {
+    "names_full": ["IEEE Transactions on Information Forensics and Security"],
+    "names_abbr": ["IEEE Trans. Inf. Forensics Security"]
+  },
+  "IEEE_J_IT": {
+    "names_full": ["IEEE Transactions on Information Theory"],
+    "names_abbr": ["IEEE Trans. Inf. Theory"]
+  },
+  "IEEE_J_KDE": {
+    "names_full": ["IEEE Transactions on Knowledge and Data Engineering"],
+    "names_abbr": ["IEEE Trans. Knowl. Data Eng."]
+  },
+  "IEEE_J_CAL": {
+    "names_full": ["IEEE Computer Architecture Letters"],
+    "names_abbr": ["IEEE Comput. Archit. Lett."]
+  },
+  "IEEE_J_ES": {
+    "names_full": ["IEEE Embedded Systems Letters"],
+    "names_abbr": ["IEEE Embedded Syst. Lett."]
+  },
+  "IEEE_J_IOT": {
+    "names_full": ["IEEE Internet of Things Journal"],
+    "names_abbr": ["IEEE Internet Things J."]
+  },
+  "IEEE_J_XCDC": {
+    "names_full": ["IEEE Journal on Exploratory Solid-State Computational Devices and Circuits"],
+    "names_abbr": ["IEEE J. Explor. Solid-State Computat. Devices Circuits"]
+  },
+  "IEEE_J_MMCT": {
+    "names_full": ["IEEE Journal on Multiscale and Multiphysics Computational Techniques"],
+    "names_abbr": ["IEEE J. Multiscale and Multiphys. Comput. Techn."]
+  },
+  "IEEE_J_SUSC": {
+    "names_full": ["IEEE Sustainable Computing"],
+    "names_abbr": ["IEEE Sustain. Comput."]
+  },
+  "IEEE_J_CC": {
+    "names_full": ["IEEE Transactions on Cloud Computing"],
+    "names_abbr": ["IEEE Trans. on Cloud Comput."]
+  },
+  "IEEE_J_CSS": {
+    "names_full": ["IEEE Transactions on Computational Social Systems"],
+    "names_abbr": ["IEEE Trans. Comput. Social Syst."]
+  },
+  "IEEE_J_C": {
+    "names_full": ["IEEE Transactions on Computers"],
+    "names_abbr": ["IEEE Trans. Comput."]
+  },
+  "IEEE_J_CNS": {
+    "names_full": ["IEEE Transactions on Control of Network Systems"],
+    "names_abbr": ["IEEE Trans. Control Netw. Syst."]
+  },
+  "IEEE_J_DSC": {
+    "names_full": ["IEEE Transactions on Dependable and Secure Computing"],
+    "names_abbr": ["IEEE Trans. Depend. Sec. Comput."]
+  },
+  "IEEE_J_ECOMP": {
+    "names_full": ["IEEE Transactions on Electronic Computers"],
+    "names_abbr": ["IEEE Trans. Electron. Comput."]
+  },
+  "IEEE_J_ETC": {
+    "names_full": ["IEEE Transactions on Emerging Topics in Computing"],
+    "names_abbr": ["IEEE Trans. Emerg. Topics Comput."]
+  },
+  "IEEE_J_EVC": {
+    "names_full": ["IEEE Transactions on Evolutionary Computation"],
+    "names_abbr": ["IEEE Trans. Evol. Comput."]
+  },
+  "IEEE_J_FUZZ": {
+    "names_full": ["IEEE Transactions on Fuzzy Systems"],
+    "names_abbr": ["IEEE Trans. Fuzzy Syst."]
+  },
+  "IEEE_J_MC": {
+    "names_full": ["IEEE Transactions on Mobile Computing"],
+    "names_abbr": ["IEEE Trans. Mobile Comput."]
+  },
+  "IEEE_J_MSCS": {
+    "names_full": ["IEEE Transactions on Multi-Scale Computing Systems"],
+    "names_abbr": ["IEEE Trans. Multi-Scale Comput. Syst."]
+  },
+  "IEEE_J_NET": {
+    "names_full": ["{IEEE/ACM} Transactions on Networking"],
+    "names_abbr": ["{IEEE/ACM} Trans. Netw."]
+  },
+  "IEEE_J_NSE": {
+    "names_full": ["IEEE Transactions on Network Science and Engineering"],
+    "names_abbr": ["IEEE Trans. Netw. Sci. Eng."]
+  },
+  "IEEE_J_NSM": {
+    "names_full": ["IEEE Transactions on Network and Service Management"],
+    "names_abbr": ["IEEE Trans. Netw. Service Manag."]
+  },
+  "IEEE_J_NN": {
+    "names_full": ["IEEE Transactions on Neural Networks"],
+    "names_abbr": ["IEEE Trans. Neural Netw."]
+  },
+  "IEEE_J_NNLS": {
+    "names_full": ["IEEE Transactions on Neural Networks and Learning Systems"],
+    "names_abbr": ["IEEE Trans. Neural Netw. Learn. Syst."]
+  },
+  "IEEE_J_PDS": {
+    "names_full": ["IEEE Transactions on Parallel and Distributed Systems"],
+    "names_abbr": ["IEEE Trans. Parallel Distrib. Syst."]
+  },
+  "IEEE_J_SC": {
+    "names_full": ["IEEE Transactions on Services Computing"],
+    "names_abbr": ["IEEE Trans. Serv. Comput."]
+  },
+  "IEEE_J_SIPN": {
+    "names_full": ["IEEE Transactions on Signal and Information Processing over Networks"],
+    "names_abbr": ["IEEE Trans. Signal Inf. Process. Netw."]
+  },
+  "IEEE_J_SE": {
+    "names_full": ["IEEE Transactions on Software Engineering"],
+    "names_abbr": ["IEEE Trans. Softw. Eng."]
+  },
+  "IEEE_J_JDT": {
+    "names_full": ["{IEEE/OSA} Journal of Display Technology"],
+    "names_abbr": ["{IEEE/OSA} J. Display Technol."]
+  },
+  "IEEE_J_IP": {
+    "names_full": ["IEEE Transactions on Image Processing"],
+    "names_abbr": ["IEEE Trans. Image Process."]
+  },
+  "IEEE_J_MM": {
+    "names_full": ["IEEE Transactions on Multimedia"],
+    "names_abbr": ["IEEE Trans. Multimedia"]
+  },
+  "IEEE_J_VCG": {
+    "names_full": ["IEEE Transactions on Visualization and Computer Graphics"],
+    "names_abbr": ["IEEE Trans. Vis. Comput. Graphics"]
+  },
+  "IEEE_J_JAS": {
+    "names_full": ["{IEEE/CAA} Journal of Automatica Sinica"],
+    "names_abbr": ["{IEEE/CAA} J. Autom. Sinica"]
+  },
+  "IEEE_J_JRA": {
+    "names_full": ["IEEE Journal of Robotics and Automation"],
+    "names_abbr": ["IEEE J. Robot. Autom."]
+  },
+  "IEEE_J_AFFC": {
+    "names_full": ["IEEE Transactions on Affective Computing"],
+    "names_abbr": ["IEEE Trans. Affect. Comput."]
+  },
+  "IEEE_J_ASE": {
+    "names_full": ["IEEE Transactions on Automation Science and Engineering"],
+    "names_abbr": ["IEEE Trans. Autom. Sci. Eng."]
+  },
+  "IEEE_J_AMD": {
+    "names_full": ["IEEE Transactions on Autonomous Mental Development"],
+    "names_abbr": ["IEEE Trans. Auton. Mental Develop."]
+  },
+  "IEEE_J_CCN": {
+    "names_full": ["IEEE Transactions on Cognitive Communications and Networking"],
+    "names_abbr": ["IEEE Trans. on Cogn. Commun. Netw."]
+  },
+  "IEEE_J_CDS": {
+    "names_full": ["IEEE Transactions on Cognitive and Developmental Systems"],
+    "names_abbr": ["IEEE Trans. Cogn. Develop. Syst."]
+  },
+  "IEEE_J_CIAIG": {
+    "names_full": ["IEEE Transactions on Computational Intelligence and AI in Games"],
+    "names_abbr": ["IEEE Trans. Comput. Intell. AI in Games"]
+  },
+  "IEEE_J_CYB": {
+    "names_full": ["IEEE Transactions on Cybernetics"],
+    "names_abbr": ["IEEE Trans. Cybern."]
+  },
+  "IEEE_J_H": {
+    "names_full": ["IEEE Transactions on Haptics"],
+    "names_abbr": ["IEEE Trans. Haptics"]
+  },
+  "IEEE_J_HFE": {
+    "names_full": ["IEEE Transactions on Human Factors in Electronics"],
+    "names_abbr": ["IEEE Trans. Hum. Factors Electron."]
+  },
+  "IEEE_J_HMS": {
+    "names_full": ["IEEE Transactions on Human-Machine Systems"],
+    "names_abbr": ["IEEE Trans. Human-Mach. Syst."]
+  },
+  "IEEE_J_MMS": {
+    "names_full": ["IEEE Transactions on Man-Machine Systems"],
+    "names_abbr": ["IEEE Trans. Man-Mach. Syst."]
+  },
+  "IEEE_J_PAMI": {
+    "names_full": ["IEEE Transactions on Pattern Analysis and Machine Intelligence"],
+    "names_abbr": ["IEEE Trans. Pattern Anal. Mach. Intell."]
+  },
+  "IEEE_J_RA": {
+    "names_full": ["IEEE Transactions on Robotics and Automation"],
+    "names_abbr": ["IEEE Trans. Robot. Autom."]
+  },
+  "IEEE_J_RAL": {
+    "names_full": ["IEEE Robotics and Automation Letters"],
+    "names_abbr": ["IEEE Robot. Autom. Lett."]
+  },
+  "IEEE_J_RO": {
+    "names_full": ["IEEE Transactions on Robotics"],
+    "names_abbr": ["IEEE Trans. Robot."]
+  },
+  "IEEE_J_SMC": {
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern."]
+  },
+  "IEEE_J_SMCA": {
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics---Part A: Systems and Humans"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. A"]
+  },
+  "IEEE_J_SMCB": {
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics---Part B: Cybernetics"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. B"]
+  },
+  "IEEE_J_SMCC": {
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics---Part C: Applications and Reviews"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. C"]
+  },
+  "IEEE_J_SMCS": {
+    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics: Systems"],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern., Syst."]
+  },
+  "IEEE_J_SSC": {
+    "names_full": ["IEEE Transactions on Systems Science and Cybernetics"],
+    "names_abbr": ["IEEE Trans. Syst. Sci. Cybern."]
+  },
+  "IEEE_J_GRSL": {
+    "names_full": ["IEEE Geoscience and Remote Sensing Letters"],
+    "names_abbr": ["IEEE Geosci. Remote Sens. Lett."]
+  },
+  "IEEE_J_GE": {
+    "names_full": ["IEEE Transactions on Geoscience Electronics"],
+    "names_abbr": ["IEEE Trans. Geosci. Electron."]
+  },
+  "IEEE_J_GRS": {
+    "names_full": ["IEEE Transactions on Geoscience and Remote Sensing"],
+    "names_abbr": ["IEEE Trans. Geosci. Remote Sens."]
+  },
+  "IEEE_J_OE": {
+    "names_full": ["IEEE Journal of Oceanic Engineering"],
+    "names_abbr": ["IEEE J. Ocean. Eng."]
+  },
+  "IEEE_J_STARS": {
+    "names_full": ["IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing"],
+    "names_abbr": ["IEEE J. Sel. Topics Appl. Earth Observ. Remote Sens."]
+  },
+  "IEEE_J_CJECE": {
+    "names_full": ["Canadian Journal of Electrical and Computer Engineering"],
+    "names_abbr": ["Canadian J. Elect. Comput. Eng."]
+  },
+  "IEEE_J_PROC": {
+    "names_full": ["Proceedings of the IEEE"],
+    "names_abbr": ["Proc. IEEE"]
+  },
+  "IEEE_J_RITA": {
+    "names_full": ["IEEE Revista Iberoamericana de Technolog{\\'{i}}as del Aprendizaje"],
+    "names_abbr": ["IEEE Revista Iberoamericana de Technolog{\\'{i}}as del Aprendizaje"]
+  },
+  "IEEE_J_EDU": {
+    "names_full": ["IEEE Transactions on Education"],
+    "names_abbr": ["IEEE Trans. Educ."]
+  },
+  "IEEE_J_EM": {
+    "names_full": ["IEEE Transactions on Engineering Management"],
+    "names_abbr": ["IEEE Trans. Eng. Manag."]
+  },
+  "IEEE_J_EWS": {
+    "names_full": ["IEEE Transactions on Engineering Writing and Speech"],
+    "names_abbr": ["IEEE Trans. Eng. Writing Speech"]
+  },
+  "IEEE_J_LT": {
+    "names_full": ["IEEE Transactions on Learning Technologies"],
+    "names_abbr": ["IEEE Trans. Learn. Technol."]
+  },
+  "IEEE_J_PC": {
+    "names_full": ["IEEE Transactions on Professional Communication"],
+    "names_abbr": ["IEEE Trans. Prof. Commun."]
+  },
+  "IEEE_J_AWPL": {
+    "names_full": ["IEEE Antennas and Wireless Propagation Letters"],
+    "names_abbr": ["IEEE Antennas Wireless Propag. Lett."]
+  },
+  "IEEE_J_MAGL": {
+    "names_full": ["IEEE Magnetics Letters"],
+    "names_abbr": ["IEEE Magn. Lett."]
+  },
+  "IEEE_J_MGWL": {
+    "names_full": ["IEEE Microwave and Guided Wave Letters"],
+    "names_abbr": ["IEEE Microw. Guided Wave Lett."]
+  },
+  "IEEE_J_MWCL": {
+    "names_full": ["IEEE Microwave and Wireless Components Letters"],
+    "names_abbr": ["IEEE Microw. Wireless Compon. Lett."]
+  },
+  "IEEE_J_RFIC": {
+    "names_full": ["IEEE {RFIC} Journal"],
+    "names_abbr": ["IEEE {RFIC} J."]
+  },
+  "IEEE_J_RFID": {
+    "names_full": ["IEEE {RFID} Journal"],
+    "names_abbr": ["IEEE {RFID} J."]
+  },
+  "IEEE_J_AP": {
+    "names_full": ["IEEE Transactions on Antennas and Propagation"],
+    "names_abbr": ["IEEE Trans. Antennas Propag."]
+  },
+  "IEEE_J_EMC": {
+    "names_full": ["IEEE Transactions on Electromagnetic Compatibility"],
+    "names_abbr": ["IEEE Trans. Electromagn. Compat."]
+  },
+  "IEEE_J_MAG": {
+    "names_full": ["IEEE Transactions on Magnetics"],
+    "names_abbr": ["IEEE Trans. Magn."]
+  },
+  "IEEE_J_MTT": {
+    "names_full": ["IEEE Transactions on Microwave Theory and Techniques"],
+    "names_abbr": ["IEEE Trans. Microw. Theory Techn."]
+  },
+  "IEEE_J_RFI": {
+    "names_full": ["IEEE Transactions on Radio Frequency Interference"],
+    "names_abbr": ["IEEE Trans. Radio Freq. Interference"]
+  },
+  "IEEE_J_TTHZ": {
+    "names_full": ["IEEE Transactions on Terahertz Science and Technology"],
+    "names_abbr": ["IEEE Trans. {THz} Sci. Technol."]
+  },
+  "IEEE_J_TJMJ": {
+    "names_full": ["IEEE Translation Journal on Magnetics in Japan"],
+    "names_abbr": ["IEEE Transl. J. Magn. Jpn."]
+  },
+  "IEEE_J_PHOT": {
+    "names_full": ["IEEE Journal of Photovoltaics"],
+    "names_abbr": ["IEEE J. Photovolt."]
+  },
+  "IEEE_J_PEL": {
+    "names_full": ["IEEE Power Electronics Letters"],
+    "names_abbr": ["IEEE Power Electron. Lett."]
+  },
+  "IEEE_J_PETS": {
+    "names_full": ["IEEE Power and Energy Technology Systems Journal"],
+    "names_abbr": ["IEEE Power Energy Technol. Syst. J."]
+  },
+  "IEEE_J_ESTPE": {
+    "names_full": ["IEEE Transactions on Emerging and Selected Topics in Power Electronics"],
+    "names_abbr": ["IEEE Trans. Emerg. Sel. Topics Power Electron."]
+  },
+  "IEEE_J_EC": {
+    "names_full": ["IEEE Transactions on Energy Conversion"],
+    "names_abbr": ["IEEE Trans. Energy Convers."]
+  },
+  "IEEE_J_PWRAS": {
+    "names_full": ["IEEE Transactions on Power Apparatus and Systems"],
+    "names_abbr": ["IEEE Trans. Power App. Syst."]
+  },
+  "IEEE_J_PWRD": {
+    "names_full": ["IEEE Transactions on Power Delivery"],
+    "names_abbr": ["IEEE Trans. Power Del."]
+  },
+  "IEEE_J_PWRE": {
+    "names_full": ["IEEE Transactions on Power Electronics"],
+    "names_abbr": ["IEEE Trans. Power Electron."]
+  },
+  "IEEE_J_PWRS": {
+    "names_full": ["IEEE Transactions on Power Systems"],
+    "names_abbr": ["IEEE Trans. Power Syst."]
+  },
+  "IEEE_J_SG": {
+    "names_full": ["IEEE Transactions on Smart Grid"],
+    "names_abbr": ["IEEE Trans. Smart Grid"]
+  },
+  "IEEE_J_STE": {
+    "names_full": ["IEEE Transactions on Sustainable Energy"],
+    "names_abbr": ["IEEE Trans. Sustain. Energy"]
+  },
+  "IEEE_J_PSE": {
+    "names_full": ["IEEE Journal of Product Safety Engineering"],
+    "names_abbr": ["IEEE J. Product Safety Eng."]
+  },
+  "IEEE_J_APPIND": {
+    "names_full": ["IEEE Transactions on Applications and Industry"],
+    "names_abbr": ["IEEE Trans. Appl. Ind."]
+  },
+  "IEEE_J_BC": {
+    "names_full": ["IEEE Transactions on Broadcasting"],
+    "names_abbr": ["IEEE Trans. Broadcast."]
+  },
+  "IEEE_J_BCTV": {
+    "names_full": ["IEEE Transactions on Broadcast and Television Receivers"],
+    "names_abbr": ["IEEE Trans. Broadcast Television Receivers"]
+  },
+  "IEEE_J_CE": {
+    "names_full": ["IEEE Transactions on Consumer Electronics"],
+    "names_abbr": ["IEEE Trans. Consum. Electron."]
+  },
+  "IEEE_J_IE": {
+    "names_full": ["IEEE Transactions on Industrial Electronics"],
+    "names_abbr": ["IEEE Trans. Ind. Electron."]
+  },
+  "IEEE_J_IECI": {
+    "names_full": ["IEEE Transactions on Industrial Electronics and Control Instrumentation"],
+    "names_abbr": ["IEEE Trans. Ind. Electron. Contr. Instrum."]
+  },
+  "IEEE_J_IA": {
+    "names_full": ["IEEE Transactions on Industry Applications"],
+    "names_abbr": ["IEEE Trans. Ind. Appl."]
+  },
+  "IEEE_J_IGA": {
+    "names_full": ["IEEE Transactions on Industry and General Applications"],
+    "names_abbr": ["IEEE Trans. Ind. Gen. Appl."]
+  },
+  "IEEE_J_IINF": {
+    "names_full": ["IEEE Transactions on Industrial Informatics"],
+    "names_abbr": ["IEEE Trans. Ind. Informat."]
+  },
+  "IEEE_J_IM": {
+    "names_full": ["IEEE Transactions on Instrumentation and Measurement"],
+    "names_abbr": ["IEEE Trans. Instrum. Meas."]
+  },
+  "IEEE_J_JEM": {
+    "names_full": ["{IEEE/TMS} Journal of Electronic Materials"],
+    "names_abbr": ["{IEEE/TMS} J. Electron. Mater."]
+  },
+  "IEEE_J_DEI": {
+    "names_full": ["IEEE Transactions on Dielectrics and Electrical Insulation"],
+    "names_abbr": ["IEEE Trans. Dielectr. Electr. Insul."]
+  },
+  "IEEE_J_EI": {
+    "names_full": ["IEEE Transactions on Electrical Insulation"],
+    "names_abbr": ["IEEE Trans. Electr. Insul."]
+  },
+  "IEEE_J_MEMS": {
+    "names_full": ["{IEEE/ASME} Journal of Microelectromechanical Systems"],
+    "names_abbr": ["J. Microelectromech. Syst."]
+  },
+  "IEEE_J_MEMSI": {
+    "names_full": ["IEEE Journal of Microelectromechanical Systems"],
+    "names_abbr": ["J. Microelectromech. Syst."]
+  },
+  "IEEE_J_MECH": {
+    "names_full": ["{IEEE/ASME} Transactions on Mechatronics"],
+    "names_abbr": ["{IEEE/ASME} Trans. Mechatronics"]
+  },
+  "IEEE_J_BHI": {
+    "names_full": ["IEEE Journal of Biomedical and Health Informatics"],
+    "names_abbr": ["IEEE J. Biomed. Health Inform."]
+  },
+  "IEEE_J_TEHM": {
+    "names_full": ["IEEE Journal of Translational Engineering in Health and Medicine"],
+    "names_abbr": ["IEEE J. Transl. Eng. Health Med."]
+  },
+  "IEEE_J_LS": {
+    "names_full": ["IEEE Life Sciences Letters"],
+    "names_abbr": ["IEEE Life Sci. Lett."]
+  },
+  "IEEE_J_RBME": {
+    "names_full": ["IEEE Reviews in Biomedical Engineering"],
+    "names_abbr": ["IEEE Rev. Biomed. Eng."]
+  },
+  "IEEE_J_BCAS": {
+    "names_full": ["IEEE Transactions on Biomedical Circuits and Systems"],
+    "names_abbr": ["IEEE Trans. Biomed. Circuits Syst."]
+  },
+  "IEEE_J_BMELC": {
+    "names_full": ["IEEE Transactions on Bio-Medical Electronics"],
+    "names_abbr": ["IEEE Trans. Bio-Med. Electron."]
+  },
+  "IEEE_J_BME": {
+    "names_full": ["IEEE Transactions on Biomedical Engineering"],
+    "names_abbr": ["IEEE Trans. Biomed. Eng."]
+  },
+  "IEEE_J_CBB": {
+    "names_full": ["{IEEE/ACM} Transactions on Computational Biology and Bioinformatics"],
+    "names_abbr": ["{IEEE/ACM} Trans. Comput. Biol. Bioinformatics"]
+  },
+  "IEEE_J_ITBM": {
+    "names_full": ["IEEE Transactions on Information Technology in Biomedicine"],
+    "names_abbr": ["IEEE Trans. Inf. Technol. Biomed."]
+  },
+  "IEEE_J_ME": {
+    "names_full": ["IEEE Transactions on Medical Electronics"],
+    "names_abbr": ["IEEE Trans. Med. Electron."]
+  },
+  "IEEE_J_MI": {
+    "names_full": ["IEEE Transactions on Medical Imaging"],
+    "names_abbr": ["IEEE Trans. Med. Imag."]
+  },
+  "IEEE_J_MBSC": {
+    "names_full": ["IEEE Transactions on Molecular, Biological and Multi-Scale Communications"],
+    "names_abbr": ["IEEE Trans. Mol. Biol. Multi-Scale Commun."]
+  },
+  "IEEE_J_NB": {
+    "names_full": ["IEEE Transactions on NanoBioscience"],
+    "names_abbr": ["IEEE Trans. Nanobiosci."]
+  },
+  "IEEE_J_NSRE": {
+    "names_full": ["IEEE Transactions on Neural Systems and Rehabilitation Engineering"],
+    "names_abbr": ["IEEE Trans. Neural Syst. Rehabil. Eng."]
+  },
+  "IEEE_J_RE": {
+    "names_full": ["IEEE Transactions on Rehabilitation Engineering"],
+    "names_abbr": ["IEEE Trans. Rehabil. Eng."]
+  },
+  "IEEE_J_JLT": {
+    "names_full": ["{IEEE/OSA} Journal of Lightwave Technology"],
+    "names_abbr": ["J. Lightw. Technol."]
+  },
+  "IEEE_J_OCN": {
+    "names_full": ["IEEE Journal of Optical Communications and Networking"],
+    "names_abbr": ["IEEE J. Opt. Commun. Netw."]
+  },
+  "IEEE_J_PJ": {
+    "names_full": ["IEEE Photonics Journal"],
+    "names_abbr": ["IEEE Photon. J."]
+  },
+  "IEEE_J_PTL": {
+    "names_full": ["IEEE Photonics Technology Letters"],
+    "names_abbr": ["IEEE Photon. Technol. Lett."]
+  },
+  "IEEE_J_EDL": {
+    "names_full": ["IEEE Electron Device Letters"],
+    "names_abbr": ["IEEE Electron Device Lett."]
+  },
+  "IEEE_J_EDS": {
+    "names_full": ["IEEE Journal of Electron Devices Society"],
+    "names_abbr": ["IEEE J. Electron Devices Soc."]
+  },
+  "IEEE_J_JQE": {
+    "names_full": ["IEEE Journal of Quantum Electronics"],
+    "names_abbr": ["IEEE J. Quantum Electron."]
+  },
+  "IEEE_J_JSTQE": {
+    "names_full": ["IEEE Journal of Selected Topics in Quantum Electronics"],
+    "names_abbr": ["IEEE J. Sel. Topics Quantum Electron."]
+  },
+  "IEEE_J_ENANO": {
+    "names_full": ["IEEE Nanotechnology Express"],
+    "names_abbr": ["IEEE Nanotechnol. Express"]
+  },
+  "IEEE_J_ED": {
+    "names_full": ["IEEE Transactions on Electron Devices"],
+    "names_abbr": ["IEEE Trans. Electron Devices"]
+  },
+  "IEEE_J_NANO": {
+    "names_full": ["IEEE Transactions on Nanotechnology"],
+    "names_abbr": ["IEEE Trans. Nanotechnol."]
+  },
+  "IEEE_J_NS": {
+    "names_full": ["IEEE Transactions on Nuclear Science"],
+    "names_abbr": ["IEEE Trans. Nucl. Sci."]
+  },
+  "IEEE_J_PS": {
+    "names_full": ["IEEE Transactions on Plasma Science"],
+    "names_abbr": ["IEEE Trans. Plasma Sci."]
+  },
+  "IEEE_J_DMR": {
+    "names_full": ["IEEE Transactions on Device and Materials Reliability"],
+    "names_abbr": ["IEEE Trans. Device Mater. Rel."]
+  },
+  "IEEE_J_R": {
+    "names_full": ["IEEE Transactions on Reliability"],
+    "names_abbr": ["IEEE Trans. Rel."]
+  },
+  "IEEE_J_ESSL": {
+    "names_full": ["{IEEE/ECS} Electrochemical and Solid-State Letters"],
+    "names_abbr": ["{IEEE/ECS} Electrochem. Solid-State Lett."]
+  },
+  "IEEE_J_JSSC": {
+    "names_full": ["IEEE Journal of Solid-State Circuits"],
+    "names_abbr": ["IEEE J. Solid-State Circuits"]
+  },
+  "IEEE_J_ASC": {
+    "names_full": ["IEEE Transactions on Applied Superconductivity"],
+    "names_abbr": ["IEEE Trans. Appl. Supercond."]
+  },
+  "IEEE_J_SM": {
+    "names_full": ["IEEE Transactions on Semiconductor Manufacturing"],
+    "names_abbr": ["IEEE Trans. Semicond. Manuf."]
+  },
+  "IEEE_J_SENSOR": {
+    "names_full": ["IEEE Sensors Journal"],
+    "names_abbr": ["IEEE Sensors J."]
+  },
+  "IEEE_J_VLSI": {
+    "names_full": ["IEEE Transactions on Very Large Scale Integration (VLSI) Systems"],
+    "names_abbr": ["IEEE Trans. VLSI Syst."]
+  },
+  "IEEE_O_ACC": {
+    "names_full": ["IEEE Access"],
+    "names_abbr": ["IEEE Access"]
+  },
+  "IEEE_M_AES": {
+    "names_full": ["IEEE Aerospace and Electronics Systems Magazine"],
+    "names_abbr": ["IEEE Aerosp. Electron. Syst. Mag."]
+  },
+  "IEEE_M_HIST": {
+    "names_full": ["IEEE Annals of the History of Computing"],
+    "names_abbr": ["IEEE Ann. Hist. Comput."]
+  },
+  "IEEE_M_AP": {
+    "names_full": ["IEEE Antennas and Propagation Magazine"],
+    "names_abbr": ["IEEE Antennas Propag. Mag."]
+  },
+  "IEEE_M_ASSP": {
+    "names_full": ["IEEE {ASSP} Magazine"],
+    "names_abbr": ["IEEE {ASSP} Mag."]
+  },
+  "IEEE_M_CHINAC": {
+    "names_full": ["China Communications Magazine"],
+    "names_abbr": ["China Commun."]
+  },
+  "IEEE_M_CD": {
+    "names_full": ["IEEE Circuits and Devices Magazine"],
+    "names_abbr": ["IEEE Circuits Devices Mag."]
+  },
+  "IEEE_M_CAS": {
+    "names_full": ["IEEE Circuits and Systems Magazine"],
+    "names_abbr": ["IEEE Circuits Syst. Mag."]
+  },
+  "IEEE_M_COM": {
+    "names_full": ["IEEE Communications Magazine"],
+    "names_abbr": ["IEEE Commun. Mag."]
+  },
+  "IEEE_M_COMSOC": {
+    "names_full": ["IEEE Communications Society Magazine"],
+    "names_abbr": ["IEEE Commun. Soc. Mag."]
+  },
+  "IEEE_O_CSTO": {
+    "names_full": ["IEEE Communications Surveys and Tutorials"],
+    "names_abbr": ["IEEE Commun. Surveys Tuts."]
+  },
+  "IEEE_M_CIM": {
+    "names_full": ["IEEE Computational Intelligence Magazine"],
+    "names_abbr": ["IEEE Comput. Intell. Mag."]
+  },
+  "IEEE_M_CSE": {
+    "names_full": ["IEEE Computing in Science and Engineering"],
+    "names_abbr": ["IEEE Comput. Sci. Eng."]
+  },
+  "IEEE_M_CSEM": {
+    "names_full": ["IEEE Computational Science and Engineering Magazine"],
+    "names_abbr": ["IEEE Comput. Sci. Eng. Mag."]
+  },
+  "IEEE_M_C": {
+    "names_full": ["Computer"],
+    "names_abbr": ["Computer"]
+  },
+  "IEEE_M_CAP": {
+    "names_full": ["IEEE Computer Applications in Power"],
+    "names_abbr": ["IEEE Comput. Appl. Power"]
+  },
+  "IEEE_M_CGA": {
+    "names_full": ["IEEE Computer Graphics and Applications"],
+    "names_abbr": ["IEEE Comput. Graph. Appl."]
+  },
+  "IEEE_M_CONC": {
+    "names_full": ["IEEE Concurrency"],
+    "names_abbr": ["IEEE Concurrency"]
+  },
+  "IEEE_M_CS": {
+    "names_full": ["IEEE Control Systems Magazine"],
+    "names_abbr": ["IEEE Control Syst. Mag."]
+  },
+  "IEEE_M_DT": {
+    "names_full": ["IEEE Design \\&\\ Test"],
+    "names_abbr": ["IEEE Des. Test"]
+  },
+  "IEEE_M_DTC": {
+    "names_full": ["IEEE Design and Test of Computers"],
+    "names_abbr": ["IEEE Des. Test. Comput."]
+  },
+  "IEEE_O_DSO": {
+    "names_full": ["IEEE Distributed Systems Online"],
+    "names_abbr": ["IEEE Distrib. Syst. Online"]
+  },
+  "IEEE_M_EI": {
+    "names_full": ["IEEE Electrical Insulation Magazine"],
+    "names_abbr": ["IEEE Electr. Insul. Mag."]
+  },
+  "IEEE_M_ETF": {
+    "names_full": ["IEEE Electrification Magazine"],
+    "names_abbr": ["IEEE Electrific. Mag."]
+  },
+  "IEEE_M_EMC": {
+    "names_full": ["IEEE Electromagnetic Compatibility Magazine"],
+    "names_abbr": ["IEEE Electromagn. Compat."]
+  },
+  "IEEE_M_ETR": {
+    "names_full": ["IEEE ElectroTechnology Review"],
+    "names_abbr": ["IEEE ElectroTechnol. Rev."]
+  },
+  "IEEE_M_EMR": {
+    "names_full": ["IEEE Engineering Management Review"],
+    "names_abbr": ["IEEE Eng. Manag. Rev."]
+  },
+  "IEEE_M_EMB": {
+    "names_full": ["IEEE Engineering in Medicine and Biology Magazine"],
+    "names_abbr": ["IEEE Eng. Med. Biol. Mag."]
+  },
+  "IEEE_M_EXP": {
+    "names_full": ["IEEE Expert"],
+    "names_abbr": ["IEEE Expert"]
+  },
+  "IEEE_M_GRS": {
+    "names_full": ["IEEE Geoscience and Remote Sensing Magazine"],
+    "names_abbr": ["IEEE Geosci. Remote Sens. Mag."]
+  },
+  "IEEE_M_IA": {
+    "names_full": ["IEEE Industry Applications Magazine"],
+    "names_abbr": ["IEEE Ind. Appl. Mag."]
+  },
+  "IEEE_M_IE": {
+    "names_full": ["IEEE Industrial Electronics Magazine"],
+    "names_abbr": ["IEEE Ind. Electron. Mag."]
+  },
+  "IEEE_M_IM": {
+    "names_full": ["IEEE Instrumentation and Measurement Magazine"],
+    "names_abbr": ["IEEE Instrum. Meas. Mag."]
+  },
+  "IEEE_M_IS": {
+    "names_full": ["IEEE Intelligent Systems"],
+    "names_abbr": ["IEEE Intell. Syst."]
+  },
+  "IEEE_M_ITS": {
+    "names_full": ["IEEE Intelligent Transportation Systems Magazine"],
+    "names_abbr": ["IEEE Intell. Transp. Syst. Mag."]
+  },
+  "IEEE_M_IC": {
+    "names_full": ["IEEE Internet Computing"],
+    "names_abbr": ["IEEE Internet Comput."]
+  },
+  "IEEE_M_ITP": {
+    "names_full": ["IEEE {IT} Professional"],
+    "names_abbr": ["IEEE {IT} Prof."]
+  },
+  "IEEE_M_MICRO": {
+    "names_full": ["IEEE Micro"],
+    "names_abbr": ["IEEE Micro"]
+  },
+  "IEEE_M_MW": {
+    "names_full": ["IEEE Microwave Magazine"],
+    "names_abbr": ["IEEE Microw. Mag."]
+  },
+  "IEEE_M_MM": {
+    "names_full": ["IEEE Multimedia"],
+    "names_abbr": ["IEEE Multimedia"]
+  },
+  "IEEE_M_NANO": {
+    "names_full": ["IEEE Nanotechnology Magazine"],
+    "names_abbr": ["IEEE Nanotechnol. Mag."]
+  },
+  "IEEE_M_NET": {
+    "names_full": ["IEEE Network"],
+    "names_abbr": ["IEEE Netw."]
+  },
+  "IEEE_M_PCOM": {
+    "names_full": ["IEEE Personal Communications Magazine"],
+    "names_abbr": ["IEEE Personal Commun. Mag."]
+  },
+  "IEEE_M_PVC": {
+    "names_full": ["IEEE Pervasive Computing"],
+    "names_abbr": ["IEEE Pervasive Comput."]
+  },
+  "IEEE_M_POT": {
+    "names_full": ["IEEE Potentials"],
+    "names_abbr": ["IEEE Potentials"]
+  },
+  "IEEE_M_PEL": {
+    "names_full": ["IEEE Power Electronics Magazine"],
+    "names_abbr": ["IEEE Power Electron. Mag."]
+  },
+  "IEEE_M_PE": {
+    "names_full": ["IEEE Power and Energy Magazine"],
+    "names_abbr": ["IEEE Power Energy Mag."]
+  },
+  "IEEE_M_PER": {
+    "names_full": ["IEEE Power Engineering Review"],
+    "names_abbr": ["IEEE Power Eng. Rev."]
+  },
+  "IEEE_M_PULSE": {
+    "names_full": ["IEEE Pulse"],
+    "names_abbr": ["IEEE Pulse"]
+  },
+  "IEEE_M_RA": {
+    "names_full": ["IEEE Robotics and Automation Magazine"],
+    "names_abbr": ["IEEE Robot. Autom. Mag."]
+  },
+  "IEEE_M_SAP": {
+    "names_full": ["IEEE Security and Privacy"],
+    "names_abbr": ["IEEE Security Privacy"]
+  },
+  "IEEE_M_SP": {
+    "names_full": ["IEEE Signal Processing Magazine"],
+    "names_abbr": ["IEEE Signal Process. Mag."]
+  },
+  "IEEE_M_S": {
+    "names_full": ["IEEE Software"],
+    "names_abbr": ["IEEE Softw."]
+  },
+  "IEEE_M_SSC": {
+    "names_full": ["IEEE Solid-State Circuits Magazine"],
+    "names_abbr": ["IEEE Solid-State Circuits Mag."]
+  },
+  "IEEE_M_SPECT": {
+    "names_full": ["IEEE Spectrum"],
+    "names_abbr": ["IEEE Spectr."]
+  },
+  "IEEE_M_SMC": {
+    "names_full": ["IEEE Systems, Man, and Cybernetics Magazine"],
+    "names_abbr": ["IEEE Syst., Man, Cybern. Mag."]
+  },
+  "IEEE_M_TS": {
+    "names_full": ["IEEE Technology and Society Magazine"],
+    "names_abbr": ["IEEE Technol. Soc. Mag."]
+  },
+  "IEEE_M_VT": {
+    "names_full": ["IEEE Vehicular Technology Magazine"],
+    "names_abbr": ["IEEE Veh. Technol. Mag."]
+  },
+  "IEEE_M_WC": {
+    "names_full": ["IEEE Wireless Communications"],
+    "names_abbr": ["IEEE Wireless Commun."]
+  },
+  "IEEE_M_TODAY": {
+    "names_full": ["Today's Engineer"],
+    "names_abbr": ["Today's Engineer"]
   },
   "AAP": {
     "names_full": ["Advances in Applied Probability"],
@@ -58,10 +1104,6 @@
   "AMC": {
     "names_full": ["Applied Mathematics and Computation"],
     "names_abbr": ["Appl. Math. Comput."]
-  },
-  "AOM": {
-    "names_abbr": ["Ann. Math."],
-    "names_full": ["The Annals of Mathematics"]
   },
   "AOMS": {
     "names_abbr": ["Ann. Math. Stat."],
@@ -167,10 +1209,6 @@
     "names_abbr": ["J. Softw."],
     "names_full": ["Journal of Software"]
   },
-  "COA": {
-    "names_abbr": ["Comput. Optim. Appl."],
-    "names_full": ["Computational Optimization and Applications"]
-  },
   "COAP": {
     "names_full": ["Computational Optimization and Applications"],
     "names_abbr": ["Comput. Optim. Appl."]
@@ -186,10 +1224,6 @@
   "COR": {
     "names_full": ["Computers & Operations Research", "Computers and Operations Research"],
     "names_abbr": ["Comput. Oper. Res.", "Comput. Oper. Res."]
-  },
-  "CPC": {
-    "names_abbr": ["Comb. Probab. Comput."],
-    "names_full": ["Combinatorics, Probability and Computing"]
   },
   "CPLX": {
     "names_abbr": ["Complexity"],
@@ -223,10 +1257,6 @@
     "names_abbr": ["Econometrica"],
     "names_full": ["Econometrica"]
   },
-  "EEE": {
-    "names_abbr": ["Ethol. Ecol. Evol."],
-    "names_full": ["Ethology, Ecology \\& Evolution"]
-  },
   "EI": {
     "names_full": ["Evolutionary Intelligence"],
     "names_abbr": ["Evol. Intell."]
@@ -239,17 +1269,9 @@
     "names_full": ["Engineering Optimization"],
     "names_abbr": ["Eng. Optim."]
   },
-  "EOPTIM": {
-    "names_abbr": ["Eng. Optim."],
-    "names_full": ["Engineering Optimization"]
-  },
   "EPE": {
     "names_abbr": ["Math. Prob. Eng."],
     "names_full": ["Mathematical Problems in Engineering"]
-  },
-  "ESA": {
-    "names_abbr": ["Expert Syst. Appl."],
-    "names_full": ["Expert Systems with Applications"]
   },
   "ESWA": {
     "names_full": ["Expert Systems with Applications"],
@@ -271,10 +1293,6 @@
     "names_abbr": ["Found. Trends Comput. Graph. Vis."],
     "names_full": ["Foundations and Trends in Computer Graphics and Vision"]
   },
-  "FTMC": {
-    "names_abbr": ["Found. Trends Mach. Learn."],
-    "names_full": ["Foundations and Trends in Machine Learning"]
-  },
   "FTSP": {
     "names_full": ["Foundations and Trends in Signal Processing", "Foundations and Trends® in Signal Processing"],
     "names_abbr": ["Found. Trends Signal Process.", "Found. Trends Signal Process."]
@@ -290,10 +1308,6 @@
   "GPEM": {
     "names_full": ["Genetic Programming and Evolvable Machines"],
     "names_abbr": ["Genet. Program. Evol. Mach."]
-  },
-  "IAST": {
-    "names_abbr": ["ISA Trans."],
-    "names_full": ["ISA Transactions"]
   },
   "ICSI": {
     "names_abbr": ["Int. Comput. Sci. Inst."],
@@ -490,10 +1504,6 @@
     "names_full": ["Journal of Parallel and Distributed Computing"],
     "names_abbr": ["J. Parallel Distrib. Comput."]
   },
-  "JRSSB": {
-    "names_abbr": ["J. R. Stat. Soc. Ser. B"],
-    "names_full": ["Journal of the Royal Statistical Society: Series B (Methodological)"]
-  },
   "JSIAM": {
     "names_abbr": ["J. Soc. Ind. Appl. Math."],
     "names_full": ["Journal of the Society for Industrial and Applied Mathematics"]
@@ -630,10 +1640,6 @@
     "names_full": ["National Science Review"],
     "names_abbr": ["Nat. Sci. Rev."]
   },
-  "NSSC": {
-    "names_abbr": ["IEEE Solid-State Circuits Soc. Newsletter"],
-    "names_full": ["IEEE Solid-State Circuits Society Newsletter"]
-  },
   "OJAS": {
     "names_abbr": ["Open J. Appl. Sci."],
     "names_full": ["Open Journal of Applied Sciences"]
@@ -657,10 +1663,6 @@
   "PCB": {
     "names_abbr": ["PLoS Comput. Biol."],
     "names_full": ["PLoS Computational Biology"]
-  },
-  "PCS": {
-    "names_abbr": ["Procedia Comput. Sci."],
-    "names_full": ["Procedia Computer Science"]
   },
   "PHYSD": {
     "names_abbr": ["Phys. D: Nonlinear Phenom."],
@@ -722,10 +1724,6 @@
     "names_abbr": ["South African Comput. J."],
     "names_full": ["South African Computer Journal"]
   },
-  "SADV": {
-    "names_abbr": ["Sci. Adv."],
-    "names_full": ["Science Advances"]
-  },
   "SCIADV": {
     "names_full": ["Science Advances"],
     "names_abbr": ["Sci. Adv."]
@@ -737,10 +1735,6 @@
   "SI": {
     "names_full": ["Swarm Intelligence"],
     "names_abbr": ["Swarm Intell."]
-  },
-  "SIAMREV": {
-    "names_abbr": ["SIAM Rev."],
-    "names_full": ["SIAM Review"]
   },
   "SICOMP": {
     "names_full": ["SIAM Journal on Computing"],
@@ -786,10 +1780,6 @@
     "names_full": ["Soft Computing"],
     "names_abbr": ["Soft Comput."]
   },
-  "SOFTC": {
-    "names_abbr": ["Soft Comput."],
-    "names_full": ["Soft Computing"]
-  },
   "SOPTIM": {
     "names_abbr": ["Struct. Optim."],
     "names_full": ["Structural Optimization"]
@@ -809,10 +1799,6 @@
   "SSRN": {
     "names_abbr": ["SSRN Journal"],
     "names_full": ["SSRN Electronic Journal"]
-  },
-  "STATC": {
-    "names_abbr": ["Stat. Comput."],
-    "names_full": ["Statistics and Computing"]
   },
   "STATS": {
     "names_abbr": ["Stat. Sci."],
@@ -1338,10 +2324,6 @@
     "names_full": ["IMS Bulletin"],
     "names_abbr": ["IMS Bull."]
   },
-  "STATSCI": {
-    "names_full": ["Statistical Science"],
-    "names_abbr": ["Stat. Sci."]
-  },
   "DECA": {
     "names_full": ["Decision Analysis"],
     "names_abbr": ["Decis. Anal."]
@@ -1360,7 +2342,7 @@
   },
   "ITED": {
     "names_full": ["INFORMS Transactions on Education"],
-    "names_abbr": ["Inf. Syst. Res."]
+    "names_abbr": ["INFORMS Trans. Edu."]
   },
   "MKSC": {
     "names_full": ["Marketing Science"],
@@ -1521,8 +2503,8 @@
     "names_abbr": ["PeerJ Comput. Sci."]
   },
   "ANNALS": {
-    "names_full": ["Annals of Mathematics"],
-    "names_abbr": ["Ann. Math."]
+    "names_full": ["Annals of Mathematics", "The Annals of Mathematics"],
+    "names_abbr": ["Ann. Math.", "Ann. Math."]
   },
   "ADBE": {
     "names_full": ["Adaptive Behavior"],
