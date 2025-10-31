@@ -91,12 +91,32 @@ class GenerateDefaultJSONs:
 
     @staticmethod
     def _read_str(full_file: str) -> str:
+        """Read file content as string.
+
+        Args:
+            full_file (str): Path to the file to read
+
+        Returns:
+            str: Content of the file as string
+        """
         # Read file content as string
         with open(full_file, "r", encoding="utf-8") as file:
             content = file.read()
         return content
 
     def parse_bibtex_file(self, full_biblatex: str, entry_type: str = "article"):
+        """Parse BibTeX file and extract conference or journal data.
+
+        Args:
+            full_biblatex (str): Path to the BibLaTeX file
+            entry_type (str): Type of entry to parse - 'article' or 'inproceedings'
+
+        Returns:
+            dict: Dictionary containing parsed conference or journal data
+
+        Raises:
+            ValueError: If entry_type is not 'article' or 'inproceedings'
+        """
         if entry_type not in ["article", "inproceedings"]:
             raise ValueError("entry_type must be 'article' or 'inproceedings'")
 
@@ -167,6 +187,12 @@ class GenerateDefaultJSONs:
 
     @staticmethod
     def _check_multiple_items(json_data: dict, verbose=False) -> None:
+        """Check for entries with multiple full names or abbreviations.
+
+        Args:
+            json_data (dict): JSON data to check
+            verbose (bool): Whether to print detailed information
+        """
         # Check for entries with multiple full names
         if verbose:
             for key in json_data:
@@ -193,10 +219,7 @@ class GenerateDefaultJSONs:
         return None
 
     def _compare_and_return(self, json_old: dict, json_new: dict) -> dict:
-        """
-        Compare old and new JSON data to find newly added items.
-
-        Returns keys that only appear in the new JSON data.
+        """Compare old and new JSON data to find newly added items.
 
         Args:
             json_old: Old JSON data as dictionary
@@ -217,17 +240,18 @@ class GenerateDefaultJSONs:
 
             for flag in ["names_full"]:
                 old_items = [item.lower() for item in json_old[key][flag]]
+                old_items = [item.replace("(", "").replace(")", "") for item in json_old[key][flag]]
+
                 new_items = [item.lower() for item in json_new[key][flag]]
+                new_items = [item.replace("(", "").replace(")", "") for item in json_new[key][flag]]
 
                 # Convert to regex patterns
-                patterns = [re.compile(item.replace("(", "").replace(")", "")) for item in old_items]
+                patterns = [re.compile(f"^{item}$") for item in old_items]
 
                 unmatched = []
-                for item in new_items:
-                    not_in_old = item not in old_items
-
-                    if not_in_old and (not any([p.match(item.replace("(", "").replace(")", "")) for p in patterns])):
-                        unmatched.append(item)
+                for new_item in new_items:
+                    if (new_item not in old_items) and (not any([p.match(new_item) for p in patterns])):
+                        unmatched.append(new_item)
 
                 # Report unmatched items
                 if unmatched:
@@ -241,8 +265,6 @@ class GenerateDefaultJSONs:
 
     def run(self, merge_json: bool = False) -> None:
         """Run the parsing pipeline.
-
-        load existing data, parse new data, check for duplicates, and optionally merge and save the data.
 
         Args:
             merge_json: Whether to merge and save data to JSON files
@@ -279,22 +301,23 @@ class GenerateDefaultJSONs:
         # Check for duplicates between old and new journal data
         print("Comparing existing journal data with newly parsed data")
         json_new_j = self._compare_and_return(json_old_j, json_new_j)
-        print()
+
+        # ==================== Check ====================
+        # Process user-specific conference and journal JSON files
+        user_c_json, user_j_json = process_user_conferences_journals_json(
+            self.user_full_json_c, self.user_full_json_j
+        )
+
+        self._check_match({**json_new_c, **json_old_c, **user_c_json})
+        self._check_match({**json_new_j, **json_old_j, **user_j_json})
 
         # ==================== Data Merging and Saving ====================
         if merge_json:
-            # Process user-specific conference and journal JSON files
-            user_c_json, user_j_json = process_user_conferences_journals_json(
-                self.user_full_json_c, self.user_full_json_j
-            )
-
-            # Merge conference data with priority: new data > user data > old data
             self.save_to_json(
                 {**json_new_c, **json_old_c, **user_c_json},  # Priority: user > old > new
                 self.default_full_json_c
             )
 
-            # Merge journal data with priority: new data > user data > old data
             self.save_to_json(
                 {**json_new_j, **json_old_j, **user_j_json},  # Priority: user > old > new
                 self.default_full_json_j
@@ -302,6 +325,30 @@ class GenerateDefaultJSONs:
             print("Data merging completed and saved")
 
         return None
+
+    def _check_match(self, data_json):
+        """Check for matching in the JSON data.
+
+        Args:
+            data_json: JSON data to check for matches
+        """
+        keys = list(data_json.keys())
+        for i in range(len(keys)):
+            items = [item.lower() for item in data_json[keys[i]].get("names_full", [])]
+            items = [item.replace("(", "").replace(")", "") for item in items]
+            patterns = [re.compile(f"^{item}$") for item in items]
+
+            matched = []
+            for key in keys[(i + 1):]:
+                for item in data_json[key]["names_full"]:
+                    item = item.lower().replace("(", "").replace(")", "")
+
+                    if any(p.match(item) for p in patterns):
+                        matched.append([keys[i], key, item])
+
+            if matched:
+                print(matched)
+                print()
 
     @staticmethod
     def load_json_file(file_path: str) -> dict[str, Any]:
