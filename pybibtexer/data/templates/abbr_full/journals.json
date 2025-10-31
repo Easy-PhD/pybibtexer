@@ -1503,8 +1503,8 @@
         "names_full": ["International Journal of Neural Systems"]
     },
     "IJOC": {
-        "names_abbr": ["INFORMS J. Comput."],
-        "names_full": ["INFORMS Journal on Computing"]
+        "names_abbr": ["INFORMS J. Comput.", "ORSA J. Comput"],
+        "names_full": ["INFORMS Journal on Computing", "ORSA Journal on Computing"]
     },
     "IJOO": {
         "names_abbr": ["INFORMS J. Optim."],
@@ -1541,6 +1541,10 @@
     "INSR": {
         "names_abbr": ["Int. Stat. Rev."],
         "names_full": ["International Statistical Review"]
+    },
+    "INTE": {
+        "names_abbr": ["Interfaces"],
+        "names_full": ["Interfaces"]
     },
     "INVENT": {
         "names_abbr": ["Invent. Math."],
@@ -1717,6 +1721,10 @@
         "names_abbr": ["J. Math. Phys."],
         "names_full": ["Journal of Mathematical Physics"]
     },
+    "JMPSY": {
+        "names_abbr": ["J. Math. Psychol."],
+        "names_full": ["Journal of Mathematical Psychology"]
+    },
     "JMUI": {
         "names_abbr": ["J. Multimodal User Interfaces"],
         "names_full": ["Journal on Multimodal User Interfaces"]
@@ -1750,8 +1758,8 @@
         "names_full": ["Journal of Mathematical Psychology"]
     },
     "JOSS": {
-        "names_abbr": ["J. Open Source Softw."],
-        "names_full": ["The Journal of Open Source Software"]
+        "names_abbr": ["J. Open Source Softw.", "J. Open Source Softw."],
+        "names_full": ["The Journal of Open Source Software", "Journal of Open Source Software"]
     },
     "JOTA": {
         "names_abbr": ["J. Optim. Theory Appl."],
@@ -2328,8 +2336,8 @@
         "names_full": ["Stochastic Systems"]
     },
     "SUPERC": {
-        "names_abbr": ["J. Supercomput."],
-        "names_full": ["The Journal of Supercomputing"]
+        "names_abbr": ["J. Supercomput.", "J. Supercomput."],
+        "names_full": ["The Journal of Supercomputing", "Journal of Supercomputing"]
     },
     "SW": {
         "names_abbr": ["Semantic Web"],

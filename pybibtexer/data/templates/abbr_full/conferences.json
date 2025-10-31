@@ -233,10 +233,15 @@
         ]
     },
     "GECCO": {
-        "names_abbr": ["Proc. Genet. Evol. Comput. Conf.", "Proc. Genet. Evol. Comput. Conf."],
+        "names_abbr": [
+            "Proc. Genet. Evol. Comput. Conf.",
+            "Proc. Genet. Evol. Comput. Conf.",
+            "Proc. Genet. Evol. Comput. Conf."
+        ],
         "names_full": [
             "Proceedings of the.* Genetic and Evolutionary Computation Conference",
-            "Proceedings of the [a-zA-Z0-9]+ Annual Conference on Genetic and Evolutionary Computation"
+            "Proceedings of the [a-zA-Z0-9]+ Annual Conference on Genetic and Evolutionary Computation",
+            "Genetic and Evolutionary Computation --- GECCO [0-9]*"
         ]
     },
     "GECCOC": {
@@ -331,6 +336,10 @@
     "ICLR": {
         "names_abbr": ["Proc. Int. Conf. Learn. Represent."],
         "names_full": [".*International Conference on Learning Representations.*"]
+    },
+    "ICLRW": {
+        "names_abbr": ["ICLR Workshop on Generative and Experimental Perspectives for Biomolecular Design"],
+        "names_full": ["ICLR [0-9]+ Workshop on Generative and Experimental Perspectives for Biomolecular Design"]
     },
     "ICML": {
         "names_abbr": [
@@ -486,8 +495,11 @@
         "names_full": ["International conference on neural computing for advanced applications"]
     },
     "NeurIPS": {
-        "names_abbr": ["Proc. Adv. Neural Inf. Process. Syst."],
-        "names_full": [".*Advances in Neural Information Processing Systems.*"]
+        "names_abbr": ["Proc. Adv. Neural Inf. Process. Syst.", "Proc. Annu. Conf. Neural Inf. Process. Syst."],
+        "names_full": [
+            ".*Advances in Neural Information Processing Systems.*",
+            ".*Annual Conference on Neural Information Processing Systems"
+        ]
     },
     "OSDI": {
         "names_abbr": ["Proc. USENIX Symp. Oper. Syst. Des. Implement."],
