@@ -301,24 +301,6 @@
         "names_abbr": ["Proc. Int. Conf. Data. Eng."],
         "names_full": [".*International Conference on Data Engineering.*"]
     },
-    "ICEC": {
-        "names_abbr": [
-            "Proceedings of the First IEEE Conference on Evolutionary Computation. IEEE World Congress on Computational Intelligence",
-            "Proceedings of IEEE International Conference on Evolutionary Computation",
-            "Proceedings of 1997 IEEE International Conference on Evolutionary Computation",
-            "Proceedings of 1995 IEEE International Conference on Evolutionary Computation",
-            "1998 IEEE International Conference on Evolutionary Computation Proceedings. IEEE World Congress on Computational Intelligence (Cat. No.98TH8360)",
-            "Proceedings of IEEE international conference on evolutionary computation"
-        ],
-        "names_full": [
-            "Proceedings of the First IEEE Conference on Evolutionary Computation. IEEE World Congress on Computational Intelligence",
-            "Proceedings of IEEE International Conference on Evolutionary Computation",
-            "Proceedings of 1997 IEEE International Conference on Evolutionary Computation",
-            "Proceedings of 1995 IEEE International Conference on Evolutionary Computation",
-            "1998 IEEE International Conference on Evolutionary Computation Proceedings. IEEE World Congress on Computational Intelligence (Cat. No.98TH8360)",
-            "Proceedings of IEEE international conference on evolutionary computation"
-        ]
-    },
     "ICG": {
         "names_abbr": ["Proceedings of the Sixth International Congress of Genetics"],
         "names_full": ["Proceedings of the Sixth International Congress of Genetics"]
