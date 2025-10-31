@@ -20,6 +20,16 @@
         "names_abbr": ["Proc. Annu. Meeting Assoc. Comput. Linguistics"],
         "names_full": [".*Annual Meeting of the Association for Computational Linguistics"]
     },
+    "ACSSC": {
+        "names_abbr": [
+            "1990 Conference Record Twenty-Fourth Asilomar Conference on Signals, Systems and Computers, 1990.",
+            "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems \\& Computers"
+        ],
+        "names_full": [
+            "1990 Conference Record Twenty-Fourth Asilomar Conference on Signals, Systems and Computers, 1990.",
+            "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems \\& Computers"
+        ]
+    },
     "AISTATS": {
         "names_abbr": ["Proc. Int. Conf. Artif. Intell. Statist.", "Proc. Int. Workshop Artif. Intell. Statist."],
         "names_full": [
@@ -42,6 +52,22 @@
         "names_abbr": ["ANTS Proc. Int. Conf. Swarm Intell."],
         "names_full": [".*ANTS International Conference on Swarm Intelligence.*"]
     },
+    "BICTA": {
+        "names_abbr": ["Bio-inspired Computing: Theories and Applications"],
+        "names_full": ["Bio-inspired Computing: Theories and Applications"]
+    },
+    "Blockchain": {
+        "names_abbr": ["IEEE International Conference on Blockchain"],
+        "names_full": ["IEEE International Conference on Blockchain"]
+    },
+    "CAC": {
+        "names_abbr": ["2020 Chinese Automation Congress", "2021 China Automation Congress"],
+        "names_full": ["2020 Chinese Automation Congress", "2021 China Automation Congress"]
+    },
+    "CCC": {
+        "names_abbr": ["2020 39th Chinese Control Conference (CCC)"],
+        "names_full": ["2020 39th Chinese Control Conference (CCC)"]
+    },
     "CEC": {
         "names_abbr": [
             "Proc. IEEE Congr. Evol. Comput.",
@@ -53,6 +79,20 @@
             ".*Congress on Evolutionary Computation.*",
             ".*Conference on Evolutionary Computation.*"
         ]
+    },
+    "CIDUE": {
+        "names_abbr": [
+            "2013 IEEE Symposium on Computational Intelligence in Dynamic and Uncertain Environments",
+            "2014 IEEE symposium on computational intelligence in dynamic and uncertain environments (CIDUE)"
+        ],
+        "names_full": [
+            "2013 IEEE Symposium on Computational Intelligence in Dynamic and Uncertain Environments",
+            "2014 IEEE symposium on computational intelligence in dynamic and uncertain environments (CIDUE)"
+        ]
+    },
+    "CMSS": {
+        "names_abbr": ["Proceedings of the 1988 Connectionist Models Summer School"],
+        "names_full": ["Proceedings of the 1988 Connectionist Models Summer School"]
     },
     "COLT": {
         "names_abbr": [
@@ -76,9 +116,17 @@
         "names_abbr": ["Proc. Conf. Robot Learn."],
         "names_full": [".*Proceedings of the.*Conference on Robot Learning.*"]
     },
+    "DOCS": {
+        "names_abbr": ["2022 4th International Conference on Data-Driven Optimization of Complex Systems"],
+        "names_full": ["2022 4th International Conference on Data-Driven Optimization of Complex Systems"]
+    },
     "EAIS": {
         "names_abbr": ["Proc. IEEE Int Conf. Evol. Adapt. Intell. Syst."],
         "names_full": [".*IEEE International Conference on Evolving and Adaptive Intelligent Systems.*"]
+    },
+    "ECAE": {
+        "names_abbr": ["Artificial Evolution"],
+        "names_full": ["Artificial Evolution"]
     },
     "ECAI": {
         "names_abbr": ["Proc. Eur. Conf. Artif. Intell."],
@@ -102,6 +150,10 @@
             "International Conference on Evolutionary Multi-Criterion Optimization"
         ]
     },
+    "EP": {
+        "names_abbr": ["Evolutionary Programming VI", "Evolutionary Programming VII"],
+        "names_full": ["Evolutionary Programming VI", "Evolutionary Programming VII"]
+    },
     "ESANN": {
         "names_abbr": [
             "Proc. Eur. Symp. Artif. Neural Netw.",
@@ -110,6 +162,14 @@
         "names_full": [
             ".*European Symposium on Artificial Neural Networks",
             "European Symposium on Artificial Neural Networks, Computational Intelligence and Machine Learning"
+        ]
+    },
+    "EUROGEN": {
+        "names_abbr": [
+            "Evolutionary and Deterministic Methods for Design, Optimization and Control with Applications to Industrial and Societal Problems"
+        ],
+        "names_full": [
+            "Evolutionary and Deterministic Methods for Design, Optimization and Control with Applications to Industrial and Societal Problems"
         ]
     },
     "EuroGP": {
@@ -149,6 +209,10 @@
             ".*Evolutionary and Biologically Inspired Music, Sound, Art and Design"
         ]
     },
+    "EvoWS": {
+        "names_abbr": ["Applications of Evolutionary Computing"],
+        "names_full": ["Applications of Evolutionary Computing"]
+    },
     "FOCS": {
         "names_abbr": ["Proc. IEEE Annu. Symp. Found. Comput. Sci.", "Proc. IEEE Annu. Symp. Found. Comput. Sci."],
         "names_full": [
@@ -159,6 +223,14 @@
     "FOGA": {
         "names_abbr": ["Proc. ACM/SIGEVO Conf. Found. Genet. Algo."],
         "names_full": [".*ACM/SIGEVO Conference on Foundations of Genetic Algorithms"]
+    },
+    "FSKD": {
+        "names_abbr": [
+            "2016 12th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery (ICNC-FSKD)"
+        ],
+        "names_full": [
+            "2016 12th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery (ICNC-FSKD)"
+        ]
     },
     "GECCO": {
         "names_abbr": ["Proc. Genet. Evol. Comput. Conf.", "Proc. Genet. Evol. Comput. Conf."],
@@ -183,6 +255,18 @@
             "Proceedings of the.* Workshop on Genetic and Evolutionary Computation"
         ]
     },
+    "GP": {
+        "names_abbr": ["Late breaking papers at the genetic programming 1998 conference"],
+        "names_full": ["Late breaking papers at the genetic programming 1998 conference"]
+    },
+    "HotOS": {
+        "names_abbr": ["Proceedings of the 15th USENIX Conference on Hot Topics in Operating Systems"],
+        "names_full": ["Proceedings of the 15th USENIX Conference on Hot Topics in Operating Systems"]
+    },
+    "ICAART": {
+        "names_abbr": ["Proceedings of the 17th International Conference on Agents and Artificial Intelligence"],
+        "names_full": ["Proceedings of the 17th International Conference on Agents and Artificial Intelligence"]
+    },
     "ICANN": {
         "names_abbr": ["Proc. Int. Conf. Artif. Neural Netw. Mach. Learn.", "Proc. Int. Conf. Artif. Neural Netw."],
         "names_full": [
@@ -194,6 +278,14 @@
         "names_abbr": ["Proc. Int. Conf. Automat. Plan. Schedul."],
         "names_full": [".*International Conference on Automated Planning and Scheduling"]
     },
+    "ICARCV": {
+        "names_abbr": ["2006 9th International Conference on Control, Automation, Robotics and Vision"],
+        "names_full": ["2006 9th International Conference on Control, Automation, Robotics and Vision"]
+    },
+    "ICCSE": {
+        "names_abbr": ["2012 7th International Conference on Computer Science \\& Education (ICCSE)"],
+        "names_full": ["2012 7th International Conference on Computer Science \\& Education (ICCSE)"]
+    },
     "ICCV": {
         "names_abbr": ["Proc. IEEE Int. Conf. Comput. Vis."],
         "names_full": [".*International Conference on Computer Vision.*"]
@@ -201,6 +293,40 @@
     "ICDE": {
         "names_abbr": ["Proc. Int. Conf. Data. Eng."],
         "names_full": [".*International Conference on Data Engineering.*"]
+    },
+    "ICEC": {
+        "names_abbr": [
+            "Proceedings of the First IEEE Conference on Evolutionary Computation. IEEE World Congress on Computational Intelligence",
+            "Proceedings of IEEE International Conference on Evolutionary Computation",
+            "Proceedings of 1997 IEEE International Conference on Evolutionary Computation",
+            "Proceedings of 1995 IEEE International Conference on Evolutionary Computation",
+            "1998 IEEE International Conference on Evolutionary Computation Proceedings. IEEE World Congress on Computational Intelligence (Cat. No.98TH8360)",
+            "Proceedings of IEEE international conference on evolutionary computation"
+        ],
+        "names_full": [
+            "Proceedings of the First IEEE Conference on Evolutionary Computation. IEEE World Congress on Computational Intelligence",
+            "Proceedings of IEEE International Conference on Evolutionary Computation",
+            "Proceedings of 1997 IEEE International Conference on Evolutionary Computation",
+            "Proceedings of 1995 IEEE International Conference on Evolutionary Computation",
+            "1998 IEEE International Conference on Evolutionary Computation Proceedings. IEEE World Congress on Computational Intelligence (Cat. No.98TH8360)",
+            "Proceedings of IEEE international conference on evolutionary computation"
+        ]
+    },
+    "ICG": {
+        "names_abbr": ["Proceedings of the Sixth International Congress of Genetics"],
+        "names_full": ["Proceedings of the Sixth International Congress of Genetics"]
+    },
+    "ICGA": {
+        "names_abbr": [
+            "Proceedings of the 4th International Conference on Genetic Algorithms",
+            "Proceedings of the Second International Conference on Genetic Algorithms",
+            "Proceedings of the 1st International Conference on Genetic Algorithms"
+        ],
+        "names_full": [
+            "Proceedings of the 4th International Conference on Genetic Algorithms",
+            "Proceedings of the Second International Conference on Genetic Algorithms",
+            "Proceedings of the 1st International Conference on Genetic Algorithms"
+        ]
     },
     "ICLR": {
         "names_abbr": ["Proc. Int. Conf. Learn. Represent."],
@@ -224,6 +350,18 @@
         "names_abbr": ["Proc. IEEE Int. Conf. Mach. Learn. Cybern."],
         "names_full": [".*International Conference on Machine Learning and Cybernetics.*"]
     },
+    "ICNN": {
+        "names_abbr": ["Proceedings of ICNN'95 - International Conference on Neural Networks"],
+        "names_full": ["Proceedings of ICNN'95 - International Conference on Neural Networks"]
+    },
+    "ICONIP": {
+        "names_abbr": ["Neural Information Processing: 24th International Conference"],
+        "names_full": ["Neural Information Processing: 24th International Conference"]
+    },
+    "ICPC": {
+        "names_abbr": ["International Conference on Parallel Computing"],
+        "names_full": ["International Conference on Parallel Computing"]
+    },
     "ICRA": {
         "names_abbr": ["Proc. IEEE Int. Conf. Robot. Automat."],
         "names_full": [".*International Conference on Robotics and Automation.*"]
@@ -231,6 +369,26 @@
     "ICSI": {
         "names_abbr": ["Proc. Int. Conf. Swarm Intell."],
         "names_full": [".*International Conference on Swarm Intelligence.*"]
+    },
+    "ICSMC": {
+        "names_abbr": [
+            "2011 IEEE International Conference on Systems, Man, and Cybernetics",
+            "1997 IEEE International Conference on Systems, Man, and Cybernetics. Computational Cybernetics and Simulation",
+            "IEEE International Conference on Systems, Man and Cybernetics"
+        ],
+        "names_full": [
+            "2011 IEEE International Conference on Systems, Man, and Cybernetics",
+            "1997 IEEE International Conference on Systems, Man, and Cybernetics. Computational Cybernetics and Simulation",
+            "IEEE International Conference on Systems, Man and Cybernetics"
+        ]
+    },
+    "ICTAS": {
+        "names_abbr": ["2018 Conference on Information Communications Technology and Society (ICTAS)"],
+        "names_full": ["2018 Conference on Information Communications Technology and Society (ICTAS)"]
+    },
+    "IES": {
+        "names_abbr": ["Proceedings of the 19th Asia Pacific Symposium on Intelligent and Evolutionary Systems"],
+        "names_full": ["Proceedings of the 19th Asia Pacific Symposium on Intelligent and Evolutionary Systems"]
     },
     "IJCAI": {
         "names_abbr": ["Proc. Int. Joint Conf. Artif. Intell.", "Proc. Int. Joint Conf. Artif. Intell."],
@@ -242,6 +400,18 @@
     "IJCCI": {
         "names_abbr": ["Proc. Int. Joint Conf. Comput. Intell."],
         "names_full": [".*International Joint Conference on Computational Intelligence.*"]
+    },
+    "IJCNN": {
+        "names_abbr": [
+            "2008 IEEE International Joint Conference on Neural Networks (IEEE World Congress on Computational Intelligence)"
+        ],
+        "names_full": [
+            "2008 IEEE International Joint Conference on Neural Networks (IEEE World Congress on Computational Intelligence)"
+        ]
+    },
+    "IPDPS": {
+        "names_abbr": ["2007 IEEE International Parallel and Distributed Processing Symposium"],
+        "names_full": ["2007 IEEE International Parallel and Distributed Processing Symposium"]
     },
     "IROS": {
         "names_abbr": [
@@ -255,6 +425,14 @@
             "IEEE International Workshop on Intelligent Robots"
         ]
     },
+    "ISECS": {
+        "names_abbr": ["2009 Second International Symposium on Electronic Commerce and Security"],
+        "names_full": ["2009 Second International Symposium on Electronic Commerce and Security"]
+    },
+    "ISS": {
+        "names_abbr": ["Proceedings of the International Symposium on Synergetics"],
+        "names_full": ["Proceedings of the International Symposium on Synergetics"]
+    },
     "KDD": {
         "names_abbr": [
             "Proc. ACM SIGKDD Int. Conf. Knowl. Discovery Data Mining",
@@ -267,6 +445,46 @@
             ".*Proceedings of the.*ACM SIGKDD Conference on Knowledge Discovery and Data Mining.*"
         ]
     },
+    "LION": {
+        "names_abbr": ["Learning and Intelligent Optimization"],
+        "names_full": ["Learning and Intelligent Optimization"]
+    },
+    "MAOC": {
+        "names_abbr": ["11th AIAA/ISSMO Multidisciplinary Analysis and Optimization Conference"],
+        "names_full": ["11th AIAA/ISSMO Multidisciplinary Analysis and Optimization Conference"]
+    },
+    "MDA": {
+        "names_abbr": ["6th International Conference, MDA"],
+        "names_full": ["6th International Conference, MDA"]
+    },
+    "MHS": {
+        "names_abbr": ["MHS'95. Proceedings of the Sixth International Symposium on Micro Machine and Human Science"],
+        "names_full": ["MHS'95. Proceedings of the Sixth International Symposium on Micro Machine and Human Science"]
+    },
+    "MICAI": {
+        "names_abbr": ["MICAI 2004: Advances in Artificial Intelligence"],
+        "names_full": ["MICAI 2004: Advances in Artificial Intelligence"]
+    },
+    "MLSYS": {
+        "names_abbr": ["Proceedings of machine learning and systems"],
+        "names_full": ["Proceedings of machine learning and systems"]
+    },
+    "MTMAEE": {
+        "names_abbr": ["Measuring Technology and Mechatronics Automation in Electrical Engineering"],
+        "names_full": ["Measuring Technology and Mechatronics Automation in Electrical Engineering"]
+    },
+    "NAACL": {
+        "names_abbr": [
+            "Proceedings of Human Language Technologies: The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics"
+        ],
+        "names_full": [
+            "Proceedings of Human Language Technologies: The 2009 Annual Conference of the North American Chapter of the Association for Computational Linguistics"
+        ]
+    },
+    "NCAA": {
+        "names_abbr": ["International conference on neural computing for advanced applications"],
+        "names_full": ["International conference on neural computing for advanced applications"]
+    },
     "NeurIPS": {
         "names_abbr": ["Proc. Adv. Neural Inf. Process. Syst."],
         "names_full": [".*Advances in Neural Information Processing Systems.*"]
@@ -275,17 +493,67 @@
         "names_abbr": ["Proc. USENIX Symp. Oper. Syst. Des. Implement."],
         "names_full": [".*Symposium on Operating Systems Design and Implementation.*"]
     },
+    "PCMO": {
+        "names_abbr": ["Parallel computing and mathematical optimization"],
+        "names_full": ["Parallel computing and mathematical optimization"]
+    },
+    "PDP": {
+        "names_abbr": [
+            "2012 20th Euromicro International Conference on Parallel, Distributed and Network-based Processing"
+        ],
+        "names_full": [
+            "2012 20th Euromicro International Conference on Parallel, Distributed and Network-based Processing"
+        ]
+    },
     "PPSN": {
         "names_abbr": ["Proc. Int. Conf. Parallel Probl. Solving Nat."],
         "names_full": [".*Parallel Problem Solving from Nature.*"]
+    },
+    "RIVF": {
+        "names_abbr": [
+            "2012 IEEE RIVF international conference on computing \\& communication technologies, research, innovation, and vision for the future"
+        ],
+        "names_full": [
+            "2012 IEEE RIVF international conference on computing \\& communication technologies, research, innovation, and vision for the future"
+        ]
+    },
+    "ROBOT": {
+        "names_abbr": ["Proceedings 2002 IEEE international conference on robotics and automation (cat. no.02ch37292)"],
+        "names_full": ["Proceedings 2002 IEEE international conference on robotics and automation (cat. no.02ch37292)"]
     },
     "RSS": {
         "names_abbr": ["Proc. Robot. Sci. Syst.", "Proc. Robot. Sci. Syst."],
         "names_full": [".*Proceedings of Robotics: Science and Systems.*", "Robotics: Science and Systems.*"]
     },
+    "SAC": {
+        "names_abbr": ["Proceedings of the 1999 ACM symposium on Applied computing"],
+        "names_full": ["Proceedings of the 1999 ACM symposium on Applied computing"]
+    },
+    "SDM": {
+        "names_abbr": [
+            "Proceedings of the 2012 SIAM International Conference on Data Mining",
+            "Proceedings of the 2020 SIAM international conference on data mining (SDM)"
+        ],
+        "names_full": [
+            "Proceedings of the 2012 SIAM International Conference on Data Mining",
+            "Proceedings of the 2020 SIAM international conference on data mining (SDM)"
+        ]
+    },
+    "SEAL": {
+        "names_abbr": ["Simulated Evolution and Learning"],
+        "names_full": ["Simulated Evolution and Learning"]
+    },
+    "SECON": {
+        "names_abbr": ["Proceedings. IEEE SoutheastCon 2001 (Cat. No.01CH37208)"],
+        "names_full": ["Proceedings. IEEE SoutheastCon 2001 (Cat. No.01CH37208)"]
+    },
     "SIGMOD": {
         "names_abbr": ["Proc. ACM SIGMOD Int. Conf. Manag. Data"],
         "names_full": [".*Proceedings of the.*International Conference on Management of Data"]
+    },
+    "SIS": {
+        "names_abbr": ["2007 IEEE Swarm Intelligence Symposium"],
+        "names_full": ["2007 IEEE Swarm Intelligence Symposium"]
     },
     "SMC": {
         "names_abbr": ["Proc. IEEE Int. Conf. Syst., Man, Cybern.", "Proc. IEEE Int. Conf. Syst., Man, Cybern."],
@@ -317,6 +585,10 @@
     "UAI": {
         "names_abbr": ["Proc. Conf. Uncert. Artif. Intell."],
         "names_full": [".*Conference on Uncertainty in Artificial Intelligence"]
+    },
+    "UKCI": {
+        "names_abbr": ["2014 14th UK Workshop on Computational Intelligence"],
+        "names_full": ["2014 14th UK Workshop on Computational Intelligence"]
     },
     "WCCI": {
         "names_abbr": ["Proc. IEEE World Congr. Comput. Intell."],
