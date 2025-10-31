@@ -663,32 +663,29 @@
         "names_full": ["IEEE Computer Architecture Letters"]
     },
     "IEEE_J_CAPT": {
-        "names_abbr": ["IEEE Trans. Compon. Packag. Technol."],
-        "names_full": ["IEEE Transactions on Components and Packaging Technology"]
-    },
-    "IEEE_J_CAPTS": {
-        "names_abbr": ["IEEE Trans. Compon. Packag. Technol."],
-        "names_full": ["IEEE Transactions on Components and Packaging Technologies"]
+        "names_abbr": ["IEEE Trans. Compon. Packag. Technol.", "IEEE Trans. Compon. Packag. Technol."],
+        "names_full": [
+            "IEEE Transactions on Components and Packaging Technology",
+            "IEEE Transactions on Components and Packaging Technologies"
+        ]
     },
     "IEEE_J_CAS": {
         "names_abbr": ["IEEE Trans. Circuits Syst."],
         "names_full": ["IEEE Transactions on Circuits and Systems"]
     },
     "IEEE_J_CASI": {
-        "names_abbr": ["IEEE Trans. Circuits Syst. I"],
-        "names_full": ["IEEE Transactions on Circuits and Systems---Part I: Fundamental Theory and Applications"]
+        "names_abbr": ["IEEE Trans. Circuits Syst. I", "IEEE Trans. Circuits Syst. I"],
+        "names_full": [
+            "IEEE Transactions on Circuits and Systems---Part I: Fundamental Theory and Applications",
+            "IEEE Transactions on Circuits and Systems---Part I: Regular Papers"
+        ]
     },
     "IEEE_J_CASII": {
-        "names_abbr": ["IEEE Trans. Circuits Syst. II"],
-        "names_full": ["IEEE Transactions on Circuits and Systems---Part II: Analog and Digital Signal Processing"]
-    },
-    "IEEE_J_CASII_EB": {
-        "names_abbr": ["IEEE Trans. Circuits Syst. II"],
-        "names_full": ["IEEE Transactions on Circuits and Systems---Part II: Express Briefs"]
-    },
-    "IEEE_J_CASI_RP": {
-        "names_abbr": ["IEEE Trans. Circuits Syst. I"],
-        "names_full": ["IEEE Transactions on Circuits and Systems---Part I: Regular Papers"]
+        "names_abbr": ["IEEE Trans. Circuits Syst. II", "IEEE Trans. Circuits Syst. II"],
+        "names_full": [
+            "IEEE Transactions on Circuits and Systems---Part II: Analog and Digital Signal Processing",
+            "IEEE Transactions on Circuits and Systems---Part II: Express Briefs"
+        ]
     },
     "IEEE_J_CASVT": {
         "names_abbr": ["IEEE Trans. Circuits Syst. Video Technol."],
@@ -927,15 +924,15 @@
         "names_full": ["IEEE Transactions on Medical Electronics"]
     },
     "IEEE_J_MECH": {
-        "names_abbr": ["{IEEE/ASME} Trans. Mechatronics"],
-        "names_full": ["{IEEE/ASME} Transactions on Mechatronics"]
+        "names_abbr": ["IEEE/ASME Trans. Mechatronics"],
+        "names_full": ["IEEE/ASME Transactions on Mechatronics"]
     },
     "IEEE_J_MEMS": {
-        "names_abbr": ["J. Microelectromech. Syst."],
-        "names_full": ["{IEEE/ASME} Journal of Microelectromechanical Systems"]
+        "names_abbr": ["IEEE/ASME J. Microelectromech. Syst."],
+        "names_full": ["IEEE/ASME Journal of Microelectromechanical Systems"]
     },
     "IEEE_J_MEMSI": {
-        "names_abbr": ["J. Microelectromech. Syst."],
+        "names_abbr": ["IEEE J. Microelectromech. Syst."],
         "names_full": ["IEEE Journal of Microelectromechanical Systems"]
     },
     "IEEE_J_MFT": {
