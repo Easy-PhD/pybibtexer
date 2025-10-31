@@ -189,10 +189,6 @@
     "names_full": ["IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems"],
     "names_abbr": ["IEEE Trans. Comput.-Aided Design Integr. Circuits Syst."]
   },
-  "IEEE_J_BD": {
-    "names_full": ["IEEE Transactions on Big Data"],
-    "names_abbr": ["IEEE Trans. Big Data"]
-  },
   "IEEE_J_CAL": {
     "names_full": ["IEEE Computer Architecture Letters"],
     "names_abbr": ["IEEE Comput. Archit. Lett."]
@@ -284,22 +280,6 @@
   "IEEE_J_SMC": {
     "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics"],
     "names_abbr": ["IEEE Trans. Syst., Man, Cybern."]
-  },
-  "IEEE_J_SMCA": {
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics---Part A: Systems and Humans"],
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. A"]
-  },
-  "IEEE_J_SMCB": {
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics---Part B: Cybernetics"],
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. B"]
-  },
-  "IEEE_J_SMCC": {
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics---Part C: Applications and Reviews"],
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. C"]
-  },
-  "IEEE_J_SMCS": {
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics: Systems"],
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern., Syst."]
   },
   "IEEE_J_SSC": {
     "names_full": ["IEEE Transactions on Systems Science and Cybernetics"],
@@ -820,10 +800,6 @@
   "IEEE_M_PULSE": {
     "names_full": ["IEEE Pulse"],
     "names_abbr": ["IEEE Pulse"]
-  },
-  "IEEE_M_RA": {
-    "names_full": ["IEEE Robotics and Automation Magazine"],
-    "names_abbr": ["IEEE Robot. Autom. Mag."]
   },
   "IEEE_M_SAP": {
     "names_full": ["IEEE Security and Privacy"],
@@ -1749,12 +1725,18 @@
     "names_abbr": ["IEEE Trans. Syst., Man, Cybern., Syst."]
   },
   "TSMCB": {
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics)"],
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. B"]
+    "names_full": [
+      "IEEE Transactions on Systems, Man, and Cybernetics, Part B (Cybernetics)",
+      "IEEE Transactions on Systems, Man, and Cybernetics---Part B: Cybernetics"
+    ],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. B", "IEEE Trans. Syst., Man, Cybern. B"]
   },
   "TSMCC": {
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)"],
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. C"]
+    "names_full": [
+      "IEEE Transactions on Systems, Man, and Cybernetics, Part C (Applications and Reviews)",
+      "IEEE Transactions on Systems, Man, and Cybernetics---Part C: Applications and Reviews"
+    ],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. C", "IEEE Trans. Syst., Man, Cybern. C"]
   },
   "TVCG": {
     "names_full": ["IEEE Transactions on Visualization and Computer Graphics"],
@@ -2005,8 +1987,8 @@
     "names_abbr": ["IEEE Intell. Syst."]
   },
   "MRA": {
-    "names_full": ["IEEE Robotics Automation Magazine"],
-    "names_abbr": ["IEEE Robot. Autom. Mag."]
+    "names_full": ["IEEE Robotics and Automation Magazine", "IEEE Robotics & Automation Magazine"],
+    "names_abbr": ["IEEE Robot. Autom. Mag.", "IEEE Robot. Autom. Mag."]
   },
   "MSSC": {
     "names_full": ["IEEE Solid-State Circuits Magazine", "IEEE Solid-State Circuits Society Newsletter"],
@@ -2033,7 +2015,7 @@
     "names_abbr": ["IEEE Trans. Audio Speech Lang. Process."]
   },
   "TBD": {
-    "names_full": ["IEEE Transactions on Transactions on Big Data"],
+    "names_full": ["IEEE Transactions on Big Data"],
     "names_abbr": ["IEEE Trans. Big Data"]
   },
   "TCDS": {
@@ -2093,8 +2075,11 @@
     "names_abbr": ["IEEE Trans. Serv. Comput."]
   },
   "TSMCA": {
-    "names_full": ["IEEE Transactions on Systems, Man, and Cybernetics, Part A: Systems and Humans"],
-    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. A"]
+    "names_full": [
+      "IEEE Transactions on Systems, Man, and Cybernetics, Part A: Systems and Humans",
+      "IEEE Transactions on Systems, Man, and Cybernetics---Part A: Systems and Humans"
+    ],
+    "names_abbr": ["IEEE Trans. Syst., Man, Cybern. A", "IEEE Trans. Syst., Man, Cybern. A"]
   },
   "TVC": {
     "names_full": ["IEEE Transactions on Vehicular Communications"],
