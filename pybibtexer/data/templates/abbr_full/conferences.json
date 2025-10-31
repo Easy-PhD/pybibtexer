@@ -38,8 +38,8 @@
         ]
     },
     "ALIFE": {
-        "names_abbr": ["Proc. Int. Conf. Artif. Life", "Proc. Int. Conf. Artif. Life"],
-        "names_full": ["Proceedings of the.* Artificial Life Conference", ".*Conference on Artificial Life"]
+        "names_abbr": ["Proc. Int. Conf. Artif. Life"],
+        "names_full": ["Proceedings of the.* Artificial Life Conference"]
     },
     "ALT": {
         "names_abbr": ["Proc. Int. Conf. Algorithmic Learn. Theory", "Proc. Int. Conf. Algorithmic Learn. Theory"],
@@ -512,10 +512,6 @@
         "names_full": [
             "2012 IEEE RIVF international conference on computing \\& communication technologies, research, innovation, and vision for the future"
         ]
-    },
-    "ROBOT": {
-        "names_abbr": ["Proceedings 2002 IEEE international conference on robotics and automation (cat. no.02ch37292)"],
-        "names_full": ["Proceedings 2002 IEEE international conference on robotics and automation (cat. no.02ch37292)"]
     },
     "RSS": {
         "names_abbr": ["Proc. Robot. Sci. Syst.", "Proc. Robot. Sci. Syst."],
