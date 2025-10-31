@@ -12,8 +12,8 @@
         "names_full": ["Autonomous Agents and Multi-Agent Systems"]
     },
     "AANDA": {
-        "names_abbr": ["Astron. Astrophys."],
-        "names_full": ["Astronomy & Astrophysics"]
+        "names_abbr": ["Astron. Astrophys.", "Astron. Astrophys."],
+        "names_full": ["Astronomy & Astrophysics", "Astronomy \\& Astrophysics"]
     },
     "AAP": {
         "names_abbr": ["Adv. Appl. Probab."],
@@ -284,16 +284,20 @@
         "names_full": ["CIRP Annals-Manufacturing Technology"]
     },
     "CIS": {
-        "names_abbr": ["Complex Intell. Syst.", "Complex Intell. Syst."],
-        "names_full": ["Complex & Intelligent Systems", "Complex and Intelligent Systems"]
+        "names_abbr": ["Complex Intell. Syst.", "Complex Intell. Syst.", "Complex Intell. Syst."],
+        "names_full": [
+            "Complex & Intelligent Systems",
+            "Complex and Intelligent Systems",
+            "Complex \\& Intelligent Systems"
+        ]
     },
     "CJIST": {
         "names_abbr": ["Chinese J. Intell. Sci. Technol."],
         "names_full": ["Chinese Journal of Intelligent Science and Techology"]
     },
     "CMA": {
-        "names_abbr": ["Comput. Meth. Appl."],
-        "names_full": ["Computers & Mathematics with Applications"]
+        "names_abbr": ["Comput. Meth. Appl.", "Comput. Meth. Appl."],
+        "names_full": ["Computers & Mathematics with Applications", "Computers \\& Mathematics with Applications"]
     },
     "CMAME": {
         "names_abbr": ["Comput. Meth. Appl. Mech. Eng."],
@@ -328,8 +332,12 @@
         "names_full": ["The Computer Journal"]
     },
     "COR": {
-        "names_abbr": ["Comput. Oper. Res.", "Comput. Oper. Res."],
-        "names_full": ["Computers & Operations Research", "Computers and Operations Research"]
+        "names_abbr": ["Comput. Oper. Res.", "Comput. Oper. Res.", "Comput. Oper. Res."],
+        "names_full": [
+            "Computers & Operations Research",
+            "Computers and Operations Research",
+            "Computers \\& Operations Research"
+        ]
     },
     "CPAC": {
         "names_abbr": ["Comb. Probab. Comput.", "Comb. Probab. Comput."],
@@ -344,8 +352,12 @@
         "names_full": ["Connection Science"]
     },
     "CSDA": {
-        "names_abbr": ["Comput. Stat. Data Anal.", "Comput. Stat. Data Anal."],
-        "names_full": ["Computational Statistics & Data Analysis", "Computational Statistics and Data Analysis"]
+        "names_abbr": ["Comput. Stat. Data Anal.", "Comput. Stat. Data Anal.", "Comput. Stat. Data Anal."],
+        "names_full": [
+            "Computational Statistics & Data Analysis",
+            "Computational Statistics and Data Analysis",
+            "Computational Statistics \\& Data Analysis"
+        ]
     },
     "CSSC": {
         "names_abbr": ["Commun. Stat. Simul. Comput."],
@@ -392,8 +404,12 @@
         "names_full": ["Discrete Optimization"]
     },
     "DKE": {
-        "names_abbr": ["Data Knowl. Eng.", "Data Knowl. Eng."],
-        "names_full": ["Data & Knowledge Engineering", "Data and Knowledge Engineering"]
+        "names_abbr": ["Data Knowl. Eng.", "Data Knowl. Eng.", "Data Knowl. Eng."],
+        "names_full": [
+            "Data & Knowledge Engineering",
+            "Data and Knowledge Engineering",
+            "Data \\& Knowledge Engineering"
+        ]
     },
     "DMKD": {
         "names_abbr": ["Data Mining Knowl. Discov."],
@@ -1483,8 +1499,11 @@
         "names_full": ["International Journal of Intelligent Systems"]
     },
     "IJITDM": {
-        "names_abbr": ["Int. J. Inf. Tech. Decis."],
-        "names_full": ["International Journal of Information Technology & Decision Making"]
+        "names_abbr": ["Int. J. Inf. Tech. Decis.", "Int. J. Inf. Tech. Decis."],
+        "names_full": [
+            "International Journal of Information Technology & Decision Making",
+            "International Journal of Information Technology \\& Decision Making"
+        ]
     },
     "IJMIR": {
         "names_abbr": ["Int. J. Multimed. Inf. Retr."],
@@ -1587,8 +1606,11 @@
         "names_full": ["Journal of the American Chemical Society"]
     },
     "JACT": {
-        "names_abbr": ["J. Algo. Comput. Technol."],
-        "names_full": ["Journal of Algorithms & Computational Technology"]
+        "names_abbr": ["J. Algo. Comput. Technol.", "J. Algo. Comput. Technol."],
+        "names_full": [
+            "Journal of Algorithms & Computational Technology",
+            "Journal of Algorithms \\& Computational Technology"
+        ]
     },
     "JAIM": {
         "names_abbr": ["Adv. Math."],
@@ -1627,8 +1649,12 @@
         "names_full": ["Journal of Approximation Theory"]
     },
     "JBES": {
-        "names_abbr": ["J. Busin. Econ. Stat.", "J. Busin. Econ. Stat."],
-        "names_full": ["Journal of Business & Economic Statistics", "Journal of Business and Economic Statistics"]
+        "names_abbr": ["J. Busin. Econ. Stat.", "J. Busin. Econ. Stat.", "J. Busin. Econ. Stat."],
+        "names_full": [
+            "Journal of Business & Economic Statistics",
+            "Journal of Business and Economic Statistics",
+            "Journal of Business \\& Economic Statistics"
+        ]
     },
     "JCC": {
         "names_abbr": ["J. Comput. Chem."],
@@ -1659,14 +1685,23 @@
         "names_full": ["Journal of Differential Equations"]
     },
     "JEEE": {
-        "names_abbr": ["Ethol. Ecol. Evol.", "Ethol. Ecol. Evol."],
-        "names_full": ["Ethology Ecology And Evolution", "Ethology Ecology & Evolution"]
+        "names_abbr": ["Ethol. Ecol. Evol.", "Ethol. Ecol. Evol.", "Ethol. Ecol. Evol."],
+        "names_full": [
+            "Ethology Ecology And Evolution",
+            "Ethology Ecology & Evolution",
+            "Ethology Ecology \\& Evolution"
+        ]
     },
     "JETAI": {
-        "names_abbr": ["J. Exp. Theor. Artif. Intell.", "J. Exp. Theor. Artif. Intell."],
+        "names_abbr": [
+            "J. Exp. Theor. Artif. Intell.",
+            "J. Exp. Theor. Artif. Intell.",
+            "J. Exp. Theor. Artif. Intell."
+        ],
         "names_full": [
             "Journal of Experimental and Theoretical Artificial Intelligence",
-            "Journal of Experimental & Theoretical Artificial Intelligence"
+            "Journal of Experimental & Theoretical Artificial Intelligence",
+            "Journal of Experimental \\& Theoretical Artificial Intelligence"
         ]
     },
     "JGCD": {
@@ -1678,8 +1713,12 @@
         "names_full": ["Journal of Global Optimization"]
     },
     "JIFS": {
-        "names_abbr": ["J. Intell. Fuzzy Syst.", "J. Intell. Fuzzy Syst."],
-        "names_full": ["Journal of Intelligent & Fuzzy Systems", "Journal of Intelligent and Fuzzy Systems"]
+        "names_abbr": ["J. Intell. Fuzzy Syst.", "J. Intell. Fuzzy Syst.", "J. Intell. Fuzzy Syst."],
+        "names_full": [
+            "Journal of Intelligent & Fuzzy Systems",
+            "Journal of Intelligent and Fuzzy Systems",
+            "Journal of Intelligent \\& Fuzzy Systems"
+        ]
     },
     "JIIS": {
         "names_abbr": ["J. Intell. Inf. Syst."],
@@ -1690,8 +1729,8 @@
         "names_full": ["Journal of Intelligent Manufacturing"]
     },
     "JIRS": {
-        "names_abbr": ["J. Intell. Robot. Syst."],
-        "names_full": ["Journal of Intelligent & Robotic Systems"]
+        "names_abbr": ["J. Intell. Robot. Syst.", "J. Intell. Robot. Syst."],
+        "names_full": ["Journal of Intelligent & Robotic Systems", "Journal of Intelligent \\& Robotic Systems"]
     },
     "JLLI": {
         "names_abbr": ["J. Log. Lang. Inf."],
@@ -1846,8 +1885,8 @@
         "names_full": ["Minds and Machines"]
     },
     "MATDES": {
-        "names_abbr": ["Mater. Des.", "Mater. Des."],
-        "names_full": ["Materials & Design", "Materials and Design"]
+        "names_abbr": ["Mater. Des.", "Mater. Des.", "Mater. Des."],
+        "names_full": ["Materials & Design", "Materials and Design", "Materials \\& Design"]
     },
     "MATHM": {
         "names_abbr": ["Math. Model."],
@@ -1914,8 +1953,12 @@
         "names_full": ["Mathematical Methods in the Applied Sciences"]
     },
     "MMS": {
-        "names_abbr": ["Multiscale Model. Simul.", "Multiscale Model. Simul."],
-        "names_full": ["Multiscale Modeling & Simulation", "Multiscale Modeling and Simulation"]
+        "names_abbr": ["Multiscale Model. Simul.", "Multiscale Model. Simul.", "Multiscale Model. Simul."],
+        "names_full": [
+            "Multiscale Modeling & Simulation",
+            "Multiscale Modeling and Simulation",
+            "Multiscale Modeling \\& Simulation"
+        ]
     },
     "MOOR": {
         "names_abbr": ["Math. Oper. Res."],
@@ -1930,8 +1973,12 @@
         "names_full": ["Mathematical Programming Computation"]
     },
     "MRA": {
-        "names_abbr": ["IEEE Robot. Autom. Mag.", "IEEE Robot. Autom. Mag."],
-        "names_full": ["IEEE Robotics and Automation Magazine", "IEEE Robotics & Automation Magazine"]
+        "names_abbr": ["IEEE Robot. Autom. Mag.", "IEEE Robot. Autom. Mag.", "IEEE Robot. Autom. Mag."],
+        "names_full": [
+            "IEEE Robotics and Automation Magazine",
+            "IEEE Robotics & Automation Magazine",
+            "IEEE Robotics \\& Automation Magazine"
+        ]
     },
     "MS": {
         "names_abbr": ["Manag. Sci."],
@@ -1948,6 +1995,9 @@
             "Manuf. Serv. Oper. Manag.",
             "Manuf. Serv. Oper. Manag.",
             "Manuf. Serv. Oper. Manag.",
+            "Manuf. Serv. Oper. Manag.",
+            "Manuf. Serv. Oper. Manag.",
+            "Manuf. Serv. Oper. Manag.",
             "Manuf. Serv. Oper. Manag."
         ],
         "names_full": [
@@ -1956,7 +2006,10 @@
             "Manufacturing & Service Operations Management (M&SOM)",
             "Manufacturing & Service Operations Management",
             "Manufacturing and Service Operations Management (M&SOM)",
-            "Manufacturing and Service Operations Management"
+            "Manufacturing and Service Operations Management",
+            "M&som-manufacturing \\& Service Operations Management",
+            "Manufacturing \\& Service Operations Management (M&SOM)",
+            "Manufacturing \\& Service Operations Management"
         ]
     },
     "MSP": {
@@ -1980,8 +2033,8 @@
         "names_full": ["Nature Computational Science"]
     },
     "NATEE": {
-        "names_abbr": ["Nat. Ecol. Evol", "Nat. Ecol. Evol"],
-        "names_full": ["Nature Ecology & Evolution", "Nature Ecology and Evolution"]
+        "names_abbr": ["Nat. Ecol. Evol", "Nat. Ecol. Evol", "Nat. Ecol. Evol"],
+        "names_full": ["Nature Ecology & Evolution", "Nature Ecology and Evolution", "Nature Ecology \\& Evolution"]
     },
     "NATMI": {
         "names_abbr": ["Nat. Mach. Intell."],
@@ -2637,8 +2690,12 @@
         "names_full": ["IEEE Transactions on Visualization and Computer Graphics"]
     },
     "TVP": {
-        "names_abbr": ["Theory Probab. Appl.", "Theory Probab. Appl."],
-        "names_full": ["Theory of Probability and Its Applications", "Theory of Probability & Its Applications"]
+        "names_abbr": ["Theory Probab. Appl.", "Theory Probab. Appl.", "Theory Probab. Appl."],
+        "names_full": [
+            "Theory of Probability and Its Applications",
+            "Theory of Probability & Its Applications",
+            "Theory of Probability \\& Its Applications"
+        ]
     },
     "TVT": {
         "names_abbr": ["IEEE Trans. Veh. Technol."],
