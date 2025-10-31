@@ -339,10 +339,6 @@
         "names_abbr": ["Comb. Probab. Comput.", "Comb. Probab. Comput."],
         "names_full": ["Combinatorics, Probability & Computing", "Combinatorics, Probability and Computing"]
     },
-    "CPC": {
-        "names_abbr": ["Comb. Probab. Comput."],
-        "names_full": ["Combinatorics, Probability and Computing"]
-    },
     "CPLX": {
         "names_abbr": ["Complexity"],
         "names_full": ["Complexity"]
@@ -435,10 +431,6 @@
         "names_abbr": ["Elec. Commun. Probab."],
         "names_full": ["Electronic Communications in Probability"]
     },
-    "EEE": {
-        "names_abbr": ["Ethol. Ecol. Evol."],
-        "names_full": ["Ethology, Ecology \\& Evolution"]
-    },
     "EI": {
         "names_abbr": ["Evol. Intell."],
         "names_full": ["Evolutionary Intelligence"]
@@ -506,10 +498,6 @@
     "FTCGV": {
         "names_abbr": ["Found. Trends Comput. Graph. Vis."],
         "names_full": ["Foundations and Trends in Computer Graphics and Vision"]
-    },
-    "FTMC": {
-        "names_abbr": ["Found. Trends Mach. Learn."],
-        "names_full": ["Foundations and Trends in Machine Learning"]
     },
     "FTML": {
         "names_abbr": ["Found. Trends Mach. Learn.", "Found. Trends Mach. Learn."],
@@ -1777,10 +1765,6 @@
         "names_abbr": ["J. Parallel Distrib. Comput."],
         "names_full": ["Journal of Parallel and Distributed Computing"]
     },
-    "JRSSB": {
-        "names_abbr": ["J. R. Stat. Soc. Ser. B"],
-        "names_full": ["Journal of the Royal Statistical Society: Series B (Methodological)"]
-    },
     "JRSSIG": {
         "names_abbr": ["Significance"],
         "names_full": ["Significance"]
@@ -2070,10 +2054,6 @@
     "NSR": {
         "names_abbr": ["Nat. Sci. Rev."],
         "names_full": ["National Science Review"]
-    },
-    "NSSC": {
-        "names_abbr": ["IEEE Solid-State Circuits Soc. Newsletter"],
-        "names_full": ["IEEE Solid-State Circuits Society Newsletter"]
     },
     "OJAS": {
         "names_abbr": ["Open J. Appl. Sci."],
