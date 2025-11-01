@@ -17,14 +17,6 @@ python = ">=3.12"
 pyadvtools = "^0.2.14"
 
 [tool.poetry.group.dev.dependencies]
-mypy = "^1.18.1"
-ruff = "^0.13.1"
-pycodestyle = "^2.14.0"
-pydocstyle = "^6.3.0"
-flake8 = "^7.3.0"
-isort = "^6.0.1"
-black = "^25.1.0"
-pyright = "^1.1.405"
 sphinx = "^8.2.3"
 sphinx-rtd-theme = "^3.0.2"
 sphinx-copybutton = "^0.5.2"
@@ -32,16 +24,50 @@ sphinx-copybutton = "^0.5.2"
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
+reportOptionalSubscript = "none"  # "none", "information", "error"
+reportIncompatibleMethodOverride = "none"  # "none", "information", "error"
 
 [tool.ruff]
 line-length = 120
 indent-width = 4
-
 exclude = [".venv"]
 extend-exclude = ["tests"]
 
 [tool.ruff.lint]
-extend-select = ["I"]
+extend-select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "D",   # pydocstyle (docstring conventions)
+    "N",   # pep8-naming
+    "UP",  # pyupgrade
+    "YTT", # flake8-2020
+    "ANN", # flake8-annotations
+    "S",   # flake8-bandit
+    "B",   # flake8-bugbear
+    "A",   # flake8-builtins
+    "C4",  # flake8-comprehensions
+    "RUF", # Ruff-specific rules
+]
+
+ignore = [
+    "ANN001",  # Missing type annotation of function argument
+    "ANN003",  # Missing type annotation
+    "ANN201",  # Missing return type of public function
+    "ANN202",  # Missing return type of private function
+    "ANN204",  # Missing return type annotation for special method `__init__`
+    "ANN205",  # Missing return type annotation for staticmethod
+    "D102",  # Missing docstring in public method
+    "D103",  # Missing docstring in public function
+    "D107",  # Missing docstring in `__init__`
+    "D204",  # 1 blank line required after class docstring
+    "D417",  # Missing argument description in the docstring
+    "RUF002",  # Docstring contains ambiguous `–` (EN-DASH)
+]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
 
 [tool.ruff.format]
 quote-style = "double"
