@@ -72,12 +72,18 @@
         "names_abbr": [
             "Proc. IEEE Congr. Evol. Comput.",
             "Proc. IEEE Congr. Evol. Comput.",
-            "Proc. IEEE Conf. Evol. Comput."
+            "Proc. IEEE Conf. Evol. Comput.",
+            "Proc. IEEE Conf. Evol. Comput. IEEE World Congr. Comput. Intell.",
+            "Proc. IEEE Conf. Evol. Comput.",
+            "Proc. IEEE Conf. Evol. Comput. IEEE World Congr. Comput. Intell."
         ],
         "names_full": [
             ".*Congress of Evolutionary Computation.*",
             ".*Congress on Evolutionary Computation.*",
-            ".*Conference on Evolutionary Computation.*"
+            ".*Conference on Evolutionary Computation",
+            "1998 IEEE International Conference on Evolutionary Computation Proceedings. IEEE World Congress on Computational Intelligence (Cat. No.98TH8360)",
+            "Proceedings of 1997 IEEE International Conference on Evolutionary Computation (ICEC '97)",
+            "Proceedings of the First IEEE Conference on Evolutionary Computation. IEEE World Congress on Computational Intelligence"
         ]
     },
     "CIDUE": {
@@ -185,7 +191,7 @@
         ],
         "names_full": [
             "Applications of Evolutionary Computation",
-            "International Conference on Applications of Evolutionary Computation.*",
+            "International Conference on .*Applications of Evolutionary Computation.*",
             "European Conference on the Applications of Evolutionary Computation",
             ".*European Conference on the Applications of Evolutionary and bio-inspired Computation"
         ]
@@ -240,8 +246,8 @@
             "Proc. Genet. Evol. Comput. Conf."
         ],
         "names_full": [
-            "Proceedings of the.* Genetic and Evolutionary Computation Conference",
-            "Proceedings of the [a-zA-Z0-9]+ Annual Conference on Genetic and Evolutionary Computation",
+            "Proceedings of the.* Genetic and Evolutionary Computation Conference\\s*[0-9]*",
+            "Proceedings of the [a-zA-Z0-9]+ Annual Conference on Genetic and Evolutionary Computation.*",
             "Genetic and Evolutionary Computation -+ GECCO [0-9]*",
             "Genetic and Evolutionary Computation Conference"
         ]
