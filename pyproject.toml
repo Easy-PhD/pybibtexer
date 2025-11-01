@@ -53,7 +53,8 @@ extend-select = [
 
 ignore = [
     "ANN001",  # Missing type annotation of function argument
-    "ANN003",  # Missing type annotation
+    "ANN002",  # Missing type annotation for `*args`
+    "ANN003",  # Missing type annotation for `**kwargs`
     "ANN201",  # Missing return type of public function
     "ANN202",  # Missing return type of private function
     "ANN204",  # Missing return type annotation for special method `__init__`
