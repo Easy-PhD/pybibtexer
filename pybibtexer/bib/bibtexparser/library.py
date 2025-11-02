@@ -1,5 +1,3 @@
-from typing import Dict, List, Union
-
 from .model import (
     Block,
     DuplicateBlockKeyBlock,
@@ -14,17 +12,17 @@ from .model import (
 # TODO Use functools.lru_cache for library properties (which create lists when called)
 
 
-class Library(object):
+class Library:
     """A collection of parsed bibtex blocks."""
 
-    def __init__(self, blocks: Union[List[Block], None] = None):
+    def __init__(self, blocks: list[Block] | None = None):
         self._blocks = []
         self._entries_by_key = dict()
         self._strings_by_key = dict()
         if blocks is not None:
             self.add(blocks)
 
-    def add(self, blocks: Union[List[Block], Block], fail_on_duplicate_key: bool = False):
+    def add(self, blocks: list[Block] | Block, fail_on_duplicate_key: bool = False):
         """Add blocks to library.
 
         The adding is key-safe, i.e., it is made sure that no duplicate keys are added.
@@ -47,7 +45,7 @@ class Library(object):
 
         if fail_on_duplicate_key:
             duplicate_keys = []
-            for original, added in zip(blocks, _added_blocks):
+            for original, added in zip(blocks, _added_blocks, strict=True):
                 if original is not added and isinstance(added, DuplicateBlockKeyBlock):
                     duplicate_keys.append(added.key)
 
@@ -58,7 +56,7 @@ class Library(object):
                     f"Use `library.failed_blocks` to access them. "
                 )
 
-    def remove(self, blocks: Union[List[Block], Block]):
+    def remove(self, blocks: list[Block] | Block):
         """Remove blocks from library.
 
         :param blocks: Block or list of blocks to remove.
@@ -116,7 +114,7 @@ class Library(object):
             raise ValueError("Duplicate key found.")
 
     @staticmethod
-    def _cast_to_duplicate(prev_block_with_same_key: Union[Entry, String], duplicate: Union[Entry, String]):
+    def _cast_to_duplicate(prev_block_with_same_key: Entry | String, duplicate: Entry | String):
         assert isinstance(prev_block_with_same_key, type(duplicate)) or isinstance(
             duplicate, type(prev_block_with_same_key)
         ), (
@@ -163,43 +161,43 @@ class Library(object):
         return block
 
     @property
-    def blocks(self) -> List[Block]:
+    def blocks(self) -> list[Block]:
         """All blocks in the library, preserving order of insertion."""
         return self._blocks
 
     @property
-    def failed_blocks(self) -> List[ParsingFailedBlock]:
+    def failed_blocks(self) -> list[ParsingFailedBlock]:
         """All blocks that could not be parsed, preserving order of insertion."""
         return [block for block in self._blocks if isinstance(block, ParsingFailedBlock)]
 
     @property
-    def strings(self) -> List[String]:
+    def strings(self) -> list[String]:
         """All @string blocks in the library, preserving order of insertion."""
         return [block for block in self._blocks if isinstance(block, String)]
 
     @property
-    def strings_dict(self) -> Dict[str, String]:
+    def strings_dict(self) -> dict[str, String]:
         """Dict representation of all @string blocks in the library."""
         return self._strings_by_key.copy()
 
     @property
-    def entries(self) -> List[Entry]:
+    def entries(self) -> list[Entry]:
         """All entry (@article, ...) blocks in the library, preserving order of insertion."""
         # Note: Taking this from the entries dict would be faster, but does not preserve order
         #   e.g. in cases where `replace` has been called.
         return [block for block in self._blocks if isinstance(block, Entry)]
 
     @property
-    def entries_dict(self) -> Dict[str, Entry]:
+    def entries_dict(self) -> dict[str, Entry]:
         """Dict representation of all entry blocks in the library."""
         return self._entries_by_key.copy()
 
     @property
-    def preambles(self) -> List[Preamble]:
+    def preambles(self) -> list[Preamble]:
         """All @preamble blocks in the library, preserving order of insertion."""
         return [block for block in self._blocks if isinstance(block, Preamble)]
 
     @property
-    def comments(self) -> List[Union[ExplicitComment, ImplicitComment]]:
+    def comments(self) -> list[ExplicitComment | ImplicitComment]:
         """All comment blocks in the library, preserving order of insertion."""
         return [block for block in self._blocks if isinstance(block, (ExplicitComment, ImplicitComment))]

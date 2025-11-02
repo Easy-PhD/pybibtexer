@@ -1,11 +1,10 @@
 import re
-from typing import List, Tuple, Union
 
 from .library import Library
 from .model import Block, Entry, ExplicitComment, Field, ImplicitComment, Preamble, String
 
 
-class Splitter(object):
+class Splitter:
     """Splitter class to split standardizing bib data list to library.
 
     Attributes:
@@ -15,7 +14,7 @@ class Splitter(object):
     def __init__(self):
         self.regex_block_type = re.compile(r"@([a-zA-Z]+){")
 
-    def splitter(self, data_list: List[str], implicit_coments: List[List[str]]):
+    def splitter(self, data_list: list[str], implicit_coments: list[list[str]]):
         """Split standardizing bib data list to library."""
         _blocks = []
 
@@ -74,7 +73,7 @@ class Splitter(object):
         _blocks.extend(entry_blocks)
         return Library(_blocks)
 
-    def _splitter_entry(self, block_type, line, line_idx, len_data, data_list) -> Tuple[Union[Block, str], int, list]:
+    def _splitter_entry(self, block_type, line, line_idx, len_data, data_list) -> tuple[Block | str, int, list]:
         regex = re.compile(r"@([a-zA-Z]+){(.*),")
         if not (mch_entry := regex.search(line)):
             block = Entry(block_type, "", [], line_idx)
@@ -124,7 +123,7 @@ class Splitter(object):
             citation_key = citation_key[:-1]
         return citation_key
 
-    def _splitter_comment(self, block_type, line, line_idx, len_data, data_list) -> Tuple[Union[Block, str], int]:
+    def _splitter_comment(self, block_type, line, line_idx, len_data, data_list) -> tuple[Block | str, int]:
         regex = re.compile(r"@comment{" + r"(.*)" + "}\n")
         if not (mch := regex.search(line)):
             return line, line_idx
@@ -132,7 +131,7 @@ class Splitter(object):
         block = ExplicitComment(mch.group(1), line_idx)
         return block, line_idx
 
-    def _splitter_string(self, block_type, line, line_idx, len_data, data_list) -> Tuple[Union[Block, str], int]:
+    def _splitter_string(self, block_type, line, line_idx, len_data, data_list) -> tuple[Block | str, int]:
         regex = re.compile(r"@string{" + r"\s*([\w]+)\s*=\s*" + r'(["{])' + r"([\w\-]+)" + r'(["}])' + "}\n")
         if not (mch := regex.search(line)):
             return line, line_idx
@@ -142,7 +141,7 @@ class Splitter(object):
             block.key = re.sub(r"\W", "", block.value.lower())[:80]
         return block, line_idx
 
-    def _splitter_preamble(self, block_type, line, line_idx, len_data, data_list) -> Tuple[Union[Block, str], int]:
+    def _splitter_preamble(self, block_type, line, line_idx, len_data, data_list) -> tuple[Block | str, int]:
         regex = re.compile(r"@preamble{" + r'\s*(")' + r"([\w\-\\\[\]\{\}\s]+)" + r'(")\s*' + "}\n")
         if not (mch := regex.search(line)):
             return line, line_idx

@@ -1,10 +1,10 @@
-from typing import Any, Dict
+from typing import Any
 
 from .middlewares.block.entry_fields_sort import SortFieldsAlphabeticallyMiddleware
 from .middlewares.library.sorting_blocks import SortBlocksByTypeAndUserSortKeyMiddleware
 
 
-class MiddlewaresLibraryToStr(object):
+class MiddlewaresLibraryToStr:
     """Middlewares for converting a library to a string.
 
     Args:
@@ -19,7 +19,7 @@ class MiddlewaresLibraryToStr(object):
         sort_entries_by_field_keys_reverse (bool): Reverse the sorting of the field keys. Default is True.
     """
 
-    def __init__(self, options: Dict[str, Any]):
+    def __init__(self, options: dict[str, Any]):
         self.is_sort_entry_fields = options.get("is_sort_entry_fields", True)
         self.is_sort_blocks = options.get("is_sort_blocks", True)
         self.sort_entries_by_cite_keys = options.get("sort_entries_by_cite_keys", [])

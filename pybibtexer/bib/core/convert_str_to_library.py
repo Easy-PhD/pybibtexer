@@ -1,10 +1,10 @@
-from typing import Any, Dict, List
+from typing import Any
 
 from ..bibtexparser import Library, MiddlewaresStrToLibrary, Splitter
 from .convert_str_to_str import ConvertStrToStr
 
 
-class ConvertStrToLibrary(object):
+class ConvertStrToLibrary:
     """Convert str to library.
 
     Args:
@@ -14,13 +14,13 @@ class ConvertStrToLibrary(object):
         is_standardize_bib (bool): Is standardize bib. Default is True.
     """
 
-    def __init__(self, options: Dict[str, Any] = {}) -> None:
+    def __init__(self, options: dict[str, Any] = {}) -> None:
 
         self.is_standardize_bib = options.get("is_standardize_bib", True)
 
         self.options = options
 
-    def generate_library(self, data_list: List[str]) -> Library:
+    def generate_library(self, data_list: list[str]) -> Library:
         implicit_coments = []
         # standardizer
         if self.is_standardize_bib:

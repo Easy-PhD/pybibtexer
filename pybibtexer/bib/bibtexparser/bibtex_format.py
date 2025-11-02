@@ -1,9 +1,7 @@
-from typing import Union
-
 PARSING_FAILED_COMMENT = "% WARNING Parsing failed for the following {n} lines."
 
 
-class BibtexFormat(object):
+class BibtexFormat:
     """Definition of formatting (alignment, ...) when writing a BibTeX file.
 
     Hint: For more manual, GUI-based formatting, see the `bibtex-tidy` tool:
@@ -12,7 +10,7 @@ class BibtexFormat(object):
 
     def __init__(self):
         self._indent: str = "  "  # "\t"
-        self._align_field_values: Union[int, str] = "auto"
+        self._align_field_values: int | str = "auto"
         self._block_separator: str = ""  # "\n\n"
         self._trailing_comma: bool = True
         self._parsing_failed_comment: str = PARSING_FAILED_COMMENT
@@ -27,7 +25,7 @@ class BibtexFormat(object):
         self._indent = indent
 
     @property
-    def value_column(self) -> Union[int, str]:
+    def value_column(self) -> int | str:
         """Controls the alignment of field- and string-values. Default: no alignment.
 
         This impacts String and Entry blocks.
@@ -44,7 +42,7 @@ class BibtexFormat(object):
         return self._align_field_values
 
     @value_column.setter
-    def value_column(self, align_values: Union[int, str]) -> None:
+    def value_column(self, align_values: int | str) -> None:
         if isinstance(align_values, int):
             if align_values < 0:
                 raise ValueError("align_field_values must be >= 0")

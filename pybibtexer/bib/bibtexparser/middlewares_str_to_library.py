@@ -1,10 +1,10 @@
-from typing import Any, Dict
+from typing import Any
 
 from .library import Library
 from .model import ImplicitComment
 
 
-class MiddlewaresStrToLibrary(object):
+class MiddlewaresStrToLibrary:
     """Middlewares for converting a string to a library.
 
     Args:
@@ -14,7 +14,7 @@ class MiddlewaresStrToLibrary(object):
         is_display_implicit_comments (bool): Display implicit comments. Default is True.
     """
 
-    def __init__(self, options: Dict[str, Any]):
+    def __init__(self, options: dict[str, Any]):
         self.is_display_implicit_comments = options.get("is_display_implicit_comments", True)
 
     def functions(self, library: Library) -> Library:

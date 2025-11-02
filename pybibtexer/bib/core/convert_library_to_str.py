@@ -1,5 +1,5 @@
 from copy import deepcopy
-from typing import Any, Dict, List, Optional, Union
+from typing import Any
 
 from ..bibtexparser import (
     BibtexFormat,
@@ -21,7 +21,7 @@ VAL_SEP = " = "
 PARSING_FAILED_COMMENT = "% WARNING Parsing failed for the following {n} lines."
 
 
-class ConvertLibrayToStr(object):
+class ConvertLibrayToStr:
     """Convert library to str.
 
     Args:
@@ -34,7 +34,7 @@ class ConvertLibrayToStr(object):
         entries_necessary (bool): Is the entries are necessary in the bib file.
     """
 
-    def __init__(self, options: Dict[str, Any]):
+    def __init__(self, options: dict[str, Any]):
 
         self.is_standardize_library = options.get("is_standardize_library", False)
         self.empty_entry_cite_keys = options.get("empty_entry_cite_keys", False)
@@ -44,8 +44,8 @@ class ConvertLibrayToStr(object):
         self.options = options
 
     def generate_str(
-        self, library: Union[Library, List[Block]], bibtex_format: Optional[BibtexFormat] = None
-    ) -> List[str]:
+        self, library: Library | list[Block], bibtex_format: BibtexFormat | None = None
+    ) -> list[str]:
         """Serialize a BibTeX database.
 
         :param library: BibTeX database to serialize.
@@ -99,10 +99,10 @@ class ConvertLibrayToStr(object):
         max_key_len = 0
         for entry in library.entries:
             for key in entry.fields_dict:
-                max_key_len = max(max_key_len, len(key))
+               max_key_len = max(max_key_len, len(key))
         return max_key_len
 
-    def _treat_block(self, bibtex_format, block) -> List[str]:
+    def _treat_block(self, bibtex_format, block) -> list[str]:
         if isinstance(block, Entry):
             pieces = self._treat_entry(block, bibtex_format)
         elif isinstance(block, String):
@@ -120,7 +120,7 @@ class ConvertLibrayToStr(object):
         return pieces
 
     # entry
-    def _treat_entry(self, block: Entry, bibtex_format: BibtexFormat) -> List[str]:
+    def _treat_entry(self, block: Entry, bibtex_format: BibtexFormat) -> list[str]:
         if self.empty_entry_cite_keys:
             result = ["@" + block.entry_type + "{" + " " + ",\n"]
         else:
@@ -154,32 +154,32 @@ class ConvertLibrayToStr(object):
 
     # string
     @staticmethod
-    def _treat_string(block: String, bibtex_format: BibtexFormat) -> List[str]:
+    def _treat_string(block: String, bibtex_format: BibtexFormat) -> list[str]:
         result = ["@string{", block.key, VAL_SEP, "{", block.value, "}", "}\n"]
         return ["".join(result)]
 
     # preamble
     @staticmethod
-    def _treat_preamble(block: Preamble, bibtex_format: BibtexFormat) -> List[str]:
+    def _treat_preamble(block: Preamble, bibtex_format: BibtexFormat) -> list[str]:
         result = ["@preamble{" + f' "{block.value.rstrip()} "' + " }", "\n"]
         return ["".join(result)]
 
     # implicit comment
     @staticmethod
-    def _treat_impl_comment(block: ImplicitComment, bibtex_format: BibtexFormat) -> List[str]:
+    def _treat_impl_comment(block: ImplicitComment, bibtex_format: BibtexFormat) -> list[str]:
         # Note: No explicit escaping is done here - that should be done in middleware
         result = [block.comment.rstrip(), "\n"]
         return ["".join(result)]
 
     # explicit comment
     @staticmethod
-    def _treat_expl_comment(block: ExplicitComment, bibtex_format: BibtexFormat) -> List[str]:
+    def _treat_expl_comment(block: ExplicitComment, bibtex_format: BibtexFormat) -> list[str]:
         result = ["@comment{", block.comment.rstrip(), "}\n"]
         return ["".join(result)]
 
     # failed block
     @staticmethod
-    def _treat_failed_block(block: ParsingFailedBlock, bibtex_format: BibtexFormat) -> List[str]:
+    def _treat_failed_block(block: ParsingFailedBlock, bibtex_format: BibtexFormat) -> list[str]:
         if isinstance(block.raw, str):
             lines = len(block.raw.splitlines())
             parsing_failed_comment = PARSING_FAILED_COMMENT.format(n=lines)
