@@ -15,18 +15,14 @@ class GenerateEntriesCiteKey(LibraryMiddleware):
     # docstr-coverage: inherited
     def __init__(
         self,
-        full_abbr_article_dict: dict,
-        full_abbr_inproceedings_dict: dict,
-        full_names_in_json: str,
-        abbr_names_in_json: str,
+        abbr_article_pattern_dict: dict,
+        abbr_inproceedings_pattern_dict: dict,
         allow_inplace_modification: bool = True,
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification)
 
-        self.full_abbr_article_dict = full_abbr_article_dict
-        self.full_abbr_inproceedings_dict = full_abbr_inproceedings_dict
-        self.full_names_in_json = full_names_in_json
-        self.abbr_names_in_json = abbr_names_in_json
+        self.abbr_article_pattern_dict = abbr_article_pattern_dict
+        self.abbr_inproceedings_pattern_dict = abbr_inproceedings_pattern_dict
 
     # docstr-coverage: inherited
     def transform(self, library: Library) -> Library:
@@ -42,10 +38,8 @@ class GenerateEntriesCiteKey(LibraryMiddleware):
         """Generate user citation key."""
         prefix = generate_cite_key_prefix(
             entry,
-            self.full_abbr_article_dict,
-            self.full_abbr_inproceedings_dict,
-            self.full_names_in_json,
-            self.abbr_names_in_json,
+            self.abbr_article_pattern_dict,
+            self.abbr_inproceedings_pattern_dict,
         )
 
         cite_key = self.generate_google_cite_key(entry)

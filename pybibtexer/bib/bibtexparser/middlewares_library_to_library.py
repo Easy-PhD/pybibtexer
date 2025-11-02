@@ -100,8 +100,8 @@ class MiddlewaresLibraryToLibrary:
         full_abbr_inproceedings_dict (dict): Full to abbreviation dictionary for inproceedings. Default is {}.
         full_names_in_json (str): Full names in json format. Default is "".
         abbr_names_in_json (str): Abbreviated names in json format. Default is "".
-        abbr_article_pattern_dict (dict):
-        abbr_inproceedings_pattern_dict (dict):
+        abbr_article_pattern_dict (dict): Pre-compiled regex patterns for journal name matching
+        abbr_inproceedings_pattern_dict (dict): Pre-compiled regex patterns for conference name matching
 
         full_to_abbr_for_abbr (bool): Full to abbreviation for abbreviate. Default is True.
         abbr_index_article_for_abbr (int): Index for abbreviation in article. Default is 1.
@@ -237,10 +237,8 @@ class MiddlewaresLibraryToLibrary:
         # Generate Entry keys (cite keys)
         if self.generate_entry_cite_keys:
             library = GenerateEntriesCiteKey(
-                self.full_abbr_article_dict,
-                self.full_abbr_inproceedings_dict,
-                self.full_names_in_json,
-                self.abbr_names_in_json,
+                self.abbr_article_pattern_dict,
+                self.abbr_inproceedings_pattern_dict,
             ).transform(library)
         return library
 
@@ -305,7 +303,9 @@ class MiddlewaresLibraryToLibrary:
         # Replace some fields for all entrys
         if self.replace_fields_for_abbr:
             for entry in self.replace_entry_list_for_abbr:
-                for old, new in zip(self.replace_old_field_list_for_abbr, self.replace_new_field_list_for_abbr, strict=True):
+                for old, new in zip(
+                    self.replace_old_field_list_for_abbr, self.replace_new_field_list_for_abbr, strict=True
+                ):
                     library = ReplaceFieldKeyInEntry(entry, old, new).transform(library)
 
         # Constrain the number of authors
@@ -367,7 +367,7 @@ class MiddlewaresLibraryToLibrary:
                 self.full_abbr_article_dict,
                 self.full_names_in_json,
                 self.abbr_names_in_json,
-                self.abbr_article_pattern_dict
+                self.abbr_article_pattern_dict,
             ).transform(library)
 
         library = self._function_sort(library)

@@ -1,5 +1,3 @@
-from typing import Tuple
-
 from ...library import Library
 from ...model import Block, Entry
 from ..middleware import BlockMiddleware
@@ -29,7 +27,7 @@ class SortFieldsCustomMiddleware(BlockMiddleware):
     The order is a list of field keys. Fields not in the list are put at the end.
     """
 
-    def __init__(self, order: Tuple[str, ...], case_sensitive: bool = False, allow_inplace_modification: bool = True):
+    def __init__(self, order: tuple[str, ...], case_sensitive: bool = False, allow_inplace_modification: bool = True):
         super().__init__(allow_inplace_modification=allow_inplace_modification, allow_parallel_execution=True)
         self._case_sensitive = case_sensitive
         if not case_sensitive:

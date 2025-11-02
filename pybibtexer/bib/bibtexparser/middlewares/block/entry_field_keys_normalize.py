@@ -1,5 +1,4 @@
 import logging
-from typing import Dict, List, Set
 
 from ...library import Library
 from ...model import Entry, Field
@@ -22,8 +21,8 @@ class NormalizeEntryFieldKeys(BlockMiddleware):
 
     # docstr-coverage: inherited
     def transform_entry(self, entry: Entry, library: Library) -> Entry:
-        seen_normalized_keys: Set[str] = set()
-        new_fields_dict: Dict[str, Field] = {}
+        seen_normalized_keys: set[str] = set()
+        new_fields_dict: dict[str, Field] = {}
         for field in entry.fields:
             normalized_key: str = field.key.lower()
             # if the normalized key is already present, apply "last one wins"
@@ -41,7 +40,7 @@ class NormalizeEntryFieldKeys(BlockMiddleware):
             field.key = normalized_key
             new_fields_dict[normalized_key] = field
 
-        new_fields: List[Field] = list(new_fields_dict.values())
+        new_fields: list[Field] = list(new_fields_dict.values())
         entry.fields = new_fields
 
         return entry

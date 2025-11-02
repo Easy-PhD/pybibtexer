@@ -14,10 +14,12 @@ class BasicInput:
         options (Dict[str, Any]): Options.
 
     Attributes:
-        full_abbr_article_dict (Dict[str, str]): Full abbr article dict.
+        full_abbr_article_dict (dict[str, str]): Full abbr article dict.
         full_abbr_inproceedings_dict (Dict[str, str]): Full abbr inproceedings dict.
         full_names_in_json (str): Full names in json.
         abbr_names_in_json (str): Abbr names in json.
+        abbr_article_pattern_dict (dict): Pre-compiled regex patterns for journal name matching
+        abbr_inproceedings_pattern_dict (dict): Pre-compiled regex patterns for conference name matching
 
         options (Dict[str, Any]): Options.
 
@@ -38,9 +40,11 @@ class BasicInput:
         full_names_in_json = "names_full"
         abbr_names_in_json = "names_abbr"
 
+        # Pre-compile regex patterns for efficient matching
         abbr_article_pattern_dict, abbr_inproceedings_pattern_dict = self.abbr_article_inproceedings_pattern(
             full_abbr_article_dict, full_abbr_inproceedings_dict, full_names_in_json, abbr_names_in_json)
 
+        # Store all configurations in options for later use
         options["full_abbr_article_dict"] = full_abbr_article_dict
         options["full_abbr_inproceedings_dict"] = full_abbr_inproceedings_dict
         options["full_names_in_json"] = full_names_in_json
@@ -54,29 +58,33 @@ class BasicInput:
     def abbr_article_inproceedings_pattern(
         full_abbr_article_dict, full_abbr_inproceedings_dict, full_names_in_json, abbr_names_in_json
     ):
-        abbr_article_pattern_dict = {}
-        for abbr in full_abbr_article_dict:
-            full_name_list = full_abbr_article_dict[abbr].get(full_names_in_json, [])
-            long_abbr_name_list = full_abbr_article_dict[abbr].get(abbr_names_in_json, [])
+        """Pre-compile regex patterns for journal and conference name matching.
 
-            full_abbr = []
-            full_abbr.extend(full_name_list)
-            full_abbr.extend(long_abbr_name_list)
-            full_abbr.append(abbr)
+        Args:
+            full_abbr_article_dict: Dictionary containing journal abbreviations and their full names
+            full_abbr_inproceedings_dict: Dictionary containing conference abbreviations and their full names
+            full_names_in_json: Key for full names in the dictionary
+            abbr_names_in_json: Key for abbreviation names in the dictionary
 
-            abbr_article_pattern_dict.update({abbr: re.compile(rf'^({"|".join(full_abbr)})$', flags=re.I)})
+        Returns:
+            Tuple of two dictionaries containing pre-compiled regex patterns for journals and conferences
+        """
 
-        abbr_inproceedings_pattern_dict = {}
-        for abbr in full_abbr_inproceedings_dict:
-            full_name_list = full_abbr_inproceedings_dict[abbr].get(full_names_in_json, [])
-            long_abbr_name_list = full_abbr_inproceedings_dict[abbr].get(abbr_names_in_json, [])
+        def _create_pattern_dict(abbr_dict):
+            """Helper function to create pattern dictionary for a given abbreviation dictionary."""
+            pattern_dict = {}
+            for abbr, abbr_info in abbr_dict.items():
+                # Get all name variations and combine with abbreviation
+                full_names = abbr_info.get(full_names_in_json, [])
+                long_abbrs = abbr_info.get(abbr_names_in_json, [])
+                all_names = [*full_names, *long_abbrs, abbr]
 
-            full_abbr = []
-            full_abbr.extend(full_name_list)
-            full_abbr.extend(long_abbr_name_list)
-            full_abbr.append(abbr)
+                # Create pre-compiled regex pattern for exact matching
+                pattern_dict[abbr] = re.compile(rf'^({"|".join(all_names)})$', flags=re.I)
+            return pattern_dict
 
-            abbr_inproceedings_pattern_dict.update({abbr: re.compile(rf'^({"|".join(full_abbr)})$', flags=re.I)})
+        abbr_article_pattern_dict = _create_pattern_dict(full_abbr_article_dict)
+        abbr_inproceedings_pattern_dict = _create_pattern_dict(full_abbr_inproceedings_dict)
 
         return abbr_article_pattern_dict, abbr_inproceedings_pattern_dict
 
@@ -88,6 +96,9 @@ class BasicInput:
                 {"abbr": {"names_abbr": [], "names_full": []}},
             while full_json_j adheres to the format
                 {"abbr": {"names_abbr": [], "names_full": []}}.
+
+        Returns:
+            Tuple containing default conference dictionary and journal dictionary
         """
         # Get current directory and construct path to templates
         current_dir = os.path.dirname(os.path.abspath(__file__))

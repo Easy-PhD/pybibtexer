@@ -1,5 +1,3 @@
-from typing import List, Optional
-
 from ...library import Library
 from ...model import Block, Entry
 from ..middleware import BlockMiddleware
@@ -9,7 +7,7 @@ class DeleteFieldsInEntry(BlockMiddleware):
     """Delete fields by user."""
 
     def __init__(
-        self, delete_field_keys: List[str], entry_type: Optional[str] = None, allow_inplace_modification: bool = True
+        self, delete_field_keys: list[str], entry_type: str | None = None, allow_inplace_modification: bool = True
     ):
         super().__init__(allow_inplace_modification=allow_inplace_modification, allow_parallel_execution=True)
 

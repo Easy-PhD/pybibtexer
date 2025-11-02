@@ -1,6 +1,5 @@
 import re
 from copy import deepcopy
-from typing import List
 
 from ...library import Library
 from ...model import Block, Entry, ExplicitComment, ImplicitComment, ParsingFailedBlock, Preamble, String
@@ -14,8 +13,8 @@ class SortBlocksByTypeAndUserSortKeyMiddleware(LibraryMiddleware):
 
     def __init__(
         self,
-        keep_entry_according_cite_keys: List[str] = [],
-        sort_entry_according_field_keys: List[str] = ["year", "volume", "number", "month", "pages"],
+        keep_entry_according_cite_keys: list[str] = [],
+        sort_entry_according_field_keys: list[str] = ["year", "volume", "number", "month", "pages"],
         sort_entry_according_field_keys_reverse: bool = True,
     ):
         self._verify_all_types_are_block_types(DEFAULT_BLOCK_TYPE_ORDER)
@@ -110,7 +109,7 @@ class SortBlocksByTypeAndUserSortKeyMiddleware(LibraryMiddleware):
         return self.sort_strings_with_embedded_numbers("_".join(_sorting_index))
 
     @staticmethod
-    def sort_strings_with_embedded_numbers(s: str) -> List[str]:
+    def sort_strings_with_embedded_numbers(s: str) -> list[str]:
         re_digits = re.compile(r"(\d+)")
         pieces = re_digits.split(s)
         pieces[1::2] = map(int, pieces[1::2])

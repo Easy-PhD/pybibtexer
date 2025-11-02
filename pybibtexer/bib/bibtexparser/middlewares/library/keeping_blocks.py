@@ -1,5 +1,3 @@
-from typing import List
-
 from ...library import Library
 from ..middleware import LibraryMiddleware
 
@@ -10,7 +8,7 @@ class KeepEntriesByCiteKey(LibraryMiddleware):
     The entry.key is also `Cite Key`.
     """
 
-    def __init__(self, entry_keys: List[str], allow_inplace_modification: bool = True):
+    def __init__(self, entry_keys: list[str], allow_inplace_modification: bool = True):
         super().__init__(allow_inplace_modification=allow_inplace_modification)
 
         self.entry_keys = [e.lower() for e in entry_keys]

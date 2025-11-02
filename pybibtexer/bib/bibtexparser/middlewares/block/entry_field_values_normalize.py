@@ -1,6 +1,5 @@
 import logging
 import re
-from typing import Dict, List, Set
 
 from ...library import Library
 from ...model import Block, Entry, Field
@@ -15,7 +14,7 @@ class NormalizeEntryFieldValues(BlockMiddleware):
 
     def __init__(
         self,
-        field_keys: List[str] = ["journal", "booktitle"],
+        field_keys: list[str] = ["journal", "booktitle"],
         title_lower_upper: str = "upper",
         allow_inplace_modification: bool = True,
     ):
@@ -26,8 +25,8 @@ class NormalizeEntryFieldValues(BlockMiddleware):
 
     # docstr-coverage: inherited
     def transform_entry(self, entry: Entry, library: Library) -> Entry:
-        seen_normalized_keys: Set[str] = set()
-        new_fields_dict: Dict[str, Field] = {}
+        seen_normalized_keys: set[str] = set()
+        new_fields_dict: dict[str, Field] = {}
         for field in entry.fields:
             if self.title_lower_upper == "upper":
                 normalized_key: str = field.key.upper()
@@ -50,7 +49,7 @@ class NormalizeEntryFieldValues(BlockMiddleware):
             field.key = normalized_key
             new_fields_dict[normalized_key] = field
 
-        new_fields: List[Field] = list(new_fields_dict.values())
+        new_fields: list[Field] = list(new_fields_dict.values())
         entry.fields = new_fields
 
         return entry
