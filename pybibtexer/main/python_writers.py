@@ -25,7 +25,8 @@ class PythonWriters(BasicInput):
         bib_name_for_zotero (str): Filename for Zotero bibliography (default: "zotero.bib")
         bib_name_for_save (str): Filename for saved bibliography (default: "save.bib")
         join_flag_in_http (str): The join flag for HTTP-related formatting (default: " | " or " |\n")
-        display_www_google_connected_scite (List[str]): Display options selection from ["www", "google", "connected", "scite"]
+        display_www_google_connected_scite (List[str]): Display options selection from
+            ["www", "google", "connected", "scite"]
         bibtex_format_indent (str): Indentation string for BibTeX formatting (default: "  ")
         bibtex_format_trailing_comma (bool): Whether to include trailing commas in BibTeX entries (default: True)
         bibtex_format_block_separator (str): Separator between BibTeX blocks (default: "")
@@ -132,9 +133,12 @@ class PythonWriters(BasicInput):
         bib_for_abbr: Library | list[Block],
         bib_for_zotero: Library | list[Block],
         bib_for_save: Library | list[Block],
-        given_cite_keys: list[str] = [],
+        given_cite_keys: list[str] | None = None,
         **kwargs,
     ) -> tuple[str, str, str]:
+        if given_cite_keys is None:
+            given_cite_keys = []
+
         _options = {}
         _options.update(self.options)
         _options["keep_entries_by_cite_keys"] = given_cite_keys
@@ -159,9 +163,12 @@ class PythonWriters(BasicInput):
         bib_for_abbr: Library | list[Block],
         bib_for_zotero: Library | list[Block],
         bib_for_save: Library | list[Block],
-        given_cite_keys: list[str] = [],
+        given_cite_keys: list[str] | None = None,
         **kwargs,
     ) -> tuple[list[str], list[str], list[str]]:
+        if given_cite_keys is None:
+            given_cite_keys = []
+
         _options = {}
         _options.update(self.options)
         _options["keep_entries_by_cite_keys"] = given_cite_keys

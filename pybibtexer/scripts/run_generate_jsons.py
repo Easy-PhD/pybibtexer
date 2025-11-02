@@ -100,7 +100,7 @@ class GenerateDefaultJSONs:
             str: Content of the file as string
         """
         # Read file content as string
-        with open(full_file, "r", encoding="utf-8") as file:
+        with open(full_file, encoding="utf-8") as file:
             content = file.read()
         return content
 
@@ -296,7 +296,7 @@ class GenerateDefaultJSONs:
 
         try:
             # Open and read the JSON file
-            with open(file_path, 'r', encoding='utf-8') as file:
+            with open(file_path, encoding='utf-8') as file:
                 return json.load(file)
 
         except Exception as e:

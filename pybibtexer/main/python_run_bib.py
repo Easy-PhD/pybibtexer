@@ -22,8 +22,11 @@ class PythonRunBib(BasicInput):
         super().__init__(options)
 
     def parse_to_single_standard_library(
-        self, original_data: list[str] | str | Library, given_cite_keys: list[str] = [], **kwargs
+        self, original_data: list[str] | str | Library, given_cite_keys: list[str] | None = None, **kwargs
     ) -> Library:
+        if given_cite_keys is None:
+            given_cite_keys = []
+
         # update
         self.options["keep_entries_by_cite_keys"] = given_cite_keys
 
@@ -35,8 +38,11 @@ class PythonRunBib(BasicInput):
         return library
 
     def parse_to_multi_standard_library(
-        self, original_data: list[str] | str | Library, given_cite_keys: list[str] = [], **kwargs
+        self, original_data: list[str] | str | Library, given_cite_keys: list[str] | None = None, **kwargs
     ) -> tuple[Library, Library, Library]:
+        if given_cite_keys is None:
+            given_cite_keys = []
+
         # update
         self.options["keep_entries_by_cite_keys"] = given_cite_keys
 
@@ -49,8 +55,11 @@ class PythonRunBib(BasicInput):
         return abbr_library, zotero_library, save_library
 
     def parse_to_nested_entries_dict(
-        self, original_data: list[str] | str | Library, given_cite_keys: list[str] = [], **kwargs
+        self, original_data: list[str] | str | Library, given_cite_keys: list[str] | None = None, **kwargs
     ) -> dict[str, dict[str, dict[str, dict[str, dict[str, list[Entry]]]]]]:
+        if given_cite_keys is None:
+            given_cite_keys = []
+
         library = self.parse_to_single_standard_library(original_data, given_cite_keys, **kwargs)
 
         entry_type_year_volume_number_month_entry_dict = {}
