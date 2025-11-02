@@ -197,10 +197,17 @@
         ]
     },
     "EvoCOP": {
-        "names_abbr": ["Proc. Eur. Conf. Evol. Comput. Comb. Optim.", "Proc. Eur. Conf. Evol. Comput. Comb. Optim."],
+        "names_abbr": [
+            "Proc. Eur. Conf. Evol. Comput. Comb. Optim.",
+            "Proc. Eur. Conf. Evol. Comput. Comb. Optim.",
+            "Proc. Eur. Conf. Evol. Comput. Comb. Optim.",
+            "Proc. Eur. Conf. Evol. Comput. Comb. Optim."
+        ],
         "names_full": [
             ".*Evolutionary Computation in Combinatorial Optimisation",
-            ".*European Conference on Evolutionary Computation in Combinatorial Optimisation"
+            ".*Evolutionary Computation in Combinatorial Optimization",
+            ".*European Conference on Evolutionary Computation in Combinatorial Optimisation",
+            ".*European Conference on Evolutionary Computation in Combinatorial Optimization"
         ]
     },
     "EvoMUSART": {
