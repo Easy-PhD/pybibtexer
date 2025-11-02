@@ -1,7 +1,7 @@
 import copy
 import os
 import re
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import Any
 
 from pyadvtools import standard_path, transform_to_data_list
 
@@ -12,7 +12,7 @@ from ..experiments_base import obtain_local_abbr_paths
 ARXIV_BIORXIV = ["arxiv", "biorxiv", "ssrn"]
 
 
-def obtain_local_abbr_paths_for_abbr(options: dict, path_spidered_bibs: str, path_spidering_bibs: str) -> List[str]:
+def obtain_local_abbr_paths_for_abbr(options: dict, path_spidered_bibs: str, path_spidering_bibs: str) -> list[str]:
     path_spidered_bibs = standard_path(path_spidered_bibs)
     path_spidering_bibs = standard_path(path_spidering_bibs)
 
@@ -30,14 +30,13 @@ def obtain_local_abbr_paths_for_abbr(options: dict, path_spidered_bibs: str, pat
 
 
 def compare_bibs_with_local(
-    original_data: Union[List[str], str],
+    original_data: list[str] | str,
     path_spidered_bibs: str,
     path_spidering_bibs: str,
     path_output: str,
-    options: Dict[str, Any],
+    options: dict[str, Any],
 ) -> None:
-    """
-    Compare bibliography entries with local bibliography collections.
+    """Compare bibliography entries with local bibliography collections.
 
     Processes original bibliography data and compares it against local bib files,
     categorizing entries into found, not found, and duplicate categories.
@@ -64,7 +63,7 @@ def compare_bibs_with_local(
 
     # generate dict for abbr key entry
     if options.get("compare_each_entry_with_all_local_bibs"):
-        abbr_key_entries_dict: Dict[str, Dict[str, Block]] = {"arXiv": {entry.key: entry for entry in library.entries}}
+        abbr_key_entries_dict: dict[str, dict[str, Block]] = {"arXiv": {entry.key: entry for entry in library.entries}}
         not_in_local_entries = []
     else:
         abbr_key_entries_dict, not_in_local_entries = generate_abbr_key_entry_dict(library, options)
@@ -93,7 +92,7 @@ def compare_bibs_with_local(
     return None
 
 
-def generate_abbr_key_entry_dict(library: Library, options: Dict[str, Any]):
+def generate_abbr_key_entry_dict(library: Library, options: dict[str, Any]):
     _options = {}
     _options["is_standardize_bib"] = True  # default is True
     _options["choose_abbr_zotero_save"] = "save"  # default is "save"
@@ -127,11 +126,11 @@ def generate_abbr_key_entry_dict(library: Library, options: Dict[str, Any]):
 
 
 def _compare_with_local(
-    abbr_key_entries_dict: Dict[str, Dict[str, Block]],
+    abbr_key_entries_dict: dict[str, dict[str, Block]],
     local_path_spidered_bibs: str,
     local_path_spidering_bibs: str,
-    options: Dict[str, Any],
-) -> Tuple[List[Block], List[Block], List[Block], List[Block]]:
+    options: dict[str, Any],
+) -> tuple[list[Block], list[Block], list[Block], list[Block]]:
     # compare with local bibs
     searched_entries, not_searched_entries, duplicate_original_entries, duplicate_searched_entries = [], [], [], []
     for abbr, old_key_entries_dict in abbr_key_entries_dict.items():
@@ -182,7 +181,7 @@ def _compare_with_local(
     return searched_entries, not_searched_entries, duplicate_original_entries, duplicate_searched_entries
 
 
-def check_equal_for_entry(original_entry, new_entry, compare_field_list: List[str], abbr: Optional[str] = None):
+def check_equal_for_entry(original_entry, new_entry, compare_field_list: list[str], abbr: str | None = None):
     a_list, b_list = [original_entry.entry_type.lower()], [new_entry.entry_type.lower()]
     if (abbr is not None) and (abbr.lower() in ARXIV_BIORXIV):
         a_list, b_list = [], []
@@ -209,10 +208,9 @@ def check_equal_for_entry(original_entry, new_entry, compare_field_list: List[st
 
 
 def compare_bibs_with_zotero(
-    zotero_bib: Union[List[str], str], download_bib: Union[List[str], str], path_output: str, options: Dict[str, Any]
+    zotero_bib: list[str] | str, download_bib: list[str] | str, path_output: str, options: dict[str, Any]
 ) -> None:
-    """
-    Compare downloaded bibliography entries with Zotero library entries.
+    """Compare downloaded bibliography entries with Zotero library entries.
 
     Processes both Zotero export and downloaded bibliography files, then compares
     them to identify entries that exist only in the download set versus entries

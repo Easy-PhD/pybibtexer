@@ -2,7 +2,7 @@ import copy
 import math
 import os
 import re
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import Any
 
 from pyadvtools import (
     IterateCombineExtendDict,
@@ -21,14 +21,14 @@ from ..tools.experiments_base import generate_readme
 def format_bib_to_save_mode_by_entry_type(
     c_j_abbr: str,
     path_output: str,
-    original_data: Union[List[str], str, Library],
+    original_data: list[str] | str | Library,
     combine_year_length: int = 1,
-    default_year_list: List[str] = [],
+    default_year_list: list[str] = [],
     write_flag_bib: str = "w",
     check_bib_exist: bool = False,
     write_flag_readme: str = "w",
     check_md_exist: bool = False,
-    options: Optional[Dict[str, Any]] = None,
+    options: dict[str, Any] | None = None,
 ) -> None:
     """Format bibliography entries and organize them by year and type.
 
@@ -104,7 +104,7 @@ def format_bib_to_save_mode_by_entry_type(
 
             # Create subset dictionary for these years
             new_year_dict = {year: year_dict[year] for year in combine_year}
-            entries: List[Block] = IterateCombineExtendDict().dict_update(copy.deepcopy(new_year_dict))
+            entries: list[Block] = IterateCombineExtendDict().dict_update(copy.deepcopy(new_year_dict))
 
             # Generate filename based on year range
             name = f"{c_j_abbr}_{combine_year[0]}"
@@ -184,7 +184,7 @@ def generate_statistic_information(path_storage: str) -> None:
 
 
 def format_bib_to_abbr_zotero_save_modes(
-    original_data: Union[List[str], str], path_output: str, options: Dict[str, Any]
+    original_data: list[str] | str, path_output: str, options: dict[str, Any]
 ) -> None:
     path_output = standard_path(path_output)
 
@@ -207,8 +207,8 @@ def format_bib_to_abbr_zotero_save_modes(
 
 
 def format_bib_to_abbr_or_zotero_or_save_mode(
-    original_data: Union[List[str], str], options: Dict[str, Any]
-) -> Tuple[List[str], List[str], List[str]]:
+    original_data: list[str] | str, options: dict[str, Any]
+) -> tuple[list[str], list[str], list[str]]:
     # generate for original data
     data_list = transform_to_data_list(original_data, ".bib")
 

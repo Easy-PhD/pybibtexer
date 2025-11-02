@@ -1,6 +1,6 @@
 import os
 import re
-from typing import Any, Dict, List, Union
+from typing import Any
 
 from pyadvtools import standard_path, transform_to_data_list, write_list
 
@@ -9,10 +9,9 @@ from ...main import PythonRunBib, PythonWriters
 
 
 def replace_to_standard_cite_keys(
-    full_tex_md: str, full_bib: str, path_output: str, options: Dict[str, Any]
-) -> List[str]:
-    """
-    Replace citation keys in TeX/Markdown files with standardized keys from BibTeX.
+    full_tex_md: str, full_bib: str, path_output: str, options: dict[str, Any]
+) -> list[str]:
+    """Replace citation keys in TeX/Markdown files with standardized keys from BibTeX.
 
     Processes both LaTeX and Markdown files, replacing old citation keys with newly
     generated standardized keys while maintaining the corresponding BibTeX database.
@@ -74,7 +73,7 @@ def replace_to_standard_cite_keys(
     return data_list
 
 
-def generate_old_key_new_entry_dict(bib_data: Union[List[str], str], options: Dict[str, Any]) -> dict:
+def generate_old_key_new_entry_dict(bib_data: list[str] | str, options: dict[str, Any]) -> dict:
     # Parse library without generating new keys first
     _options = {}
     _options.update(options)
@@ -90,7 +89,7 @@ def generate_old_key_new_entry_dict(bib_data: Union[List[str], str], options: Di
 
     # Generate new keys for each entry
     old_key_new_entry_dict = {}
-    generate_cite_keys: List[str] = []  # Track generated keys to ensure uniqueness
+    generate_cite_keys: list[str] = []  # Track generated keys to ensure uniqueness
 
     for old_key in (entries_dict := library.entries_dict):
         new_library = _python_bib.parse_to_single_standard_library(Library([entries_dict[old_key]]))

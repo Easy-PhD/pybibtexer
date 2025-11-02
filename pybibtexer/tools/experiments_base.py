@@ -1,13 +1,13 @@
 import copy
 import os
-from typing import Any, Dict, List
+from typing import Any
 
 from pyadvtools import sort_int_str
 
 from ..bib.bibtexparser import Entry
 
 
-def obtain_local_abbr_paths(path_storage: str, options: dict) -> List[str]:
+def obtain_local_abbr_paths(path_storage: str, options: dict) -> list[str]:
     """Get all local abbreviation paths from the storage directory.
 
     Scans the specified storage directory and returns paths to all abbreviation
@@ -41,8 +41,8 @@ def obtain_local_abbr_paths(path_storage: str, options: dict) -> List[str]:
 
 
 def generate_standard_publisher_abbr_options_dict(
-    path_storage: str, options: Dict[str, Any]
-) -> Dict[str, Dict[str, Dict[str, Any]]]:
+    path_storage: str, options: dict[str, Any]
+) -> dict[str, dict[str, dict[str, Any]]]:
     """Generate a nested dictionary of publisher/abbreviation options.
 
     Creates a hierarchical dictionary structure representing all publishers
@@ -67,7 +67,7 @@ def generate_standard_publisher_abbr_options_dict(
         return {}
 
     # First scan directory structure to find all publishers and abbreviations
-    publisher_abbr_dict: Dict[str, List[str]] = {}
+    publisher_abbr_dict: dict[str, list[str]] = {}
     publishers = [f for f in os.listdir(path_storage) if os.path.isdir(os.path.join(path_storage, f))]
     for p in publishers:
         path_p = os.path.join(path_storage, p)
@@ -81,7 +81,7 @@ def generate_standard_publisher_abbr_options_dict(
     )
 
     # Build the nested options dictionary structure
-    publisher_abbr_options_dict: Dict[str, Dict[str, Dict[str, Any]]] = {}
+    publisher_abbr_options_dict: dict[str, dict[str, dict[str, Any]]] = {}
     for publisher in sort_int_str(publisher_list):
 
         # Apply inclusion/exclusion filters to abbreviations
@@ -95,7 +95,7 @@ def generate_standard_publisher_abbr_options_dict(
     return publisher_abbr_options_dict
 
 
-def in_not_in_list(original: List[str], in_list: List[str], out_list: List[str]):
+def in_not_in_list(original: list[str], in_list: list[str], out_list: list[str]):
     """Filter a list based on inclusion and exclusion criteria.
 
     Parameters
@@ -124,8 +124,8 @@ def in_not_in_list(original: List[str], in_list: List[str], out_list: List[str])
 def generate_readme(
     j_conf_abbr: str,
     entry_type: str,
-    year_volume_number_month_entry_dict: Dict[str, Dict[str, Dict[str, Dict[str, List[Entry]]]]],
-) -> List[str]:
+    year_volume_number_month_entry_dict: dict[str, dict[str, dict[str, dict[str, list[Entry]]]]],
+) -> list[str]:
     """Generate a README markdown file summarizing bibliography entries.
 
     Creates a formatted markdown table showing publication statistics
@@ -158,7 +158,7 @@ def generate_readme(
     if (entry_type := entry_type.lower()) in entry_type_list:
         field_key = filed_key_list[entry_type_list.index(entry_type)]
 
-    def extract_journal_booktitle(entries: List[Entry], field_key: str) -> List[str]:
+    def extract_journal_booktitle(entries: list[Entry], field_key: str) -> list[str]:
         """Extract unique journal/booktitle values from entries."""
         if field_key:
             contents = []
@@ -179,7 +179,7 @@ def generate_readme(
 
                     # Generate filename components
                     file_name = ""
-                    for i, j in zip(["", "Vol.", "No.", "Month"], [j_conf_abbr, volume, number, month]):
+                    for i, j in zip(["", "Vol.", "No.", "Month"], [j_conf_abbr, volume, number, month], strict=True):
                         if j.lower().strip() in ["volume", "number", "month"]:
                             j = ""
                         file_name += (i + j + "-") * (len(j.strip()) >= 1)

@@ -13,7 +13,7 @@ from ..format_save_bibs import format_bib_to_save_mode_by_entry_type, generate_s
 EXCLUDE_ABBR_LIST = ["arxiv", "biorxiv", "ssrn"]
 
 
-class ProcessSpiderBib(object):
+class ProcessSpiderBib:
     """Process spider bib.
 
     Args:

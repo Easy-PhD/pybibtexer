@@ -1,7 +1,7 @@
 import json
 import os
 import re
-from typing import Any, Tuple
+from typing import Any
 
 from ..main.utils import process_user_conferences_journals_json
 
@@ -217,7 +217,7 @@ class GenerateDefaultJSONs:
 
                 unmatched = []
                 for new_item in new_items:
-                    if (new_item not in old_items) and (not any([p.match(new_item) for p in patterns])):
+                    if (new_item not in old_items) and (not any(p.match(new_item) for p in patterns)):
                         unmatched.append(new_item)
 
                 # Report unmatched items
@@ -321,7 +321,7 @@ class CheckAcronymAbbrAndFullDict:
         self.names_abbr = names_abbr
         self.names_full = names_full
 
-    def run(self, dict_data: dict[str, dict[str, list[str]]]) -> Tuple[dict[str, dict[str, list[str]]], bool]:
+    def run(self, dict_data: dict[str, dict[str, list[str]]]) -> tuple[dict[str, dict[str, list[str]]], bool]:
         # Check if each acronym has equal number of abbreviations and full forms
         dict_data, length_check = self._validate_lengths(dict_data)
 
@@ -361,7 +361,7 @@ class CheckAcronymAbbrAndFullDict:
             has_duplicate = False
 
             # Check for duplicate abbreviations
-            abbrs_lower = set([abbr.lower() for abbr in values.get(self.names_abbr, [])])
+            abbrs_lower = {abbr.lower() for abbr in values.get(self.names_abbr, [])}
             for abbr in abbrs_lower:
                 if abbr in seen_abbrs:
                     print(f"Duplicate abbreviation '{abbr}' found in '{acronym}'")
@@ -370,7 +370,7 @@ class CheckAcronymAbbrAndFullDict:
                     seen_abbrs.add(abbr)
 
             # Check for duplicate full forms
-            fulls_lower = set([full.lower() for full in values.get(self.names_full, [])])
+            fulls_lower = {full.lower() for full in values.get(self.names_full, [])}
             for full in fulls_lower:
                 if full in seen_fulls:
                     print(f"Duplicate full form '{full}' found in '{acronym}'")
@@ -389,7 +389,7 @@ class CheckAcronymAbbrAndFullDict:
         """Check for exact matches in abbreviations or full forms between different acronyms."""
         valid_data = {}
         no_matches = True
-        acronyms = sorted(list(data.keys()))
+        acronyms = sorted(data.keys())
 
         for i, main_acronym in enumerate(acronyms):
             # Normalize items: lowercase and remove parentheses

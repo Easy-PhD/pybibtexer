@@ -48,6 +48,8 @@
     "full_abbr_inproceedings_dict": {},
     "full_names_in_json": "names_full",
     "abbr_names_in_json": "names_abbr",
+    "abbr_article_pattern_dict": {},
+    "abbr_inproceedings_pattern_dict": {},
 
     // special for abbr
     // abbreviate

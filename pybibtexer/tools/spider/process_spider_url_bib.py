@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict
+from typing import Any
 
 from pyadvtools import standard_path
 
@@ -8,7 +8,7 @@ from ..spider.process_spider_bib import ProcessSpiderBib
 from ..spider.process_spider_url import ProcessSpiderUrl
 
 
-class CheckDeleteFormatMoveSpideredBibs(object):
+class CheckDeleteFormatMoveSpideredBibs:
     """Experiment for check.
 
     Args:
@@ -22,7 +22,7 @@ class CheckDeleteFormatMoveSpideredBibs(object):
         publisher_abbr_dict (Dict[str, Dict[str, Any]]): publisher abbreviation options dict
     """
 
-    def __init__(self, path_storage: str, path_shutil: str, options: Dict[str, Any]) -> None:
+    def __init__(self, path_storage: str, path_shutil: str, options: dict[str, Any]) -> None:
         self.path_storage = standard_path(path_storage)
         self.path_shutil = standard_path(path_shutil)
         self.publisher_abbr_dict = generate_standard_publisher_abbr_options_dict(self.path_storage, options)
@@ -33,7 +33,7 @@ class CheckDeleteFormatMoveSpideredBibs(object):
             for abbr_standard in publisher_abbr_dict[publisher]:
                 self._check_format_check_move(publisher, abbr_standard, publisher_abbr_dict[publisher][abbr_standard])
 
-    def _check_format_check_move(self, publisher: str, abbr_standard: str, options: Dict[str, Any]) -> None:
+    def _check_format_check_move(self, publisher: str, abbr_standard: str, options: dict[str, Any]) -> None:
         path_abbr = os.path.join(self.path_storage, f"{publisher.lower()}/{abbr_standard}")
 
         # for urls

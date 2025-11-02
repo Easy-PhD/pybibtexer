@@ -1,6 +1,6 @@
 import os
 import re
-from typing import Any, Dict, List, Optional, Tuple, Union
+from typing import Any
 
 from pyadvtools import write_list
 
@@ -10,7 +10,7 @@ from .basic_input import BasicInput
 
 
 class PythonWriters(BasicInput):
-    """Python writers for generating BibTeX files with various formatting options.
+    r"""Python writers for generating BibTeX files with various formatting options.
 
     Args:
         options (Dict[str, Any]): Configuration options for BibTeX generation.
@@ -31,7 +31,7 @@ class PythonWriters(BasicInput):
         bibtex_format_block_separator (str): Separator between BibTeX blocks (default: "")
     """
 
-    def __init__(self, options: Dict[str, Any]) -> None:
+    def __init__(self, options: dict[str, Any]) -> None:
         # Set default options if not provided
         options["choose_abbr_zotero_save"] = options.get("choose_abbr_zotero_save", "save")
         options["is_sort_entry_fields"] = options.get("is_sort_entry_fields", True)
@@ -61,9 +61,9 @@ class PythonWriters(BasicInput):
         bibtex_format.indent = self.bibtex_format_indent
         bibtex_format.block_separator = self.bibtex_format_block_separator
         bibtex_format.trailing_comma = self.bibtex_format_trailing_comma
-        self._bibtex_format: Optional[BibtexFormat] = bibtex_format
+        self._bibtex_format: BibtexFormat = bibtex_format
 
-    def write_to_str(self, library: Union[Library, List[Block]]) -> List[str]:
+    def write_to_str(self, library: Library | list[Block]) -> list[str]:
         """Serialize a BibTeX database to a string.
 
         Args:
@@ -75,10 +75,10 @@ class PythonWriters(BasicInput):
 
     def write_to_file(
         self,
-        original_data: Union[Library, List[Block], List[str]],
+        original_data: Library | list[Block] | list[str],
         file_name: str,
         write_flag: str = "w",
-        path_storage: Optional[str] = None,
+        path_storage: str | None = None,
         check: bool = True,
         delete_first_empty: bool = True,
         delete_last_empty: bool = True,
@@ -107,7 +107,7 @@ class PythonWriters(BasicInput):
         if isinstance(original_data, Library):
             data_list = _library_str.generate_str(original_data, self._bibtex_format)
         elif isinstance(original_data, list):
-            if all([isinstance(line, str) for line in original_data]):
+            if all(isinstance(line, str) for line in original_data):
                 data_list = [line for line in original_data if isinstance(line, str)]
             else:
                 data_list = [line for line in original_data if isinstance(line, Block)]
@@ -129,12 +129,12 @@ class PythonWriters(BasicInput):
     def write_multi_library_to_multi_file(
         self,
         path_output: str,
-        bib_for_abbr: Union[Library, List[Block]],
-        bib_for_zotero: Union[Library, List[Block]],
-        bib_for_save: Union[Library, List[Block]],
-        given_cite_keys: List[str] = [],
+        bib_for_abbr: Library | list[Block],
+        bib_for_zotero: Library | list[Block],
+        bib_for_save: Library | list[Block],
+        given_cite_keys: list[str] = [],
         **kwargs,
-    ) -> Tuple[str, str, str]:
+    ) -> tuple[str, str, str]:
         _options = {}
         _options.update(self.options)
         _options["keep_entries_by_cite_keys"] = given_cite_keys
@@ -156,12 +156,12 @@ class PythonWriters(BasicInput):
 
     def write_multi_library_to_multi_data_list(
         self,
-        bib_for_abbr: Union[Library, List[Block]],
-        bib_for_zotero: Union[Library, List[Block]],
-        bib_for_save: Union[Library, List[Block]],
-        given_cite_keys: List[str] = [],
+        bib_for_abbr: Library | list[Block],
+        bib_for_zotero: Library | list[Block],
+        bib_for_save: Library | list[Block],
+        given_cite_keys: list[str] = [],
         **kwargs,
-    ) -> Tuple[List[str], List[str], List[str]]:
+    ) -> tuple[list[str], list[str], list[str]]:
         _options = {}
         _options.update(self.options)
         _options["keep_entries_by_cite_keys"] = given_cite_keys
@@ -174,19 +174,19 @@ class PythonWriters(BasicInput):
         bib_save = ConvertLibrayToStr(_options).generate_str(bib_for_save, **kwargs)
         return bib_abbr, bib_zotero, bib_save
 
-    def output_key_url_http_bib_dict(self, library: Library) -> Dict[str, List[List[str]]]:
+    def output_key_url_http_bib_dict(self, library: Library) -> dict[str, list[list[str]]]:
         _options = {}
         _options.update(self.options)
         _options["empty_entry_cite_keys"] = True
 
-        key_url_http_bib_dict: Dict[str, List[List[str]]] = {}
+        key_url_http_bib_dict: dict[str, list[list[str]]] = {}
 
         for key, entry in library.entries_dict.items():
 
             url, link_list = self._generate_link_list(entry)
             patch_bib = ConvertLibrayToStr(_options).generate_str([entry])
 
-            v: List[List[str]] = [[], [], patch_bib]
+            v: list[list[str]] = [[], [], patch_bib]
 
             if len(url) != 0:
                 v[0] = [url + "\n"]
@@ -205,7 +205,7 @@ class PythonWriters(BasicInput):
             key_url_http_bib_dict.update({key: v})
         return key_url_http_bib_dict
 
-    def _generate_link_list(self, entry: Entry) -> Tuple[str, List[str]]:
+    def _generate_link_list(self, entry: Entry) -> tuple[str, list[str]]:
         title = entry["title"] if "title" in entry else ""
         if not title:
             return "", []
@@ -235,7 +235,7 @@ class PythonWriters(BasicInput):
         scite = f"[Scite]({url_scite})"
 
         link_list = []
-        for i, j in zip(["www", "google", "connected", "scite"], [www, google, connected, scite]):
+        for i, j in zip(["www", "google", "connected", "scite"], [www, google, connected, scite], strict=True):
             if i in self.display_www_google_connected_scite:
                 if j:
                     link_list.append(j)

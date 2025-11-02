@@ -1,23 +1,17 @@
 import re
-from typing import Any, Dict
+from typing import Any
 
 from ...bibtexbase.standardize_bib import MARKS_FLAGS
 from ..model import Entry
 
 
 def generate_cite_key_prefix(
-    entry: Entry,
-    full_abbr_article_dict: Dict[str, Any],
-    full_abbr_inproceedings_dict: Dict[str, Any],
-    full_names_in_json: str,
-    abbr_names_in_json: str,
+    entry: Entry, abbr_article_pattern_dict: dict[str, Any], abbr_inporceedings_pattern_dict: dict[str, Any],
 ) -> str:
     prefix = generate_entry_abbr(entry.entry_type)
 
     if prefix.upper() in ["C", "J"]:
-        prefix = generate_cite_key_prefix_c_j(
-            entry, full_abbr_article_dict, full_abbr_inproceedings_dict, full_names_in_json, abbr_names_in_json
-        )
+        prefix = generate_cite_key_prefix_c_j(entry, abbr_article_pattern_dict, abbr_inporceedings_pattern_dict)
 
     elif prefix == "D":
         if "url" in entry:
@@ -31,25 +25,18 @@ def generate_cite_key_prefix(
 
 
 def generate_cite_key_prefix_c_j(
-    entry: Entry,
-    full_abbr_article_dict: Dict[str, Any],
-    full_abbr_inproceedings_dict: Dict[str, Any],
-    full_names_in_json: str,
-    abbr_names_in_json: str,
+    entry: Entry, abbr_article_pattern_dict: dict[str, Any], abbr_inporceedings_pattern_dict: dict[str, Any],
 ) -> str:
     if entry.entry_type.lower() == "article":
-        full_abbr_dict = full_abbr_article_dict
+        abbr_patterns = abbr_article_pattern_dict
         field_key = "journal"
         prefix = "J"
     elif entry.entry_type.lower() == "inproceedings":
-        full_abbr_dict = full_abbr_inproceedings_dict
+        abbr_patterns = abbr_inporceedings_pattern_dict
         field_key = "booktitle"
         prefix = "C"
     else:
         return ""
-
-    # nested dict
-    abbr_dict_dict = full_abbr_dict
 
     field_content = entry[field_key] if field_key in entry else ""
 
@@ -62,18 +49,8 @@ def generate_cite_key_prefix_c_j(
 
     # match
     abbr_list = []
-    for abbr in abbr_dict_dict:
-        full_name_list = abbr_dict_dict[abbr].get(full_names_in_json, [])
-        long_abbr_name_list = abbr_dict_dict[abbr].get(abbr_names_in_json, [])
-
-        # [full, long_abbr, abbr]
-        full_abbr = []
-        full_abbr.extend(full_name_list)
-        full_abbr.extend(long_abbr_name_list)
-        full_abbr.append(abbr)
-
-        # completely match
-        if re.match("^{" + rf'({"|".join(full_abbr)})' + "}$", "{" + field_content + "}", flags=re.I):
+    for abbr, p in abbr_patterns.items():
+        if p.match(field_content):
             abbr_list.append(abbr)
 
     # check

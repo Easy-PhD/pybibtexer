@@ -1,5 +1,5 @@
 import copy
-from typing import Any, Dict, Tuple
+from typing import Any
 
 from .library import Library
 from .middlewares.block.add_field import AddArchive, AddJournalLongAbbr
@@ -78,7 +78,7 @@ def keep_for_zotero():
     return keep_entry_list, keep_field_list_list
 
 
-class MiddlewaresLibraryToLibrary(object):
+class MiddlewaresLibraryToLibrary:
     """Middlewares for converting a library to a library.
 
     Args:
@@ -100,6 +100,8 @@ class MiddlewaresLibraryToLibrary(object):
         full_abbr_inproceedings_dict (dict): Full to abbreviation dictionary for inproceedings. Default is {}.
         full_names_in_json (str): Full names in json format. Default is "".
         abbr_names_in_json (str): Abbreviated names in json format. Default is "".
+        abbr_article_pattern_dict (dict):
+        abbr_inproceedings_pattern_dict (dict):
 
         full_to_abbr_for_abbr (bool): Full to abbreviation for abbreviate. Default is True.
         abbr_index_article_for_abbr (int): Index for abbreviation in article. Default is 1.
@@ -138,7 +140,7 @@ class MiddlewaresLibraryToLibrary(object):
 
     """
 
-    def __init__(self, options: Dict[str, Any]):
+    def __init__(self, options: dict[str, Any]):
         self.function_common_again = options.get("function_common_again", True)
         self.function_common_again_for_abbr = options.get("function_common_again_for_abbr", True)
         self.function_common_again_for_zotero = options.get("function_common_again_for_zotero", True)
@@ -150,7 +152,7 @@ class MiddlewaresLibraryToLibrary(object):
         self._initialize_function_zotero(options)
         self._initialize_function_save(options)
 
-    def functions(self, library: Library) -> Tuple[Library, Library, Library]:
+    def functions(self, library: Library) -> tuple[Library, Library, Library]:
         if self.function_common_again:
             library = self._function_common(library)
 
@@ -174,7 +176,7 @@ class MiddlewaresLibraryToLibrary(object):
             library = self._function_common(library)
         return self._function_save(library)
 
-    def _initialize_function_common(self, options: Dict[str, Any]) -> None:
+    def _initialize_function_common(self, options: dict[str, Any]) -> None:
         self.lower_entry_type = options.get("lower_entry_type", True)
         self.lower_entry_field_key = options.get("lower_entry_field_key", True)
         self.keep_entries_by_cite_keys = options.get("keep_entries_by_cite_keys", [])
@@ -189,6 +191,8 @@ class MiddlewaresLibraryToLibrary(object):
         self.full_abbr_inproceedings_dict = options.get("full_abbr_inproceedings_dict", {})
         self.full_names_in_json = options.get("full_names_in_json", "")
         self.abbr_names_in_json = options.get("abbr_names_in_json", "")
+        self.abbr_article_pattern_dict = options.get("abbr_article_pattern_dict", {})
+        self.abbr_inproceedings_pattern_dict = options.get("abbr_inproceedings_pattern_dict", {})
 
     def _function_common(self, library: Library) -> Library:
         # Lower Entry types
@@ -240,7 +244,7 @@ class MiddlewaresLibraryToLibrary(object):
             ).transform(library)
         return library
 
-    def _initialize_function_abbr(self, options: Dict[str, Any]) -> None:
+    def _initialize_function_abbr(self, options: dict[str, Any]) -> None:
         self.full_to_abbr_for_abbr = options.get("full_to_abbr_for_abbr", True)
         self.abbr_index_article_for_abbr = options.get("abbr_index_article_for_abbr", 1)  # 0, 1, 2
         self.abbr_index_inproceedings_for_abbr = options.get("abbr_index_inproceedings_for_abbr", 2)  # 0, 1, 2
@@ -272,6 +276,8 @@ class MiddlewaresLibraryToLibrary(object):
                 self.abbr_index_inproceedings_for_abbr,
                 self.full_names_in_json,
                 self.abbr_names_in_json,
+                self.abbr_article_pattern_dict,
+                self.abbr_inproceedings_pattern_dict,
             ).transform(library)
 
         # Just keep doi or url (doi > url)
@@ -289,7 +295,7 @@ class MiddlewaresLibraryToLibrary(object):
 
         # Must set after self.add_link_to_title_for_abbr
         if self.is_keep_fields_for_abbr:
-            for i, j in zip(self.keep_entry_list_for_abbr, self.keep_field_list_list_for_abbr):
+            for i, j in zip(self.keep_entry_list_for_abbr, self.keep_field_list_list_for_abbr, strict=True):
                 library = KeepFieldsInEntry(i, j).transform(library)
 
         # Delete some fields for all entrys
@@ -299,7 +305,7 @@ class MiddlewaresLibraryToLibrary(object):
         # Replace some fields for all entrys
         if self.replace_fields_for_abbr:
             for entry in self.replace_entry_list_for_abbr:
-                for old, new in zip(self.replace_old_field_list_for_abbr, self.replace_new_field_list_for_abbr):
+                for old, new in zip(self.replace_old_field_list_for_abbr, self.replace_new_field_list_for_abbr, strict=True):
                     library = ReplaceFieldKeyInEntry(entry, old, new).transform(library)
 
         # Constrain the number of authors
@@ -309,7 +315,7 @@ class MiddlewaresLibraryToLibrary(object):
         library = self._function_sort(library)
         return library
 
-    def _initialize_function_zotero(self, options: Dict[str, Any]) -> None:
+    def _initialize_function_zotero(self, options: dict[str, Any]) -> None:
         self.doi_or_url_for_zotero = options.get("doi_or_url_for_zotero", True)  # keep only doi or url
 
         self.is_keep_fields_for_zotero = options.get("is_keep_fields_for_zotero", True)
@@ -332,7 +338,7 @@ class MiddlewaresLibraryToLibrary(object):
 
         # Must set after self.add_link_to_title_for_abbr
         if self.is_keep_fields_for_zotero:
-            for i, j in zip(self.keep_entry_list_for_zotero, self.keep_field_list_list_for_zotero):
+            for i, j in zip(self.keep_entry_list_for_zotero, self.keep_field_list_list_for_zotero, strict=True):
                 library = KeepFieldsInEntry(i, j).transform(library)
 
         # Delete some fields for all entrys
@@ -351,22 +357,23 @@ class MiddlewaresLibraryToLibrary(object):
         # Add field 'archive'
         if self.add_archive_for_zotero:
             library = AddArchive(
-                self.full_abbr_article_dict,
-                self.full_abbr_inproceedings_dict,
-                self.full_names_in_json,
-                self.abbr_names_in_json,
+                self.abbr_article_pattern_dict,
+                self.abbr_inproceedings_pattern_dict,
             ).transform(library)
 
         # Add field 'journal abbreviation'
         if self.add_journal_abbr_for_zotero:
             library = AddJournalLongAbbr(
-                self.full_abbr_article_dict, self.full_names_in_json, self.abbr_names_in_json
+                self.full_abbr_article_dict,
+                self.full_names_in_json,
+                self.abbr_names_in_json,
+                self.abbr_article_pattern_dict
             ).transform(library)
 
         library = self._function_sort(library)
         return library
 
-    def _initialize_function_save(self, options: Dict[str, Any]) -> None:
+    def _initialize_function_save(self, options: dict[str, Any]) -> None:
         self.delete_field_list_for_save = options.get("delete_field_list_for_save", [])
 
     def _function_save(self, library: Library) -> Library:
@@ -377,7 +384,7 @@ class MiddlewaresLibraryToLibrary(object):
         library = self._function_sort(library)
         return library
 
-    def _initialize_function_sort(self, options: Dict[str, Any]) -> None:
+    def _initialize_function_sort(self, options: dict[str, Any]) -> None:
         self.is_sort_entry_fields = options.get("is_sort_entry_fields", False)
         self.is_sort_blocks = options.get("is_sort_blocks", False)
         self.sort_entries_by_cite_keys = options.get("sort_entries_by_cite_keys", [])

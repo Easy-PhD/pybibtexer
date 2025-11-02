@@ -1,11 +1,10 @@
 import os
 import re
-from typing import Dict, List
 
 from pyadvtools import IterateSortDict, read_list, sort_int_str, write_list
 
 
-class ProcessSpiderUrl(object):
+class ProcessSpiderUrl:
     """Process spider URL.
 
     Args:
@@ -37,7 +36,7 @@ class ProcessSpiderUrl(object):
     def _check_delete(
         self, path_storage: str, extension: str = ".txt", write_flag: bool = False, iterate_check_url: bool = False
     ) -> None:
-        data_dict: Dict[str, Dict[str, List[str]]] = {}
+        data_dict: dict[str, dict[str, list[str]]] = {}
         files = [f for f in os.listdir(path_storage) if f.endswith(extension)]
         for f in files:
             mch = re.match(r"([a-zA-Z]+)_([\w\-]+)", f)
@@ -49,8 +48,8 @@ class ProcessSpiderUrl(object):
             b_list = sort_int_str(list(data_dict[a].keys()))
 
             for b in b_list:
-                new_temp_list: List[str] = []
-                duplicate_dict: Dict[str, List[str]] = {}
+                new_temp_list: list[str] = []
+                duplicate_dict: dict[str, list[str]] = {}
                 for line in data_dict[a][b]:
                     line_flag = False
                     if iterate_check_url:
