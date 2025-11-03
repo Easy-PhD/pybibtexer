@@ -27,7 +27,7 @@ jobs:
 
       - name: Generate changelog
         # run: conventional-changelog -p angular -i CHANGELOG.md -s -r 0
-        run: conventional-changelog -p angular -i CHANGELOG.md -s
+        run: conventional-changelog -p angular -i CHANGELOG.md -s -r 2
 
       # - name: Commit changelog
       #   run: |
