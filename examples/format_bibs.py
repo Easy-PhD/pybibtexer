@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict
+from typing import Any
 
 from local_config import LOCAL_OPTIONS
 from pyadvtools import delete_python_cache
@@ -11,12 +11,12 @@ from pybibtexer.tools import (
 )
 
 
-class FormatAllConferenceOrJournalPapers(object):
+class FormatAllConferenceOrJournalPapers:
     def __init__(self, path_storage: str, path_output: str) -> None:
         self.path_storage = path_storage
         self.path_output = path_output
 
-    def run(self, options: Dict[str, Any]) -> None:
+    def run(self, options: dict[str, Any]) -> None:
         publisher_abbr_dict = generate_standard_publisher_abbr_options_dict(self.path_storage, options)
         for publisher in publisher_abbr_dict:
             for abbr_standard in publisher_abbr_dict[publisher]:
@@ -31,7 +31,7 @@ class FormatAllConferenceOrJournalPapers(object):
 
 
 if __name__ == "__main__":
-    options: Dict[str, Any] = {}
+    options: dict[str, Any] = {}
     options = {
         "include_publisher_list": [],
         "include_abbr_list": [],
@@ -41,7 +41,7 @@ if __name__ == "__main__":
     options["full_json_c"] = LOCAL_OPTIONS["full_json_c"]
     options["full_json_j"] = LOCAL_OPTIONS["full_json_j"]
 
-    for i, j in zip(["Journals", "Conferences"], ["Journals", "Conferences"]):
+    for i, j in zip(["Journals", "Conferences"], ["Journals", "Conferences"], strict=True):
         path_storage = os.path.join(LOCAL_OPTIONS["path_spidered_bibs"], i)
         path_output = os.path.join(LOCAL_OPTIONS["path_output"], os.path.join("Format_Local_All", j))
         FormatAllConferenceOrJournalPapers(path_storage, path_output).run(options)

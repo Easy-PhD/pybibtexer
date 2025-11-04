@@ -1,5 +1,5 @@
 import os
-from typing import Any, Dict
+from typing import Any
 
 from local_config import LOCAL_OPTIONS
 from pyadvtools import delete_python_cache
@@ -7,7 +7,7 @@ from pyadvtools import delete_python_cache
 from pybibtexer.tools import CheckDeleteFormatMoveSpideredBibs
 
 if __name__ == "__main__":
-    options: Dict[str, Any] = {}
+    options: dict[str, Any] = {}
     options = {
         # url
         "check_duplicate_url": True,

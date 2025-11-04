@@ -1,8 +1,8 @@
 import os
 
 
-def update_path(input: str):
-    return os.path.expandvars(os.path.expanduser(input))
+def update_path(path_input: str):
+    return os.path.expandvars(os.path.expanduser(path_input))
 
 
 LOCAL_OPTIONS = {
