@@ -12,7 +12,7 @@ class NormalizePagesInEntry(BlockMiddleware):
     # docstr-coverage: inherited
     def transform_entry(self, entry: Entry, library: Library) -> Block:
         if "pages" in entry:
-            # 5-10-5-10 -> 5-10
+            # 5-10-5-10 -> 5--10
             page_list = []
             for page in entry["pages"].split("-"):  # English hyphen
                 for p in page.strip().split("—"):  # Chinese hyphen
@@ -20,9 +20,9 @@ class NormalizePagesInEntry(BlockMiddleware):
                         page_list.append(p.strip())
 
             page_list = sorted(set(page_list), key=page_list.index)
-            entry["pages"] = "-".join(page_list)
+            entry["pages"] = "--".join(page_list)
         else:
-            # pages = {12:1-37}
+            # pages = {12:1--37}
             if "articleno" in entry and "numpages" in entry:
-                entry["pages"] = f'{entry["articleno"]}:1-{entry["numpages"]}'
+                entry["pages"] = f'{entry["articleno"]}:1--{entry["numpages"]}'
         return entry
