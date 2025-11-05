@@ -389,40 +389,41 @@ class CheckAcronymAbbrAndFullDict:
         """Check for exact matches in abbreviations or full forms between different acronyms."""
         valid_data = {}
         no_matches = True
-        acronyms = sorted(data.keys())
+        acronyms_bak = sorted(data.keys())
 
-        for i, main_acronym in enumerate(acronyms):
-            # Normalize items: lowercase and remove parentheses
-            main_items = [
-                item.lower().replace("(", "").replace(")", "")
-                for item in data[main_acronym].get(key_type, [])
-            ]
-
-            # Create exact match patterns
-            patterns = [re.compile(f"^{item}$") for item in main_items]
-
-            matches_found = []
-
-            # Compare with other acronyms
-            for other_acronym in acronyms[i + 1:]:
-                other_items = [
+        for acronyms in [acronyms_bak, acronyms_bak[::-1]]:
+            for i, main_acronym in enumerate(acronyms):
+                # Normalize items: lowercase and remove parentheses
+                main_items = [
                     item.lower().replace("(", "").replace(")", "")
-                    for item in data[other_acronym].get(key_type, [])
+                    for item in data[main_acronym].get(key_type, [])
                 ]
 
-                # Find matching items
-                matching_items = [
-                    item for item in other_items
-                    if any(pattern.match(item) for pattern in patterns)
-                ]
+                # Create exact match patterns
+                patterns = [re.compile(f"^{item}$") for item in main_items]
 
-                if matching_items:
-                    matches_found.append([main_acronym, other_acronym, matching_items])
+                matches_found = []
 
-            if matches_found:
-                no_matches = False
-                print(f"Found matches in {key_type}: {matches_found}")
-            else:
-                valid_data[main_acronym] = data[main_acronym]
+                # Compare with other acronyms
+                for other_acronym in acronyms[i + 1:]:
+                    other_items = [
+                        item.lower().replace("(", "").replace(")", "")
+                        for item in data[other_acronym].get(key_type, [])
+                    ]
+
+                    # Find matching items
+                    matching_items = [
+                        item for item in other_items
+                        if any(pattern.match(item) for pattern in patterns)
+                    ]
+
+                    if matching_items:
+                        matches_found.append([main_acronym, other_acronym, matching_items])
+
+                if matches_found:
+                    no_matches = False
+                    print(f"Found matches in {key_type}: {matches_found}")
+                else:
+                    valid_data[main_acronym] = data[main_acronym]
 
         return valid_data, no_matches

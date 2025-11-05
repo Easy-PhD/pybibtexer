@@ -73,17 +73,13 @@
             "Proc. IEEE Congr. Evol. Comput.",
             "Proc. IEEE Congr. Evol. Comput.",
             "Proc. IEEE Conf. Evol. Comput.",
-            "Proc. IEEE Conf. Evol. Comput. IEEE World Congr. Comput. Intell.",
-            "Proc. IEEE Conf. Evol. Comput.",
-            "Proc. IEEE Conf. Evol. Comput. IEEE World Congr. Comput. Intell."
+            "Proc. IEEE Conf. Evol. Comput."
         ],
         "names_full": [
             ".*Congress of Evolutionary Computation.*",
             ".*Congress on Evolutionary Computation.*",
             ".*Conference on Evolutionary Computation",
-            "1998 IEEE International Conference on Evolutionary Computation Proceedings. IEEE World Congress on Computational Intelligence (Cat. No.98TH8360)",
-            "Proceedings of 1997 IEEE International Conference on Evolutionary Computation (ICEC '97)",
-            "Proceedings of the First IEEE Conference on Evolutionary Computation. IEEE World Congress on Computational Intelligence"
+            "Proceedings of 1997 IEEE International Conference on Evolutionary Computation (ICEC '97)"
         ]
     },
     "CIDUE": {
@@ -374,19 +370,7 @@
     },
     "ICSI": {
         "names_abbr": ["Proc. Int. Conf. Swarm Intell."],
-        "names_full": [".*International Conference on Swarm Intelligence.*"]
-    },
-    "ICSMC": {
-        "names_abbr": [
-            "2011 IEEE International Conference on Systems, Man, and Cybernetics",
-            "1997 IEEE International Conference on Systems, Man, and Cybernetics. Computational Cybernetics and Simulation",
-            "IEEE International Conference on Systems, Man and Cybernetics"
-        ],
-        "names_full": [
-            "2011 IEEE International Conference on Systems, Man, and Cybernetics",
-            "1997 IEEE International Conference on Systems, Man, and Cybernetics. Computational Cybernetics and Simulation",
-            "IEEE International Conference on Systems, Man and Cybernetics"
-        ]
+        "names_full": ["International Conference on Swarm Intelligence"]
     },
     "ICTAS": {
         "names_abbr": ["2018 Conference on Information Communications Technology and Society (ICTAS)"],
@@ -406,14 +390,6 @@
     "IJCCI": {
         "names_abbr": ["Proc. Int. Joint Conf. Comput. Intell."],
         "names_full": [".*International Joint Conference on Computational Intelligence.*"]
-    },
-    "IJCNN": {
-        "names_abbr": [
-            "2008 IEEE International Joint Conference on Neural Networks (IEEE World Congress on Computational Intelligence)"
-        ],
-        "names_full": [
-            "2008 IEEE International Joint Conference on Neural Networks (IEEE World Congress on Computational Intelligence)"
-        ]
     },
     "IPDPS": {
         "names_abbr": ["2007 IEEE International Parallel and Distributed Processing Symposium"],
