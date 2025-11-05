@@ -24,8 +24,6 @@ sphinx-copybutton = "^0.5.2"
 [tool.pyright]
 venvPath = "."
 venv = ".venv"
-reportOptionalSubscript = "none"  # "none", "information", "error"
-reportIncompatibleMethodOverride = "none"  # "none", "information", "error"
 
 [tool.ruff]
 line-length = 120
