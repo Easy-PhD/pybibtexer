@@ -12,4 +12,5 @@ LOCAL_OPTIONS = {
     "zotero_bibtex": update_path(""),
     "path_spidered_bibs": update_path(""),
     "path_spidering_bibs": update_path(""),
+    "path_input": update_path(""),
 }
