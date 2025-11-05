@@ -80,8 +80,8 @@ class Splitter:
         else:
             block = Entry(mch_entry.group(1), mch_entry.group(2).strip(), [], line_idx)
 
-        regex_field_type = re.compile(r"[%\s]*([\w\-]+)" + r'\s*=\s*["{](.*)["}],\n', flags=re.I)
-        regex_field_type_abbr = re.compile(r"[%\s]*([\w\-]+)" + r"\s*=\s*([\w\-]+),\n", flags=re.I)
+        regex_field_type = re.compile(r"[%\s]*([\w\-]+)" + r'\s*=\s*["{](.*)["}][,]?\n', flags=re.I)
+        regex_field_type_abbr = re.compile(r"[%\s]*([\w\-]+)" + r"\s*=\s*([\w\-]+)[,]?\n", flags=re.I)
         implicit_comment_blocks = []
         while line_idx < len_data:
             new_line = data_list[line_idx]

@@ -17,8 +17,8 @@ class Library:
 
     def __init__(self, blocks: list[Block] | None = None):
         self._blocks = []
-        self._entries_by_key = dict()
-        self._strings_by_key = dict()
+        self._entries_by_key = {}
+        self._strings_by_key = {}
         if blocks is not None:
             self.add(blocks)
 
