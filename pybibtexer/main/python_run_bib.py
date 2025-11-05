@@ -34,7 +34,7 @@ class PythonRunBib(BasicInput):
             original_data = transform_to_data_list(original_data, extension=".bib", **kwargs)
             original_data = ConvertStrToLibrary(self.options).generate_library(original_data)
 
-        library = ConvertLibrayToLibrary(self.options).generate_single_library(original_data)
+        library = ConvertLibrayToLibrary(self.options).generate_single_library(original_data, given_cite_keys)
         return library
 
     def parse_to_multi_standard_library(
@@ -50,7 +50,7 @@ class PythonRunBib(BasicInput):
             original_data = transform_to_data_list(original_data, extension=".bib", **kwargs)
             original_data = ConvertStrToLibrary(self.options).generate_library(original_data)
 
-        libraries = ConvertLibrayToLibrary(self.options).generate_multi_libraries(original_data)
+        libraries = ConvertLibrayToLibrary(self.options).generate_multi_libraries(original_data, given_cite_keys)
         abbr_library, zotero_library, save_library = libraries
         return abbr_library, zotero_library, save_library
 
