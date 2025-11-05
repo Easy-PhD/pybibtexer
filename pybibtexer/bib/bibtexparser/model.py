@@ -12,13 +12,13 @@ class Block(abc.ABC):
         self,
         start_line: Optional[int] = None,
         raw: Optional[str] = None,
-        parser_metadata: Optional[Dict[str, Any]] = None,
+        parser_metadata: Optional[dict[str, Any]] = None,
     ):
         self._start_line = start_line
         self._raw = raw
-        self._parser_metadata: Dict[str, Any] = {}
+        self._parser_metadata: dict[str, Any] = {}
         if parser_metadata is not None:
-            self._parser_metadata: Dict[str, Any] = parser_metadata
+            self._parser_metadata: dict[str, Any] = parser_metadata
 
     @property
     def start_line(self) -> Optional[int]:
@@ -35,7 +35,7 @@ class Block(abc.ABC):
         return self._raw
 
     @property
-    def parser_metadata(self) -> Dict[str, Any]:
+    def parser_metadata(self) -> dict[str, Any]:
         """EXPERIMENTAL: field for middleware to store auxiliary information.
 
         As an end-user, as long as you are not writing middleware, you probably
@@ -225,7 +225,7 @@ class Entry(Block):
         self,
         entry_type: str,
         key: str,
-        fields: List[Field],
+        fields: list[Field],
         start_line: Optional[int] = None,
         raw: Optional[str] = None,
     ):
@@ -253,16 +253,16 @@ class Entry(Block):
         self._key = value
 
     @property
-    def fields(self) -> List[Field]:
+    def fields(self) -> list[Field]:
         """The key-value attributes of an entry, as ``Field`` instances."""
         return self._fields
 
     @fields.setter
-    def fields(self, value: List[Field]) -> None:
+    def fields(self, value: list[Field]) -> None:
         self._fields = value
 
     @property
-    def fields_dict(self) -> Dict[str, Field]:
+    def fields_dict(self) -> dict[str, Field]:
         """A dict of fields, with field keys as keys.
 
         Note that with duplicate field keys, the behavior is undefined.

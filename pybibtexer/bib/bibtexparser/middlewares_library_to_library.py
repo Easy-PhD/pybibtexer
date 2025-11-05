@@ -89,7 +89,7 @@ class MiddlewaresLibraryToLibrary:
 
         lower_entry_type (bool): Lower Entry type. Default is True.
         lower_entry_field_key (bool): Lower Entry field keys. Default is True.
-        keep_entries_by_cite_keys (list): List of keys to keep entries in the order of cite keys. Default is [].
+        keep_entries_by_cite_keys (list): list of keys to keep entries in the order of cite keys. Default is [].
         update_month (bool): Convert str month to int month. Default is True.
         update_number_volume (bool): Update number and volume. Default is True.
         update_pages (bool): Update pages. Default is True.
@@ -133,8 +133,8 @@ class MiddlewaresLibraryToLibrary:
 
         is_sort_entry_fields (bool): Sort entry fields alphabetically. Default is True.
         is_sort_blocks (bool): Sort entries by type and user sort key. Default is True.
-        sort_entries_by_cite_keys (list): List of keys to sort entries in the order of cite keys. Default is [].
-        sort_entries_by_field_keys (list): List of keys to sort entries in the order of field keys. Default is
+        sort_entries_by_cite_keys (list): list of keys to sort entries in the order of cite keys. Default is [].
+        sort_entries_by_field_keys (list): list of keys to sort entries in the order of field keys. Default is
             ["year", "volume", "number", "month", "pages"].
         sort_entries_by_field_keys_reverse (bool): Reverse the sorting of the field keys. Default is True.
 

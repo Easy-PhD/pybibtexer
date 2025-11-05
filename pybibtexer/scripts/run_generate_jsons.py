@@ -112,7 +112,7 @@ class GenerateDefaultJSONs:
             entry_type (str): Type of entry to parse - 'article' or 'inproceedings'
 
         Returns:
-            dict: Dictionary containing parsed conference or journal data
+            dict: dictionary containing parsed conference or journal data
 
         Raises:
             ValueError: If entry_type is not 'article' or 'inproceedings'

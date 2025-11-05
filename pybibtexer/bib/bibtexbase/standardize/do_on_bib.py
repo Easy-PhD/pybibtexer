@@ -21,7 +21,7 @@ class SplitBibAccordingToMark(object):
     def __init__(self) -> None:
         super().__init__()
 
-    def split_marks(self, data_list: List[str]) -> List[str]:
+    def split_marks(self, data_list: list[str]) -> list[str]:
         return split_data_list(r"(@[a-zA-Z]+{)", data_list, "next")
 
 
@@ -30,19 +30,19 @@ class ObtainMarkBlocksDict(object):
         pass
 
     def obtain_dict(
-        self, data_list: List[str], is_lower_mark: bool = True
-    ) -> Tuple[Dict[str, List[List[str]]], List[List[str]]]:
+        self, data_list: list[str], is_lower_mark: bool = True
+    ) -> tuple[dict[str, list[list[str]]], list[list[str]]]:
         r"""Generate blocks.
 
         Args:
-            data_list (List[str]): data list.
+            data_list (list[str]): data list.
 
         Returns:
-            Tuple[Dict[str, List[List[str]]], List[str]]: dict and implicit comments.
+            tuple[dict[str, list[list[str]]], list[str]]: dict and implicit comments.
         """
         regex_mark = re.compile(r"@([a-zA-Z]+){")
         line_index, len_data, implicit_comment_list = 0, len(data_list), []
-        mark_patch_bib_list_dict: Dict[str, List[List[str]]] = {}
+        mark_patch_bib_list_dict: dict[str, list[list[str]]] = {}
         while line_index < len_data:
             line = data_list[line_index]
             line_index += 1

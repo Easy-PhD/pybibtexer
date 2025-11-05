@@ -12,18 +12,18 @@ import re
 from typing import List
 
 
-def split_data_list(split_pattern: str, data_list: List[str], last_next: str = "next") -> List[str]:
+def split_data_list(split_pattern: str, data_list: list[str], last_next: str = "next") -> list[str]:
     r"""Split data list according to the split pattern.
 
     The capturing parentheses must be used in the pattern, such as `(\n)`.
 
     Args:
         split_pattern (str): split pattern.
-        data_list (List[str]): data list.
+        data_list (list[str]): data list.
         last_next (str): "next" or "last".
 
     Returns:
-        List[str]: new data list.
+        list[str]: new data list.
 
     Examples:
         split_pattern = r"(\n)", last_next = "next" or "last".

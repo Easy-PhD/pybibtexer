@@ -11,17 +11,17 @@ class BasicInput:
     Args:
         full_json_c (str): The conference json file
         full_json_j (str): The journal json file
-        options (Dict[str, Any]): Options.
+        options (dict[str, Any]): Options.
 
     Attributes:
         full_abbr_article_dict (dict[str, str]): Full abbr article dict.
-        full_abbr_inproceedings_dict (Dict[str, str]): Full abbr inproceedings dict.
+        full_abbr_inproceedings_dict (dict[str, str]): Full abbr inproceedings dict.
         full_names_in_json (str): Full names in json.
         abbr_names_in_json (str): Abbr names in json.
         abbr_article_pattern_dict (dict): Pre-compiled regex patterns for journal name matching
         abbr_inproceedings_pattern_dict (dict): Pre-compiled regex patterns for conference name matching
 
-        options (Dict[str, Any]): Options.
+        options (dict[str, Any]): Options.
 
     """
 
@@ -61,8 +61,8 @@ class BasicInput:
         """Pre-compile regex patterns for journal and conference name matching.
 
         Args:
-            full_abbr_article_dict: Dictionary containing journal abbreviations and their full names
-            full_abbr_inproceedings_dict: Dictionary containing conference abbreviations and their full names
+            full_abbr_article_dict: dictionary containing journal abbreviations and their full names
+            full_abbr_inproceedings_dict: dictionary containing conference abbreviations and their full names
             full_names_in_json: Key for full names in the dictionary
             abbr_names_in_json: Key for abbreviation names in the dictionary
 

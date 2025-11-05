@@ -19,7 +19,7 @@ class StandardizeStringBlock(object):
     def __init__(self) -> None:
         pass
 
-    def standardize(self, block: List[str]) -> Tuple[List[str], List[List[str]]]:
+    def standardize(self, block: list[str]) -> tuple[list[str], list[list[str]]]:
         implicit_comments = []
 
         regex = re.compile(

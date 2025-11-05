@@ -25,7 +25,7 @@ def replace_to_standard_cite_keys(
         full_json_j: Journal metadata
 
     Returns:
-        List[str]: Lines of processed text content with updated citation keys
+        list[str]: Lines of processed text content with updated citation keys
     """
     # Validate input file type
     ext = os.path.splitext(full_tex_md)[-1]

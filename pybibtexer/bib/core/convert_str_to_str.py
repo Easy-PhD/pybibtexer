@@ -8,10 +8,10 @@ class ConvertStrToStr:
     """Convert str to str.
 
     Args:
-        options (Dict[str, Any]): Options. Default is {}.
+        options (dict[str, Any]): Options. Default is {}.
 
     Attributes:
-        default_additional_field_list (List[str]): Default additional field list. Default is [].
+        default_additional_field_list (list[str]): Default additional field list. Default is [].
     """
 
     def __init__(self, options: dict[str, Any] = {}) -> None:

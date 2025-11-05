@@ -31,18 +31,18 @@ class StandardizeEntryBlock(object):
     """Stanndardize entry block.
 
     Args:
-        default_additional_field_list (List[str] = []): Additional default fields.
+        default_additional_field_list (list[str] = []): Additional default fields.
 
     Attributes:
-        default_fields_list (List[str]): Default fields.
+        default_fields_list (list[str]): Default fields.
     """
 
-    def __init__(self, default_additional_field_list: List[str] = []) -> None:
+    def __init__(self, default_additional_field_list: list[str] = []) -> None:
         default_fields_old = [d.lower().strip() for d in DEFAULT_FIELDS_LIST]
         default_fields_new = [d.lower().strip() for d in default_additional_field_list]
         self.default_fields_list = list(set(default_fields_old).union(set(default_fields_new)))
 
-    def standardize(self, block: List[str]) -> Tuple[List[str], List[List[str]]]:
+    def standardize(self, block: list[str]) -> tuple[list[str], list[list[str]]]:
         # obtain braces or quotes
         implicit_comments = []
         pre, post = EntryBase().obtain_braces_or_quotes(block)
@@ -95,14 +95,14 @@ class EntryBase(object):
         pass
 
     @staticmethod
-    def obtain_braces_or_quotes(block: List[str]) -> Tuple[str, str]:
+    def obtain_braces_or_quotes(block: list[str]) -> tuple[str, str]:
         """Obtain braces or quotes in block.
 
         Args:
-            block (List[str]): block.
+            block (list[str]): block.
 
         Returns:
-            Tuple[str, str]: the tuple of braces or quotes.
+            tuple[str, str]: the tuple of braces or quotes.
         """
         content = "".join(block)
         regex_list = [
@@ -127,16 +127,16 @@ class EntryBase(object):
             return '"', '"'
 
     def obtain_fields(
-        self, block: List[str], default_fields_list: List[str], field_pattern: str = r"[\w\-]+"
-    ) -> List[str]:
+        self, block: list[str], default_fields_list: list[str], field_pattern: str = r"[\w\-]+"
+    ) -> list[str]:
         r"""Obtain fileds in block.
 
         Args:
-            block (List[str]): block.
+            block (list[str]): block.
             field_pattern (str = r'[\w\-]+'): field pattern.
 
         Returns:
-            List[str]: field list.
+            list[str]: field list.
         """
         regex = re.compile(rf'({field_pattern})\s*=\s*(?:{"|".join(FIELD_FORMAT_FLAG)})')  # support for abbreviation
         obtain_field_list = list(set(regex.findall("".join(block))))
@@ -148,7 +148,7 @@ class SplitEntry(object):
     def __init__(self) -> None:
         super().__init__()
 
-    def split_fields(self, field_pattern: str, block: List[str], last_next: str = "next") -> List[str]:
+    def split_fields(self, field_pattern: str, block: list[str], last_next: str = "next") -> list[str]:
         return split_data_list(field_pattern, block, last_next)
 
 
@@ -159,16 +159,16 @@ class AppendEntry(object):
         pass
 
     @staticmethod
-    def append_field(field_list: List[str], braces_or_quotes: Tuple[str, str], block: List[str]) -> List[str]:
+    def append_field(field_list: list[str], braces_or_quotes: tuple[str, str], block: list[str]) -> list[str]:
         """Append.
 
         Args:
-            field_list (List[str]): Append field list.
-            braces_or_quotes (Tuple[str, str]): Brace or quote.
-            data_list (List[str]): Data list.
+            field_list (list[str]): Append field list.
+            braces_or_quotes (tuple[str, str]): Brace or quote.
+            data_list (list[str]): Data list.
 
         Returns:
-            List[str]: new patch bib after appending.
+            list[str]: new patch bib after appending.
         """
         pre, _ = braces_or_quotes
 
@@ -203,17 +203,17 @@ class ExtractEntry(object):
         pass
 
     def extract(
-        self, field_list: List[str], brace_or_quote: Tuple[str, str], block: List[str]
-    ) -> Tuple[List[str], List[str]]:
+        self, field_list: list[str], brace_or_quote: tuple[str, str], block: list[str]
+    ) -> tuple[list[str], list[str]]:
         """Extract.
 
         Args:
-            field_list (List[str]): field list
-            brace_or_quote (Tuple[str, str]): (", ") or ({, })
-            block (List[str]): the block
+            field_list (list[str]): field list
+            brace_or_quote (tuple[str, str]): (", ") or ({, })
+            block (list[str]): the block
 
         Return:
-            Tuple[List[str], List[str]]: main block, redundant part
+            tuple[list[str], list[str]]: main block, redundant part
         """
         pre, post = brace_or_quote
 
@@ -295,15 +295,15 @@ def add_brace_or_quote(pre, post, line: str):
 class CheckEntry(object):
     @staticmethod
     def check(
-        field_list: List[str], brace_or_quote: Tuple[str, str], block: List[str]
-    ) -> Tuple[Dict[str, List[str]], List[str], bool]:
+        field_list: list[str], brace_or_quote: tuple[str, str], block: list[str]
+    ) -> tuple[dict[str, list[str]], list[str], bool]:
         """Check."""
         pre, post = brace_or_quote
 
         regex_entry = re.compile(r"\s*@[a-zA-Z]+{")
         regex_field = re.compile(rf'\s*(?:{"|".join(field_list)})' + r"\s*=")
         entry_flag, brace_flag = False, False  # minimal conditions
-        error_dict: Dict[str, List[str]] = {}
+        error_dict: dict[str, list[str]] = {}
         new_block = []
         for line in block:
             if regex_entry.match(line) and (not entry_flag):  # just iff exsiting one time in single patch bib

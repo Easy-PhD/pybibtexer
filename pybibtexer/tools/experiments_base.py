@@ -16,10 +16,10 @@ def obtain_local_abbr_paths(path_storage: str, options: dict) -> list[str]:
     Args:
         path_storage: Root directory containing publisher/abbreviation folders.
         options: Configuration dictionary containing:
-            - include_publisher_list: List of publishers to include.
-            - exclude_publisher_list: List of publishers to exclude.
-            - include_abbr_list: List of abbreviations to include.
-            - exclude_abbr_list: List of abbreviations to exclude.
+            - include_publisher_list: list of publishers to include.
+            - exclude_publisher_list: list of publishers to exclude.
+            - include_abbr_list: list of abbreviations to include.
+            - exclude_abbr_list: list of abbreviations to exclude.
 
     Returns:
         List of full paths to all matching abbreviation directories.
@@ -90,8 +90,8 @@ def in_not_in_list(original: list[str], in_list: list[str], out_list: list[str])
 
     Args:
         original: Original list to filter.
-        in_list: List of items to include (case-insensitive).
-        out_list: List of items to exclude (case-insensitive).
+        in_list: list of items to include (case-insensitive).
+        out_list: list of items to exclude (case-insensitive).
 
     Returns:
         Filtered list containing only items that:
@@ -137,7 +137,7 @@ def generate_readme(
         """Extracts unique journal/booktitle values from entries.
 
         Args:
-            entries: List of bibliography entries.
+            entries: list of bibliography entries.
             field_key: Field name to extract (journal, booktitle, etc.).
 
         Returns:

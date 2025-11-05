@@ -10,8 +10,8 @@ class MiddlewaresStrToStr:
 
     Attributes:
         substitute_in_bib (bool): Substitute in the bib. Default is True.
-        substitute_old_list (list): List of old strings to substitute. Default is [].
-        substitute_new_list (list): List of new strings to substitute. Default is [].
+        substitute_old_list (list): list of old strings to substitute. Default is [].
+        substitute_new_list (list): list of new strings to substitute. Default is [].
     """
 
     def __init__(self, options: dict[str, Any]):

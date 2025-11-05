@@ -13,7 +13,7 @@ class PythonWriters(BasicInput):
     r"""Python writers for generating BibTeX files with various formatting options.
 
     Args:
-        options (Dict[str, Any]): Configuration options for BibTeX generation.
+        options (dict[str, Any]): Configuration options for BibTeX generation.
             - is_sort_entry_fields (bool): Whether to sort entry fields (default: True)
             - is_sort_blocks (bool): Whether to sort bibliography blocks (default: True)
             - sort_entries_by_field_keys_reverse (bool): Reverse sort order for entries (default: True)
@@ -25,7 +25,7 @@ class PythonWriters(BasicInput):
         bib_name_for_zotero (str): Filename for Zotero bibliography (default: "zotero.bib")
         bib_name_for_save (str): Filename for saved bibliography (default: "save.bib")
         join_flag_in_http (str): The join flag for HTTP-related formatting (default: " | " or " |\n")
-        display_www_google_connected_scite (List[str]): Display options selection from
+        display_www_google_connected_scite (list[str]): Display options selection from
             ["www", "google", "connected", "scite"]
         bibtex_format_indent (str): Indentation string for BibTeX formatting (default: "  ")
         bibtex_format_trailing_comma (bool): Whether to include trailing commas in BibTeX entries (default: True)
@@ -68,7 +68,7 @@ class PythonWriters(BasicInput):
         """Serialize a BibTeX database to a string.
 
         Args:
-            library (Library | List[Block]): BibTeX database to serialize.
+            library (Library | list[Block]): BibTeX database to serialize.
             bibtex_format (Optional[BibtexFormat] = None):
 
         """
@@ -89,7 +89,7 @@ class PythonWriters(BasicInput):
         """Write.
 
         Args:
-            original_data (Union[Library, List[Block], List[str]]): data
+            original_data (Union[Library, list[Block], list[str]]): data
             file_name (str): file name
             write_flag (str = "w"): write flag
             path_storage (Optional[str] = None): path storage

@@ -8,7 +8,7 @@ class ConvertStrToLibrary:
     """Convert str to library.
 
     Args:
-        options (Dict[str, Any]): Options. Default is {}.
+        options (dict[str, Any]): Options. Default is {}.
 
     Attributes:
         is_standardize_bib (bool): Is standardize bib. Default is True.

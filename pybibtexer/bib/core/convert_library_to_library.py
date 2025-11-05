@@ -7,7 +7,7 @@ class ConvertLibrayToLibrary:
     """Convert library to library.
 
     Args:
-        options (Dict[str, Any]): Options. Default is {}.
+        options (dict[str, Any]): Options. Default is {}.
 
     Attributes:
         choose_abbr_zotero_save (str): Choose "abbr", "zotero", or "save". Default is "save".

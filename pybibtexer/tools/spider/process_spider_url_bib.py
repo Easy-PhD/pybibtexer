@@ -14,12 +14,12 @@ class CheckDeleteFormatMoveSpideredBibs:
     Args:
         path_storage (str): path to storage
         path_shutil (str): path to shutil
-        options (Dict[str, Any]): options for check, delete, format
+        options (dict[str, Any]): options for check, delete, format
 
     Attributes:
         path_storage (str): path to storage
         path_shutil (str): path to shutil
-        publisher_abbr_dict (Dict[str, Dict[str, Any]]): publisher abbreviation options dict
+        publisher_abbr_dict (dict[str, dict[str, Any]]): publisher abbreviation options dict
     """
 
     def __init__(self, path_storage: str, path_shutil: str, options: dict[str, Any]) -> None:

@@ -46,23 +46,23 @@ class StandardizeBib(object):
     """Stanndardize bib.
 
     Args:
-        default_additional_field_list (List[str] = []): Additional default fields.
+        default_additional_field_list (list[str] = []): Additional default fields.
     """
 
-    def __init__(self, default_additional_field_list: List[str] = []) -> None:
+    def __init__(self, default_additional_field_list: list[str] = []) -> None:
         self._standardize_comment_block = StandardizeCommentBlock()
         self._standardize_entry_block = StandardizeEntryBlock(default_additional_field_list)
         self._standardize_preamble_block = StandardizePreambleBlock()
         self._standardize_string_block = StandardizeStringBlock()
 
-    def standardize(self, data_list: List[str]) -> Tuple[List[str], List[List[str]]]:
+    def standardize(self, data_list: list[str]) -> tuple[list[str], list[list[str]]]:
         """Generate standard bib.
 
         Args:
-            data_list (List[str]): Bib data.
+            data_list (list[str]): Bib data.
 
         Returns:
-            List[str]: Standard bib.
+            list[str]: Standard bib.
         """
         # Initialize
         data_list = "".join(data_list).splitlines(keepends=True)
@@ -71,8 +71,8 @@ class StandardizeBib(object):
         # Split data according to mark pattern
         data_list = SplitBibAccordingToMark().split_marks(data_list)
 
-        new_data_list: List[str] = []
-        implicit_comment_list: List[List[str]] = []
+        new_data_list: list[str] = []
+        implicit_comment_list: list[list[str]] = []
 
         # Generate dict
         mark_blocks_dict, temp_implicit_comment_list = ObtainMarkBlocksDict().obtain_dict(data_list, True)

@@ -11,7 +11,7 @@ class PythonRunBib(BasicInput):
     """Python bib.
 
     Args:
-        options (Dict[str, Any]): Options.
+        options (dict[str, Any]): Options.
 
     Attributes:
         choose_abbr_zotero_save (str): Selected bibliography purpose ("abbr", "zotero", or "save")

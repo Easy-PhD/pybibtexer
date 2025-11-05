@@ -13,8 +13,8 @@ class MiddlewaresLibraryToStr:
     Attributes:
         is_sort_entry_fields (bool): Sort entry fields alphabetically. Default is True.
         is_sort_blocks (bool): Sort entries by type and user sort key. Default is True.
-        sort_entries_by_cite_keys (list): List of keys to sort entries in the order of cite keys. Default is [].
-        sort_entries_by_field_keys (list): List of keys to sort entries in the order of field keys. Default is
+        sort_entries_by_cite_keys (list): list of keys to sort entries in the order of cite keys. Default is [].
+        sort_entries_by_field_keys (list): list of keys to sort entries in the order of field keys. Default is
             ["year", "volume", "number", "month", "pages"].
         sort_entries_by_field_keys_reverse (bool): Reverse the sorting of the field keys. Default is True.
     """

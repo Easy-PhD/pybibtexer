@@ -25,7 +25,7 @@ class ConvertLibrayToStr:
     """Convert library to str.
 
     Args:
-        options (Dict[str, Any]): Options. Default is {}.
+        options (dict[str, Any]): Options. Default is {}.
 
     Attributes:
         is_standardize_library (bool): Is standardize library. Default is False.
