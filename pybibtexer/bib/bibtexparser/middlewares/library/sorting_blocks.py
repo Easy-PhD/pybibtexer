@@ -13,10 +13,15 @@ class SortBlocksByTypeAndUserSortKeyMiddleware(LibraryMiddleware):
 
     def __init__(
         self,
-        keep_entry_according_cite_keys: list[str] = [],
-        sort_entry_according_field_keys: list[str] = ["year", "volume", "number", "month", "pages"],
+        keep_entry_according_cite_keys: list[str] | None = None,
+        sort_entry_according_field_keys: list[str] | None = None,
         sort_entry_according_field_keys_reverse: bool = True,
     ):
+        if keep_entry_according_cite_keys is None:
+            keep_entry_according_cite_keys = []
+        if sort_entry_according_field_keys is None:
+            sort_entry_according_field_keys = ["year", "volume", "number", "month", "pages"]
+
         self._verify_all_types_are_block_types(DEFAULT_BLOCK_TYPE_ORDER)
         self.keep_entry_according_cite_keys = keep_entry_according_cite_keys
         self.sort_entry_according_field_keys = sort_entry_according_field_keys
@@ -29,7 +34,7 @@ class SortBlocksByTypeAndUserSortKeyMiddleware(LibraryMiddleware):
     def _verify_all_types_are_block_types(sort_order):
         for t in sort_order:
             if not issubclass(t, Block):
-                raise ValueError("Sort order must only contain Block subclasses, " f"but got {str(t)}")
+                raise ValueError("Sort order must only contain Block subclasses, " f"but got {t}")
 
     # docstr-coverage: inherited
     def transform(self, library: Library) -> Library:
