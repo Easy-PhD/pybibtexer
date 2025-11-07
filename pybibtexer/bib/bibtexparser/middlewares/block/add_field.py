@@ -77,7 +77,6 @@ class AddJournalLongAbbr(BlockMiddleware):
         for full, long_abbr in zip(full_name_list, long_abbr_name_list, strict=True):
             if re.match(f"^{full}", field_content, re.I):
                 long_abbr_list.append(long_abbr)
-                break
 
         # check
         long_abbr_list = list(set(long_abbr_list))

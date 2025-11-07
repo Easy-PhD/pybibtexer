@@ -91,6 +91,7 @@ def _find_pattern_match(content: str, patterns: dict[str, Any]) -> str:
     for abbr, pattern_data in patterns.items():
         if pattern_data["pattern"].match(content):
             matches.append(abbr)
+            # TODO: match all?
             break
 
     # Handle multiple matches

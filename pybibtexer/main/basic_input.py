@@ -53,10 +53,11 @@ class BasicInput:
         full_abbr_article_dict = {**default_abbr_dict_j, **user_abbr_dict_j}
         full_abbr_inproceedings_dict = {**default_abbr_dict_c, **user_abbr_dict_c}
 
+        # TODO: Whether to check?
         # Check for duplicate acronyms and abbreviations in the dictionaries
-        check = CheckAcronymAbbrAndFullDict()
-        full_abbr_article_dict = check.length_dupicate_match(full_abbr_article_dict)[0]
-        full_abbr_inproceedings_dict = check.length_dupicate_match(full_abbr_inproceedings_dict)[0]
+        # check = CheckAcronymAbbrAndFullDict()
+        # full_abbr_article_dict = check.length_dupicate_match(full_abbr_article_dict)[0]
+        # full_abbr_inproceedings_dict = check.length_dupicate_match(full_abbr_inproceedings_dict)[0]
 
         # Merge dictionaries with precedence: merged (user + default) > special
         # Articles use journal abbreviations, inproceedings use conference abbreviations
@@ -113,6 +114,7 @@ class BasicInput:
                 full_names = abbr_info.get(full_names_in_json, [])
                 long_abbrs = abbr_info.get(abbr_names_in_json, [])
                 all_names = [*full_names, *long_abbrs, abbr]
+                all_names = [m.lower() for m in all_names]
 
                 # Create pre-compiled regex pattern for exact matching
                 pattern_dict[abbr] = {
