@@ -55,8 +55,8 @@ class BasicInput:
 
         # Check for duplicate acronyms and abbreviations in the dictionaries
         check = CheckAcronymAbbrAndFullDict()
-        full_abbr_article_dict = check.run(full_abbr_article_dict)[0]
-        full_abbr_inproceedings_dict = check.run(full_abbr_inproceedings_dict)[0]
+        full_abbr_article_dict = check.length_dupicate_match(full_abbr_article_dict)[0]
+        full_abbr_inproceedings_dict = check.length_dupicate_match(full_abbr_inproceedings_dict)[0]
 
         # Merge dictionaries with precedence: merged (user + default) > special
         # Articles use journal abbreviations, inproceedings use conference abbreviations

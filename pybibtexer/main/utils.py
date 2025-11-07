@@ -27,8 +27,8 @@ class StrictOrderedDict:
             >>> sod = StrictOrderedDict()
             >>> sod = StrictOrderedDict([('a', 1), ('b', 2)])
         """
-        self._keys = []    # Maintains insertion order of keys
-        self._data = {}    # Stores the actual key-value mappings
+        self._keys = []  # Maintains insertion order of keys
+        self._data = {}  # Stores the actual key-value mappings
 
         if data:
             for k, v in data.items():
@@ -158,47 +158,86 @@ def process_user_conferences_journals_json(full_json_c: str, full_json_j: str) -
 
 
 class CheckAcronymAbbrAndFullDict:
-    def __init__(self, names_abbr="names_abbr", names_full="names_full"):
+    """Checker for acronym, abbreviation and full form dictionaries.
+
+    Validates and processes dictionary data containing acronyms with their
+    corresponding abbreviations and full forms.
+
+    Attributes:
+        names_abbr (str): Key name for abbreviations in the dictionary.
+        names_full (str): Key name for full forms in the dictionary.
+    """
+
+    def __init__(self, names_abbr: str = "names_abbr", names_full: str = "names_full") -> None:
+        """Initializes the checker with field names.
+
+        Args:
+            names_abbr: Key name for abbreviations, defaults to "names_abbr".
+            names_full: Key name for full forms, defaults to "names_full".
+        """
         self.names_abbr = names_abbr
         self.names_full = names_full
 
-    def run(self, dict_data: dict[str, dict[str, list[str]]]) -> tuple[dict[str, dict[str, list[str]]], bool]:
-        # Check if each acronym has equal number of abbreviations and full forms
-        dict_data, length_check = self._validate_lengths(dict_data)
+    def length_dupicate_match(
+        self, dict_data: dict[str, dict[str, list[str]]]
+    ) -> tuple[dict[str, dict[str, list[str]]], list[str]]:
+        """Performs comprehensive validation on dictionary data.
 
-        # Check for duplicate abbreviations or full forms across all acronyms
-        dict_data, duplicate_check = self._check_duplicates(dict_data)
+        Executes three validation steps: length validation, duplicate checking,
+        and mutual pattern matching.
+
+        Args:
+            dict_data: Dictionary containing acronym data with abbreviations
+                      and full forms.
+
+        Returns:
+            tuple: Validated dictionary and list of acronyms with matches.
+        """
+        dict_data = self._validate_length(dict_data)
+        dict_data = self._check_duplicate(dict_data)
 
         # Check for matching patterns in both abbreviations and full forms
-        dict_data, abbr_match_check = self._check_matches(dict_data, self.names_abbr)
-        dict_data, full_match_check = self._check_matches(dict_data, self.names_full)
+        dict_data, abbr_matches = self._mutually_check_match(dict_data, self.names_abbr)
+        dict_data, full_matches = self._mutually_check_match(dict_data, self.names_full)
+        matches = sorted(set(abbr_matches).union(full_matches))
+        return dict_data, matches
 
-        return dict_data, all([length_check, duplicate_check, abbr_match_check, full_match_check])
+    def _validate_length(self, data_dict: dict[str, dict[str, list[str]]]) -> dict[str, dict[str, list[str]]]:
+        """Validates that each acronym has equal number of abbreviations and full forms.
 
-    def _validate_lengths(self, dict_data):
-        """Validate that each acronym has equal number of abbreviations and full forms."""
-        valid_data, all_valid = {}, True
-        for acronym, value_dict in dict_data.items():
+        Args:
+            data_dict: Input dictionary to validate.
+
+        Returns:
+            dict: Dictionary with only entries having equal length lists.
+        """
+        valid_data = {}
+        for acronym, value_dict in data_dict.items():
             names_abbr = value_dict.get(self.names_abbr, [])
             names_full = value_dict.get(self.names_full, [])
 
             if len(names_abbr) != len(names_full):
-                all_valid = False
                 print(
                     f"Length mismatch in '{acronym}': {len(names_abbr)} abbreviations vs {len(names_full)} full forms"
                 )
             else:
                 valid_data[acronym] = value_dict
-        return valid_data, all_valid
+        return valid_data
 
-    def _check_duplicates(self, data):
-        """Check for duplicate abbreviations or full forms across all acronyms."""
+    def _check_duplicate(self, data_dict: dict[str, dict[str, list[str]]]) -> dict[str, dict[str, list[str]]]:
+        """Checks for duplicate abbreviations or full forms across all acronyms.
+
+        Args:
+            data_dict: Input dictionary to check for duplicates.
+
+        Returns:
+            dict: Dictionary with duplicate entries removed.
+        """
         valid_data = {}
-        all_unique = True
         seen_abbrs = set()
         seen_fulls = set()
 
-        for acronym, values in data.items():
+        for acronym, values in data_dict.items():
             has_duplicate = False
 
             # Check for duplicate abbreviations
@@ -221,23 +260,28 @@ class CheckAcronymAbbrAndFullDict:
 
             if not has_duplicate:
                 valid_data[acronym] = values
-            else:
-                all_unique = False
 
-        return valid_data, all_unique
+        return valid_data
 
-    def _check_matches(self, data, key_type: str):
-        """Check for exact matches in abbreviations or full forms between different acronyms."""
+    def _mutually_check_match(self, data_dict: dict, key_type: str) -> tuple[dict, list[str]]:
+        """Checks for exact matches in abbreviations or full forms between different acronyms.
+
+        Args:
+            data_dict: Dictionary to check for mutual matches.
+            key_type: Type of key to check ("names_abbr" or "names_full").
+
+        Returns:
+            tuple: Validated dictionary and list of acronyms with matches.
+        """
         valid_data = {}
-        no_matches = True
-        acronyms_bak = sorted(data.keys())
+        matches_acronyms = []
+        acronyms_bak = sorted(data_dict.keys())
 
         for acronyms in [acronyms_bak, acronyms_bak[::-1]]:
             for i, main_acronym in enumerate(acronyms):
                 # Normalize items: lowercase and remove parentheses
                 main_items = [
-                    item.lower().replace("(", "").replace(")", "")
-                    for item in data[main_acronym].get(key_type, [])
+                    item.lower().replace("(", "").replace(")", "") for item in data_dict[main_acronym].get(key_type, [])
                 ]
 
                 # Create exact match patterns
@@ -246,25 +290,78 @@ class CheckAcronymAbbrAndFullDict:
                 matches_found = []
 
                 # Compare with other acronyms
-                for other_acronym in acronyms[i + 1:]:
+                for other_acronym in acronyms[i + 1 :]:
                     other_items = [
                         item.lower().replace("(", "").replace(")", "")
-                        for item in data[other_acronym].get(key_type, [])
+                        for item in data_dict[other_acronym].get(key_type, [])
                     ]
 
                     # Find matching items
-                    matching_items = [
-                        item for item in other_items
-                        if any(pattern.match(item) for pattern in patterns)
-                    ]
+                    matching_items = [item for item in other_items if any(pattern.match(item) for pattern in patterns)]
 
                     if matching_items:
                         matches_found.append([main_acronym, other_acronym, matching_items])
+                        matches_acronyms.append([main_acronym, other_acronym])
 
                 if matches_found:
-                    no_matches = False
                     print(f"Found matches in {key_type}: {matches_found}")
                 else:
-                    valid_data[main_acronym] = data[main_acronym]
+                    valid_data[main_acronym] = data_dict[main_acronym]
 
-        return valid_data, no_matches
+        matches_acronyms = sorted({item for sublist in matches_acronyms for item in sublist})
+        return valid_data, matches_acronyms
+
+    def compare_and_return_only_in_new(self, json_old: dict, json_new: dict) -> dict:
+        """Compares old and new JSON data to find newly added items.
+
+        Args:
+            json_old: Old JSON data as dictionary.
+            json_new: New JSON data as dictionary.
+
+        Returns:
+            dict: Dictionary containing keys that only exist in new data.
+        """
+        # Find keys that only exist in new JSON
+        keys_only_in_new = sorted(set(json_new.keys()) - set(json_old.keys()))
+        new_only_data = {key: json_new[key] for key in keys_only_in_new}
+
+        # Find common keys between old and new JSON
+        common_keys = set(json_old.keys()) & set(json_new.keys())
+
+        # Check each common key for new items using pattern matching
+        for key in sorted(common_keys):
+            for flag in [self.names_full]:
+                old_items = [item.lower() for item in json_old[key][flag]]
+                old_items = [item.replace("(", "").replace(")", "") for item in old_items]
+
+                new_items = [item.lower() for item in json_new[key][flag]]
+                new_items = [item.replace("(", "").replace(")", "") for item in new_items]
+
+                self._old_match_new(json_old, key, flag, old_items, new_items)
+
+        # Return keys that only exist in new data
+        return new_only_data
+
+    @staticmethod
+    def _old_match_new(json_old: dict, key: str, flag: str, old_items: list[str], new_items: list[str]) -> None:
+        """Compares old and new items for a specific key and flag.
+
+        Args:
+            json_old: Old JSON data.
+            key: Current acronym key being processed.
+            flag: Field type being checked ("names_abbr" or "names_full").
+            old_items: Normalized items from old data.
+            new_items: Normalized items from new data.
+        """
+        # Convert to regex patterns
+        patterns = [re.compile(f"^{item}$") for item in old_items]
+
+        unmatched = []
+        for new_item in new_items:
+            if (new_item not in old_items) and (not any(p.match(new_item) for p in patterns)):
+                unmatched.append(new_item)
+
+        if unmatched:
+            print(f"\nManually handle - Key: {key}")
+            print(f"Old data: {json_old[key][flag]}")
+            print(f"New data: {unmatched}")
