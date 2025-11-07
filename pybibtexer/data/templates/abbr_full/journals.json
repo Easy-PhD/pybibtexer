@@ -13,7 +13,7 @@
     },
     "AANDA": {
         "names_abbr": ["Astron. Astrophys.", "Astron. Astrophys."],
-        "names_full": ["Astronomy & Astrophysics", "Astronomy \\& Astrophysics"]
+        "names_full": ["Astronomy & Astrophysics", "Astronomy \\\\& Astrophysics"]
     },
     "AAP": {
         "names_abbr": ["Adv. Appl. Probab."],
@@ -288,7 +288,7 @@
         "names_full": [
             "Complex & Intelligent Systems",
             "Complex and Intelligent Systems",
-            "Complex \\& Intelligent Systems"
+            "Complex \\\\& Intelligent Systems"
         ]
     },
     "CJIST": {
@@ -297,7 +297,7 @@
     },
     "CMA": {
         "names_abbr": ["Comput. Meth. Appl.", "Comput. Meth. Appl."],
-        "names_full": ["Computers & Mathematics with Applications", "Computers \\& Mathematics with Applications"]
+        "names_full": ["Computers & Mathematics with Applications", "Computers \\\\& Mathematics with Applications"]
     },
     "CMAME": {
         "names_abbr": ["Comput. Meth. Appl. Mech. Eng."],
@@ -336,7 +336,7 @@
         "names_full": [
             "Computers & Operations Research",
             "Computers and Operations Research",
-            "Computers \\& Operations Research"
+            "Computers \\\\& Operations Research"
         ]
     },
     "CPAC": {
@@ -356,7 +356,7 @@
         "names_full": [
             "Computational Statistics & Data Analysis",
             "Computational Statistics and Data Analysis",
-            "Computational Statistics \\& Data Analysis"
+            "Computational Statistics \\\\& Data Analysis"
         ]
     },
     "CSSC": {
@@ -408,7 +408,7 @@
         "names_full": [
             "Data & Knowledge Engineering",
             "Data and Knowledge Engineering",
-            "Data \\& Knowledge Engineering"
+            "Data \\\\& Knowledge Engineering"
         ]
     },
     "DMKD": {
@@ -1249,7 +1249,7 @@
     },
     "IEEE_M_DT": {
         "names_abbr": ["IEEE Des. Test"],
-        "names_full": ["IEEE Design \\&\\ Test"]
+        "names_full": ["IEEE Design \\\\&\\ Test"]
     },
     "IEEE_M_DTC": {
         "names_abbr": ["IEEE Des. Test. Comput."],
@@ -1413,7 +1413,7 @@
     },
     "IETMAP": {
         "names_abbr": ["IET Microw. Antennas Propag."],
-        "names_full": ["IET Microwaves Antennas \\& Propagation"]
+        "names_full": ["IET Microwaves Antennas \\\\& Propagation"]
     },
     "IJAA": {
         "names_abbr": ["INFORMS. J. Appl. Anal."],
@@ -1499,7 +1499,7 @@
         "names_abbr": ["Int. J. Inf. Tech. Decis.", "Int. J. Inf. Tech. Decis."],
         "names_full": [
             "International Journal of Information Technology & Decision Making",
-            "International Journal of Information Technology \\& Decision Making"
+            "International Journal of Information Technology \\\\& Decision Making"
         ]
     },
     "IJMIR": {
@@ -1606,7 +1606,7 @@
         "names_abbr": ["J. Algo. Comput. Technol.", "J. Algo. Comput. Technol."],
         "names_full": [
             "Journal of Algorithms & Computational Technology",
-            "Journal of Algorithms \\& Computational Technology"
+            "Journal of Algorithms \\\\& Computational Technology"
         ]
     },
     "JAIM": {
@@ -1650,7 +1650,7 @@
         "names_full": [
             "Journal of Business & Economic Statistics",
             "Journal of Business and Economic Statistics",
-            "Journal of Business \\& Economic Statistics"
+            "Journal of Business \\\\& Economic Statistics"
         ]
     },
     "JCC": {
@@ -1686,7 +1686,7 @@
         "names_full": [
             "Ethology Ecology And Evolution",
             "Ethology Ecology & Evolution",
-            "Ethology Ecology \\& Evolution"
+            "Ethology Ecology \\\\& Evolution"
         ]
     },
     "JETAI": {
@@ -1698,7 +1698,7 @@
         "names_full": [
             "Journal of Experimental and Theoretical Artificial Intelligence",
             "Journal of Experimental & Theoretical Artificial Intelligence",
-            "Journal of Experimental \\& Theoretical Artificial Intelligence"
+            "Journal of Experimental \\\\& Theoretical Artificial Intelligence"
         ]
     },
     "JGCD": {
@@ -1714,7 +1714,7 @@
         "names_full": [
             "Journal of Intelligent & Fuzzy Systems",
             "Journal of Intelligent and Fuzzy Systems",
-            "Journal of Intelligent \\& Fuzzy Systems"
+            "Journal of Intelligent \\\\& Fuzzy Systems"
         ]
     },
     "JIIS": {
@@ -1727,7 +1727,7 @@
     },
     "JIRS": {
         "names_abbr": ["J. Intell. Robot. Syst.", "J. Intell. Robot. Syst."],
-        "names_full": ["Journal of Intelligent & Robotic Systems", "Journal of Intelligent \\& Robotic Systems"]
+        "names_full": ["Journal of Intelligent & Robotic Systems", "Journal of Intelligent \\\\& Robotic Systems"]
     },
     "JLLI": {
         "names_abbr": ["J. Log. Lang. Inf."],
@@ -1883,7 +1883,7 @@
     },
     "MATDES": {
         "names_abbr": ["Mater. Des.", "Mater. Des.", "Mater. Des."],
-        "names_full": ["Materials & Design", "Materials and Design", "Materials \\& Design"]
+        "names_full": ["Materials & Design", "Materials and Design", "Materials \\\\& Design"]
     },
     "MATHM": {
         "names_abbr": ["Math. Model."],
@@ -1907,7 +1907,7 @@
     },
     "MCSE": {
         "names_abbr": ["Comput. Sci. Eng."],
-        "names_full": ["Computing in Science \\& Engineering"]
+        "names_full": ["Computing in Science \\\\& Engineering"]
     },
     "MECO": {
         "names_abbr": ["Memet. Comput."],
@@ -1954,7 +1954,7 @@
         "names_full": [
             "Multiscale Modeling & Simulation",
             "Multiscale Modeling and Simulation",
-            "Multiscale Modeling \\& Simulation"
+            "Multiscale Modeling \\\\& Simulation"
         ]
     },
     "MOOR": {
@@ -1974,7 +1974,7 @@
         "names_full": [
             "IEEE Robotics and Automation Magazine",
             "IEEE Robotics & Automation Magazine",
-            "IEEE Robotics \\& Automation Magazine"
+            "IEEE Robotics \\\\& Automation Magazine"
         ]
     },
     "MS": {
@@ -2004,9 +2004,9 @@
             "Manufacturing & Service Operations Management",
             "Manufacturing and Service Operations Management (M&SOM)",
             "Manufacturing and Service Operations Management",
-            "M&som-manufacturing \\& Service Operations Management",
-            "Manufacturing \\& Service Operations Management (M&SOM)",
-            "Manufacturing \\& Service Operations Management"
+            "M&som-manufacturing \\\\& Service Operations Management",
+            "Manufacturing \\\\& Service Operations Management (M&SOM)",
+            "Manufacturing \\\\& Service Operations Management"
         ]
     },
     "MSP": {
@@ -2031,7 +2031,7 @@
     },
     "NATEE": {
         "names_abbr": ["Nat. Ecol. Evol", "Nat. Ecol. Evol", "Nat. Ecol. Evol"],
-        "names_full": ["Nature Ecology & Evolution", "Nature Ecology and Evolution", "Nature Ecology \\& Evolution"]
+        "names_full": ["Nature Ecology & Evolution", "Nature Ecology and Evolution", "Nature Ecology \\\\& Evolution"]
     },
     "NATMI": {
         "names_abbr": ["Nat. Mach. Intell."],
@@ -2691,7 +2691,7 @@
         "names_full": [
             "Theory of Probability and Its Applications",
             "Theory of Probability & Its Applications",
-            "Theory of Probability \\& Its Applications"
+            "Theory of Probability \\\\& Its Applications"
         ]
     },
     "TVT": {
