@@ -57,6 +57,12 @@ def generate_cite_key_prefix_c_j(
         if abbr_match:
             return f"{prefix}_{abbr_match}"
 
+    # Third
+    cite_key = entry.entry_type
+    if cite_key.startswith("J_") or cite_key.startswith("C_"):
+        if (len(ll := cite_key.split("_")) == 3) and (ll[1] in abbr_patterns):
+            return f"{prefix}_{ll[1]}"
+
     return prefix
 
 
