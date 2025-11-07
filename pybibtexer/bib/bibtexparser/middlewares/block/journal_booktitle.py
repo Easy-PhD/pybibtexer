@@ -79,6 +79,7 @@ class AbbreviateJournalBooktitle(BlockMiddleware):
             for full, long_abbr in zip(full_name_list, long_abbr_name_list, strict=True):
                 if re.match(f"^{full}$", field_content, re.I):
                     content_list.append(long_abbr)
+                    break
 
         # check
         content_list = list(set(content_list))

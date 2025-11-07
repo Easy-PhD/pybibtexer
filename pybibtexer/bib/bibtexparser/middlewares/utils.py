@@ -52,6 +52,7 @@ def generate_cite_key_prefix_c_j(
     for abbr, p in abbr_patterns.items():
         if p.match(field_content):
             abbr_list.append(abbr)
+            break
 
     # check
     abbr_list = list(set(abbr_list))
