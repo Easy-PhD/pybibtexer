@@ -61,8 +61,8 @@ class BasicInput:
 
         # Merge dictionaries with precedence: merged (user + default) > special
         # Articles use journal abbreviations, inproceedings use conference abbreviations
-        full_abbr_article_dict = {**special_abbr_dict_c, **full_abbr_article_dict}
-        full_abbr_inproceedings_dict = {**special_abbr_dict_j, **full_abbr_inproceedings_dict}
+        full_abbr_article_dict = {**special_abbr_dict_j, **full_abbr_article_dict}
+        full_abbr_inproceedings_dict = {**special_abbr_dict_c, **full_abbr_inproceedings_dict}
 
         # Convert to strict ordered dictionaries to maintain consistent ordering
         full_abbr_article_dict = StrictOrderedDict(full_abbr_article_dict)

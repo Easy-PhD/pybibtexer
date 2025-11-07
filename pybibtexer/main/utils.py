@@ -64,6 +64,37 @@ class StrictOrderedDict:
         """
         return self._data[key]
 
+    def __contains__(self, key):
+        """Support key in dict syntax.
+
+        Args:
+            key: The key to check for existence.
+
+        Returns:
+            True if key exists in the dictionary, False otherwise.
+        """
+        return key in self._data
+
+    def __len__(self):
+        """Support len(dict) syntax.
+
+        Returns:
+            The number of items in the dictionary.
+        """
+        return len(self._data)
+
+    def get(self, key, default=None):
+        """Safely get a value by key, returning default if key doesn't exist.
+
+        Args:
+            key: The key to look up.
+            default: Value to return if key is not found. Defaults to None.
+
+        Returns:
+            The value associated with the key, or default if key doesn't exist.
+        """
+        return self._data.get(key, default)
+
     def keys(self):
         """Returns all keys in insertion order.
 
