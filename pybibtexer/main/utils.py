@@ -15,7 +15,7 @@ class StrictOrderedDict:
         _data: Dictionary storing the actual key-value pairs.
     """
 
-    def __init__(self, data=None):
+    def __init__(self, data: dict):
         """Initializes the StrictOrderedDict with optional initial data.
 
         Args:
@@ -31,7 +31,7 @@ class StrictOrderedDict:
         self._data = {}    # Stores the actual key-value mappings
 
         if data:
-            for k, v in data:
+            for k, v in data.items():
                 self[k] = v
 
     def __setitem__(self, key, value):

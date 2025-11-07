@@ -4,6 +4,9 @@ from typing import Any
 
 
 def load_json_file(file_path: str) -> dict[str, Any]:
+    if not file_path.strip():
+        return {}
+
     if not os.path.isfile(file_path):
         print(f"File not found: {file_path}")
         return {}
