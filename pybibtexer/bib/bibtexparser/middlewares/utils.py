@@ -38,29 +38,69 @@ def generate_cite_key_prefix_c_j(
     else:
         return ""
 
+    # Get field content for matching
     field_content = entry[field_key] if field_key in entry else ""
-
-    # 2024 IEEE congress on evolutionary computation (CEC)
-    # 2024 IEEE congress on evolutionary computation
-    field_content = re.sub(r"\(.*\)", "", field_content).strip()
-
     if not field_content:
         return prefix
 
-    # match
-    abbr_list = []
-    for abbr, p in abbr_patterns.items():
-        if p.match(field_content):
-            abbr_list.append(abbr)
+    # First matching attempt: exact lowercase match
+    abbr_match = _find_abbreviation_match(field_content, abbr_patterns)
+    if abbr_match:
+        return f"{prefix}_{abbr_match}"
+
+    # Second matching attempt: remove content in parentheses and try pattern match
+    # 2024 IEEE congress on evolutionary computation (CEC)
+    # 2024 IEEE congress on evolutionary computation
+    field_content_clean = re.sub(r"\(.*\)", "", field_content).strip()
+    if field_content_clean:
+        abbr_match = _find_pattern_match(field_content_clean, abbr_patterns)
+        if abbr_match:
+            return f"{prefix}_{abbr_match}"
+
+    return prefix
+
+
+def _find_abbreviation_match(content: str, patterns: dict[str, Any]) -> str:
+    """Find abbreviation match using exact lowercase comparison.
+
+    Args:
+        content: Field content to match.
+        patterns: Dictionary of abbreviation patterns.
+
+    Returns:
+        Matched abbreviation or empty string if no match.
+    """
+    content_lower = content.lower()
+    for abbr, pattern_data in patterns.items():
+        if content_lower in pattern_data["names"]:
+            return abbr
+    return ""
+
+
+def _find_pattern_match(content: str, patterns: dict[str, Any]) -> str:
+    """Find abbreviation match using regex pattern matching.
+
+    Args:
+        content: Field content to match.
+        patterns: Dictionary of abbreviation patterns.
+
+    Returns:
+        Matched abbreviation or empty string if no match.
+    """
+    matches = []
+    for abbr, pattern_data in patterns.items():
+        if pattern_data["pattern"].match(content):
+            matches.append(abbr)
             break
 
-    # check
-    abbr_list = list(set(abbr_list))
-    if len(abbr_list) > 1:
-        print(f"Multiple match: {abbr_list} for {field_content}.")
-    elif len(abbr_list) == 1:
-        prefix = prefix + "_" + abbr_list[0]
-    return prefix
+    # Handle multiple matches
+    if len(matches) > 1:
+        print(f"Multiple match: {matches} for {content}.")
+        return matches[0]  # Return first match
+    elif len(matches) == 1:
+        return matches[0]
+
+    return ""
 
 
 def generate_entry_abbr(entry_type: str) -> str:

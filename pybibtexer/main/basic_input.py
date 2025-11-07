@@ -115,7 +115,10 @@ class BasicInput:
                 all_names = [*full_names, *long_abbrs, abbr]
 
                 # Create pre-compiled regex pattern for exact matching
-                pattern_dict[abbr] = re.compile(rf'^({"|".join(all_names)})$', flags=re.I)
+                pattern_dict[abbr] = {
+                    "pattern": re.compile(rf'^({"|".join(all_names)})$', flags=re.I),
+                    "names": all_names
+                }
             return pattern_dict
 
         abbr_article_pattern_dict = _create_pattern_dict(full_abbr_article_dict)
