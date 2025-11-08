@@ -17,8 +17,6 @@ Classes:
         BibTeX files and returns standardized output with error reporting.
 """
 
-from typing import List, Tuple
-
 from .standardize.do_on_bib import ObtainMarkBlocksDict, SplitBibAccordingToMark
 from .standardize.do_on_comment_block import StandardizeCommentBlock
 from .standardize.do_on_entry_block import StandardizeEntryBlock
@@ -42,14 +40,14 @@ MARKS_FLAGS = [
 ]
 
 
-class StandardizeBib(object):
+class StandardizeBib:
     """Stanndardize bib.
 
     Args:
-        default_additional_field_list (list[str] = []): Additional default fields.
+        default_additional_field_list (list[str] | None = None): Additional default fields.
     """
 
-    def __init__(self, default_additional_field_list: list[str] = []) -> None:
+    def __init__(self, default_additional_field_list: list[str] | None = None) -> None:
         self._standardize_comment_block = StandardizeCommentBlock()
         self._standardize_entry_block = StandardizeEntryBlock(default_additional_field_list)
         self._standardize_preamble_block = StandardizePreambleBlock()

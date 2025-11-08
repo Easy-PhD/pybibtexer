@@ -9,7 +9,6 @@ Functions:
 """
 
 import re
-from typing import List
 
 
 def split_data_list(split_pattern: str, data_list: list[str], last_next: str = "next") -> list[str]:

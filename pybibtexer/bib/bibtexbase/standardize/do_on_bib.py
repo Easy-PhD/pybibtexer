@@ -12,12 +12,11 @@ Classes:
 """
 
 import re
-from typing import Dict, List, Tuple
 
 from ._base import split_data_list
 
 
-class SplitBibAccordingToMark(object):
+class SplitBibAccordingToMark:
     def __init__(self) -> None:
         super().__init__()
 
@@ -25,7 +24,7 @@ class SplitBibAccordingToMark(object):
         return split_data_list(r"(@[a-zA-Z]+{)", data_list, "next")
 
 
-class ObtainMarkBlocksDict(object):
+class ObtainMarkBlocksDict:
     def __init__(self) -> None:
         pass
 

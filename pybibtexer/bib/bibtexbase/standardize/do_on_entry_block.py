@@ -21,23 +21,25 @@ Functions:
 """
 
 import re
-from typing import Dict, List, Tuple
 
 from ._base import split_data_list
 from .default_data import DEFAULT_FIELDS_LIST, FIELD_FORMAT_FLAG
 
 
-class StandardizeEntryBlock(object):
+class StandardizeEntryBlock:
     """Stanndardize entry block.
 
     Args:
-        default_additional_field_list (list[str] = []): Additional default fields.
+        default_additional_field_list (list[str] | None = None): Additional default fields.
 
     Attributes:
         default_fields_list (list[str]): Default fields.
     """
 
-    def __init__(self, default_additional_field_list: list[str] = []) -> None:
+    def __init__(self, default_additional_field_list: list[str] | None = None) -> None:
+        if default_additional_field_list is None:
+            default_additional_field_list = []
+
         default_fields_old = [d.lower().strip() for d in DEFAULT_FIELDS_LIST]
         default_fields_new = [d.lower().strip() for d in default_additional_field_list]
         self.default_fields_list = list(set(default_fields_old).union(set(default_fields_new)))
@@ -90,7 +92,7 @@ class StandardizeEntryBlock(object):
         return block, implicit_comments
 
 
-class EntryBase(object):
+class EntryBase:
     def __init__(self) -> None:
         pass
 
@@ -112,13 +114,13 @@ class EntryBase(object):
             re.compile(r'\bpages*\s*=\s*([{"])', flags=re.I),
             re.compile(r'\burls*\s*=\s*([{"])', flags=re.I),
         ]
-        flag_list_list = [sorted(list(set(regex.findall(content)))) for regex in regex_list]
+        flag_list_list = [sorted(set(regex.findall(content))) for regex in regex_list]
 
         flag_list_list = [f for f in flag_list_list if len(f) != 0]
         len_list = [len(f) for f in flag_list_list]
 
         # 0 or 1 or 2 flags
-        if (len(len_list) == 0) or (2 in len_list) or (not all([f == flag_list_list[0] for f in flag_list_list])):
+        if (len(len_list) == 0) or (2 in len_list) or (not all(f == flag_list_list[0] for f in flag_list_list)):
             return "", ""
 
         if flag_list_list[0][0] == "{":
@@ -144,7 +146,7 @@ class EntryBase(object):
         return sorted(obtain_field_list)
 
 
-class SplitEntry(object):
+class SplitEntry:
     def __init__(self) -> None:
         super().__init__()
 
@@ -152,7 +154,7 @@ class SplitEntry(object):
         return split_data_list(field_pattern, block, last_next)
 
 
-class AppendEntry(object):
+class AppendEntry:
     """Append Patch Bib."""
 
     def __init__(self) -> None:
@@ -198,7 +200,7 @@ class AppendEntry(object):
         return new_block
 
 
-class ExtractEntry(object):
+class ExtractEntry:
     def __init__(self) -> None:
         pass
 
@@ -292,7 +294,7 @@ def add_brace_or_quote(pre, post, line: str):
     return line
 
 
-class CheckEntry(object):
+class CheckEntry:
     @staticmethod
     def check(
         field_list: list[str], brace_or_quote: tuple[str, str], block: list[str]

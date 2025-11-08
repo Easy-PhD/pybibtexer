@@ -10,10 +10,9 @@ Classes:
 """
 
 import re
-from typing import List, Tuple
 
 
-class StandardizePreambleBlock(object):
+class StandardizePreambleBlock:
     """Stanndardize preamble block."""
 
     def __init__(self) -> None:

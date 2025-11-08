@@ -10,10 +10,9 @@ Classes:
 """
 
 import re
-from typing import List, Tuple
 
 
-class StandardizeStringBlock(object):
+class StandardizeStringBlock:
     """Stanndardize string block."""
 
     def __init__(self) -> None:
