@@ -13,7 +13,7 @@ def load_json_file(file_path: str) -> dict[str, Any]:
 
     try:
         # Open and read the JSON file
-        with open(file_path, encoding='utf-8') as file:
+        with open(file_path, encoding="utf-8", newline="\n") as file:
             return json.load(file)
 
     except Exception as e:
@@ -24,7 +24,7 @@ def load_json_file(file_path: str) -> dict[str, Any]:
 def save_to_json(data: dict, full_json: str) -> None:
     try:
         if data:
-            with open(full_json, "w", encoding="utf-8") as f:
+            with open(full_json, "w", encoding="utf-8", newline="\n") as f:
                 json.dump(data, f, indent=4, sort_keys=True, ensure_ascii=True)
 
     except Exception as e:

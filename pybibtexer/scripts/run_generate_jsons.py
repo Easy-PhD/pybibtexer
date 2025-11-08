@@ -77,7 +77,7 @@ class GenerateDefaultJSONs:
         Returns:
             Content of the file as string.
         """
-        with open(full_file, encoding="utf-8") as file:
+        with open(full_file, encoding="utf-8", newline="\n") as file:
             content = file.read()
         return content
 
