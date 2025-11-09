@@ -167,7 +167,7 @@ class AppendEntry:
         Args:
             field_list (list[str]): Append field list.
             braces_or_quotes (tuple[str, str]): Brace or quote.
-            data_list (list[str]): Data list.
+            block (list[str]): Data list.
 
         Returns:
             list[str]: new patch bib after appending.
