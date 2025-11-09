@@ -14,10 +14,11 @@ class NormalizePagesInEntry(BlockMiddleware):
         if "pages" in entry:
             # 5-10-5-10 -> 5--10
             page_list = []
-            for page in entry["pages"].split("-"):  # English hyphen
-                for p in page.strip().split("—"):  # Chinese hyphen
-                    if p.strip():
-                        page_list.append(p.strip())
+            for page in entry["pages"].split("-"):  # Hyphen U+002D -
+                for p in page.strip().split("—"):  # Hyphen U+2014 —
+                    for pp in p.strip().split("–"):  # Hyphen U+2013 –
+                        if pp.strip():
+                            page_list.append(pp.strip())
 
             page_list = sorted(set(page_list), key=page_list.index)
             entry["pages"] = "--".join(page_list)
