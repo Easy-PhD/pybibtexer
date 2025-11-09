@@ -92,8 +92,11 @@ class BasicInput:
 
     @staticmethod
     def abbr_article_inproceedings_pattern(
-        full_abbr_article_dict, full_abbr_inproceedings_dict, full_names_in_json, abbr_names_in_json
-    ):
+        full_abbr_article_dict: StrictOrderedDict,
+        full_abbr_inproceedings_dict: StrictOrderedDict,
+        full_names_in_json: str,
+        abbr_names_in_json: str,
+    ) -> tuple[dict[str, dict[str, Any]], dict[str, dict[str, dict[str, Any]]]]:
         """Pre-compile regex patterns for journal and conference name matching.
 
         Args:
@@ -106,7 +109,7 @@ class BasicInput:
             Tuple of two dictionaries containing pre-compiled regex patterns for journals and conferences
         """
 
-        def _create_pattern_dict(abbr_dict):
+        def _create_pattern_dict(abbr_dict: StrictOrderedDict) -> dict[str, dict[str, Any]]:
             """Helper function to create pattern dictionary for a given abbreviation dictionary."""
             pattern_dict = {}
             for abbr, abbr_info in abbr_dict.items():
