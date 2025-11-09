@@ -21,8 +21,6 @@ def replace_to_standard_cite_keys(
         full_bib: Path to BibTeX file with reference entries
         path_output: Output directory for processed files
         options: Configuration options for key generation
-        full_json_c: Conference metadata
-        full_json_j: Journal metadata
 
     Returns:
         list[str]: Lines of processed text content with updated citation keys
