@@ -2,6 +2,7 @@
 # Ignored files
 .DS_Store
 poetry.lock
+uv.lock
 
 *.sublime-workspace
 *.code-workspace
