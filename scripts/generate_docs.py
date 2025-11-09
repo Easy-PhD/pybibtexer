@@ -5,7 +5,7 @@ from typing import Any
 class DocGenerator:
     """Documentation generator class."""
 
-    def __init__(self, package_name: str, source_dir: str, docs_dir: str = "docs"):
+    def __init__(self, package_name: str, source_dir: str, docs_dir: str = "docs") -> None:
         self.package_name = package_name
         self.source_dir = Path(source_dir)
         self.docs_dir = Path(docs_dir)

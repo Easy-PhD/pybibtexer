@@ -1,4 +1,5 @@
 import re
+from typing import Any
 
 from ..utils.utils import load_json_file
 
@@ -15,7 +16,7 @@ class StrictOrderedDict:
         _data: Dictionary storing the actual key-value pairs.
     """
 
-    def __init__(self, data: dict):
+    def __init__(self, data: dict) -> None:
         """Initializes the StrictOrderedDict with optional initial data.
 
         Args:
@@ -34,7 +35,7 @@ class StrictOrderedDict:
             for k, v in data.items():
                 self[k] = v
 
-    def __setitem__(self, key, value):
+    def __setitem__(self, key: str, value: Any) -> None:
         """Sets a key-value pair, maintaining insertion order for new keys.
 
         Args:
@@ -50,7 +51,7 @@ class StrictOrderedDict:
 
         self._data[key] = value
 
-    def __getitem__(self, key):
+    def __getitem__(self, key: str) -> Any:
         """Retrieves the value associated with the given key.
 
         Args:
@@ -64,7 +65,7 @@ class StrictOrderedDict:
         """
         return self._data[key]
 
-    def __contains__(self, key):
+    def __contains__(self, key: str) -> bool:
         """Support key in dict syntax.
 
         Args:
@@ -75,7 +76,7 @@ class StrictOrderedDict:
         """
         return key in self._data
 
-    def __len__(self):
+    def __len__(self) -> int:
         """Support len(dict) syntax.
 
         Returns:
@@ -83,7 +84,7 @@ class StrictOrderedDict:
         """
         return len(self._data)
 
-    def get(self, key, default=None):
+    def get(self, key: str, default=None) -> Any:
         """Safely get a value by key, returning default if key doesn't exist.
 
         Args:
@@ -95,7 +96,7 @@ class StrictOrderedDict:
         """
         return self._data.get(key, default)
 
-    def keys(self):
+    def keys(self) -> list[str]:
         """Returns all keys in insertion order.
 
         Returns:
@@ -103,7 +104,7 @@ class StrictOrderedDict:
         """
         return self._keys.copy()
 
-    def values(self):
+    def values(self) -> list[Any]:
         """Returns all values in key insertion order.
 
         Returns:
@@ -111,7 +112,7 @@ class StrictOrderedDict:
         """
         return [self._data[k] for k in self._keys]
 
-    def items(self):
+    def items(self) -> list[tuple[str, Any]]:
         """Returns all key-value pairs in insertion order.
 
         Returns:
@@ -119,7 +120,7 @@ class StrictOrderedDict:
         """
         return [(k, self._data[k]) for k in self._keys]
 
-    def __repr__(self):
+    def __repr__(self) -> str:
         """Returns a string representation of the dictionary.
 
         Returns:

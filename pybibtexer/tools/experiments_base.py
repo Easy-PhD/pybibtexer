@@ -85,7 +85,7 @@ def generate_standard_publisher_abbr_options_dict(
     return publisher_abbr_options_dict
 
 
-def in_not_in_list(original: list[str], in_list: list[str], out_list: list[str]):
+def in_not_in_list(original: list[str], in_list: list[str], out_list: list[str]) -> list[str]:
     """Filters a list based on inclusion and exclusion criteria.
 
     Args:

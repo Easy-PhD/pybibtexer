@@ -69,7 +69,6 @@ class PythonWriters(BasicInput):
 
         Args:
             library (Library | list[Block]): BibTeX database to serialize.
-            bibtex_format (Optional[BibtexFormat] = None):
 
         """
         return ConvertLibrayToStr(self.options).generate_str(library, self._bibtex_format)
@@ -98,7 +97,6 @@ class PythonWriters(BasicInput):
             delete_last_empty (bool = True): delete last empty
             compulsory (bool = False): compulsory
             delete_original_file (bool = False): delete original file
-            bibtex_format (Optional[BibtexFormat] = None):
 
         """
         _options = {}
