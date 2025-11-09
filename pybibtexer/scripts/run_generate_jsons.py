@@ -81,7 +81,7 @@ class GenerateDefaultJSONs:
             content = file.read()
         return content
 
-    def parse_bibtex_file(self, full_biblatex: str, entry_type: str = "article"):
+    def parse_bibtex_file(self, full_biblatex: str, entry_type: str = "article") -> dict[str, dict[str, list[str]]]:
         """Parse BibTeX file and extract conference or journal data.
 
         Args:

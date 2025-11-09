@@ -84,7 +84,7 @@ class StrictOrderedDict:
         """
         return len(self._data)
 
-    def get(self, key: str, default=None) -> Any:
+    def get(self, key: str, default: Any = None) -> Any:
         """Safely get a value by key, returning default if key doesn't exist.
 
         Args:
