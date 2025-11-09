@@ -17,8 +17,6 @@
     ],
     "settings": {},
     "folders": [
-        {
-            "path": ".",
-        },
+        { "path": "." },
     ],
 }
