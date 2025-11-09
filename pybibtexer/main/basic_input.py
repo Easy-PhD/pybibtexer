@@ -14,8 +14,6 @@ class BasicInput:
     """Basic input.
 
     Args:
-        full_json_c (str): The conference json file
-        full_json_j (str): The journal json file
         options (dict[str, Any]): Options.
 
     Attributes:
@@ -27,6 +25,10 @@ class BasicInput:
         abbr_inproceedings_pattern_dict (dict): Pre-compiled regex patterns for conference name matching
 
         options (dict[str, Any]): Options.
+
+    Notes:
+        full_json_c (str): User-provided JSON file containing conference data.
+        full_json_j (str): User-provided JSON file containing journal data.
 
     """
 
