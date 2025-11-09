@@ -33,7 +33,8 @@ class DocGenerator:
     def get_module_info(self, module_path: Path) -> dict[str, Any]:
         # Calculate relative import path
         relative_path = module_path.relative_to(self.source_dir)
-        module_name = str(relative_path).replace("/", ".").replace("\\", ".").replace(".py", "")
+        module_name = str(relative_path).replace("/", ".").replace("\\", ".")
+        module_name = module_name[:-3]  # replace(".py", "")
 
         return {
             "path": module_path,
