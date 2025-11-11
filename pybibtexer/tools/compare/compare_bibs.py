@@ -117,7 +117,7 @@ def generate_abbr_key_entry_dict(library: Library, options: dict[str, Any]):
 
                 # misc (arXiv, bioRxiv, and ssrn)
                 elif (len(temps) == 2) and temps[0].lower() in ARXIV_BIORXIV:
-                    abbr_key_entries_dict.setdefault(temps[0], {}).update({entry.key: entry})
+                    abbr_key_entries_dict.setdefault("arXiv", {}).update({entry.key: entry})
                     flag = True
 
         if not flag:
