@@ -40,7 +40,7 @@ class DocGenerator:
             "path": module_path,
             "name": module_name,
             "import_path": f"{self.package_name}.{module_name}",
-            "doc_path": self.api_dir / f"{module_name}.md"
+            "doc_path": self.api_dir / f"{module_name}.md",
         }
 
     def generate_module_doc(self, module_info: dict[str, Any]) -> str:
@@ -57,7 +57,7 @@ class DocGenerator:
             "      heading_level: 2",
             "      show_source: true",
             "      show_category_heading: true",
-            ""
+            "",
         ]
 
         return "\n".join(content)
@@ -72,7 +72,7 @@ class DocGenerator:
             f"This is the complete API reference documentation for the {self.package_name} library.",
             "",
             "## Module List",
-            ""
+            "",
         ]
 
         # Group modules by directory

@@ -37,9 +37,7 @@ class AbbreviateJournalBooktitle(BlockMiddleware):
         if entry.entry_type.lower() not in ["article", "inproceedings"]:
             return entry
 
-        prefix = generate_cite_key_prefix(
-            entry, self.abbr_article_pattern_dict, self.abbr_inproceedings_pattern_dict
-        )
+        prefix = generate_cite_key_prefix(entry, self.abbr_article_pattern_dict, self.abbr_inproceedings_pattern_dict)
         abbr = prefix.replace("J_", "").replace("C_", "")
         return self.abbreviate_journal_booktitle(entry, abbr)
 

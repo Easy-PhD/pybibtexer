@@ -34,7 +34,7 @@ class SortBlocksByTypeAndUserSortKeyMiddleware(LibraryMiddleware):
     def _verify_all_types_are_block_types(sort_order):
         for t in sort_order:
             if not issubclass(t, Block):
-                raise ValueError("Sort order must only contain Block subclasses, " f"but got {t}")
+                raise ValueError(f"Sort order must only contain Block subclasses, but got {t}")
 
     # docstr-coverage: inherited
     def transform(self, library: Library) -> Library:

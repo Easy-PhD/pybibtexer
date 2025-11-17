@@ -187,7 +187,6 @@ class PythonWriters(BasicInput):
         key_url_http_bib_dict: dict[str, list[list[str]]] = {}
 
         for key, entry in library.entries_dict.items():
-
             url, link_list = self._generate_link_list(entry)
             patch_bib = ConvertLibrayToStr(_options).generate_str([entry])
 

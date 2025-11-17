@@ -77,7 +77,6 @@ def format_bib_to_save_mode_by_entry_type(
 
     # Process each entry type separately.
     for entry_type in entry_type_year_volume_number_month_entry_dict:
-
         # Filter years if specified.
         year_dict = entry_type_year_volume_number_month_entry_dict[entry_type]
         year_list = sort_int_str(list(year_dict.keys()))
@@ -88,7 +87,6 @@ def format_bib_to_save_mode_by_entry_type(
         # Save bibliography files grouped by years.
         path_write = os.path.join(path_output, entry_type.lower(), "bib")
         for i in range(math.ceil(len(year_list) / combine_year_length)):
-
             # Determine year range for this file.
             start_year_index = i * combine_year_length
             end_year_index = min([(i + 1) * combine_year_length, len(year_list)])

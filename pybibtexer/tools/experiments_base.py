@@ -73,7 +73,6 @@ def generate_standard_publisher_abbr_options_dict(
     # Build the nested options dictionary structure.
     publisher_abbr_options_dict: dict[str, dict[str, dict[str, Any]]] = {}
     for publisher in sort_int_str(publisher_list):
-
         # Apply inclusion/exclusion filters to abbreviations.
         abbr_list = in_not_in_list(
             publisher_abbr_dict[publisher], options.get("include_abbr_list", []), options.get("exclude_abbr_list", [])
@@ -159,7 +158,6 @@ def generate_readme(
         for volume in year_volume_number_month_entry_dict[year]:
             for number in year_volume_number_month_entry_dict[year][volume]:
                 for month in year_volume_number_month_entry_dict[year][volume][number]:
-
                     # Generate filename components.
                     file_name = ""
                     for i, j in zip(["", "Vol.", "No.", "Month"], [j_conf_abbr, volume, number, month], strict=True):
@@ -172,7 +170,7 @@ def generate_readme(
                     j_b = extract_journal_booktitle(temp, field_key)
 
                     # Add table row.
-                    readme.append(f'|{file_name[:-1]}|{year}|{number_paper}|{"; ".join(j_b)}|' + "\n")
+                    readme.append(f"|{file_name[:-1]}|{year}|{number_paper}|{'; '.join(j_b)}|" + "\n")
 
     # Only return content if we have more than just the header.
     if len(readme) > 3:

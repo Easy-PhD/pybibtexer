@@ -76,7 +76,8 @@ class BasicInput:
 
         # Pre-compile regex patterns for efficient text matching
         abbr_article_pattern_dict, abbr_inproceedings_pattern_dict = self.abbr_article_inproceedings_pattern(
-            full_abbr_article_dict, full_abbr_inproceedings_dict, full_names_in_json, abbr_names_in_json)
+            full_abbr_article_dict, full_abbr_inproceedings_dict, full_names_in_json, abbr_names_in_json
+        )
 
         # Convert pattern dictionaries to strict ordered dictionaries
         abbr_article_pattern_dict = StrictOrderedDict(abbr_article_pattern_dict)
@@ -123,8 +124,8 @@ class BasicInput:
 
                 # Create pre-compiled regex pattern for exact matching
                 pattern_dict[abbr] = {
-                    "pattern": re.compile(rf'^({"|".join(all_names)})$', flags=re.I),
-                    "names": all_names
+                    "pattern": re.compile(rf"^({'|'.join(all_names)})$", flags=re.I),
+                    "names": all_names,
                 }
             return pattern_dict
 

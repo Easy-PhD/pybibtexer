@@ -35,7 +35,6 @@ class ConvertLibrayToStr:
     """
 
     def __init__(self, options: dict[str, Any]):
-
         self.is_standardize_library = options.get("is_standardize_library", False)
         self.empty_entry_cite_keys = options.get("empty_entry_cite_keys", False)
         self.add_index_to_entries = options.get("add_index_to_entries", False)
@@ -43,9 +42,7 @@ class ConvertLibrayToStr:
 
         self.options = options
 
-    def generate_str(
-        self, library: Library | list[Block], bibtex_format: BibtexFormat | None = None
-    ) -> list[str]:
+    def generate_str(self, library: Library | list[Block], bibtex_format: BibtexFormat | None = None) -> list[str]:
         """Serialize a BibTeX database.
 
         :param library: BibTeX database to serialize.
@@ -99,7 +96,7 @@ class ConvertLibrayToStr:
         max_key_len = 0
         for entry in library.entries:
             for key in entry.fields_dict:
-               max_key_len = max(max_key_len, len(key))
+                max_key_len = max(max_key_len, len(key))
         return max_key_len
 
     def _treat_block(self, bibtex_format, block) -> list[str]:

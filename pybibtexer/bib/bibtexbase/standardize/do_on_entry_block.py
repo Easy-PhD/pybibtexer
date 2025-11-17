@@ -140,7 +140,7 @@ class EntryBase:
         Returns:
             list[str]: field list.
         """
-        regex = re.compile(rf'({field_pattern})\s*=\s*(?:{"|".join(FIELD_FORMAT_FLAG)})')  # support for abbreviation
+        regex = re.compile(rf"({field_pattern})\s*=\s*(?:{'|'.join(FIELD_FORMAT_FLAG)})")  # support for abbreviation
         obtain_field_list = list(set(regex.findall("".join(block))))
         obtain_field_list = [field for field in obtain_field_list if field.lower() in default_fields_list]
         return sorted(obtain_field_list)
@@ -174,7 +174,7 @@ class AppendEntry:
         """
         pre, _ = braces_or_quotes
 
-        temp = rf'[%\s]*(?:{"|".join(field_list)})'
+        temp = rf"[%\s]*(?:{'|'.join(field_list)})"
         regex_field = re.compile(rf"{temp}\s*=\s*{pre}", flags=re.I)
         regex_field_abbr = re.compile(rf"{temp}\s*=\s*\w+[\w\-]*", flags=re.I)  # journal = EJC,
         regex_termination = re.compile(r"\s*@[a-zA-Z]*{", flags=re.I)
@@ -219,7 +219,7 @@ class ExtractEntry:
         """
         pre, post = brace_or_quote
 
-        temp = rf'[%\s]*(?:{"|".join(field_list)})'
+        temp = rf"[%\s]*(?:{'|'.join(field_list)})"
         regex_field_two = re.compile(rf"({temp}\s*=\s*{pre})(.*)(\n*)", flags=re.I)
         regex_field_one = re.compile(rf"({temp}\s*=\s*{pre}.*{post})(.*)(\n*)", flags=re.I)
         regex_field_abbr = re.compile(rf"({temp}\s*=\s*\w+[\w\-]*)(.*)(\n*)", flags=re.I)
@@ -303,7 +303,7 @@ class CheckEntry:
         pre, post = brace_or_quote
 
         regex_entry = re.compile(r"\s*@[a-zA-Z]+{")
-        regex_field = re.compile(rf'\s*(?:{"|".join(field_list)})' + r"\s*=")
+        regex_field = re.compile(rf"\s*(?:{'|'.join(field_list)})" + r"\s*=")
         entry_flag, brace_flag = False, False  # minimal conditions
         error_dict: dict[str, list[str]] = {}
         new_block = []

@@ -124,9 +124,9 @@ class Library:
             f"Please report this issue at the bibtexparser issue tracker.",
         )
 
-        assert (
-            prev_block_with_same_key.key == duplicate.key
-        ), "Internal BibtexParser Error. Duplicate blocks have different keys."
+        assert prev_block_with_same_key.key == duplicate.key, (
+            "Internal BibtexParser Error. Duplicate blocks have different keys."
+        )
 
         return DuplicateBlockKeyBlock(
             start_line=duplicate.start_line,

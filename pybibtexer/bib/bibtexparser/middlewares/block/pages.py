@@ -25,5 +25,5 @@ class NormalizePagesInEntry(BlockMiddleware):
         else:
             # pages = {12:1--37}
             if "articleno" in entry and "numpages" in entry:
-                entry["pages"] = f'{entry["articleno"]}:1--{entry["numpages"]}'
+                entry["pages"] = f"{entry['articleno']}:1--{entry['numpages']}"
         return entry

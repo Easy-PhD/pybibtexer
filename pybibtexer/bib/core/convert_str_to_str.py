@@ -15,7 +15,6 @@ class ConvertStrToStr:
     """
 
     def __init__(self, options: dict[str, Any] = {}) -> None:
-
         self.default_additional_field_list = options.get("default_additional_field_list", [])
 
         self.options = options

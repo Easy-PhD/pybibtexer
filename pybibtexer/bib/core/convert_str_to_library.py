@@ -15,7 +15,6 @@ class ConvertStrToLibrary:
     """
 
     def __init__(self, options: dict[str, Any] = {}) -> None:
-
         self.is_standardize_bib = options.get("is_standardize_bib", True)
 
         self.options = options

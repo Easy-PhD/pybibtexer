@@ -23,7 +23,9 @@ class AddArchive(BlockMiddleware):
     # docstr-coverage: inherited
     def transform_entry(self, entry: Entry, library: Library) -> Block:
         entry["archive"] = generate_cite_key_prefix(
-            entry, self.abbr_article_pattern_dict, self.abbr_inproceedings_pattern_dict,
+            entry,
+            self.abbr_article_pattern_dict,
+            self.abbr_inproceedings_pattern_dict,
         )
         return entry
 
@@ -52,9 +54,7 @@ class AddJournalLongAbbr(BlockMiddleware):
         if entry.entry_type.lower() != "article":
             return entry
 
-        prefix = generate_cite_key_prefix(
-            entry, self.abbr_article_pattern_dict, self.abbr_inproceedings_pattern_dict
-        )
+        prefix = generate_cite_key_prefix(entry, self.abbr_article_pattern_dict, self.abbr_inproceedings_pattern_dict)
         abbr = prefix.replace("J_", "")
         return self.generate_journal_booktitle_long_abbr(entry, abbr)
 

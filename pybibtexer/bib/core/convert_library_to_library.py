@@ -14,7 +14,6 @@ class ConvertLibrayToLibrary:
     """
 
     def __init__(self, options: dict[str, Any] = {}) -> None:
-
         self.choose_abbr_zotero_save = options.get("choose_abbr_zotero_save", "save")
 
         self._middleware_library_library = MiddlewaresLibraryToLibrary(options)

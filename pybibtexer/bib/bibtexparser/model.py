@@ -101,7 +101,7 @@ class String(Block):
         return f"String (line: {self.start_line}, key: `{self.key}`): `{self.value}`"
 
     def __repr__(self) -> str:
-        return f"String(key=`{self.key}`, value=`{self.value}`, " f"start_line={self.start_line}, raw=`{self.raw}`)"
+        return f"String(key=`{self.key}`, value=`{self.value}`, start_line={self.start_line}, raw=`{self.raw}`)"
 
 
 class Preamble(Block):
@@ -124,7 +124,7 @@ class Preamble(Block):
         return f"Preamble (line: {self.start_line}): `{self.value}`"
 
     def __repr__(self) -> str:
-        return f"Preamble(value=`{self.value}`, " f"start_line={self.start_line}, raw=`{self.raw}`)"
+        return f"Preamble(value=`{self.value}`, start_line={self.start_line}, raw=`{self.raw}`)"
 
 
 class ExplicitComment(Block):
@@ -147,7 +147,7 @@ class ExplicitComment(Block):
         return f"ExplicitComment (line: {self.start_line}): `{self.comment}`"
 
     def __repr__(self) -> str:
-        return f"ExplicitComment(comment=`{self.comment}`, " f"start_line={self.start_line}, raw=`{self.raw}`)"
+        return f"ExplicitComment(comment=`{self.comment}`, start_line={self.start_line}, raw=`{self.raw}`)"
 
 
 class ImplicitComment(Block):
@@ -170,7 +170,7 @@ class ImplicitComment(Block):
         return f"ImplicitComment (line: {self.start_line}): `{self.comment}`"
 
     def __repr__(self) -> str:
-        return f"ImplicitComment(comment=`{self.comment}`, " f"start_line={self.start_line}, raw=`{self.raw}`)"
+        return f"ImplicitComment(comment=`{self.comment}`, start_line={self.start_line}, raw=`{self.raw}`)"
 
 
 class Field:
@@ -214,7 +214,7 @@ class Field:
         return f"Field (line: {self.start_line}, key: `{self.key}`): `{self.value}`"
 
     def __repr__(self) -> str:
-        return f"Field(key=`{self.key}`, value=`{self.value}`, " f"start_line={self.start_line})"
+        return f"Field(key=`{self.key}`, value=`{self.value}`, start_line={self.start_line})"
 
 
 class Entry(Block):

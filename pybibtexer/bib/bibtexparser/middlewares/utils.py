@@ -6,7 +6,9 @@ from ..model import Entry
 
 
 def generate_cite_key_prefix(
-    entry: Entry, abbr_article_pattern_dict: dict[str, Any], abbr_inporceedings_pattern_dict: dict[str, Any],
+    entry: Entry,
+    abbr_article_pattern_dict: dict[str, Any],
+    abbr_inporceedings_pattern_dict: dict[str, Any],
 ) -> str:
     prefix = generate_entry_abbr(entry.entry_type)
 
@@ -25,7 +27,9 @@ def generate_cite_key_prefix(
 
 
 def generate_cite_key_prefix_c_j(
-    entry: Entry, abbr_article_pattern_dict: dict[str, Any], abbr_inporceedings_pattern_dict: dict[str, Any],
+    entry: Entry,
+    abbr_article_pattern_dict: dict[str, Any],
+    abbr_inporceedings_pattern_dict: dict[str, Any],
 ) -> str:
     if entry.entry_type.lower() == "article":
         abbr_patterns = abbr_article_pattern_dict

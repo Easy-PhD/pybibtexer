@@ -108,7 +108,6 @@ def generate_abbr_key_entry_dict(library: Library, options: dict[str, Any]):
         if ("title" in entry) and (entry["title"].strip()) and ("year" in entry) and (entry["year"].strip()):
             temp_library = _python_bib.parse_to_single_standard_library(copy.deepcopy(Library([entry])))
             if len(entries := temp_library.entries) == 1:
-
                 # article and inproceedings
                 temps = entries[0].key.split("_")
                 if (len(temps) == 3) and temps[0].lower() in ["j", "c"]:
@@ -134,7 +133,6 @@ def _compare_with_local(
     # compare with local bibs
     searched_entries, not_searched_entries, duplicate_original_entries, duplicate_searched_entries = [], [], [], []
     for abbr, old_key_entries_dict in abbr_key_entries_dict.items():
-
         options_ = {}
         options_.update(options)
         if abbr.lower() not in ARXIV_BIORXIV:
