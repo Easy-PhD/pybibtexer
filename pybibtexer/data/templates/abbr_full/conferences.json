@@ -119,8 +119,14 @@
         "names_full": [".*Proceedings of the.*Conference on Robot Learning.*"]
     },
     "DOCS": {
-        "names_abbr": ["2022 4th International Conference on Data-Driven Optimization of Complex Systems"],
-        "names_full": ["2022 4th International Conference on Data-Driven Optimization of Complex Systems"]
+        "names_abbr": [
+            "Proc. Int. Conf. Data-Driven Optim. Complex Syst.",
+            "Proc. Int. Conf. Data-Driven Optim. Complex Syst."
+        ],
+        "names_full": [
+            "2022 4th International Conference on Data-Driven Optimization of Complex Systems",
+            "2024 6th international conference on data-driven optimization of complex systems"
+        ]
     },
     "EAIS": {
         "names_abbr": ["Proc. IEEE Int Conf. Evol. Adapt. Intell. Syst."],

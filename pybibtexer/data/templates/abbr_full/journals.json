@@ -275,6 +275,10 @@
         "names_abbr": ["Cogn. Comput."],
         "names_full": ["Cognitive Computation"]
     },
+    "CEE": {
+        "names_abbr": ["Comput. Elec. Eng."],
+        "names_full": ["Computers \\& Electrical Engineering"]
+    },
     "CHRE": {
         "names_abbr": ["Chem. Rev."],
         "names_full": ["Chemical Reviews"]
@@ -2348,6 +2352,10 @@
     "SPA": {
         "names_abbr": ["Stoch. Proc. Appl."],
         "names_full": ["Stochastic Processes and their Applications"]
+    },
+    "SPL": {
+        "names_abbr": ["Stat. Probab. Lett.", "Stat. Probab. Lett."],
+        "names_full": ["Statistics and Probability Letters", "Statistics & Probability Letters"]
     },
     "SREP": {
         "names_abbr": ["Sci. Rep."],
