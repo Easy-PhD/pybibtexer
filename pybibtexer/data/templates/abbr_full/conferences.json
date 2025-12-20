@@ -236,8 +236,11 @@
         ]
     },
     "FOGA": {
-        "names_abbr": ["Proc. ACM/SIGEVO Conf. Found. Genet. Algo."],
-        "names_full": [".*ACM/SIGEVO Conference on Foundations of Genetic Algorithms"]
+        "names_abbr": ["Proc. ACM/SIGEVO Conf. Found. Genet. Algo.", "Proc. ACM Conf. Found. Genet. Algo."],
+        "names_full": [
+            ".*ACM/SIGEVO Conference on Foundations of Genetic Algorithms",
+            ".*ACM Conference on Foundations of Genetic Algorithms.*"
+        ]
     },
     "FSKD": {
         "names_abbr": [
