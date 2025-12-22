@@ -19,6 +19,7 @@ from .middlewares.block.pages import NormalizePagesInEntry
 from .middlewares.block.title import NormalizeTitleInEntry
 from .middlewares.library.generating_entrykeys import GenerateEntriesCiteKey
 from .middlewares.library.keeping_blocks import KeepEntriesByCiteKey
+from .middlewares.library.protecting_title import ProtectTitleWithBracket
 from .middlewares.library.sorting_blocks import SortBlocksByTypeAndUserSortKeyMiddleware
 
 keep_entry_list = [
@@ -106,6 +107,7 @@ class MiddlewaresLibraryToLibrary:
         full_to_abbr_for_abbr (bool): Full to abbreviation for abbreviate. Default is True.
         abbr_index_article_for_abbr (int): Index for abbreviation in article. Default is 1.
         abbr_index_inproceedings_for_abbr (int): Index for abbreviation in inproceedings. Default is 2.
+        protect_title_with_bracket_for_abbr (bool): Protect title with bracket. Default is True
         doi_or_url_for_abbr (bool): Keep only doi or url. Default is True.
         doi_to_url_for_abbr (bool): Change doi to url and delete original doi. Default is True.
         add_link_to_fields_for_abbr (Optional[list[str]] = None): Add link to fields. Default is None.
@@ -119,6 +121,7 @@ class MiddlewaresLibraryToLibrary:
         replace_entry_list_for_abbr (list): Entry list for replace. Default is ["misc"].
         maximum_authors_for_abbr (int): Maximum number of authors. Default is 0.
 
+        protect_title_with_bracket_for_zotero (bool): Protect title with bracket. Default is False
         doi_or_url_for_zotero (bool): Keep only doi or url. Default is True.
         is_keep_fields_for_zotero (bool): Keep fields for zotero. Default is True.
         keep_entry_list_for_zotero (list): Entry list for keep fields. Default is keep_for_zotero()[0].
@@ -129,6 +132,7 @@ class MiddlewaresLibraryToLibrary:
         add_archive_for_zotero (bool): Add field 'archive'. Default is True.
         add_journal_abbr_for_zotero (bool): Add 'journal/booktitle abbreviation'. Default is True.
 
+        protect_title_with_bracket_for_save (bool): Protect title with bracket. Default is False
         delete_field_list_for_save (list): Delete fields list for save. Default is [].
 
         is_sort_entry_fields (bool): Sort entry fields alphabetically. Default is True.
@@ -247,6 +251,8 @@ class MiddlewaresLibraryToLibrary:
         self.abbr_index_article_for_abbr = options.get("abbr_index_article_for_abbr", 1)  # 0, 1, 2
         self.abbr_index_inproceedings_for_abbr = options.get("abbr_index_inproceedings_for_abbr", 2)  # 0, 1, 2
 
+        self.protect_title_with_bracket_for_abbr = options.get("protect_title_with_bracket_for_abbr", True)
+
         self.doi_or_url_for_abbr = options.get("doi_or_url_for_abbr", True)  # keep only doi or url
         self.doi_to_url_for_abbr = options.get("doi_to_url_for_abbr", True)  # change (https://doi.org/xxx) to doi
         self.add_link_to_fields_for_abbr = options.get("add_link_to_fields_for_abbr", None)  # add link to fields
@@ -277,6 +283,10 @@ class MiddlewaresLibraryToLibrary:
                 self.abbr_article_pattern_dict,
                 self.abbr_inproceedings_pattern_dict,
             ).transform(library)
+
+        # Protect title
+        if self.protect_title_with_bracket_for_abbr:
+            library = ProtectTitleWithBracket().transform(library)
 
         # Just keep doi or url (doi > url)
         if self.doi_or_url_for_abbr:
@@ -316,6 +326,8 @@ class MiddlewaresLibraryToLibrary:
         return library
 
     def _initialize_function_zotero(self, options: dict[str, Any]) -> None:
+        self.protect_title_with_bracket_for_zotero = options.get("protect_title_with_bracket_for_zotero", False)
+
         self.doi_or_url_for_zotero = options.get("doi_or_url_for_zotero", True)  # keep only doi or url
 
         self.is_keep_fields_for_zotero = options.get("is_keep_fields_for_zotero", True)
@@ -332,6 +344,10 @@ class MiddlewaresLibraryToLibrary:
         self.add_journal_abbr_for_zotero = options.get("add_journal_abbr_for_zotero", True)
 
     def _function_zotero(self, library: Library) -> Library:
+        # Protect title
+        if self.protect_title_with_bracket_for_zotero:
+            library = ProtectTitleWithBracket().transform(library)
+
         # Just keep doi or url (doi > url)
         if self.doi_or_url_for_zotero:
             library = ChooseDoiOrUrlInEntry().transform(library)
@@ -374,9 +390,15 @@ class MiddlewaresLibraryToLibrary:
         return library
 
     def _initialize_function_save(self, options: dict[str, Any]) -> None:
+        self.protect_title_with_bracket_for_save = options.get("protect_title_with_bracket_for_save", False)
+
         self.delete_field_list_for_save = options.get("delete_field_list_for_save", [])
 
     def _function_save(self, library: Library) -> Library:
+        # Protect title
+        if self.protect_title_with_bracket_for_save:
+            library = ProtectTitleWithBracket().transform(library)
+
         # Delete some fields for all entrys
         if self.delete_field_list_for_save:
             library = DeleteFieldsInEntry(self.delete_field_list_for_save).transform(library)

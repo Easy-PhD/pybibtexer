@@ -58,6 +58,9 @@
     "abbr_index_article_for_abbr": 1,
     "abbr_index_inproceedings_for_abbr": 2,
 
+    // protect title with bracket for abbr
+    "protect_title_with_bracket_for_abbr": true,
+
     // format doi and url
     // keep only doi or url
     "doi_or_url_for_abbr": true,
@@ -93,6 +96,9 @@
     "maximum_authors_for_abbr": 0,
 
     // special for zotero
+    // protect title with bracket for zotero
+    "protect_title_with_bracket_for_zotero": false,
+
     // format doi and url
     "doi_or_url_for_zotero": true,
 
@@ -127,6 +133,9 @@
     "add_journal_abbr_for_zotero": true,
 
     // special for save
+    // protect title with bracket for save
+    "protect_title_with_bracket_for_save": false,
+
     // delete field list for save
     "delete_field_list_for_save": [],
 
