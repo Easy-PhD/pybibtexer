@@ -27,18 +27,24 @@ def wrap_if_internal_capital_with_punctuation(word):
     if not isinstance(word, str) or len(word) <= 1:
         return word
 
-    trailing_punct_l = word[:(len(word) - len(word.lstrip(string.punctuation)))]
-    trailing_punct_r = word[len(word.rstrip(string.punctuation)):]
+    trailing_punct_l = word[: (len(word) - len(word.lstrip(string.punctuation)))]
+    trailing_punct_r = word[len(word.rstrip(string.punctuation)) :]
     word_stripped = word.strip(string.punctuation)
 
     if len(word_stripped) <= 1:
-        return word
+        if re.search(r"[\{\}]", word):  # {{A
+            return "{{" + word + "}}"  # {{A}}
+        else:
+            return word
 
     rest = word_stripped[1:]
     if any(c.isupper() for c in rest):
         return trailing_punct_l + "{{" + word_stripped + "}}" + trailing_punct_r
 
-    return word
+    if re.search(r"[\{\}]", word):  # Flows}}
+        return "{{" + word + "}}"  # {{Flows}}
+    else:
+        return word
 
 
 def process_sentence_refined(sentence):
@@ -47,8 +53,10 @@ def process_sentence_refined(sentence):
 
     for word in words:
         processed_word = wrap_if_internal_capital_with_punctuation(word)
-        processed_word = re.sub(r'\{{2,}', '{{', processed_word)
-        processed_word = re.sub(r'\}{2,}', '}}', processed_word)
+        processed_word = re.sub(r"\{{2,}", "{{", processed_word)
+        processed_word = re.sub(r"\}{2,}", "}}", processed_word)
         processed_words.append(processed_word)
 
-    return ' '.join(processed_words)
+    sentence = " ".join(processed_words)
+    sentence = re.sub("}} {{", " ", sentence)
+    return sentence
