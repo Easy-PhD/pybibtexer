@@ -27,15 +27,16 @@ def wrap_if_internal_capital_with_punctuation(word):
     if not isinstance(word, str) or len(word) <= 1:
         return word
 
-    word_stripped = word.rstrip(string.punctuation)
-    trailing_punct = word[len(word_stripped):]
+    trailing_punct_l = word[:(len(word) - len(word.lstrip(string.punctuation)))]
+    trailing_punct_r = word[len(word.rstrip(string.punctuation)):]
+    word_stripped = word.strip(string.punctuation)
 
     if len(word_stripped) <= 1:
         return word
 
     rest = word_stripped[1:]
     if any(c.isupper() for c in rest):
-        return "{{" + word_stripped + "}}" + trailing_punct
+        return trailing_punct_l + "{{" + word_stripped + "}}" + trailing_punct_r
 
     return word
 
