@@ -46,7 +46,8 @@ def process_sentence_refined(sentence):
 
     for word in words:
         processed_word = wrap_if_internal_capital_with_punctuation(word)
-        processed_word = re.sub(r'\{{2,}', '{{', re.sub(r'\}{2,}', '}}', processed_word))
+        processed_word = re.sub(r'\{{2,}', '{{', processed_word)
+        processed_word = re.sub(r'\}{2,}', '}}', processed_word)
         processed_words.append(processed_word)
 
     return ' '.join(processed_words)
