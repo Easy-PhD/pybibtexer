@@ -37,9 +37,13 @@ def wrap_if_internal_capital_with_punctuation(word):
     rest = word_stripped[1:]
 
     # {{A -> {{{{A}}
-    # Flows}} -> {{Flows}}}}
-    # {{nflows}}: -> {{{{nflows}}}}:
-    if (len(word_stripped) <= 1) or (any(c.isupper() for c in rest)) or (re.search(r"[\{\}]", word)):
+    # MCMC -> {{MCMC}}
+    # Carlo}} -> {{Carlo}}}}
+    flag = len(word_stripped) <= 1
+    flag = flag or (any(c.isupper() for c in rest) and word.count("{") == 0 and word.count("}") == 0)
+    flag = flag or word.count("{") != word.count("}")
+
+    if flag:
         return trailing_punct_l + "{{" + word_stripped + "}}" + trailing_punct_r
 
     return word
