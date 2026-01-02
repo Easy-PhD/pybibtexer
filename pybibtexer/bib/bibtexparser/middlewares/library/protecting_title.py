@@ -27,24 +27,22 @@ def wrap_if_internal_capital_with_punctuation(word):
     if not isinstance(word, str) or len(word) <= 1:
         return word
 
-    trailing_punct_l = word[: (len(word) - len(word.lstrip(string.punctuation)))]
-    trailing_punct_r = word[len(word.rstrip(string.punctuation)) :]
+    ll = len(word.lstrip(string.punctuation))
+    trailing_punct_l = word[: (len(word) - ll)]
+
+    rr = len(word.rstrip(string.punctuation))
+    trailing_punct_r = word[rr:]
+
     word_stripped = word.strip(string.punctuation)
-
-    if len(word_stripped) <= 1:
-        if re.search(r"[\{\}]", word):  # {{A
-            return "{{" + word + "}}"  # {{A}}
-        else:
-            return word
-
     rest = word_stripped[1:]
-    if any(c.isupper() for c in rest):
+
+    # {{A -> {{{{A}}
+    # Flows}} -> {{Flows}}}}
+    # {{nflows}}: -> {{{{nflows}}}}:
+    if (len(word_stripped) <= 1) or (any(c.isupper() for c in rest)) or (re.search(r"[\{\}]", word)):
         return trailing_punct_l + "{{" + word_stripped + "}}" + trailing_punct_r
 
-    if re.search(r"[\{\}]", word):  # Flows}}
-        return "{{" + word + "}}"  # {{Flows}}
-    else:
-        return word
+    return word
 
 
 def process_sentence_refined(sentence):
