@@ -242,6 +242,16 @@
             ".*ACM Conference on Foundations of Genetic Algorithms.*"
         ]
     },
+    "FOGAW": {
+        "names_abbr": [
+            "Proceedings of the Twelfth Workshop on Foundations of Genetic Algorithms XII",
+            "Proceedings of the Seventh Workshop on Foundations of Genetic Algorithms"
+        ],
+        "names_full": [
+            "Proceedings of the Twelfth Workshop on Foundations of Genetic Algorithms XII",
+            "Proceedings of the Seventh Workshop on Foundations of Genetic Algorithms"
+        ]
+    },
     "FSKD": {
         "names_abbr": [
             "2016 12th International Conference on Natural Computation, Fuzzy Systems and Knowledge Discovery (ICNC-FSKD)"
