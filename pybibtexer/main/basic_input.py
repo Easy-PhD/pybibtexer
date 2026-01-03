@@ -68,8 +68,8 @@ class BasicInput:
         full_abbr_inproceedings_dict = {**special_abbr_dict_c, **full_abbr_inproceedings_dict}
 
         biblatex_dict_c, biblatex_dict_j = self._process_biblatex(options.get("full_biblatex_bib", ""))
-        full_abbr_article_dict = {**biblatex_dict_c, **full_abbr_article_dict}
-        full_abbr_inproceedings_dict = {**biblatex_dict_j, **biblatex_dict_j}
+        full_abbr_article_dict = {**biblatex_dict_j, **full_abbr_article_dict}
+        full_abbr_inproceedings_dict = {**biblatex_dict_c, **full_abbr_inproceedings_dict}
 
         # Convert to strict ordered dictionaries to maintain consistent ordering
         full_abbr_article_dict = StrictOrderedDict(full_abbr_article_dict)
