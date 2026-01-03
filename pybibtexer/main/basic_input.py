@@ -24,6 +24,7 @@ class BasicInput:
         abbr_names_in_json (str): Abbr names in json.
         abbr_article_pattern_dict (dict): Pre-compiled regex patterns for journal name matching
         abbr_inproceedings_pattern_dict (dict): Pre-compiled regex patterns for conference name matching
+        full_biblatex_bib (str): Path to the BibLaTex file
 
         options (dict[str, Any]): Options.
 
@@ -52,7 +53,6 @@ class BasicInput:
         user_abbr_dict_c, user_abbr_dict_j = process_user_conferences_journals_json(full_json_c, full_json_j)
 
         # Merge dictionaries with precedence: user > default
-        # Articles use journal abbreviations, inproceedings use conference abbreviations
         full_abbr_article_dict = {**default_abbr_dict_j, **user_abbr_dict_j}
         full_abbr_inproceedings_dict = {**default_abbr_dict_c, **user_abbr_dict_c}
 
@@ -62,14 +62,12 @@ class BasicInput:
         # full_abbr_article_dict = check.length_dupicate_match(full_abbr_article_dict)[0]
         # full_abbr_inproceedings_dict = check.length_dupicate_match(full_abbr_inproceedings_dict)[0]
 
-        # Merge dictionaries with precedence: merged (user + default) > special
-        # Articles use journal abbreviations, inproceedings use conference abbreviations
-        full_abbr_article_dict = {**special_abbr_dict_j, **full_abbr_article_dict}
-        full_abbr_inproceedings_dict = {**special_abbr_dict_c, **full_abbr_inproceedings_dict}
-
+        # Parse new abbreviations from BibLaTex file
         biblatex_dict_c, biblatex_dict_j = self._process_biblatex(options.get("full_biblatex_bib", ""))
-        full_abbr_article_dict = {**biblatex_dict_j, **full_abbr_article_dict}
-        full_abbr_inproceedings_dict = {**biblatex_dict_c, **full_abbr_inproceedings_dict}
+
+        # Merge dictionaries with precedence: user > default > new > special
+        full_abbr_article_dict = {**special_abbr_dict_j, **biblatex_dict_j, **full_abbr_article_dict}
+        full_abbr_inproceedings_dict = {**special_abbr_dict_c, **biblatex_dict_c, **full_abbr_inproceedings_dict}
 
         # Convert to strict ordered dictionaries to maintain consistent ordering
         full_abbr_article_dict = StrictOrderedDict(full_abbr_article_dict)

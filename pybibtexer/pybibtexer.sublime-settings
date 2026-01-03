@@ -157,8 +157,9 @@
     // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // for bib file
     // pybibtexer/main/basic_input.py
-    "full_json_c": "",  // specified by different users.
-    "full_json_j": "",  // specified by different users.
+    "full_json_c": "",  // specified by different users
+    "full_json_j": "",  // specified by different users
+    "full_biblatex_bib": "",  // path to the BibLaTex file
 
     // ######### ######### ######### ######### ######### ######### ######### ######### ######### //
     // pybibtexer/main/python_run_bib.py
