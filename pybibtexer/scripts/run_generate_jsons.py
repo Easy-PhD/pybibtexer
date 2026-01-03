@@ -123,8 +123,8 @@ class GenerateDefaultJSONs:
                 continue
 
             # Extract full and abbreviation fields
-            full_match = re.search(rf"{cfg['full_field']}\s*=\s*{{([^}}]*)}}", entry_content)
-            abbr_match = re.search(rf"{cfg['abbr_field']}\s*=\s*{{([^}}]*)}}", entry_content)
+            full_match = re.search(cfg['full_field'] + r"\s*=\s*{" + r"(.*)" + "}", entry_content)
+            abbr_match = re.search(cfg['abbr_field'] + r"\s*=\s*{" + r"(.*)" + "}", entry_content)
 
             # For inproceedings, booktitle is required but eventtitle is optional
             if not full_match:
