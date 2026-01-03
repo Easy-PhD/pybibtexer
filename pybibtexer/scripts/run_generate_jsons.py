@@ -137,6 +137,9 @@ class GenerateDefaultJSONs:
                 # Use full name as abbreviation if abbreviation field is missing
                 abbr = full
 
+            full = full.replace("{", "").replace("}", "")
+            abbr = abbr.replace("{", "").replace("}", "")
+
             parts = cite_key.split("_")
             if len(parts) >= 3:
                 key = parts[1]
