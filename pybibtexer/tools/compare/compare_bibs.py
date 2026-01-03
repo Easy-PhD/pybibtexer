@@ -5,11 +5,13 @@ from typing import Any
 
 from pyadvtools import standard_path, transform_to_data_list
 
+from pybibtexer.bib.bibtexbase.standardize_bib import XIVS
+
 from ...bib.bibtexparser import Block, Library
 from ...main import PythonRunBib, PythonWriters
 from ..experiments_base import obtain_local_abbr_paths
 
-ARXIV_BIORXIV = ["arxiv", "biorxiv", "ssrn"]
+ARXIV_BIORXIV = list(XIVS.keys())
 
 
 def obtain_local_abbr_paths_for_abbr(options: dict, path_spidered_bibs: str, path_spidering_bibs: str) -> list[str]:

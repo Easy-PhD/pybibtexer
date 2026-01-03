@@ -24,20 +24,24 @@ from .standardize.do_on_preamble_block import StandardizePreambleBlock
 from .standardize.do_on_string_block import StandardizeStringBlock
 
 MARKS_FLAGS = [
-    ["comment", "comment", "CMT"],  # comment
-    ["string", "string", "S"],  # string
-    ["preamble", "preamble", "P"],  # preamble
-    ["article", "entry", "J"],  # entry
-    ["inproceedings", "entry", "C"],  # entry
-    ["proceedings", "entry", "B"],  # entry
-    ["book", "entry", "B"],  # entry
-    ["incollection", "entry", "BS"],  # entry
-    ["misc", "entry", "D"],  # entry
-    ["unpublished", "entry", "M"],  # entry
-    ["techreport", "entry", "R"],  # entry
-    ["phdthesis", "entry", "T_D"],  # entry
-    ["mastersthesis", "entry", "T_M"],  # entry
+    ["comment", "comment", "CMT", ""],  # comment
+    ["string", "string", "S", ""],  # string
+    ["preamble", "preamble", "P", ""],  # preamble
+    #
+    ["article", "entry", "J", "Journal Article"],  # entry
+    ["inproceedings", "entry", "C", "Conference Paper"],  # entry
+    ["book", "entry", "B", "Book"],  # entry
+    ["incollection", "entry", "BS", "Book Section"],  # entry
+    ["misc", "entry", "D", "Document"],  # entry
+    ["unpublished", "entry", "M", "Manuscript"],  # entry
+    ["techreport", "entry", "R", "Report"],  # entry
+    ["phdthesis", "entry", "T_D", "Thesis"],  # entry
+    ["mastersthesis", "entry", "T_M", "Thesis"],  # entry
+    #
+    ["proceedings", "entry", "B", ""],  # entry
 ]
+
+XIVS = {"arxiv": "arXiv", "biorxiv": "bioRxiv"}
 
 
 class StandardizeBib:

@@ -1,7 +1,7 @@
 import re
 from typing import Any
 
-from ...bibtexbase.standardize_bib import MARKS_FLAGS
+from ...bibtexbase.standardize_bib import MARKS_FLAGS, XIVS
 from ..model import Entry
 
 
@@ -17,12 +17,10 @@ def generate_cite_key_prefix(
 
     elif prefix == "D":
         if "url" in entry:
-            if re.search(r"arxiv\.org", entry["url"]):
-                prefix = "arXiv"
-            elif re.search(r"biorxiv\.org", entry["url"]):
-                prefix = "bioRxiv"
-            elif re.search(r"ssrn\.", entry["url"]):
-                prefix = "SSRN"
+            for key in XIVS:
+                if re.search(rf"\b{key}\.org", entry["url"]):
+                    prefix = XIVS[key]
+                    break
     return prefix
 
 

@@ -5,12 +5,14 @@ import time
 
 from pyadvtools import IterateCombineExtendDict, iterate_obtain_full_file_names, read_list, standard_path, write_list
 
+from pybibtexer.bib.bibtexbase.standardize_bib import XIVS
+
 from ...bib.bibtexparser.library import Library
 from ...main import PythonRunBib, PythonWriters
 from ..experiments_base import generate_readme
 from ..format_save_bibs import format_bib_to_save_mode_by_entry_type, generate_statistic_information
 
-EXCLUDE_ABBR_LIST = ["arxiv", "biorxiv", "ssrn"]
+EXCLUDE_ABBR_LIST = list(XIVS.keys())
 
 
 class ProcessSpiderBib:
