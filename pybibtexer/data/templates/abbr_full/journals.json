@@ -2486,6 +2486,10 @@
         "names_abbr": ["SSRN Journal"],
         "names_full": ["SSRN Electronic Journal"]
     },
+    "STATISTICA": {
+        "names_abbr": ["Stat. Sinica"],
+        "names_full": ["Statistica Sinica"]
+    },
     "STATS": {
         "names_abbr": ["Stat. Sci."],
         "names_full": ["Statistical Science"]
@@ -2830,6 +2834,10 @@
     "WSARAI": {
         "names_abbr": ["World Sci. Annu. Rev. Artif. Intell."],
         "names_full": ["World Scientific Annual Review of Artificial Intelligence"]
+    },
+    "Zenodo": {
+        "names_abbr": ["Zenodo"],
+        "names_full": ["Zenodo"]
     },
     "arXiv": {
         "names_abbr": ["arXiv"],

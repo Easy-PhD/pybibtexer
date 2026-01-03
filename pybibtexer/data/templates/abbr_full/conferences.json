@@ -383,6 +383,12 @@
         "names_abbr": ["Proc. IEEE Int. Conf. Mach. Learn. Cybern."],
         "names_full": [".*International Conference on Machine Learning and Cybernetics.*"]
     },
+    "ICMLW": {
+        "names_abbr": [
+            "ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models"
+        ],
+        "names_full": ["ICML Workshop on Invertible Neural Networks, Normalizing Flows, and Explicit Likelihood Models"]
+    },
     "ICNN": {
         "names_abbr": ["Proceedings of ICNN'95 - International Conference on Neural Networks"],
         "names_full": ["Proceedings of ICNN'95 - International Conference on Neural Networks"]
@@ -406,6 +412,10 @@
     "ICTAS": {
         "names_abbr": ["2018 Conference on Information Communications Technology and Society (ICTAS)"],
         "names_full": ["2018 Conference on Information Communications Technology and Society (ICTAS)"]
+    },
+    "ICoSMEE": {
+        "names_abbr": ["The 2nd International Conference on Science, Mathematics, Environment, and Education"],
+        "names_full": ["The 2nd International Conference on Science, Mathematics, Environment, and Education"]
     },
     "IES": {
         "names_abbr": ["Proceedings of the 19th Asia Pacific Symposium on Intelligent and Evolutionary Systems"],
@@ -504,6 +514,10 @@
             ".*Advances in Neural Information Processing Systems.*",
             ".*Annual Conference on Neural Information Processing Systems"
         ]
+    },
+    "NeurIPSW": {
+        "names_abbr": ["NIPS Workshop on Bayesian Deep Learning"],
+        "names_full": ["NIPS Workshop on Bayesian Deep Learning"]
     },
     "OSDI": {
         "names_abbr": ["Proc. USENIX Symp. Oper. Syst. Des. Implement."],
