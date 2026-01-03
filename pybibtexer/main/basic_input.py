@@ -161,8 +161,8 @@ class BasicInput:
         if len(full_biblatex_bib.strip()) == 0:
             return {}, {}
 
-        biblatex_dict_c = parse_bibtex_file(full_biblatex_bib, "conferences")
-        biblatex_dict_j = parse_bibtex_file(full_biblatex_bib, "journals")
+        biblatex_dict_c = parse_bibtex_file(full_biblatex_bib, "inproceedings")
+        biblatex_dict_j = parse_bibtex_file(full_biblatex_bib, "article")
 
         check = CheckAcronymAbbrAndFullDict()
         biblatex_dict_c = check.length_dupicate_match(biblatex_dict_c)[0]
