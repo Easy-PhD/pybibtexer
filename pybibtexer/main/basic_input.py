@@ -6,6 +6,7 @@ from .utils import (
     CheckAcronymAbbrAndFullDict,
     StrictOrderedDict,
     load_json_file,
+    parse_bibtex_file,
     process_user_conferences_journals_json,
 )
 
@@ -65,6 +66,10 @@ class BasicInput:
         # Articles use journal abbreviations, inproceedings use conference abbreviations
         full_abbr_article_dict = {**special_abbr_dict_j, **full_abbr_article_dict}
         full_abbr_inproceedings_dict = {**special_abbr_dict_c, **full_abbr_inproceedings_dict}
+
+        biblatex_dict_c, biblatex_dict_j = self._process_biblatex(options.get("full_biblatex_bib", ""))
+        full_abbr_article_dict = {**biblatex_dict_c, **full_abbr_article_dict}
+        full_abbr_inproceedings_dict = {**biblatex_dict_j, **biblatex_dict_j}
 
         # Convert to strict ordered dictionaries to maintain consistent ordering
         full_abbr_article_dict = StrictOrderedDict(full_abbr_article_dict)
@@ -153,3 +158,15 @@ class BasicInput:
         full_abbr_dict = load_json_file(full_json)
 
         return full_abbr_dict
+
+    def _process_biblatex(self, full_biblatex_bib: str) -> tuple[dict, dict]:
+        if len(full_biblatex_bib.strip()) == 0:
+            return {}, {}
+
+        biblatex_dict_c = parse_bibtex_file(full_biblatex_bib, "conferences")
+        biblatex_dict_j = parse_bibtex_file(full_biblatex_bib, "journals")
+
+        check = CheckAcronymAbbrAndFullDict()
+        biblatex_dict_c = check.length_dupicate_match(biblatex_dict_c)[0]
+        biblatex_dict_j = check.length_dupicate_match(biblatex_dict_j)[0]
+        return biblatex_dict_c, biblatex_dict_j
