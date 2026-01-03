@@ -1,6 +1,6 @@
 [project]
 name = "pybibtexer"
-version = "0.3.37"
+version = "0.3.38"
 description = "pybibtexer"
 license = "GPL-3.0-or-later"
 license-files = ["LICENSE"]
