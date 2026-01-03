@@ -23,10 +23,14 @@
     "ACSSC": {
         "names_abbr": [
             "1990 Conference Record Twenty-Fourth Asilomar Conference on Signals, Systems and Computers, 1990.",
+            "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems & Computers",
+            "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems \\& Computers",
             "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems \\\\& Computers"
         ],
         "names_full": [
             "1990 Conference Record Twenty-Fourth Asilomar Conference on Signals, Systems and Computers, 1990.",
+            "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems & Computers",
+            "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems \\& Computers",
             "[1991] Conference Record of the Twenty-Fifth Asilomar Conference on Signals, Systems \\\\& Computers"
         ]
     },
@@ -318,8 +322,16 @@
         "names_full": ["2006 9th International Conference on Control, Automation, Robotics and Vision"]
     },
     "ICCSE": {
-        "names_abbr": ["2012 7th International Conference on Computer Science \\\\& Education (ICCSE)"],
-        "names_full": ["2012 7th International Conference on Computer Science \\\\& Education (ICCSE)"]
+        "names_abbr": [
+            "2012 7th International Conference on Computer Science & Education (ICCSE)",
+            "2012 7th International Conference on Computer Science \\& Education (ICCSE)",
+            "2012 7th International Conference on Computer Science \\\\& Education (ICCSE)"
+        ],
+        "names_full": [
+            "2012 7th International Conference on Computer Science & Education (ICCSE)",
+            "2012 7th International Conference on Computer Science \\& Education (ICCSE)",
+            "2012 7th International Conference on Computer Science \\\\& Education (ICCSE)"
+        ]
     },
     "ICCV": {
         "names_abbr": ["Proc. IEEE Int. Conf. Comput. Vis."],
@@ -515,9 +527,13 @@
     },
     "RIVF": {
         "names_abbr": [
+            "2012 IEEE RIVF international conference on computing & communication technologies, research, innovation, and vision for the future",
+            "2012 IEEE RIVF international conference on computing \\& communication technologies, research, innovation, and vision for the future",
             "2012 IEEE RIVF international conference on computing \\\\& communication technologies, research, innovation, and vision for the future"
         ],
         "names_full": [
+            "2012 IEEE RIVF international conference on computing & communication technologies, research, innovation, and vision for the future",
+            "2012 IEEE RIVF international conference on computing \\& communication technologies, research, innovation, and vision for the future",
             "2012 IEEE RIVF international conference on computing \\\\& communication technologies, research, innovation, and vision for the future"
         ]
     },
