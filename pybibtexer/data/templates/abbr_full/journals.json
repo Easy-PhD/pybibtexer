@@ -374,6 +374,10 @@
             "Combinatorics, Probability and Computing"
         ]
     },
+    "CPC": {
+        "names_abbr": ["Comput. Phys. Commun."],
+        "names_full": ["Computer Physics Communications"]
+    },
     "CPLX": {
         "names_abbr": ["Complexity"],
         "names_full": ["Complexity"]
@@ -1727,10 +1731,6 @@
         "names_abbr": ["J. Chem. Phys.", "J. Chem. Phys."],
         "names_full": ["Journal of Chemical Physics", "The Journal of Chemical Physics"]
     },
-    "JCPC": {
-        "names_abbr": ["Comput. Phys. Commun."],
-        "names_full": ["Computer Physics Communications"]
-    },
     "JDA": {
         "names_abbr": ["J. Discret. Algo."],
         "names_full": ["Journal of Discrete Algorithms"]
@@ -2309,7 +2309,7 @@
         "names_abbr": ["Phys. Rev. X"],
         "names_full": ["Physical Review X"]
     },
-    "PS": {
+    "PSURV": {
         "names_abbr": ["Probab. Surv."],
         "names_full": ["Probability Surveys"]
     },
@@ -2474,9 +2474,9 @@
         "names_abbr": ["Sci. Robot."],
         "names_full": ["Science Robotics"]
     },
-    "SS": {
-        "names_abbr": ["Stat. Surv."],
-        "names_full": ["Statistics Surveys"]
+    "SSCI": {
+        "names_abbr": ["Stat. Sci."],
+        "names_full": ["Statistical Science"]
     },
     "SSIGNAL": {
         "names_abbr": ["Sci. Signal."],
@@ -2486,13 +2486,13 @@
         "names_abbr": ["SSRN Journal"],
         "names_full": ["SSRN Electronic Journal"]
     },
+    "SSURV": {
+        "names_abbr": ["Stat. Surv."],
+        "names_full": ["Statistics Surveys"]
+    },
     "STATISTICA": {
         "names_abbr": ["Stat. Sinica"],
         "names_full": ["Statistica Sinica"]
-    },
-    "STATS": {
-        "names_abbr": ["Stat. Sci."],
-        "names_full": ["Statistical Science"]
     },
     "STSC": {
         "names_abbr": ["Strat. Sci."],
