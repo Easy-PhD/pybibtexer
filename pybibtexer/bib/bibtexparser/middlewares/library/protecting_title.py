@@ -49,7 +49,7 @@ def wrap_if_internal_capital_with_punctuation(word):
     return word
 
 
-def process_sentence_refined(sentence):
+def process_sentence_refined(sentence, force_first: bool = False):
     words = sentence.split()
     processed_words = []
 
@@ -58,6 +58,9 @@ def process_sentence_refined(sentence):
         processed_word = re.sub(r"\{{2,}", "{{", processed_word)
         processed_word = re.sub(r"\}{2,}", "}}", processed_word)
         processed_words.append(processed_word)
+
+    if force_first and "{{" not in processed_words[0]:
+        processed_words[0] = "{{" + processed_words[0] + "}}"
 
     sentence = " ".join(processed_words)
     sentence = re.sub("}} {{", " ", sentence)
@@ -70,7 +73,7 @@ def process_sentence_refined_all(sentence):
     if len(parts) == 1:
         sentence = process_sentence_refined(sentence)
     elif len(parts) == 3:
-        sentence = process_sentence_refined(parts[0]) + parts[1] + process_sentence_refined(parts[2])
+        sentence = process_sentence_refined(parts[0]) + parts[1] + process_sentence_refined(parts[2], True)
     else:
         sentence = sentence
     return sentence
