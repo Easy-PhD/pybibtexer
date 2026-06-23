@@ -14,7 +14,7 @@ class ProtectTitleWithBracket(LibraryMiddleware):
         library = super().transform(library)
         for entry in library.entries:
             if "title" in entry:
-                entry["title"] = process_sentence_refined(entry["title"])
+                entry["title"] = process_sentence_refined_all(entry["title"])
         return library
 
     # docstr-coverage: inherited
@@ -61,4 +61,16 @@ def process_sentence_refined(sentence):
 
     sentence = " ".join(processed_words)
     sentence = re.sub("}} {{", " ", sentence)
+    return sentence
+
+
+def process_sentence_refined_all(sentence):
+    separator_pattern = r'(\s*[:：]\s*|\s*(?<=\s)[-]+(?=\s)\s*|\s*(?<=\s)[–]+(?=\s)\s*|\s*(?<=\s)[—]+(?=\s)\s*)'
+    parts = re.split(separator_pattern, sentence)
+    if len(parts) == 1:
+        sentence = process_sentence_refined(sentence)
+    elif len(parts) == 3:
+        sentence = process_sentence_refined(parts[0]) + parts[1] + process_sentence_refined(parts[2])
+    else:
+        sentence = sentence
     return sentence
